@@ -11,6 +11,7 @@ use DiContainerBenchmarks\Container\Joomla\JoomlaContainerDefinition;
 use DiContainerBenchmarks\Container\LaminasServiceManager\LaminasServiceManagerContainerDefinition;
 use DiContainerBenchmarks\Container\Laravel\LaravelContainerDefinition;
 use DiContainerBenchmarks\Container\PhpDi\PhpDiContainerDefinition;
+use DiContainerBenchmarks\Container\Rammewerk\RammewerkContainerDefinition;
 use DiContainerBenchmarks\Container\Symfony\SymfonyContainerDefinition;
 use DiContainerBenchmarks\Container\Yii2\Yii2ContainerDefinition;
 use DiContainerBenchmarks\Container\Zen\ZenContainerDefinition;
@@ -26,7 +27,7 @@ final class ContainerDefinitions
             new AuraContainerDefinition(),
             new ChubbyphpContainerDefinition(),
             new DiceContainerDefinition(),
-            new JoomlaContainerDefinition(),
+            new RammewerkContainerDefinition(),
             new LaminasServiceManagerContainerDefinition(),
             new LaravelContainerDefinition(),
             new PhpDiContainerDefinition(),

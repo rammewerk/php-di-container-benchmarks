@@ -3,7 +3,15 @@ set -e
 
 PROJECT_ROOT=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-if [[ "$1" == "docker" ]]; then
+if [[ "$1" == "composer" ]]; then
+
+    # Update composer dependencies
+    docker run --rm --interactive --tty \
+        --volume $PROJECT_ROOT:/code \
+        --user $(id -u):$(id -g) \
+        composer update --prefer-dist --no-interaction --working-dir=/code --ignore-platform-reqs
+
+elif [[ "$1" == "docker" ]]; then
 
     # Install composer dependencies
     docker run --rm --interactive --tty \

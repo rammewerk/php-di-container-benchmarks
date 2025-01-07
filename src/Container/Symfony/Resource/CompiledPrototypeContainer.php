@@ -1027,6 +1027,56 @@ class CompiledPrototypeContainer extends Container
             'DiContainerBenchmarks\\Fixture\\B\\FixtureB998' => 'getFixtureB998Service',
             'DiContainerBenchmarks\\Fixture\\B\\FixtureB999' => 'getFixtureB999Service',
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC1000' => 'getFixtureC1000Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD1' => 'getFixtureD1Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD10' => 'getFixtureD10Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD11' => 'getFixtureD11Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD12' => 'getFixtureD12Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD13' => 'getFixtureD13Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD14' => 'getFixtureD14Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD15' => 'getFixtureD15Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD16' => 'getFixtureD16Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD17' => 'getFixtureD17Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD18' => 'getFixtureD18Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD19' => 'getFixtureD19Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD2' => 'getFixtureD2Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD20' => 'getFixtureD20Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD21' => 'getFixtureD21Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD22' => 'getFixtureD22Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD23' => 'getFixtureD23Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD24' => 'getFixtureD24Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD25' => 'getFixtureD25Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD26' => 'getFixtureD26Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD27' => 'getFixtureD27Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD28' => 'getFixtureD28Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD29' => 'getFixtureD29Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD3' => 'getFixtureD3Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD30' => 'getFixtureD30Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD31' => 'getFixtureD31Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD32' => 'getFixtureD32Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD33' => 'getFixtureD33Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD34' => 'getFixtureD34Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD35' => 'getFixtureD35Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD36' => 'getFixtureD36Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD37' => 'getFixtureD37Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD38' => 'getFixtureD38Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD39' => 'getFixtureD39Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD4' => 'getFixtureD4Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD40' => 'getFixtureD40Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD41' => 'getFixtureD41Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD42' => 'getFixtureD42Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD43' => 'getFixtureD43Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD44' => 'getFixtureD44Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD45' => 'getFixtureD45Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD46' => 'getFixtureD46Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD47' => 'getFixtureD47Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD48' => 'getFixtureD48Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD49' => 'getFixtureD49Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD5' => 'getFixtureD5Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD50' => 'getFixtureD50Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD6' => 'getFixtureD6Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD7' => 'getFixtureD7Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD8' => 'getFixtureD8Service',
+            'DiContainerBenchmarks\\Fixture\\D\\FixtureD9' => 'getFixtureD9Service',
         ];
 
         $this->aliases = [];
@@ -2143,6 +2193,11 @@ class CompiledPrototypeContainer extends Container
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC998' => true,
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC999' => true,
         ];
+    }
+
+    protected function createProxy($class, \Closure $factory)
+    {
+        return $factory();
     }
 
     /*
@@ -16187,6 +16242,806 @@ class CompiledPrototypeContainer extends Container
         return $container->factories['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000']($container);
     }
 
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD1' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD1
+     */
+    protected static function getFixtureD1Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD1'] ??= fn () => self::getFixtureD1Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD1Ghost2e6ee76', static fn () => \FixtureD1Ghost2e6ee76::createLazyGhost(static fn ($proxy) => self::getFixtureD1Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct() && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD10' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD10
+     */
+    protected static function getFixtureD10Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD10'] ??= fn () => self::getFixtureD10Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD10GhostF07c897', static fn () => \FixtureD10GhostF07c897::createLazyGhost(static fn ($proxy) => self::getFixtureD10Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD9']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD9']($container) : self::getFixtureD9Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD11' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD11
+     */
+    protected static function getFixtureD11Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD11'] ??= fn () => self::getFixtureD11Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD11GhostD239abb', static fn () => \FixtureD11GhostD239abb::createLazyGhost(static fn ($proxy) => self::getFixtureD11Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD10']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD10']($container) : self::getFixtureD10Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD12' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD12
+     */
+    protected static function getFixtureD12Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD12'] ??= fn () => self::getFixtureD12Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD12GhostF17e246', static fn () => \FixtureD12GhostF17e246::createLazyGhost(static fn ($proxy) => self::getFixtureD12Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD11']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD11']($container) : self::getFixtureD11Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD13' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD13
+     */
+    protected static function getFixtureD13Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD13'] ??= fn () => self::getFixtureD13Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD13GhostB3b3f8d', static fn () => \FixtureD13GhostB3b3f8d::createLazyGhost(static fn ($proxy) => self::getFixtureD13Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD12']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD12']($container) : self::getFixtureD12Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD14' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD14
+     */
+    protected static function getFixtureD14Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD14'] ??= fn () => self::getFixtureD14Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD14Ghost5388973', static fn () => \FixtureD14Ghost5388973::createLazyGhost(static fn ($proxy) => self::getFixtureD14Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD13']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD13']($container) : self::getFixtureD13Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD15' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD15
+     */
+    protected static function getFixtureD15Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD15'] ??= fn () => self::getFixtureD15Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD15GhostF7237c7', static fn () => \FixtureD15GhostF7237c7::createLazyGhost(static fn ($proxy) => self::getFixtureD15Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD14']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD14']($container) : self::getFixtureD14Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD16' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD16
+     */
+    protected static function getFixtureD16Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD16'] ??= fn () => self::getFixtureD16Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD16Ghost40a485d', static fn () => \FixtureD16Ghost40a485d::createLazyGhost(static fn ($proxy) => self::getFixtureD16Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD15']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD15']($container) : self::getFixtureD15Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD17' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD17
+     */
+    protected static function getFixtureD17Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD17'] ??= fn () => self::getFixtureD17Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD17Ghost45f6f24', static fn () => \FixtureD17Ghost45f6f24::createLazyGhost(static fn ($proxy) => self::getFixtureD17Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD16']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD16']($container) : self::getFixtureD16Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD18' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD18
+     */
+    protected static function getFixtureD18Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD18'] ??= fn () => self::getFixtureD18Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD18Ghost50f86a0', static fn () => \FixtureD18Ghost50f86a0::createLazyGhost(static fn ($proxy) => self::getFixtureD18Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD17']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD17']($container) : self::getFixtureD17Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD19' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD19
+     */
+    protected static function getFixtureD19Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD19'] ??= fn () => self::getFixtureD19Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD19GhostBe5aa48', static fn () => \FixtureD19GhostBe5aa48::createLazyGhost(static fn ($proxy) => self::getFixtureD19Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD18']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD18']($container) : self::getFixtureD18Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD2' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD2
+     */
+    protected static function getFixtureD2Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD2'] ??= fn () => self::getFixtureD2Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD2GhostAb3b5f6', static fn () => \FixtureD2GhostAb3b5f6::createLazyGhost(static fn ($proxy) => self::getFixtureD2Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD1']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD1']($container) : self::getFixtureD1Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD20' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD20
+     */
+    protected static function getFixtureD20Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD20'] ??= fn () => self::getFixtureD20Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD20Ghost5245395', static fn () => \FixtureD20Ghost5245395::createLazyGhost(static fn ($proxy) => self::getFixtureD20Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD19']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD19']($container) : self::getFixtureD19Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD21' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD21
+     */
+    protected static function getFixtureD21Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD21'] ??= fn () => self::getFixtureD21Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD21GhostC32df21', static fn () => \FixtureD21GhostC32df21::createLazyGhost(static fn ($proxy) => self::getFixtureD21Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD20']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD20']($container) : self::getFixtureD20Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD22' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD22
+     */
+    protected static function getFixtureD22Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD22'] ??= fn () => self::getFixtureD22Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD22Ghost1486d7c', static fn () => \FixtureD22Ghost1486d7c::createLazyGhost(static fn ($proxy) => self::getFixtureD22Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD21']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD21']($container) : self::getFixtureD21Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD23' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD23
+     */
+    protected static function getFixtureD23Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD23'] ??= fn () => self::getFixtureD23Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD23Ghost529c566', static fn () => \FixtureD23Ghost529c566::createLazyGhost(static fn ($proxy) => self::getFixtureD23Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD22']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD22']($container) : self::getFixtureD22Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD24' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD24
+     */
+    protected static function getFixtureD24Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD24'] ??= fn () => self::getFixtureD24Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD24GhostB18fcf9', static fn () => \FixtureD24GhostB18fcf9::createLazyGhost(static fn ($proxy) => self::getFixtureD24Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD23']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD23']($container) : self::getFixtureD23Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD25' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD25
+     */
+    protected static function getFixtureD25Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD25'] ??= fn () => self::getFixtureD25Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD25Ghost2d48350', static fn () => \FixtureD25Ghost2d48350::createLazyGhost(static fn ($proxy) => self::getFixtureD25Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD24']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD24']($container) : self::getFixtureD24Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD26' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD26
+     */
+    protected static function getFixtureD26Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD26'] ??= fn () => self::getFixtureD26Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD26GhostFa53b3c', static fn () => \FixtureD26GhostFa53b3c::createLazyGhost(static fn ($proxy) => self::getFixtureD26Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD25']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD25']($container) : self::getFixtureD25Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD27' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD27
+     */
+    protected static function getFixtureD27Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD27'] ??= fn () => self::getFixtureD27Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD27GhostB613521', static fn () => \FixtureD27GhostB613521::createLazyGhost(static fn ($proxy) => self::getFixtureD27Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD26']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD26']($container) : self::getFixtureD26Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD28' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD28
+     */
+    protected static function getFixtureD28Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD28'] ??= fn () => self::getFixtureD28Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD28Ghost123152c', static fn () => \FixtureD28Ghost123152c::createLazyGhost(static fn ($proxy) => self::getFixtureD28Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD27']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD27']($container) : self::getFixtureD27Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD29' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD29
+     */
+    protected static function getFixtureD29Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD29'] ??= fn () => self::getFixtureD29Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD29Ghost37f3d3a', static fn () => \FixtureD29Ghost37f3d3a::createLazyGhost(static fn ($proxy) => self::getFixtureD29Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD28']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD28']($container) : self::getFixtureD28Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD3' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD3
+     */
+    protected static function getFixtureD3Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD3'] ??= fn () => self::getFixtureD3Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD3GhostEc315c2', static fn () => \FixtureD3GhostEc315c2::createLazyGhost(static fn ($proxy) => self::getFixtureD3Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD2']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD2']($container) : self::getFixtureD2Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD30' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD30
+     */
+    protected static function getFixtureD30Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD30'] ??= fn () => self::getFixtureD30Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD30Ghost23dda49', static fn () => \FixtureD30Ghost23dda49::createLazyGhost(static fn ($proxy) => self::getFixtureD30Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD29']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD29']($container) : self::getFixtureD29Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD31' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD31
+     */
+    protected static function getFixtureD31Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD31'] ??= fn () => self::getFixtureD31Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD31GhostEb0e97d', static fn () => \FixtureD31GhostEb0e97d::createLazyGhost(static fn ($proxy) => self::getFixtureD31Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD30']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD30']($container) : self::getFixtureD30Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD32' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD32
+     */
+    protected static function getFixtureD32Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD32'] ??= fn () => self::getFixtureD32Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD32Ghost1e1c417', static fn () => \FixtureD32Ghost1e1c417::createLazyGhost(static fn ($proxy) => self::getFixtureD32Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD31']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD31']($container) : self::getFixtureD31Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD33' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD33
+     */
+    protected static function getFixtureD33Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD33'] ??= fn () => self::getFixtureD33Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD33GhostD603158', static fn () => \FixtureD33GhostD603158::createLazyGhost(static fn ($proxy) => self::getFixtureD33Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD32']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD32']($container) : self::getFixtureD32Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD34' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD34
+     */
+    protected static function getFixtureD34Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD34'] ??= fn () => self::getFixtureD34Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD34Ghost56f404d', static fn () => \FixtureD34Ghost56f404d::createLazyGhost(static fn ($proxy) => self::getFixtureD34Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD33']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD33']($container) : self::getFixtureD33Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD35' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD35
+     */
+    protected static function getFixtureD35Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD35'] ??= fn () => self::getFixtureD35Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD35Ghost312fff5', static fn () => \FixtureD35Ghost312fff5::createLazyGhost(static fn ($proxy) => self::getFixtureD35Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD34']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD34']($container) : self::getFixtureD34Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD36' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD36
+     */
+    protected static function getFixtureD36Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD36'] ??= fn () => self::getFixtureD36Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD36Ghost60e160c', static fn () => \FixtureD36Ghost60e160c::createLazyGhost(static fn ($proxy) => self::getFixtureD36Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD35']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD35']($container) : self::getFixtureD35Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD37' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD37
+     */
+    protected static function getFixtureD37Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD37'] ??= fn () => self::getFixtureD37Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD37Ghost60a124e', static fn () => \FixtureD37Ghost60a124e::createLazyGhost(static fn ($proxy) => self::getFixtureD37Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD36']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD36']($container) : self::getFixtureD36Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD38' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD38
+     */
+    protected static function getFixtureD38Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD38'] ??= fn () => self::getFixtureD38Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD38Ghost7284bbf', static fn () => \FixtureD38Ghost7284bbf::createLazyGhost(static fn ($proxy) => self::getFixtureD38Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD37']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD37']($container) : self::getFixtureD37Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD39' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD39
+     */
+    protected static function getFixtureD39Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD39'] ??= fn () => self::getFixtureD39Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD39Ghost868d53f', static fn () => \FixtureD39Ghost868d53f::createLazyGhost(static fn ($proxy) => self::getFixtureD39Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD38']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD38']($container) : self::getFixtureD38Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD4' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD4
+     */
+    protected static function getFixtureD4Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD4'] ??= fn () => self::getFixtureD4Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD4Ghost5e1a7b2', static fn () => \FixtureD4Ghost5e1a7b2::createLazyGhost(static fn ($proxy) => self::getFixtureD4Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD3']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD3']($container) : self::getFixtureD3Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD40' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD40
+     */
+    protected static function getFixtureD40Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD40'] ??= fn () => self::getFixtureD40Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD40Ghost9fb7328', static fn () => \FixtureD40Ghost9fb7328::createLazyGhost(static fn ($proxy) => self::getFixtureD40Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD39']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD39']($container) : self::getFixtureD39Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD41' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD41
+     */
+    protected static function getFixtureD41Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD41'] ??= fn () => self::getFixtureD41Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD41Ghost9a3f3eb', static fn () => \FixtureD41Ghost9a3f3eb::createLazyGhost(static fn ($proxy) => self::getFixtureD41Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD40']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD40']($container) : self::getFixtureD40Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD42' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD42
+     */
+    protected static function getFixtureD42Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD42'] ??= fn () => self::getFixtureD42Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD42Ghost6d621ba', static fn () => \FixtureD42Ghost6d621ba::createLazyGhost(static fn ($proxy) => self::getFixtureD42Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD41']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD41']($container) : self::getFixtureD41Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD43' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD43
+     */
+    protected static function getFixtureD43Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD43'] ??= fn () => self::getFixtureD43Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD43Ghost5a3dd5c', static fn () => \FixtureD43Ghost5a3dd5c::createLazyGhost(static fn ($proxy) => self::getFixtureD43Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD42']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD42']($container) : self::getFixtureD42Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD44' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD44
+     */
+    protected static function getFixtureD44Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD44'] ??= fn () => self::getFixtureD44Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD44GhostD81ef81', static fn () => \FixtureD44GhostD81ef81::createLazyGhost(static fn ($proxy) => self::getFixtureD44Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD43']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD43']($container) : self::getFixtureD43Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD45' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD45
+     */
+    protected static function getFixtureD45Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD45'] ??= fn () => self::getFixtureD45Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD45Ghost2447a6d', static fn () => \FixtureD45Ghost2447a6d::createLazyGhost(static fn ($proxy) => self::getFixtureD45Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD44']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD44']($container) : self::getFixtureD44Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD46' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD46
+     */
+    protected static function getFixtureD46Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD46'] ??= fn () => self::getFixtureD46Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD46Ghost3590ff7', static fn () => \FixtureD46Ghost3590ff7::createLazyGhost(static fn ($proxy) => self::getFixtureD46Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD45']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD45']($container) : self::getFixtureD45Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD47' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD47
+     */
+    protected static function getFixtureD47Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD47'] ??= fn () => self::getFixtureD47Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD47Ghost76060bf', static fn () => \FixtureD47Ghost76060bf::createLazyGhost(static fn ($proxy) => self::getFixtureD47Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD46']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD46']($container) : self::getFixtureD46Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD48' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD48
+     */
+    protected static function getFixtureD48Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD48'] ??= fn () => self::getFixtureD48Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD48Ghost3d78ebb', static fn () => \FixtureD48Ghost3d78ebb::createLazyGhost(static fn ($proxy) => self::getFixtureD48Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD47']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD47']($container) : self::getFixtureD47Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD49' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD49
+     */
+    protected static function getFixtureD49Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD49'] ??= fn () => self::getFixtureD49Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD49Ghost4758c80', static fn () => \FixtureD49Ghost4758c80::createLazyGhost(static fn ($proxy) => self::getFixtureD49Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD48']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD48']($container) : self::getFixtureD48Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD5' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD5
+     */
+    protected static function getFixtureD5Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD5'] ??= fn () => self::getFixtureD5Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD5Ghost1c66cd7', static fn () => \FixtureD5Ghost1c66cd7::createLazyGhost(static fn ($proxy) => self::getFixtureD5Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD4']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD4']($container) : self::getFixtureD4Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD50' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD50
+     */
+    protected static function getFixtureD50Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD50'] ??= fn () => self::getFixtureD50Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD50GhostE90bb0b', static fn () => \FixtureD50GhostE90bb0b::createLazyGhost(static fn ($proxy) => self::getFixtureD50Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD49']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD49']($container) : self::getFixtureD49Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD6' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD6
+     */
+    protected static function getFixtureD6Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD6'] ??= fn () => self::getFixtureD6Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD6Ghost58797dc', static fn () => \FixtureD6Ghost58797dc::createLazyGhost(static fn ($proxy) => self::getFixtureD6Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD5']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD5']($container) : self::getFixtureD5Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD7' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD7
+     */
+    protected static function getFixtureD7Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD7'] ??= fn () => self::getFixtureD7Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD7GhostFb0e027', static fn () => \FixtureD7GhostFb0e027::createLazyGhost(static fn ($proxy) => self::getFixtureD7Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD6']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD6']($container) : self::getFixtureD6Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD8' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD8
+     */
+    protected static function getFixtureD8Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD8'] ??= fn () => self::getFixtureD8Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD8Ghost4042f59', static fn () => \FixtureD8Ghost4042f59::createLazyGhost(static fn ($proxy) => self::getFixtureD8Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD7']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD7']($container) : self::getFixtureD7Service($container))) && false ?: $lazyLoad);
+    }
+
+    /*
+     * Gets the public 'DiContainerBenchmarks\Fixture\D\FixtureD9' autowired service.
+     *
+     * @return \DiContainerBenchmarks\Fixture\D\FixtureD9
+     */
+    protected static function getFixtureD9Service($container, $lazyLoad = true)
+    {
+        $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD9'] ??= fn () => self::getFixtureD9Service($container);
+
+        if (true === $lazyLoad) {
+            return $container->createProxy('FixtureD9Ghost36c12b2', static fn () => \FixtureD9Ghost36c12b2::createLazyGhost(static fn ($proxy) => self::getFixtureD9Service($container, $proxy)));
+        }
+
+        return ($lazyLoad->__construct((isset($container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD8']) ? $container->factories['DiContainerBenchmarks\\Fixture\\D\\FixtureD8']($container) : self::getFixtureD8Service($container))) && false ?: $lazyLoad);
+    }
+
     public function getParameter(string $name): array|bool|string|int|float|\UnitEnum|null
     {
         if (!(isset($this->parameters[$name]) || isset($this->loadedDynamicParameters[$name]) || \array_key_exists($name, $this->parameters))) {
@@ -16240,4 +17095,654 @@ class CompiledPrototypeContainer extends Container
             'container.dumper.inline_factories' => false,
         ];
     }
+}
+
+class FixtureD1Ghost2e6ee76 extends \DiContainerBenchmarks\Fixture\D\FixtureD1 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD1Ghost2e6ee76', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD1Ghost2e6ee76', 'FixtureD1Ghost2e6ee76', false);
+}
+
+class FixtureD10GhostF07c897 extends \DiContainerBenchmarks\Fixture\D\FixtureD10 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD10GhostF07c897', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD10GhostF07c897', 'FixtureD10GhostF07c897', false);
+}
+
+class FixtureD11GhostD239abb extends \DiContainerBenchmarks\Fixture\D\FixtureD11 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD11GhostD239abb', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD11GhostD239abb', 'FixtureD11GhostD239abb', false);
+}
+
+class FixtureD12GhostF17e246 extends \DiContainerBenchmarks\Fixture\D\FixtureD12 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD12GhostF17e246', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD12GhostF17e246', 'FixtureD12GhostF17e246', false);
+}
+
+class FixtureD13GhostB3b3f8d extends \DiContainerBenchmarks\Fixture\D\FixtureD13 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD13GhostB3b3f8d', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD13GhostB3b3f8d', 'FixtureD13GhostB3b3f8d', false);
+}
+
+class FixtureD14Ghost5388973 extends \DiContainerBenchmarks\Fixture\D\FixtureD14 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD14Ghost5388973', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD14Ghost5388973', 'FixtureD14Ghost5388973', false);
+}
+
+class FixtureD15GhostF7237c7 extends \DiContainerBenchmarks\Fixture\D\FixtureD15 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD15GhostF7237c7', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD15GhostF7237c7', 'FixtureD15GhostF7237c7', false);
+}
+
+class FixtureD16Ghost40a485d extends \DiContainerBenchmarks\Fixture\D\FixtureD16 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD16Ghost40a485d', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD16Ghost40a485d', 'FixtureD16Ghost40a485d', false);
+}
+
+class FixtureD17Ghost45f6f24 extends \DiContainerBenchmarks\Fixture\D\FixtureD17 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD17Ghost45f6f24', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD17Ghost45f6f24', 'FixtureD17Ghost45f6f24', false);
+}
+
+class FixtureD18Ghost50f86a0 extends \DiContainerBenchmarks\Fixture\D\FixtureD18 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD18Ghost50f86a0', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD18Ghost50f86a0', 'FixtureD18Ghost50f86a0', false);
+}
+
+class FixtureD19GhostBe5aa48 extends \DiContainerBenchmarks\Fixture\D\FixtureD19 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD19GhostBe5aa48', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD19GhostBe5aa48', 'FixtureD19GhostBe5aa48', false);
+}
+
+class FixtureD2GhostAb3b5f6 extends \DiContainerBenchmarks\Fixture\D\FixtureD2 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD2GhostAb3b5f6', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD2GhostAb3b5f6', 'FixtureD2GhostAb3b5f6', false);
+}
+
+class FixtureD20Ghost5245395 extends \DiContainerBenchmarks\Fixture\D\FixtureD20 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD20Ghost5245395', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD20Ghost5245395', 'FixtureD20Ghost5245395', false);
+}
+
+class FixtureD21GhostC32df21 extends \DiContainerBenchmarks\Fixture\D\FixtureD21 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD21GhostC32df21', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD21GhostC32df21', 'FixtureD21GhostC32df21', false);
+}
+
+class FixtureD22Ghost1486d7c extends \DiContainerBenchmarks\Fixture\D\FixtureD22 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD22Ghost1486d7c', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD22Ghost1486d7c', 'FixtureD22Ghost1486d7c', false);
+}
+
+class FixtureD23Ghost529c566 extends \DiContainerBenchmarks\Fixture\D\FixtureD23 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD23Ghost529c566', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD23Ghost529c566', 'FixtureD23Ghost529c566', false);
+}
+
+class FixtureD24GhostB18fcf9 extends \DiContainerBenchmarks\Fixture\D\FixtureD24 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD24GhostB18fcf9', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD24GhostB18fcf9', 'FixtureD24GhostB18fcf9', false);
+}
+
+class FixtureD25Ghost2d48350 extends \DiContainerBenchmarks\Fixture\D\FixtureD25 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD25Ghost2d48350', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD25Ghost2d48350', 'FixtureD25Ghost2d48350', false);
+}
+
+class FixtureD26GhostFa53b3c extends \DiContainerBenchmarks\Fixture\D\FixtureD26 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD26GhostFa53b3c', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD26GhostFa53b3c', 'FixtureD26GhostFa53b3c', false);
+}
+
+class FixtureD27GhostB613521 extends \DiContainerBenchmarks\Fixture\D\FixtureD27 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD27GhostB613521', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD27GhostB613521', 'FixtureD27GhostB613521', false);
+}
+
+class FixtureD28Ghost123152c extends \DiContainerBenchmarks\Fixture\D\FixtureD28 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD28Ghost123152c', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD28Ghost123152c', 'FixtureD28Ghost123152c', false);
+}
+
+class FixtureD29Ghost37f3d3a extends \DiContainerBenchmarks\Fixture\D\FixtureD29 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD29Ghost37f3d3a', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD29Ghost37f3d3a', 'FixtureD29Ghost37f3d3a', false);
+}
+
+class FixtureD3GhostEc315c2 extends \DiContainerBenchmarks\Fixture\D\FixtureD3 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD3GhostEc315c2', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD3GhostEc315c2', 'FixtureD3GhostEc315c2', false);
+}
+
+class FixtureD30Ghost23dda49 extends \DiContainerBenchmarks\Fixture\D\FixtureD30 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD30Ghost23dda49', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD30Ghost23dda49', 'FixtureD30Ghost23dda49', false);
+}
+
+class FixtureD31GhostEb0e97d extends \DiContainerBenchmarks\Fixture\D\FixtureD31 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD31GhostEb0e97d', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD31GhostEb0e97d', 'FixtureD31GhostEb0e97d', false);
+}
+
+class FixtureD32Ghost1e1c417 extends \DiContainerBenchmarks\Fixture\D\FixtureD32 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD32Ghost1e1c417', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD32Ghost1e1c417', 'FixtureD32Ghost1e1c417', false);
+}
+
+class FixtureD33GhostD603158 extends \DiContainerBenchmarks\Fixture\D\FixtureD33 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD33GhostD603158', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD33GhostD603158', 'FixtureD33GhostD603158', false);
+}
+
+class FixtureD34Ghost56f404d extends \DiContainerBenchmarks\Fixture\D\FixtureD34 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD34Ghost56f404d', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD34Ghost56f404d', 'FixtureD34Ghost56f404d', false);
+}
+
+class FixtureD35Ghost312fff5 extends \DiContainerBenchmarks\Fixture\D\FixtureD35 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD35Ghost312fff5', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD35Ghost312fff5', 'FixtureD35Ghost312fff5', false);
+}
+
+class FixtureD36Ghost60e160c extends \DiContainerBenchmarks\Fixture\D\FixtureD36 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD36Ghost60e160c', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD36Ghost60e160c', 'FixtureD36Ghost60e160c', false);
+}
+
+class FixtureD37Ghost60a124e extends \DiContainerBenchmarks\Fixture\D\FixtureD37 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD37Ghost60a124e', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD37Ghost60a124e', 'FixtureD37Ghost60a124e', false);
+}
+
+class FixtureD38Ghost7284bbf extends \DiContainerBenchmarks\Fixture\D\FixtureD38 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD38Ghost7284bbf', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD38Ghost7284bbf', 'FixtureD38Ghost7284bbf', false);
+}
+
+class FixtureD39Ghost868d53f extends \DiContainerBenchmarks\Fixture\D\FixtureD39 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD39Ghost868d53f', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD39Ghost868d53f', 'FixtureD39Ghost868d53f', false);
+}
+
+class FixtureD4Ghost5e1a7b2 extends \DiContainerBenchmarks\Fixture\D\FixtureD4 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD4Ghost5e1a7b2', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD4Ghost5e1a7b2', 'FixtureD4Ghost5e1a7b2', false);
+}
+
+class FixtureD40Ghost9fb7328 extends \DiContainerBenchmarks\Fixture\D\FixtureD40 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD40Ghost9fb7328', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD40Ghost9fb7328', 'FixtureD40Ghost9fb7328', false);
+}
+
+class FixtureD41Ghost9a3f3eb extends \DiContainerBenchmarks\Fixture\D\FixtureD41 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD41Ghost9a3f3eb', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD41Ghost9a3f3eb', 'FixtureD41Ghost9a3f3eb', false);
+}
+
+class FixtureD42Ghost6d621ba extends \DiContainerBenchmarks\Fixture\D\FixtureD42 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD42Ghost6d621ba', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD42Ghost6d621ba', 'FixtureD42Ghost6d621ba', false);
+}
+
+class FixtureD43Ghost5a3dd5c extends \DiContainerBenchmarks\Fixture\D\FixtureD43 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD43Ghost5a3dd5c', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD43Ghost5a3dd5c', 'FixtureD43Ghost5a3dd5c', false);
+}
+
+class FixtureD44GhostD81ef81 extends \DiContainerBenchmarks\Fixture\D\FixtureD44 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD44GhostD81ef81', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD44GhostD81ef81', 'FixtureD44GhostD81ef81', false);
+}
+
+class FixtureD45Ghost2447a6d extends \DiContainerBenchmarks\Fixture\D\FixtureD45 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD45Ghost2447a6d', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD45Ghost2447a6d', 'FixtureD45Ghost2447a6d', false);
+}
+
+class FixtureD46Ghost3590ff7 extends \DiContainerBenchmarks\Fixture\D\FixtureD46 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD46Ghost3590ff7', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD46Ghost3590ff7', 'FixtureD46Ghost3590ff7', false);
+}
+
+class FixtureD47Ghost76060bf extends \DiContainerBenchmarks\Fixture\D\FixtureD47 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD47Ghost76060bf', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD47Ghost76060bf', 'FixtureD47Ghost76060bf', false);
+}
+
+class FixtureD48Ghost3d78ebb extends \DiContainerBenchmarks\Fixture\D\FixtureD48 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD48Ghost3d78ebb', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD48Ghost3d78ebb', 'FixtureD48Ghost3d78ebb', false);
+}
+
+class FixtureD49Ghost4758c80 extends \DiContainerBenchmarks\Fixture\D\FixtureD49 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD49Ghost4758c80', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD49Ghost4758c80', 'FixtureD49Ghost4758c80', false);
+}
+
+class FixtureD5Ghost1c66cd7 extends \DiContainerBenchmarks\Fixture\D\FixtureD5 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD5Ghost1c66cd7', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD5Ghost1c66cd7', 'FixtureD5Ghost1c66cd7', false);
+}
+
+class FixtureD50GhostE90bb0b extends \DiContainerBenchmarks\Fixture\D\FixtureD50 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD50GhostE90bb0b', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD50GhostE90bb0b', 'FixtureD50GhostE90bb0b', false);
+}
+
+class FixtureD6Ghost58797dc extends \DiContainerBenchmarks\Fixture\D\FixtureD6 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD6Ghost58797dc', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD6Ghost58797dc', 'FixtureD6Ghost58797dc', false);
+}
+
+class FixtureD7GhostFb0e027 extends \DiContainerBenchmarks\Fixture\D\FixtureD7 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD7GhostFb0e027', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD7GhostFb0e027', 'FixtureD7GhostFb0e027', false);
+}
+
+class FixtureD8Ghost4042f59 extends \DiContainerBenchmarks\Fixture\D\FixtureD8 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD8Ghost4042f59', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD8Ghost4042f59', 'FixtureD8Ghost4042f59', false);
+}
+
+class FixtureD9Ghost36c12b2 extends \DiContainerBenchmarks\Fixture\D\FixtureD9 implements \Symfony\Component\VarExporter\LazyObjectInterface
+{
+    use \Symfony\Component\VarExporter\LazyGhostTrait;
+    private const LAZY_OBJECT_PROPERTY_SCOPES = [];
+}
+class_exists(\Symfony\Component\VarExporter\Internal\Hydrator::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectRegistry::class);
+class_exists(\Symfony\Component\VarExporter\Internal\LazyObjectState::class);
+
+if (!\class_exists('FixtureD9Ghost36c12b2', false)) {
+    \class_alias(__NAMESPACE__.'\\FixtureD9Ghost36c12b2', 'FixtureD9Ghost36c12b2', false);
 }

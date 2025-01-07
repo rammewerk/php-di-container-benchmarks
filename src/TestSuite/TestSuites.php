@@ -21,6 +21,8 @@ final class TestSuites
                 return new TestSuite5();
             case 6:
                 return new TestSuite6();
+            case 7:
+                return new TestSuite7();
             default:
                 return null;
         }

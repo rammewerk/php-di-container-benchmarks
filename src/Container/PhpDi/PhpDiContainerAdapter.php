@@ -37,6 +37,10 @@ final class PhpDiContainerAdapter implements ContainerAdapterInterface
             $definitions["DiContainerBenchmarks\\Fixture\\B\\FixtureB$i"] = autowire();
         }
 
+        for ($i = 1; $i <= 50; $i++) {
+            $definitions["DiContainerBenchmarks\\Fixture\\D\\FixtureD$i"] = autowire();
+        }
+
         $builder->addDefinitions($definitions);
         $builder->enableCompilation(PROJECT_ROOT . "/src/Container/PhpDi/Resource", "CompiledSingletonContainer");
         $builder->build();

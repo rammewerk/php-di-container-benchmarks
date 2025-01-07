@@ -25,5 +25,10 @@ class AuraSingletonContainerConfig extends ContainerConfig
             $className = "DiContainerBenchmarks\\Fixture\\C\\FixtureC$i";
             $di->set($className, $di->lazyNew($className));
         }
+
+        for ($i = 1; $i <= 50; $i++) {
+            $className = "DiContainerBenchmarks\\Fixture\\D\\FixtureD$i";
+            $di->set($className, $di->lazyNew($className));
+        }
     }
 }

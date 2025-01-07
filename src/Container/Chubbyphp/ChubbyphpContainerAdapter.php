@@ -2107,6 +2107,7 @@ use DiContainerBenchmarks\Fixture\C\FixtureC996;
 use DiContainerBenchmarks\Fixture\C\FixtureC997;
 use DiContainerBenchmarks\Fixture\C\FixtureC998;
 use DiContainerBenchmarks\Fixture\C\FixtureC999;
+use DiContainerBenchmarks\Fixture\D\FixtureD50;
 
 final class ChubbyphpContainerAdapter implements ContainerAdapterInterface
 {
@@ -18984,6 +18985,10 @@ final class ChubbyphpContainerAdapter implements ContainerAdapterInterface
 
         $container->prototypeFactory(FixtureC1000::class, static function (ContainerInterface $container) {
             return new FixtureC1000($container->get(FixtureC999::class));
+        });
+
+        $container->prototypeFactory(FixtureD50::class, static function (ContainerInterface $container) {
+            return new FixtureD50($container->get(FixtureD50::class));
         });
 
         return $container;

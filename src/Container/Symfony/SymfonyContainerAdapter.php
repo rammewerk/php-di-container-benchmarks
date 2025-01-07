@@ -60,6 +60,15 @@ final class SymfonyContainerAdapter implements ContainerAdapterInterface
             $containerBuilder->setDefinition("DiContainerBenchmarks\\Fixture\\B\\FixtureB$i", $definition);
         }
 
+        for ($i = 1; $i <= 50; $i++) {
+            $definition = new Definition("DiContainerBenchmarks\\Fixture\\D\\FixtureD$i", []);
+            $definition->setShared(false);
+            $definition->setAutowired(true);
+            $definition->setPublic(true);
+            $definition->setLazy( true);
+            $containerBuilder->setDefinition("DiContainerBenchmarks\\Fixture\\D\\FixtureD$i", $definition);
+        }
+
         $definition = new Definition(FixtureC1000::class, []);
         $definition->setShared(false);
         $definition->setAutowired(true);

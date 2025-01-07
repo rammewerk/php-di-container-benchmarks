@@ -1008,6 +1008,7 @@ use DiContainerBenchmarks\Fixture\B\FixtureB997;
 use DiContainerBenchmarks\Fixture\B\FixtureB998;
 use DiContainerBenchmarks\Fixture\B\FixtureB999;
 use DiContainerBenchmarks\Fixture\C\FixtureC1000;
+use DiContainerBenchmarks\Fixture\D\FixtureD50;
 use Illuminate\Container\Container;
 use Psr\Container\ContainerInterface;
 

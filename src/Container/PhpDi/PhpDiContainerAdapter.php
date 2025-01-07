@@ -12,6 +12,7 @@ use DiContainerBenchmarks\Fixture\A\FixtureA100;
 use DiContainerBenchmarks\Fixture\C\FixtureC1000;
 use DiContainerBenchmarks\Test\UnsupportedTestException;
 
+use Psr\Container\ContainerInterface;
 use function DI\autowire;
 use function file_exists;
 use function unlink;
@@ -41,15 +42,12 @@ final class PhpDiContainerAdapter implements ContainerAdapterInterface
         $builder->build();
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         require_once __DIR__ . "/Resource/CompiledSingletonContainer.php";
-
         return new CompiledSingletonContainer();
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         throw new UnsupportedTestException("PHP-DI doesn't support the prototype scope");
     }
 }

@@ -7,7 +7,6 @@ namespace DiContainerBenchmarks\Container;
 use DiContainerBenchmarks\Container\Aura\AuraContainerDefinition;
 use DiContainerBenchmarks\Container\Chubbyphp\ChubbyphpContainerDefinition;
 use DiContainerBenchmarks\Container\Dice\DiceContainerDefinition;
-use DiContainerBenchmarks\Container\Joomla\JoomlaContainerDefinition;
 use DiContainerBenchmarks\Container\LaminasServiceManager\LaminasServiceManagerContainerDefinition;
 use DiContainerBenchmarks\Container\Laravel\LaravelContainerDefinition;
 use DiContainerBenchmarks\Container\PhpDi\PhpDiContainerDefinition;
@@ -16,13 +15,12 @@ use DiContainerBenchmarks\Container\Symfony\SymfonyContainerDefinition;
 use DiContainerBenchmarks\Container\Yii2\Yii2ContainerDefinition;
 use DiContainerBenchmarks\Container\Zen\ZenContainerDefinition;
 
-final class ContainerDefinitions
-{
+final class ContainerDefinitions {
+
     /**
      * @return ContainerDefinitionInterface[]
      */
-    public static function getAllContainerDefinitions(): array
-    {
+    public static function getAllContainerDefinitions(): array {
         return [
             new AuraContainerDefinition(),
             new ChubbyphpContainerDefinition(),
@@ -37,14 +35,14 @@ final class ContainerDefinitions
         ];
     }
 
-    public static function getContainerDefinition(string $name): ?ContainerDefinitionInterface
-    {
-        foreach (self::getAllContainerDefinitions() as $definition) {
-            if ($definition->getName() === $name) {
-                return $definition;
-            }
-        }
 
-        return null;
+
+    public static function getContainerDefinition(string $name): ?ContainerDefinitionInterface {
+        return array_find(
+            self::getAllContainerDefinitions(),
+            static fn($definition) => $definition->getName() === $name
+        );
     }
+
+
 }

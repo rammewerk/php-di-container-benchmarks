@@ -218,7 +218,7 @@ HERE;
 HERE;
             foreach ($testSuite->getTestCases() as $testCase) {
                 $testCaseTitle = $testCase->getTitle();
-                $testCaseNumber = $testCase->getNumber();
+                $testCaseNumber = $testCase->number;
                 $testCaseFixtureUrl = "https://github.com/kocsismate/php-di-container-benchmarks/blob/master/app/generated/test_case_{$testSuiteNumber}_{$testCaseNumber}.php";
 
                 $html .= <<<HERE

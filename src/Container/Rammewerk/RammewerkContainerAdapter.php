@@ -8,6 +8,7 @@ use DiContainerBenchmarks\Container\ContainerAdapterInterface;
 use DiContainerBenchmarks\Fixture\A\FixtureA10;
 use DiContainerBenchmarks\Fixture\A\FixtureA100;
 use DiContainerBenchmarks\Fixture\C\FixtureC1000;
+use Psr\Container\ContainerInterface;
 
 final class RammewerkContainerAdapter implements ContainerAdapterInterface {
 
@@ -15,7 +16,7 @@ final class RammewerkContainerAdapter implements ContainerAdapterInterface {
 
 
 
-    public function bootstrapSingletonContainer(): DecoratedRammewerk {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         $container = new DecoratedRammewerk();
 
         $shared_classes = [
@@ -34,7 +35,7 @@ final class RammewerkContainerAdapter implements ContainerAdapterInterface {
 
 
 
-    public function bootstrapPrototypeContainer() {
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         return new DecoratedRammewerk();
     }
 

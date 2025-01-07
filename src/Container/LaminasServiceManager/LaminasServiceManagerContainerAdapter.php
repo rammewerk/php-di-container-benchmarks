@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DiContainerBenchmarks\Container\LaminasServiceManager;
 
 use DiContainerBenchmarks\Container\ContainerAdapterInterface;
+use Psr\Container\ContainerInterface;
 use DiContainerBenchmarks\Fixture\A\FixtureA1;
 use DiContainerBenchmarks\Fixture\A\FixtureA10;
 use DiContainerBenchmarks\Fixture\A\FixtureA100;
@@ -2115,7 +2116,7 @@ final class LaminasServiceManagerContainerAdapter implements ContainerAdapterInt
     {
     }
 
-    public function bootstrapSingletonContainer(): ServiceManager {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\A\\FixtureA$i";\n";
@@ -8457,8 +8458,7 @@ final class LaminasServiceManagerContainerAdapter implements ContainerAdapterInt
         );
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): ServiceManager {
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\A\\FixtureA$i";\n";

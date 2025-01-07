@@ -31,7 +31,7 @@ final class BenchmarkResult
     ): void {
         $containerName = $container->getDisplayedName();
         $testSuiteNumber = $testSuite->getNumber();
-        $testCaseNumber = $testCase->getNumber();
+        $testCaseNumber = $testCase->number;
 
         $this->testResults[$testSuiteNumber][$testCaseNumber][$containerName][] = $result;
     }
@@ -39,7 +39,7 @@ final class BenchmarkResult
     public function getResult(TestSuiteInterface $testSuite, TestCase $testCase, string $containerName): TestResult
     {
         $testSuiteNumber = $testSuite->getNumber();
-        $testCaseNumber = $testCase->getNumber();
+        $testCaseNumber = $testCase->number;
 
         if (isset($this->testResults[$testSuiteNumber][$testCaseNumber][$containerName]) === false) {
             throw new InvalidArgumentException("No result with the given parameters exists");
@@ -54,7 +54,7 @@ final class BenchmarkResult
     public function getResults(TestSuiteInterface $testSuite, TestCase $testCase): array
     {
         $testSuiteNumber = $testSuite->getNumber();
-        $testCaseNumber = $testCase->getNumber();
+        $testCaseNumber = $testCase->number;
 
         if (isset($this->testResults[$testSuiteNumber][$testCaseNumber]) === false) {
             return [];

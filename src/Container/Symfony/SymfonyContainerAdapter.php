@@ -10,6 +10,7 @@ use DiContainerBenchmarks\Container\Symfony\Resource\CompiledSingletonContainer;
 use DiContainerBenchmarks\Fixture\A\FixtureA10;
 use DiContainerBenchmarks\Fixture\A\FixtureA100;
 use DiContainerBenchmarks\Fixture\C\FixtureC1000;
+use Psr\Container\ContainerInterface;
 use RuntimeException;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -124,14 +125,12 @@ final class SymfonyContainerAdapter implements ContainerAdapterInterface
         );
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         //return require __DIR__ . "/Resource/CompiledSingletonContainer.php";
         return new CompiledSingletonContainer();
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         //return require __DIR__ . "/Resource/CompiledPrototypeContainer.php";
         return new CompiledPrototypeContainer();
     }

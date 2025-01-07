@@ -49,7 +49,7 @@ final class Benchmark
             $testSuiteNumber = $testSuite->getNumber();
 
             foreach ($testSuite->getTestCases() as $testCase) {
-                $testCaseNumber = $testCase->getNumber();
+                $testCaseNumber = $testCase->number;
 
                 echo "Generating test case $testSuiteNumber/$testCaseNumber: ";
                 $code = TestCaseGenerator::generate($testCase);
@@ -95,7 +95,7 @@ final class Benchmark
         BenchmarkResult $benchmarkResult
     ): void {
         $testSuiteNumber = $testSuite->getNumber();
-        $testCaseNumber = $testCase->getNumber();
+        $testCaseNumber = $testCase->number;
         $containerName = $containerDefinition->getDisplayedName();
 
         echo "Running test $testSuiteNumber.$testCaseNumber: $containerName";

@@ -2114,8 +2114,7 @@ final class JoomlaContainerAdapter implements ContainerAdapterInterface
     {
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): Container {
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\A\\FixtureA$i";\n";
@@ -10552,8 +10551,7 @@ final class JoomlaContainerAdapter implements ContainerAdapterInterface
         return $container;
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): Container {
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\A\\FixtureA$i";\n";

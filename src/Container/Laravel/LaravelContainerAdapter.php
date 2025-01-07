@@ -1009,6 +1009,7 @@ use DiContainerBenchmarks\Fixture\B\FixtureB998;
 use DiContainerBenchmarks\Fixture\B\FixtureB999;
 use DiContainerBenchmarks\Fixture\C\FixtureC1000;
 use Illuminate\Container\Container;
+use Psr\Container\ContainerInterface;
 
 final class LaravelContainerAdapter implements ContainerAdapterInterface
 {
@@ -1016,8 +1017,7 @@ final class LaravelContainerAdapter implements ContainerAdapterInterface
     {
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         /* Generated with:
             for ($i = 1; $i <= 1000; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\B\\FixtureB$i";\n";
@@ -2036,8 +2036,7 @@ final class LaravelContainerAdapter implements ContainerAdapterInterface
         return $container;
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         /* Generated with:
             for ($i = 1; $i <= 1000; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\B\\FixtureB$i";\n";

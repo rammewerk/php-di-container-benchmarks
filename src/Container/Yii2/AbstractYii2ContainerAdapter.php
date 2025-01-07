@@ -2105,6 +2105,7 @@ use DiContainerBenchmarks\Fixture\C\FixtureC996;
 use DiContainerBenchmarks\Fixture\C\FixtureC997;
 use DiContainerBenchmarks\Fixture\C\FixtureC998;
 use DiContainerBenchmarks\Fixture\C\FixtureC999;
+use Psr\Container\ContainerInterface;
 use yii\di\Container;
 
 final class AbstractYii2ContainerAdapter implements ContainerAdapterInterface
@@ -2113,8 +2114,7 @@ final class AbstractYii2ContainerAdapter implements ContainerAdapterInterface
     {
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): ContainerInterface {
         $container = new Container();
 
         /* Generated with:
@@ -4246,8 +4246,7 @@ final class AbstractYii2ContainerAdapter implements ContainerAdapterInterface
         return $container;
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         $container = new Container();
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {

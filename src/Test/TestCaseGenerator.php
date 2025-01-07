@@ -4,14 +4,13 @@ declare(strict_types=1);
 
 namespace DiContainerBenchmarks\Test;
 
-final class TestCaseGenerator
-{
-    public static function generate(TestCase $testCase): string
-    {
-        $type = $testCase->getMode();
-        $isSingleton = $testCase->isSingleton();
-        $iterations = $testCase->getIterations();
-        $classes = $testCase->getClassesToRetrieve();
+final class TestCaseGenerator {
+
+    public static function generate(TestCase $testCase): string {
+        $type = $testCase->mode;
+        $isSingleton = $testCase->singleton;
+        $iterations = $testCase->iterations;
+        $classes = $testCase->classesToRetrieve;
 
         $code = "<?php\n\n";
         $code .= "declare(strict_types=1);\n\n";
@@ -21,17 +20,17 @@ final class TestCaseGenerator
 
         $code .= "/** @var ContainerAdapterInterface \$adapter */\n\n";
 
-        if ($type !== TestCase::COLD) {
+        if( $type !== TestCase::COLD ) {
             $code .= "// Warm-up\n";
-            if ($isSingleton) {
+            if( $isSingleton ) {
                 $code .= "\$container = \$adapter->bootstrapSingletonContainer();\n";
             } else {
                 $code .= "\$container = \$adapter->bootstrapPrototypeContainer();\n";
             }
         }
 
-        if ($type === TestCase::HOT) {
-            foreach ($classes as $class) {
+        if( $type === TestCase::HOT ) {
+            foreach( $classes as $class ) {
                 $code .= "\$container->get($class::class);\n";
             }
         }
@@ -40,16 +39,16 @@ final class TestCaseGenerator
         $code .= "// Start benchmark\n";
         $code .= "\$t1 = hrtime(true);\n";
 
-        if ($type === TestCase::COLD) {
-            if ($isSingleton) {
+        if( $type === TestCase::COLD ) {
+            if( $isSingleton ) {
                 $code .= "\$container = \$adapter->bootstrapSingletonContainer();\n";
             } else {
                 $code .= "\$container = \$adapter->bootstrapPrototypeContainer();\n";
             }
         }
 
-        for ($i = 0; $i < $iterations; $i++) {
-            foreach ($classes as $class) {
+        for( $i = 0; $i < $iterations; $i++ ) {
+            foreach( $classes as $class ) {
                 $code .= "\$container->get($class::class);\n";
             }
         }
@@ -61,4 +60,6 @@ final class TestCaseGenerator
 
         return $code;
     }
+
+
 }

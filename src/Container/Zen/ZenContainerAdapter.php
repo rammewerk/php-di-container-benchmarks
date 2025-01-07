@@ -7,12 +7,12 @@ namespace DiContainerBenchmarks\Container\Zen;
 use DiContainerBenchmarks\Container\ContainerAdapterInterface;
 use DiContainerBenchmarks\Container\Zen\Resource\CompiledPrototypeContainer;
 use DiContainerBenchmarks\Container\Zen\Resource\CompiledSingletonContainer;
+use Psr\Container\ContainerInterface;
 use WoohooLabs\Zen\Container\Builder\FileSystemContainerBuilder;
 
-final class ZenContainerAdapter implements ContainerAdapterInterface
-{
-    public function build(): void
-    {
+final class ZenContainerAdapter implements ContainerAdapterInterface {
+
+    public function build(): void {
         // Build container with prototype services
         $builder = new FileSystemContainerBuilder(
             new ZenPrototypeCompilerConfig(),
@@ -30,13 +30,17 @@ final class ZenContainerAdapter implements ContainerAdapterInterface
         $builder->build();
     }
 
-    public function bootstrapSingletonContainer()
-    {
+
+
+    public function bootstrapSingletonContainer(): ContainerInterface {
         return new CompiledSingletonContainer();
     }
 
-    public function bootstrapPrototypeContainer()
-    {
+
+
+    public function bootstrapPrototypeContainer(): ContainerInterface {
         return new CompiledPrototypeContainer();
     }
+
+
 }

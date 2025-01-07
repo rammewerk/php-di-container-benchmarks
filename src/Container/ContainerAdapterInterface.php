@@ -6,17 +6,23 @@ namespace DiContainerBenchmarks\Container;
 
 use Psr\Container\ContainerInterface;
 
-interface ContainerAdapterInterface
-{
+interface ContainerAdapterInterface {
+
     public function build(): void;
 
-    /**
-     * @return ContainerInterface
-     */
-    public function bootstrapSingletonContainer();
+
 
     /**
      * @return ContainerInterface
      */
-    public function bootstrapPrototypeContainer();
+    public function bootstrapSingletonContainer(): ContainerInterface;
+
+
+
+    /**
+     * @return ContainerInterface
+     */
+    public function bootstrapPrototypeContainer(): ContainerInterface;
+
+
 }

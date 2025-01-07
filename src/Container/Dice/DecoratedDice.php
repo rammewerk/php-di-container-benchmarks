@@ -9,8 +9,7 @@ use Psr\Container\ContainerInterface;
 
 final class DecoratedDice extends Dice implements ContainerInterface
 {
-    public function has($id)
-    {
+    public function has($id): bool {
         return true;
     }
 

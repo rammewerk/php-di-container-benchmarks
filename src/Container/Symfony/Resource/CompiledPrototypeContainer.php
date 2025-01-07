@@ -5,8 +5,8 @@ namespace DiContainerBenchmarks\Container\Symfony\Resource;
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\LogicException;
+use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -2142,8 +2142,6 @@ class CompiledPrototypeContainer extends Container
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC997' => true,
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC998' => true,
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC999' => true,
-            'Psr\\Container\\ContainerInterface' => true,
-            'Symfony\\Component\\DependencyInjection\\ContainerInterface' => true,
         ];
     }
 
@@ -2152,13 +2150,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\A\FixtureA10
      */
-    protected function getFixtureA10Service()
+    protected static function getFixtureA10Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\A\FixtureA10(new \DiContainerBenchmarks\Fixture\A\FixtureA9(new \DiContainerBenchmarks\Fixture\A\FixtureA8(new \DiContainerBenchmarks\Fixture\A\FixtureA7(new \DiContainerBenchmarks\Fixture\A\FixtureA6(new \DiContainerBenchmarks\Fixture\A\FixtureA5(new \DiContainerBenchmarks\Fixture\A\FixtureA4(new \DiContainerBenchmarks\Fixture\A\FixtureA3(new \DiContainerBenchmarks\Fixture\A\FixtureA2(new \DiContainerBenchmarks\Fixture\A\FixtureA1())))))))));
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA10']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA10']($container);
     }
 
     /*
@@ -2166,13 +2164,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\A\FixtureA100
      */
-    protected function getFixtureA100Service()
+    protected static function getFixtureA100Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA100'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA100'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\A\FixtureA100(new \DiContainerBenchmarks\Fixture\A\FixtureA99(new \DiContainerBenchmarks\Fixture\A\FixtureA98(new \DiContainerBenchmarks\Fixture\A\FixtureA97(new \DiContainerBenchmarks\Fixture\A\FixtureA96(new \DiContainerBenchmarks\Fixture\A\FixtureA95(new \DiContainerBenchmarks\Fixture\A\FixtureA94(new \DiContainerBenchmarks\Fixture\A\FixtureA93(new \DiContainerBenchmarks\Fixture\A\FixtureA92(new \DiContainerBenchmarks\Fixture\A\FixtureA91(new \DiContainerBenchmarks\Fixture\A\FixtureA90(new \DiContainerBenchmarks\Fixture\A\FixtureA89(new \DiContainerBenchmarks\Fixture\A\FixtureA88(new \DiContainerBenchmarks\Fixture\A\FixtureA87(new \DiContainerBenchmarks\Fixture\A\FixtureA86(new \DiContainerBenchmarks\Fixture\A\FixtureA85(new \DiContainerBenchmarks\Fixture\A\FixtureA84(new \DiContainerBenchmarks\Fixture\A\FixtureA83(new \DiContainerBenchmarks\Fixture\A\FixtureA82(new \DiContainerBenchmarks\Fixture\A\FixtureA81(new \DiContainerBenchmarks\Fixture\A\FixtureA80(new \DiContainerBenchmarks\Fixture\A\FixtureA79(new \DiContainerBenchmarks\Fixture\A\FixtureA78(new \DiContainerBenchmarks\Fixture\A\FixtureA77(new \DiContainerBenchmarks\Fixture\A\FixtureA76(new \DiContainerBenchmarks\Fixture\A\FixtureA75(new \DiContainerBenchmarks\Fixture\A\FixtureA74(new \DiContainerBenchmarks\Fixture\A\FixtureA73(new \DiContainerBenchmarks\Fixture\A\FixtureA72(new \DiContainerBenchmarks\Fixture\A\FixtureA71(new \DiContainerBenchmarks\Fixture\A\FixtureA70(new \DiContainerBenchmarks\Fixture\A\FixtureA69(new \DiContainerBenchmarks\Fixture\A\FixtureA68(new \DiContainerBenchmarks\Fixture\A\FixtureA67(new \DiContainerBenchmarks\Fixture\A\FixtureA66(new \DiContainerBenchmarks\Fixture\A\FixtureA65(new \DiContainerBenchmarks\Fixture\A\FixtureA64(new \DiContainerBenchmarks\Fixture\A\FixtureA63(new \DiContainerBenchmarks\Fixture\A\FixtureA62(new \DiContainerBenchmarks\Fixture\A\FixtureA61(new \DiContainerBenchmarks\Fixture\A\FixtureA60(new \DiContainerBenchmarks\Fixture\A\FixtureA59(new \DiContainerBenchmarks\Fixture\A\FixtureA58(new \DiContainerBenchmarks\Fixture\A\FixtureA57(new \DiContainerBenchmarks\Fixture\A\FixtureA56(new \DiContainerBenchmarks\Fixture\A\FixtureA55(new \DiContainerBenchmarks\Fixture\A\FixtureA54(new \DiContainerBenchmarks\Fixture\A\FixtureA53(new \DiContainerBenchmarks\Fixture\A\FixtureA52(new \DiContainerBenchmarks\Fixture\A\FixtureA51(new \DiContainerBenchmarks\Fixture\A\FixtureA50(new \DiContainerBenchmarks\Fixture\A\FixtureA49(new \DiContainerBenchmarks\Fixture\A\FixtureA48(new \DiContainerBenchmarks\Fixture\A\FixtureA47(new \DiContainerBenchmarks\Fixture\A\FixtureA46(new \DiContainerBenchmarks\Fixture\A\FixtureA45(new \DiContainerBenchmarks\Fixture\A\FixtureA44(new \DiContainerBenchmarks\Fixture\A\FixtureA43(new \DiContainerBenchmarks\Fixture\A\FixtureA42(new \DiContainerBenchmarks\Fixture\A\FixtureA41(new \DiContainerBenchmarks\Fixture\A\FixtureA40(new \DiContainerBenchmarks\Fixture\A\FixtureA39(new \DiContainerBenchmarks\Fixture\A\FixtureA38(new \DiContainerBenchmarks\Fixture\A\FixtureA37(new \DiContainerBenchmarks\Fixture\A\FixtureA36(new \DiContainerBenchmarks\Fixture\A\FixtureA35(new \DiContainerBenchmarks\Fixture\A\FixtureA34(new \DiContainerBenchmarks\Fixture\A\FixtureA33(new \DiContainerBenchmarks\Fixture\A\FixtureA32(new \DiContainerBenchmarks\Fixture\A\FixtureA31(new \DiContainerBenchmarks\Fixture\A\FixtureA30(new \DiContainerBenchmarks\Fixture\A\FixtureA29(new \DiContainerBenchmarks\Fixture\A\FixtureA28(new \DiContainerBenchmarks\Fixture\A\FixtureA27(new \DiContainerBenchmarks\Fixture\A\FixtureA26(new \DiContainerBenchmarks\Fixture\A\FixtureA25(new \DiContainerBenchmarks\Fixture\A\FixtureA24(new \DiContainerBenchmarks\Fixture\A\FixtureA23(new \DiContainerBenchmarks\Fixture\A\FixtureA22(new \DiContainerBenchmarks\Fixture\A\FixtureA21(new \DiContainerBenchmarks\Fixture\A\FixtureA20(new \DiContainerBenchmarks\Fixture\A\FixtureA19(new \DiContainerBenchmarks\Fixture\A\FixtureA18(new \DiContainerBenchmarks\Fixture\A\FixtureA17(new \DiContainerBenchmarks\Fixture\A\FixtureA16(new \DiContainerBenchmarks\Fixture\A\FixtureA15(new \DiContainerBenchmarks\Fixture\A\FixtureA14(new \DiContainerBenchmarks\Fixture\A\FixtureA13(new \DiContainerBenchmarks\Fixture\A\FixtureA12(new \DiContainerBenchmarks\Fixture\A\FixtureA11(new \DiContainerBenchmarks\Fixture\A\FixtureA10(new \DiContainerBenchmarks\Fixture\A\FixtureA9(new \DiContainerBenchmarks\Fixture\A\FixtureA8(new \DiContainerBenchmarks\Fixture\A\FixtureA7(new \DiContainerBenchmarks\Fixture\A\FixtureA6(new \DiContainerBenchmarks\Fixture\A\FixtureA5(new \DiContainerBenchmarks\Fixture\A\FixtureA4(new \DiContainerBenchmarks\Fixture\A\FixtureA3(new \DiContainerBenchmarks\Fixture\A\FixtureA2(new \DiContainerBenchmarks\Fixture\A\FixtureA1())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA100']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\A\\FixtureA100']($container);
     }
 
     /*
@@ -2180,13 +2178,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB1
      */
-    protected function getFixtureB1Service()
+    protected static function getFixtureB1Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB1();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1']($container);
     }
 
     /*
@@ -2194,13 +2192,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB10
      */
-    protected function getFixtureB10Service()
+    protected static function getFixtureB10Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB10'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB10'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB10();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB10']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB10']($container);
     }
 
     /*
@@ -2208,13 +2206,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB100
      */
-    protected function getFixtureB100Service()
+    protected static function getFixtureB100Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB100'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB100'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB100();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB100']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB100']($container);
     }
 
     /*
@@ -2222,13 +2220,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB1000
      */
-    protected function getFixtureB1000Service()
+    protected static function getFixtureB1000Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB1000();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000']($container);
     }
 
     /*
@@ -2236,13 +2234,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB101
      */
-    protected function getFixtureB101Service()
+    protected static function getFixtureB101Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB101'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB101'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB101();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB101']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB101']($container);
     }
 
     /*
@@ -2250,13 +2248,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB102
      */
-    protected function getFixtureB102Service()
+    protected static function getFixtureB102Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB102'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB102'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB102();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB102']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB102']($container);
     }
 
     /*
@@ -2264,13 +2262,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB103
      */
-    protected function getFixtureB103Service()
+    protected static function getFixtureB103Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB103'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB103'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB103();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB103']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB103']($container);
     }
 
     /*
@@ -2278,13 +2276,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB104
      */
-    protected function getFixtureB104Service()
+    protected static function getFixtureB104Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB104'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB104'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB104();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB104']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB104']($container);
     }
 
     /*
@@ -2292,13 +2290,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB105
      */
-    protected function getFixtureB105Service()
+    protected static function getFixtureB105Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB105'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB105'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB105();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB105']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB105']($container);
     }
 
     /*
@@ -2306,13 +2304,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB106
      */
-    protected function getFixtureB106Service()
+    protected static function getFixtureB106Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB106'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB106'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB106();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB106']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB106']($container);
     }
 
     /*
@@ -2320,13 +2318,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB107
      */
-    protected function getFixtureB107Service()
+    protected static function getFixtureB107Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB107'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB107'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB107();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB107']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB107']($container);
     }
 
     /*
@@ -2334,13 +2332,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB108
      */
-    protected function getFixtureB108Service()
+    protected static function getFixtureB108Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB108'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB108'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB108();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB108']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB108']($container);
     }
 
     /*
@@ -2348,13 +2346,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB109
      */
-    protected function getFixtureB109Service()
+    protected static function getFixtureB109Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB109'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB109'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB109();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB109']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB109']($container);
     }
 
     /*
@@ -2362,13 +2360,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB11
      */
-    protected function getFixtureB11Service()
+    protected static function getFixtureB11Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB11'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB11'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB11();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB11']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB11']($container);
     }
 
     /*
@@ -2376,13 +2374,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB110
      */
-    protected function getFixtureB110Service()
+    protected static function getFixtureB110Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB110'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB110'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB110();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB110']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB110']($container);
     }
 
     /*
@@ -2390,13 +2388,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB111
      */
-    protected function getFixtureB111Service()
+    protected static function getFixtureB111Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB111'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB111'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB111();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB111']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB111']($container);
     }
 
     /*
@@ -2404,13 +2402,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB112
      */
-    protected function getFixtureB112Service()
+    protected static function getFixtureB112Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB112'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB112'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB112();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB112']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB112']($container);
     }
 
     /*
@@ -2418,13 +2416,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB113
      */
-    protected function getFixtureB113Service()
+    protected static function getFixtureB113Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB113'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB113'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB113();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB113']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB113']($container);
     }
 
     /*
@@ -2432,13 +2430,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB114
      */
-    protected function getFixtureB114Service()
+    protected static function getFixtureB114Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB114'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB114'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB114();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB114']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB114']($container);
     }
 
     /*
@@ -2446,13 +2444,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB115
      */
-    protected function getFixtureB115Service()
+    protected static function getFixtureB115Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB115'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB115'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB115();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB115']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB115']($container);
     }
 
     /*
@@ -2460,13 +2458,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB116
      */
-    protected function getFixtureB116Service()
+    protected static function getFixtureB116Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB116'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB116'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB116();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB116']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB116']($container);
     }
 
     /*
@@ -2474,13 +2472,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB117
      */
-    protected function getFixtureB117Service()
+    protected static function getFixtureB117Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB117'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB117'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB117();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB117']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB117']($container);
     }
 
     /*
@@ -2488,13 +2486,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB118
      */
-    protected function getFixtureB118Service()
+    protected static function getFixtureB118Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB118'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB118'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB118();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB118']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB118']($container);
     }
 
     /*
@@ -2502,13 +2500,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB119
      */
-    protected function getFixtureB119Service()
+    protected static function getFixtureB119Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB119'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB119'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB119();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB119']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB119']($container);
     }
 
     /*
@@ -2516,13 +2514,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB12
      */
-    protected function getFixtureB12Service()
+    protected static function getFixtureB12Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB12'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB12'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB12();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB12']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB12']($container);
     }
 
     /*
@@ -2530,13 +2528,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB120
      */
-    protected function getFixtureB120Service()
+    protected static function getFixtureB120Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB120'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB120'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB120();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB120']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB120']($container);
     }
 
     /*
@@ -2544,13 +2542,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB121
      */
-    protected function getFixtureB121Service()
+    protected static function getFixtureB121Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB121'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB121'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB121();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB121']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB121']($container);
     }
 
     /*
@@ -2558,13 +2556,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB122
      */
-    protected function getFixtureB122Service()
+    protected static function getFixtureB122Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB122'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB122'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB122();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB122']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB122']($container);
     }
 
     /*
@@ -2572,13 +2570,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB123
      */
-    protected function getFixtureB123Service()
+    protected static function getFixtureB123Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB123'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB123'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB123();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB123']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB123']($container);
     }
 
     /*
@@ -2586,13 +2584,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB124
      */
-    protected function getFixtureB124Service()
+    protected static function getFixtureB124Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB124'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB124'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB124();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB124']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB124']($container);
     }
 
     /*
@@ -2600,13 +2598,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB125
      */
-    protected function getFixtureB125Service()
+    protected static function getFixtureB125Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB125'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB125'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB125();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB125']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB125']($container);
     }
 
     /*
@@ -2614,13 +2612,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB126
      */
-    protected function getFixtureB126Service()
+    protected static function getFixtureB126Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB126'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB126'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB126();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB126']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB126']($container);
     }
 
     /*
@@ -2628,13 +2626,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB127
      */
-    protected function getFixtureB127Service()
+    protected static function getFixtureB127Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB127'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB127'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB127();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB127']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB127']($container);
     }
 
     /*
@@ -2642,13 +2640,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB128
      */
-    protected function getFixtureB128Service()
+    protected static function getFixtureB128Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB128'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB128'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB128();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB128']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB128']($container);
     }
 
     /*
@@ -2656,13 +2654,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB129
      */
-    protected function getFixtureB129Service()
+    protected static function getFixtureB129Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB129'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB129'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB129();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB129']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB129']($container);
     }
 
     /*
@@ -2670,13 +2668,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB13
      */
-    protected function getFixtureB13Service()
+    protected static function getFixtureB13Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB13'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB13'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB13();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB13']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB13']($container);
     }
 
     /*
@@ -2684,13 +2682,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB130
      */
-    protected function getFixtureB130Service()
+    protected static function getFixtureB130Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB130'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB130'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB130();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB130']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB130']($container);
     }
 
     /*
@@ -2698,13 +2696,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB131
      */
-    protected function getFixtureB131Service()
+    protected static function getFixtureB131Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB131'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB131'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB131();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB131']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB131']($container);
     }
 
     /*
@@ -2712,13 +2710,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB132
      */
-    protected function getFixtureB132Service()
+    protected static function getFixtureB132Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB132'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB132'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB132();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB132']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB132']($container);
     }
 
     /*
@@ -2726,13 +2724,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB133
      */
-    protected function getFixtureB133Service()
+    protected static function getFixtureB133Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB133'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB133'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB133();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB133']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB133']($container);
     }
 
     /*
@@ -2740,13 +2738,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB134
      */
-    protected function getFixtureB134Service()
+    protected static function getFixtureB134Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB134'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB134'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB134();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB134']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB134']($container);
     }
 
     /*
@@ -2754,13 +2752,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB135
      */
-    protected function getFixtureB135Service()
+    protected static function getFixtureB135Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB135'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB135'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB135();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB135']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB135']($container);
     }
 
     /*
@@ -2768,13 +2766,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB136
      */
-    protected function getFixtureB136Service()
+    protected static function getFixtureB136Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB136'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB136'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB136();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB136']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB136']($container);
     }
 
     /*
@@ -2782,13 +2780,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB137
      */
-    protected function getFixtureB137Service()
+    protected static function getFixtureB137Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB137'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB137'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB137();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB137']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB137']($container);
     }
 
     /*
@@ -2796,13 +2794,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB138
      */
-    protected function getFixtureB138Service()
+    protected static function getFixtureB138Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB138'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB138'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB138();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB138']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB138']($container);
     }
 
     /*
@@ -2810,13 +2808,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB139
      */
-    protected function getFixtureB139Service()
+    protected static function getFixtureB139Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB139'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB139'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB139();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB139']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB139']($container);
     }
 
     /*
@@ -2824,13 +2822,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB14
      */
-    protected function getFixtureB14Service()
+    protected static function getFixtureB14Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB14'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB14'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB14();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB14']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB14']($container);
     }
 
     /*
@@ -2838,13 +2836,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB140
      */
-    protected function getFixtureB140Service()
+    protected static function getFixtureB140Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB140'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB140'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB140();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB140']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB140']($container);
     }
 
     /*
@@ -2852,13 +2850,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB141
      */
-    protected function getFixtureB141Service()
+    protected static function getFixtureB141Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB141'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB141'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB141();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB141']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB141']($container);
     }
 
     /*
@@ -2866,13 +2864,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB142
      */
-    protected function getFixtureB142Service()
+    protected static function getFixtureB142Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB142'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB142'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB142();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB142']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB142']($container);
     }
 
     /*
@@ -2880,13 +2878,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB143
      */
-    protected function getFixtureB143Service()
+    protected static function getFixtureB143Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB143'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB143'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB143();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB143']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB143']($container);
     }
 
     /*
@@ -2894,13 +2892,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB144
      */
-    protected function getFixtureB144Service()
+    protected static function getFixtureB144Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB144'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB144'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB144();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB144']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB144']($container);
     }
 
     /*
@@ -2908,13 +2906,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB145
      */
-    protected function getFixtureB145Service()
+    protected static function getFixtureB145Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB145'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB145'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB145();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB145']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB145']($container);
     }
 
     /*
@@ -2922,13 +2920,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB146
      */
-    protected function getFixtureB146Service()
+    protected static function getFixtureB146Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB146'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB146'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB146();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB146']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB146']($container);
     }
 
     /*
@@ -2936,13 +2934,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB147
      */
-    protected function getFixtureB147Service()
+    protected static function getFixtureB147Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB147'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB147'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB147();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB147']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB147']($container);
     }
 
     /*
@@ -2950,13 +2948,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB148
      */
-    protected function getFixtureB148Service()
+    protected static function getFixtureB148Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB148'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB148'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB148();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB148']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB148']($container);
     }
 
     /*
@@ -2964,13 +2962,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB149
      */
-    protected function getFixtureB149Service()
+    protected static function getFixtureB149Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB149'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB149'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB149();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB149']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB149']($container);
     }
 
     /*
@@ -2978,13 +2976,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB15
      */
-    protected function getFixtureB15Service()
+    protected static function getFixtureB15Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB15'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB15'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB15();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB15']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB15']($container);
     }
 
     /*
@@ -2992,13 +2990,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB150
      */
-    protected function getFixtureB150Service()
+    protected static function getFixtureB150Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB150'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB150'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB150();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB150']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB150']($container);
     }
 
     /*
@@ -3006,13 +3004,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB151
      */
-    protected function getFixtureB151Service()
+    protected static function getFixtureB151Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB151'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB151'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB151();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB151']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB151']($container);
     }
 
     /*
@@ -3020,13 +3018,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB152
      */
-    protected function getFixtureB152Service()
+    protected static function getFixtureB152Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB152'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB152'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB152();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB152']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB152']($container);
     }
 
     /*
@@ -3034,13 +3032,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB153
      */
-    protected function getFixtureB153Service()
+    protected static function getFixtureB153Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB153'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB153'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB153();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB153']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB153']($container);
     }
 
     /*
@@ -3048,13 +3046,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB154
      */
-    protected function getFixtureB154Service()
+    protected static function getFixtureB154Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB154'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB154'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB154();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB154']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB154']($container);
     }
 
     /*
@@ -3062,13 +3060,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB155
      */
-    protected function getFixtureB155Service()
+    protected static function getFixtureB155Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB155'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB155'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB155();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB155']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB155']($container);
     }
 
     /*
@@ -3076,13 +3074,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB156
      */
-    protected function getFixtureB156Service()
+    protected static function getFixtureB156Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB156'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB156'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB156();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB156']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB156']($container);
     }
 
     /*
@@ -3090,13 +3088,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB157
      */
-    protected function getFixtureB157Service()
+    protected static function getFixtureB157Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB157'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB157'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB157();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB157']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB157']($container);
     }
 
     /*
@@ -3104,13 +3102,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB158
      */
-    protected function getFixtureB158Service()
+    protected static function getFixtureB158Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB158'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB158'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB158();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB158']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB158']($container);
     }
 
     /*
@@ -3118,13 +3116,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB159
      */
-    protected function getFixtureB159Service()
+    protected static function getFixtureB159Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB159'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB159'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB159();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB159']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB159']($container);
     }
 
     /*
@@ -3132,13 +3130,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB16
      */
-    protected function getFixtureB16Service()
+    protected static function getFixtureB16Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB16'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB16'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB16();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB16']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB16']($container);
     }
 
     /*
@@ -3146,13 +3144,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB160
      */
-    protected function getFixtureB160Service()
+    protected static function getFixtureB160Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB160'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB160'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB160();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB160']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB160']($container);
     }
 
     /*
@@ -3160,13 +3158,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB161
      */
-    protected function getFixtureB161Service()
+    protected static function getFixtureB161Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB161'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB161'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB161();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB161']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB161']($container);
     }
 
     /*
@@ -3174,13 +3172,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB162
      */
-    protected function getFixtureB162Service()
+    protected static function getFixtureB162Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB162'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB162'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB162();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB162']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB162']($container);
     }
 
     /*
@@ -3188,13 +3186,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB163
      */
-    protected function getFixtureB163Service()
+    protected static function getFixtureB163Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB163'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB163'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB163();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB163']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB163']($container);
     }
 
     /*
@@ -3202,13 +3200,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB164
      */
-    protected function getFixtureB164Service()
+    protected static function getFixtureB164Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB164'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB164'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB164();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB164']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB164']($container);
     }
 
     /*
@@ -3216,13 +3214,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB165
      */
-    protected function getFixtureB165Service()
+    protected static function getFixtureB165Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB165'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB165'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB165();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB165']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB165']($container);
     }
 
     /*
@@ -3230,13 +3228,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB166
      */
-    protected function getFixtureB166Service()
+    protected static function getFixtureB166Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB166'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB166'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB166();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB166']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB166']($container);
     }
 
     /*
@@ -3244,13 +3242,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB167
      */
-    protected function getFixtureB167Service()
+    protected static function getFixtureB167Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB167'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB167'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB167();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB167']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB167']($container);
     }
 
     /*
@@ -3258,13 +3256,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB168
      */
-    protected function getFixtureB168Service()
+    protected static function getFixtureB168Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB168'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB168'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB168();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB168']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB168']($container);
     }
 
     /*
@@ -3272,13 +3270,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB169
      */
-    protected function getFixtureB169Service()
+    protected static function getFixtureB169Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB169'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB169'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB169();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB169']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB169']($container);
     }
 
     /*
@@ -3286,13 +3284,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB17
      */
-    protected function getFixtureB17Service()
+    protected static function getFixtureB17Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB17'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB17'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB17();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB17']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB17']($container);
     }
 
     /*
@@ -3300,13 +3298,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB170
      */
-    protected function getFixtureB170Service()
+    protected static function getFixtureB170Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB170'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB170'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB170();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB170']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB170']($container);
     }
 
     /*
@@ -3314,13 +3312,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB171
      */
-    protected function getFixtureB171Service()
+    protected static function getFixtureB171Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB171'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB171'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB171();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB171']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB171']($container);
     }
 
     /*
@@ -3328,13 +3326,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB172
      */
-    protected function getFixtureB172Service()
+    protected static function getFixtureB172Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB172'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB172'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB172();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB172']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB172']($container);
     }
 
     /*
@@ -3342,13 +3340,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB173
      */
-    protected function getFixtureB173Service()
+    protected static function getFixtureB173Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB173'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB173'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB173();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB173']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB173']($container);
     }
 
     /*
@@ -3356,13 +3354,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB174
      */
-    protected function getFixtureB174Service()
+    protected static function getFixtureB174Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB174'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB174'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB174();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB174']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB174']($container);
     }
 
     /*
@@ -3370,13 +3368,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB175
      */
-    protected function getFixtureB175Service()
+    protected static function getFixtureB175Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB175'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB175'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB175();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB175']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB175']($container);
     }
 
     /*
@@ -3384,13 +3382,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB176
      */
-    protected function getFixtureB176Service()
+    protected static function getFixtureB176Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB176'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB176'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB176();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB176']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB176']($container);
     }
 
     /*
@@ -3398,13 +3396,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB177
      */
-    protected function getFixtureB177Service()
+    protected static function getFixtureB177Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB177'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB177'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB177();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB177']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB177']($container);
     }
 
     /*
@@ -3412,13 +3410,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB178
      */
-    protected function getFixtureB178Service()
+    protected static function getFixtureB178Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB178'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB178'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB178();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB178']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB178']($container);
     }
 
     /*
@@ -3426,13 +3424,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB179
      */
-    protected function getFixtureB179Service()
+    protected static function getFixtureB179Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB179'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB179'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB179();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB179']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB179']($container);
     }
 
     /*
@@ -3440,13 +3438,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB18
      */
-    protected function getFixtureB18Service()
+    protected static function getFixtureB18Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB18'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB18'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB18();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB18']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB18']($container);
     }
 
     /*
@@ -3454,13 +3452,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB180
      */
-    protected function getFixtureB180Service()
+    protected static function getFixtureB180Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB180'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB180'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB180();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB180']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB180']($container);
     }
 
     /*
@@ -3468,13 +3466,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB181
      */
-    protected function getFixtureB181Service()
+    protected static function getFixtureB181Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB181'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB181'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB181();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB181']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB181']($container);
     }
 
     /*
@@ -3482,13 +3480,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB182
      */
-    protected function getFixtureB182Service()
+    protected static function getFixtureB182Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB182'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB182'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB182();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB182']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB182']($container);
     }
 
     /*
@@ -3496,13 +3494,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB183
      */
-    protected function getFixtureB183Service()
+    protected static function getFixtureB183Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB183'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB183'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB183();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB183']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB183']($container);
     }
 
     /*
@@ -3510,13 +3508,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB184
      */
-    protected function getFixtureB184Service()
+    protected static function getFixtureB184Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB184'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB184'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB184();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB184']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB184']($container);
     }
 
     /*
@@ -3524,13 +3522,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB185
      */
-    protected function getFixtureB185Service()
+    protected static function getFixtureB185Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB185'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB185'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB185();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB185']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB185']($container);
     }
 
     /*
@@ -3538,13 +3536,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB186
      */
-    protected function getFixtureB186Service()
+    protected static function getFixtureB186Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB186'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB186'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB186();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB186']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB186']($container);
     }
 
     /*
@@ -3552,13 +3550,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB187
      */
-    protected function getFixtureB187Service()
+    protected static function getFixtureB187Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB187'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB187'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB187();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB187']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB187']($container);
     }
 
     /*
@@ -3566,13 +3564,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB188
      */
-    protected function getFixtureB188Service()
+    protected static function getFixtureB188Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB188'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB188'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB188();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB188']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB188']($container);
     }
 
     /*
@@ -3580,13 +3578,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB189
      */
-    protected function getFixtureB189Service()
+    protected static function getFixtureB189Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB189'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB189'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB189();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB189']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB189']($container);
     }
 
     /*
@@ -3594,13 +3592,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB19
      */
-    protected function getFixtureB19Service()
+    protected static function getFixtureB19Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB19'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB19'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB19();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB19']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB19']($container);
     }
 
     /*
@@ -3608,13 +3606,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB190
      */
-    protected function getFixtureB190Service()
+    protected static function getFixtureB190Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB190'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB190'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB190();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB190']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB190']($container);
     }
 
     /*
@@ -3622,13 +3620,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB191
      */
-    protected function getFixtureB191Service()
+    protected static function getFixtureB191Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB191'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB191'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB191();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB191']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB191']($container);
     }
 
     /*
@@ -3636,13 +3634,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB192
      */
-    protected function getFixtureB192Service()
+    protected static function getFixtureB192Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB192'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB192'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB192();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB192']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB192']($container);
     }
 
     /*
@@ -3650,13 +3648,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB193
      */
-    protected function getFixtureB193Service()
+    protected static function getFixtureB193Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB193'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB193'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB193();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB193']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB193']($container);
     }
 
     /*
@@ -3664,13 +3662,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB194
      */
-    protected function getFixtureB194Service()
+    protected static function getFixtureB194Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB194'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB194'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB194();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB194']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB194']($container);
     }
 
     /*
@@ -3678,13 +3676,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB195
      */
-    protected function getFixtureB195Service()
+    protected static function getFixtureB195Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB195'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB195'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB195();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB195']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB195']($container);
     }
 
     /*
@@ -3692,13 +3690,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB196
      */
-    protected function getFixtureB196Service()
+    protected static function getFixtureB196Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB196'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB196'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB196();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB196']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB196']($container);
     }
 
     /*
@@ -3706,13 +3704,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB197
      */
-    protected function getFixtureB197Service()
+    protected static function getFixtureB197Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB197'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB197'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB197();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB197']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB197']($container);
     }
 
     /*
@@ -3720,13 +3718,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB198
      */
-    protected function getFixtureB198Service()
+    protected static function getFixtureB198Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB198'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB198'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB198();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB198']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB198']($container);
     }
 
     /*
@@ -3734,13 +3732,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB199
      */
-    protected function getFixtureB199Service()
+    protected static function getFixtureB199Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB199'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB199'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB199();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB199']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB199']($container);
     }
 
     /*
@@ -3748,13 +3746,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB2
      */
-    protected function getFixtureB2Service()
+    protected static function getFixtureB2Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB2'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB2'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB2();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB2']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB2']($container);
     }
 
     /*
@@ -3762,13 +3760,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB20
      */
-    protected function getFixtureB20Service()
+    protected static function getFixtureB20Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB20'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB20'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB20();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB20']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB20']($container);
     }
 
     /*
@@ -3776,13 +3774,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB200
      */
-    protected function getFixtureB200Service()
+    protected static function getFixtureB200Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB200'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB200'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB200();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB200']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB200']($container);
     }
 
     /*
@@ -3790,13 +3788,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB201
      */
-    protected function getFixtureB201Service()
+    protected static function getFixtureB201Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB201'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB201'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB201();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB201']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB201']($container);
     }
 
     /*
@@ -3804,13 +3802,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB202
      */
-    protected function getFixtureB202Service()
+    protected static function getFixtureB202Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB202'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB202'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB202();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB202']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB202']($container);
     }
 
     /*
@@ -3818,13 +3816,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB203
      */
-    protected function getFixtureB203Service()
+    protected static function getFixtureB203Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB203'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB203'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB203();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB203']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB203']($container);
     }
 
     /*
@@ -3832,13 +3830,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB204
      */
-    protected function getFixtureB204Service()
+    protected static function getFixtureB204Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB204'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB204'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB204();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB204']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB204']($container);
     }
 
     /*
@@ -3846,13 +3844,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB205
      */
-    protected function getFixtureB205Service()
+    protected static function getFixtureB205Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB205'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB205'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB205();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB205']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB205']($container);
     }
 
     /*
@@ -3860,13 +3858,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB206
      */
-    protected function getFixtureB206Service()
+    protected static function getFixtureB206Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB206'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB206'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB206();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB206']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB206']($container);
     }
 
     /*
@@ -3874,13 +3872,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB207
      */
-    protected function getFixtureB207Service()
+    protected static function getFixtureB207Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB207'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB207'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB207();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB207']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB207']($container);
     }
 
     /*
@@ -3888,13 +3886,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB208
      */
-    protected function getFixtureB208Service()
+    protected static function getFixtureB208Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB208'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB208'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB208();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB208']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB208']($container);
     }
 
     /*
@@ -3902,13 +3900,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB209
      */
-    protected function getFixtureB209Service()
+    protected static function getFixtureB209Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB209'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB209'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB209();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB209']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB209']($container);
     }
 
     /*
@@ -3916,13 +3914,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB21
      */
-    protected function getFixtureB21Service()
+    protected static function getFixtureB21Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB21'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB21'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB21();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB21']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB21']($container);
     }
 
     /*
@@ -3930,13 +3928,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB210
      */
-    protected function getFixtureB210Service()
+    protected static function getFixtureB210Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB210'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB210'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB210();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB210']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB210']($container);
     }
 
     /*
@@ -3944,13 +3942,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB211
      */
-    protected function getFixtureB211Service()
+    protected static function getFixtureB211Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB211'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB211'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB211();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB211']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB211']($container);
     }
 
     /*
@@ -3958,13 +3956,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB212
      */
-    protected function getFixtureB212Service()
+    protected static function getFixtureB212Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB212'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB212'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB212();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB212']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB212']($container);
     }
 
     /*
@@ -3972,13 +3970,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB213
      */
-    protected function getFixtureB213Service()
+    protected static function getFixtureB213Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB213'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB213'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB213();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB213']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB213']($container);
     }
 
     /*
@@ -3986,13 +3984,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB214
      */
-    protected function getFixtureB214Service()
+    protected static function getFixtureB214Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB214'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB214'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB214();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB214']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB214']($container);
     }
 
     /*
@@ -4000,13 +3998,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB215
      */
-    protected function getFixtureB215Service()
+    protected static function getFixtureB215Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB215'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB215'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB215();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB215']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB215']($container);
     }
 
     /*
@@ -4014,13 +4012,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB216
      */
-    protected function getFixtureB216Service()
+    protected static function getFixtureB216Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB216'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB216'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB216();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB216']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB216']($container);
     }
 
     /*
@@ -4028,13 +4026,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB217
      */
-    protected function getFixtureB217Service()
+    protected static function getFixtureB217Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB217'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB217'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB217();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB217']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB217']($container);
     }
 
     /*
@@ -4042,13 +4040,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB218
      */
-    protected function getFixtureB218Service()
+    protected static function getFixtureB218Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB218'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB218'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB218();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB218']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB218']($container);
     }
 
     /*
@@ -4056,13 +4054,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB219
      */
-    protected function getFixtureB219Service()
+    protected static function getFixtureB219Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB219'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB219'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB219();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB219']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB219']($container);
     }
 
     /*
@@ -4070,13 +4068,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB22
      */
-    protected function getFixtureB22Service()
+    protected static function getFixtureB22Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB22'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB22'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB22();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB22']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB22']($container);
     }
 
     /*
@@ -4084,13 +4082,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB220
      */
-    protected function getFixtureB220Service()
+    protected static function getFixtureB220Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB220'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB220'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB220();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB220']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB220']($container);
     }
 
     /*
@@ -4098,13 +4096,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB221
      */
-    protected function getFixtureB221Service()
+    protected static function getFixtureB221Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB221'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB221'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB221();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB221']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB221']($container);
     }
 
     /*
@@ -4112,13 +4110,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB222
      */
-    protected function getFixtureB222Service()
+    protected static function getFixtureB222Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB222'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB222'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB222();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB222']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB222']($container);
     }
 
     /*
@@ -4126,13 +4124,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB223
      */
-    protected function getFixtureB223Service()
+    protected static function getFixtureB223Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB223'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB223'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB223();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB223']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB223']($container);
     }
 
     /*
@@ -4140,13 +4138,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB224
      */
-    protected function getFixtureB224Service()
+    protected static function getFixtureB224Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB224'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB224'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB224();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB224']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB224']($container);
     }
 
     /*
@@ -4154,13 +4152,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB225
      */
-    protected function getFixtureB225Service()
+    protected static function getFixtureB225Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB225'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB225'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB225();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB225']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB225']($container);
     }
 
     /*
@@ -4168,13 +4166,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB226
      */
-    protected function getFixtureB226Service()
+    protected static function getFixtureB226Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB226'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB226'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB226();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB226']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB226']($container);
     }
 
     /*
@@ -4182,13 +4180,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB227
      */
-    protected function getFixtureB227Service()
+    protected static function getFixtureB227Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB227'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB227'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB227();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB227']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB227']($container);
     }
 
     /*
@@ -4196,13 +4194,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB228
      */
-    protected function getFixtureB228Service()
+    protected static function getFixtureB228Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB228'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB228'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB228();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB228']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB228']($container);
     }
 
     /*
@@ -4210,13 +4208,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB229
      */
-    protected function getFixtureB229Service()
+    protected static function getFixtureB229Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB229'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB229'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB229();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB229']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB229']($container);
     }
 
     /*
@@ -4224,13 +4222,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB23
      */
-    protected function getFixtureB23Service()
+    protected static function getFixtureB23Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB23'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB23'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB23();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB23']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB23']($container);
     }
 
     /*
@@ -4238,13 +4236,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB230
      */
-    protected function getFixtureB230Service()
+    protected static function getFixtureB230Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB230'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB230'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB230();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB230']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB230']($container);
     }
 
     /*
@@ -4252,13 +4250,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB231
      */
-    protected function getFixtureB231Service()
+    protected static function getFixtureB231Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB231'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB231'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB231();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB231']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB231']($container);
     }
 
     /*
@@ -4266,13 +4264,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB232
      */
-    protected function getFixtureB232Service()
+    protected static function getFixtureB232Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB232'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB232'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB232();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB232']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB232']($container);
     }
 
     /*
@@ -4280,13 +4278,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB233
      */
-    protected function getFixtureB233Service()
+    protected static function getFixtureB233Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB233'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB233'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB233();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB233']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB233']($container);
     }
 
     /*
@@ -4294,13 +4292,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB234
      */
-    protected function getFixtureB234Service()
+    protected static function getFixtureB234Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB234'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB234'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB234();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB234']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB234']($container);
     }
 
     /*
@@ -4308,13 +4306,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB235
      */
-    protected function getFixtureB235Service()
+    protected static function getFixtureB235Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB235'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB235'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB235();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB235']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB235']($container);
     }
 
     /*
@@ -4322,13 +4320,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB236
      */
-    protected function getFixtureB236Service()
+    protected static function getFixtureB236Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB236'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB236'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB236();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB236']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB236']($container);
     }
 
     /*
@@ -4336,13 +4334,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB237
      */
-    protected function getFixtureB237Service()
+    protected static function getFixtureB237Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB237'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB237'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB237();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB237']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB237']($container);
     }
 
     /*
@@ -4350,13 +4348,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB238
      */
-    protected function getFixtureB238Service()
+    protected static function getFixtureB238Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB238'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB238'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB238();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB238']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB238']($container);
     }
 
     /*
@@ -4364,13 +4362,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB239
      */
-    protected function getFixtureB239Service()
+    protected static function getFixtureB239Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB239'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB239'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB239();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB239']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB239']($container);
     }
 
     /*
@@ -4378,13 +4376,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB24
      */
-    protected function getFixtureB24Service()
+    protected static function getFixtureB24Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB24'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB24'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB24();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB24']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB24']($container);
     }
 
     /*
@@ -4392,13 +4390,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB240
      */
-    protected function getFixtureB240Service()
+    protected static function getFixtureB240Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB240'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB240'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB240();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB240']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB240']($container);
     }
 
     /*
@@ -4406,13 +4404,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB241
      */
-    protected function getFixtureB241Service()
+    protected static function getFixtureB241Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB241'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB241'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB241();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB241']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB241']($container);
     }
 
     /*
@@ -4420,13 +4418,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB242
      */
-    protected function getFixtureB242Service()
+    protected static function getFixtureB242Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB242'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB242'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB242();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB242']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB242']($container);
     }
 
     /*
@@ -4434,13 +4432,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB243
      */
-    protected function getFixtureB243Service()
+    protected static function getFixtureB243Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB243'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB243'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB243();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB243']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB243']($container);
     }
 
     /*
@@ -4448,13 +4446,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB244
      */
-    protected function getFixtureB244Service()
+    protected static function getFixtureB244Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB244'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB244'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB244();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB244']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB244']($container);
     }
 
     /*
@@ -4462,13 +4460,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB245
      */
-    protected function getFixtureB245Service()
+    protected static function getFixtureB245Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB245'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB245'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB245();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB245']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB245']($container);
     }
 
     /*
@@ -4476,13 +4474,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB246
      */
-    protected function getFixtureB246Service()
+    protected static function getFixtureB246Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB246'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB246'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB246();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB246']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB246']($container);
     }
 
     /*
@@ -4490,13 +4488,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB247
      */
-    protected function getFixtureB247Service()
+    protected static function getFixtureB247Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB247'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB247'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB247();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB247']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB247']($container);
     }
 
     /*
@@ -4504,13 +4502,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB248
      */
-    protected function getFixtureB248Service()
+    protected static function getFixtureB248Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB248'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB248'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB248();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB248']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB248']($container);
     }
 
     /*
@@ -4518,13 +4516,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB249
      */
-    protected function getFixtureB249Service()
+    protected static function getFixtureB249Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB249'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB249'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB249();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB249']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB249']($container);
     }
 
     /*
@@ -4532,13 +4530,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB25
      */
-    protected function getFixtureB25Service()
+    protected static function getFixtureB25Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB25'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB25'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB25();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB25']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB25']($container);
     }
 
     /*
@@ -4546,13 +4544,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB250
      */
-    protected function getFixtureB250Service()
+    protected static function getFixtureB250Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB250'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB250'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB250();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB250']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB250']($container);
     }
 
     /*
@@ -4560,13 +4558,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB251
      */
-    protected function getFixtureB251Service()
+    protected static function getFixtureB251Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB251'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB251'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB251();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB251']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB251']($container);
     }
 
     /*
@@ -4574,13 +4572,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB252
      */
-    protected function getFixtureB252Service()
+    protected static function getFixtureB252Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB252'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB252'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB252();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB252']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB252']($container);
     }
 
     /*
@@ -4588,13 +4586,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB253
      */
-    protected function getFixtureB253Service()
+    protected static function getFixtureB253Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB253'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB253'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB253();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB253']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB253']($container);
     }
 
     /*
@@ -4602,13 +4600,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB254
      */
-    protected function getFixtureB254Service()
+    protected static function getFixtureB254Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB254'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB254'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB254();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB254']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB254']($container);
     }
 
     /*
@@ -4616,13 +4614,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB255
      */
-    protected function getFixtureB255Service()
+    protected static function getFixtureB255Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB255'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB255'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB255();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB255']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB255']($container);
     }
 
     /*
@@ -4630,13 +4628,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB256
      */
-    protected function getFixtureB256Service()
+    protected static function getFixtureB256Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB256'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB256'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB256();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB256']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB256']($container);
     }
 
     /*
@@ -4644,13 +4642,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB257
      */
-    protected function getFixtureB257Service()
+    protected static function getFixtureB257Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB257'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB257'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB257();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB257']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB257']($container);
     }
 
     /*
@@ -4658,13 +4656,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB258
      */
-    protected function getFixtureB258Service()
+    protected static function getFixtureB258Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB258'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB258'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB258();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB258']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB258']($container);
     }
 
     /*
@@ -4672,13 +4670,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB259
      */
-    protected function getFixtureB259Service()
+    protected static function getFixtureB259Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB259'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB259'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB259();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB259']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB259']($container);
     }
 
     /*
@@ -4686,13 +4684,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB26
      */
-    protected function getFixtureB26Service()
+    protected static function getFixtureB26Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB26'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB26'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB26();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB26']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB26']($container);
     }
 
     /*
@@ -4700,13 +4698,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB260
      */
-    protected function getFixtureB260Service()
+    protected static function getFixtureB260Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB260'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB260'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB260();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB260']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB260']($container);
     }
 
     /*
@@ -4714,13 +4712,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB261
      */
-    protected function getFixtureB261Service()
+    protected static function getFixtureB261Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB261'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB261'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB261();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB261']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB261']($container);
     }
 
     /*
@@ -4728,13 +4726,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB262
      */
-    protected function getFixtureB262Service()
+    protected static function getFixtureB262Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB262'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB262'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB262();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB262']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB262']($container);
     }
 
     /*
@@ -4742,13 +4740,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB263
      */
-    protected function getFixtureB263Service()
+    protected static function getFixtureB263Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB263'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB263'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB263();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB263']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB263']($container);
     }
 
     /*
@@ -4756,13 +4754,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB264
      */
-    protected function getFixtureB264Service()
+    protected static function getFixtureB264Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB264'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB264'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB264();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB264']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB264']($container);
     }
 
     /*
@@ -4770,13 +4768,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB265
      */
-    protected function getFixtureB265Service()
+    protected static function getFixtureB265Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB265'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB265'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB265();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB265']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB265']($container);
     }
 
     /*
@@ -4784,13 +4782,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB266
      */
-    protected function getFixtureB266Service()
+    protected static function getFixtureB266Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB266'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB266'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB266();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB266']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB266']($container);
     }
 
     /*
@@ -4798,13 +4796,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB267
      */
-    protected function getFixtureB267Service()
+    protected static function getFixtureB267Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB267'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB267'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB267();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB267']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB267']($container);
     }
 
     /*
@@ -4812,13 +4810,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB268
      */
-    protected function getFixtureB268Service()
+    protected static function getFixtureB268Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB268'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB268'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB268();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB268']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB268']($container);
     }
 
     /*
@@ -4826,13 +4824,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB269
      */
-    protected function getFixtureB269Service()
+    protected static function getFixtureB269Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB269'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB269'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB269();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB269']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB269']($container);
     }
 
     /*
@@ -4840,13 +4838,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB27
      */
-    protected function getFixtureB27Service()
+    protected static function getFixtureB27Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB27'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB27'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB27();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB27']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB27']($container);
     }
 
     /*
@@ -4854,13 +4852,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB270
      */
-    protected function getFixtureB270Service()
+    protected static function getFixtureB270Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB270'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB270'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB270();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB270']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB270']($container);
     }
 
     /*
@@ -4868,13 +4866,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB271
      */
-    protected function getFixtureB271Service()
+    protected static function getFixtureB271Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB271'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB271'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB271();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB271']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB271']($container);
     }
 
     /*
@@ -4882,13 +4880,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB272
      */
-    protected function getFixtureB272Service()
+    protected static function getFixtureB272Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB272'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB272'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB272();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB272']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB272']($container);
     }
 
     /*
@@ -4896,13 +4894,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB273
      */
-    protected function getFixtureB273Service()
+    protected static function getFixtureB273Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB273'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB273'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB273();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB273']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB273']($container);
     }
 
     /*
@@ -4910,13 +4908,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB274
      */
-    protected function getFixtureB274Service()
+    protected static function getFixtureB274Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB274'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB274'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB274();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB274']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB274']($container);
     }
 
     /*
@@ -4924,13 +4922,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB275
      */
-    protected function getFixtureB275Service()
+    protected static function getFixtureB275Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB275'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB275'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB275();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB275']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB275']($container);
     }
 
     /*
@@ -4938,13 +4936,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB276
      */
-    protected function getFixtureB276Service()
+    protected static function getFixtureB276Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB276'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB276'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB276();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB276']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB276']($container);
     }
 
     /*
@@ -4952,13 +4950,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB277
      */
-    protected function getFixtureB277Service()
+    protected static function getFixtureB277Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB277'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB277'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB277();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB277']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB277']($container);
     }
 
     /*
@@ -4966,13 +4964,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB278
      */
-    protected function getFixtureB278Service()
+    protected static function getFixtureB278Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB278'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB278'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB278();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB278']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB278']($container);
     }
 
     /*
@@ -4980,13 +4978,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB279
      */
-    protected function getFixtureB279Service()
+    protected static function getFixtureB279Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB279'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB279'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB279();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB279']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB279']($container);
     }
 
     /*
@@ -4994,13 +4992,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB28
      */
-    protected function getFixtureB28Service()
+    protected static function getFixtureB28Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB28'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB28'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB28();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB28']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB28']($container);
     }
 
     /*
@@ -5008,13 +5006,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB280
      */
-    protected function getFixtureB280Service()
+    protected static function getFixtureB280Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB280'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB280'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB280();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB280']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB280']($container);
     }
 
     /*
@@ -5022,13 +5020,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB281
      */
-    protected function getFixtureB281Service()
+    protected static function getFixtureB281Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB281'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB281'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB281();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB281']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB281']($container);
     }
 
     /*
@@ -5036,13 +5034,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB282
      */
-    protected function getFixtureB282Service()
+    protected static function getFixtureB282Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB282'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB282'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB282();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB282']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB282']($container);
     }
 
     /*
@@ -5050,13 +5048,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB283
      */
-    protected function getFixtureB283Service()
+    protected static function getFixtureB283Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB283'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB283'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB283();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB283']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB283']($container);
     }
 
     /*
@@ -5064,13 +5062,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB284
      */
-    protected function getFixtureB284Service()
+    protected static function getFixtureB284Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB284'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB284'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB284();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB284']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB284']($container);
     }
 
     /*
@@ -5078,13 +5076,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB285
      */
-    protected function getFixtureB285Service()
+    protected static function getFixtureB285Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB285'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB285'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB285();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB285']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB285']($container);
     }
 
     /*
@@ -5092,13 +5090,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB286
      */
-    protected function getFixtureB286Service()
+    protected static function getFixtureB286Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB286'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB286'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB286();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB286']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB286']($container);
     }
 
     /*
@@ -5106,13 +5104,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB287
      */
-    protected function getFixtureB287Service()
+    protected static function getFixtureB287Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB287'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB287'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB287();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB287']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB287']($container);
     }
 
     /*
@@ -5120,13 +5118,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB288
      */
-    protected function getFixtureB288Service()
+    protected static function getFixtureB288Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB288'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB288'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB288();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB288']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB288']($container);
     }
 
     /*
@@ -5134,13 +5132,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB289
      */
-    protected function getFixtureB289Service()
+    protected static function getFixtureB289Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB289'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB289'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB289();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB289']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB289']($container);
     }
 
     /*
@@ -5148,13 +5146,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB29
      */
-    protected function getFixtureB29Service()
+    protected static function getFixtureB29Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB29'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB29'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB29();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB29']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB29']($container);
     }
 
     /*
@@ -5162,13 +5160,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB290
      */
-    protected function getFixtureB290Service()
+    protected static function getFixtureB290Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB290'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB290'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB290();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB290']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB290']($container);
     }
 
     /*
@@ -5176,13 +5174,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB291
      */
-    protected function getFixtureB291Service()
+    protected static function getFixtureB291Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB291'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB291'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB291();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB291']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB291']($container);
     }
 
     /*
@@ -5190,13 +5188,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB292
      */
-    protected function getFixtureB292Service()
+    protected static function getFixtureB292Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB292'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB292'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB292();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB292']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB292']($container);
     }
 
     /*
@@ -5204,13 +5202,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB293
      */
-    protected function getFixtureB293Service()
+    protected static function getFixtureB293Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB293'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB293'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB293();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB293']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB293']($container);
     }
 
     /*
@@ -5218,13 +5216,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB294
      */
-    protected function getFixtureB294Service()
+    protected static function getFixtureB294Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB294'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB294'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB294();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB294']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB294']($container);
     }
 
     /*
@@ -5232,13 +5230,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB295
      */
-    protected function getFixtureB295Service()
+    protected static function getFixtureB295Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB295'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB295'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB295();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB295']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB295']($container);
     }
 
     /*
@@ -5246,13 +5244,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB296
      */
-    protected function getFixtureB296Service()
+    protected static function getFixtureB296Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB296'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB296'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB296();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB296']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB296']($container);
     }
 
     /*
@@ -5260,13 +5258,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB297
      */
-    protected function getFixtureB297Service()
+    protected static function getFixtureB297Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB297'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB297'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB297();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB297']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB297']($container);
     }
 
     /*
@@ -5274,13 +5272,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB298
      */
-    protected function getFixtureB298Service()
+    protected static function getFixtureB298Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB298'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB298'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB298();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB298']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB298']($container);
     }
 
     /*
@@ -5288,13 +5286,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB299
      */
-    protected function getFixtureB299Service()
+    protected static function getFixtureB299Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB299'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB299'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB299();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB299']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB299']($container);
     }
 
     /*
@@ -5302,13 +5300,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB3
      */
-    protected function getFixtureB3Service()
+    protected static function getFixtureB3Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB3'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB3'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB3();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB3']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB3']($container);
     }
 
     /*
@@ -5316,13 +5314,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB30
      */
-    protected function getFixtureB30Service()
+    protected static function getFixtureB30Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB30'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB30'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB30();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB30']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB30']($container);
     }
 
     /*
@@ -5330,13 +5328,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB300
      */
-    protected function getFixtureB300Service()
+    protected static function getFixtureB300Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB300'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB300'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB300();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB300']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB300']($container);
     }
 
     /*
@@ -5344,13 +5342,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB301
      */
-    protected function getFixtureB301Service()
+    protected static function getFixtureB301Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB301'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB301'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB301();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB301']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB301']($container);
     }
 
     /*
@@ -5358,13 +5356,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB302
      */
-    protected function getFixtureB302Service()
+    protected static function getFixtureB302Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB302'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB302'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB302();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB302']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB302']($container);
     }
 
     /*
@@ -5372,13 +5370,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB303
      */
-    protected function getFixtureB303Service()
+    protected static function getFixtureB303Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB303'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB303'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB303();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB303']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB303']($container);
     }
 
     /*
@@ -5386,13 +5384,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB304
      */
-    protected function getFixtureB304Service()
+    protected static function getFixtureB304Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB304'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB304'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB304();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB304']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB304']($container);
     }
 
     /*
@@ -5400,13 +5398,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB305
      */
-    protected function getFixtureB305Service()
+    protected static function getFixtureB305Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB305'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB305'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB305();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB305']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB305']($container);
     }
 
     /*
@@ -5414,13 +5412,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB306
      */
-    protected function getFixtureB306Service()
+    protected static function getFixtureB306Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB306'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB306'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB306();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB306']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB306']($container);
     }
 
     /*
@@ -5428,13 +5426,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB307
      */
-    protected function getFixtureB307Service()
+    protected static function getFixtureB307Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB307'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB307'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB307();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB307']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB307']($container);
     }
 
     /*
@@ -5442,13 +5440,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB308
      */
-    protected function getFixtureB308Service()
+    protected static function getFixtureB308Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB308'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB308'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB308();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB308']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB308']($container);
     }
 
     /*
@@ -5456,13 +5454,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB309
      */
-    protected function getFixtureB309Service()
+    protected static function getFixtureB309Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB309'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB309'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB309();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB309']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB309']($container);
     }
 
     /*
@@ -5470,13 +5468,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB31
      */
-    protected function getFixtureB31Service()
+    protected static function getFixtureB31Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB31'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB31'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB31();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB31']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB31']($container);
     }
 
     /*
@@ -5484,13 +5482,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB310
      */
-    protected function getFixtureB310Service()
+    protected static function getFixtureB310Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB310'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB310'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB310();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB310']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB310']($container);
     }
 
     /*
@@ -5498,13 +5496,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB311
      */
-    protected function getFixtureB311Service()
+    protected static function getFixtureB311Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB311'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB311'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB311();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB311']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB311']($container);
     }
 
     /*
@@ -5512,13 +5510,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB312
      */
-    protected function getFixtureB312Service()
+    protected static function getFixtureB312Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB312'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB312'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB312();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB312']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB312']($container);
     }
 
     /*
@@ -5526,13 +5524,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB313
      */
-    protected function getFixtureB313Service()
+    protected static function getFixtureB313Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB313'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB313'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB313();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB313']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB313']($container);
     }
 
     /*
@@ -5540,13 +5538,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB314
      */
-    protected function getFixtureB314Service()
+    protected static function getFixtureB314Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB314'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB314'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB314();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB314']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB314']($container);
     }
 
     /*
@@ -5554,13 +5552,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB315
      */
-    protected function getFixtureB315Service()
+    protected static function getFixtureB315Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB315'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB315'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB315();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB315']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB315']($container);
     }
 
     /*
@@ -5568,13 +5566,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB316
      */
-    protected function getFixtureB316Service()
+    protected static function getFixtureB316Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB316'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB316'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB316();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB316']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB316']($container);
     }
 
     /*
@@ -5582,13 +5580,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB317
      */
-    protected function getFixtureB317Service()
+    protected static function getFixtureB317Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB317'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB317'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB317();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB317']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB317']($container);
     }
 
     /*
@@ -5596,13 +5594,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB318
      */
-    protected function getFixtureB318Service()
+    protected static function getFixtureB318Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB318'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB318'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB318();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB318']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB318']($container);
     }
 
     /*
@@ -5610,13 +5608,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB319
      */
-    protected function getFixtureB319Service()
+    protected static function getFixtureB319Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB319'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB319'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB319();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB319']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB319']($container);
     }
 
     /*
@@ -5624,13 +5622,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB32
      */
-    protected function getFixtureB32Service()
+    protected static function getFixtureB32Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB32'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB32'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB32();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB32']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB32']($container);
     }
 
     /*
@@ -5638,13 +5636,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB320
      */
-    protected function getFixtureB320Service()
+    protected static function getFixtureB320Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB320'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB320'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB320();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB320']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB320']($container);
     }
 
     /*
@@ -5652,13 +5650,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB321
      */
-    protected function getFixtureB321Service()
+    protected static function getFixtureB321Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB321'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB321'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB321();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB321']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB321']($container);
     }
 
     /*
@@ -5666,13 +5664,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB322
      */
-    protected function getFixtureB322Service()
+    protected static function getFixtureB322Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB322'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB322'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB322();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB322']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB322']($container);
     }
 
     /*
@@ -5680,13 +5678,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB323
      */
-    protected function getFixtureB323Service()
+    protected static function getFixtureB323Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB323'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB323'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB323();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB323']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB323']($container);
     }
 
     /*
@@ -5694,13 +5692,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB324
      */
-    protected function getFixtureB324Service()
+    protected static function getFixtureB324Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB324'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB324'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB324();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB324']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB324']($container);
     }
 
     /*
@@ -5708,13 +5706,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB325
      */
-    protected function getFixtureB325Service()
+    protected static function getFixtureB325Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB325'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB325'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB325();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB325']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB325']($container);
     }
 
     /*
@@ -5722,13 +5720,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB326
      */
-    protected function getFixtureB326Service()
+    protected static function getFixtureB326Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB326'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB326'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB326();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB326']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB326']($container);
     }
 
     /*
@@ -5736,13 +5734,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB327
      */
-    protected function getFixtureB327Service()
+    protected static function getFixtureB327Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB327'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB327'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB327();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB327']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB327']($container);
     }
 
     /*
@@ -5750,13 +5748,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB328
      */
-    protected function getFixtureB328Service()
+    protected static function getFixtureB328Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB328'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB328'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB328();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB328']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB328']($container);
     }
 
     /*
@@ -5764,13 +5762,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB329
      */
-    protected function getFixtureB329Service()
+    protected static function getFixtureB329Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB329'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB329'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB329();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB329']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB329']($container);
     }
 
     /*
@@ -5778,13 +5776,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB33
      */
-    protected function getFixtureB33Service()
+    protected static function getFixtureB33Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB33'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB33'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB33();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB33']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB33']($container);
     }
 
     /*
@@ -5792,13 +5790,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB330
      */
-    protected function getFixtureB330Service()
+    protected static function getFixtureB330Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB330'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB330'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB330();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB330']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB330']($container);
     }
 
     /*
@@ -5806,13 +5804,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB331
      */
-    protected function getFixtureB331Service()
+    protected static function getFixtureB331Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB331'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB331'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB331();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB331']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB331']($container);
     }
 
     /*
@@ -5820,13 +5818,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB332
      */
-    protected function getFixtureB332Service()
+    protected static function getFixtureB332Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB332'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB332'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB332();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB332']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB332']($container);
     }
 
     /*
@@ -5834,13 +5832,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB333
      */
-    protected function getFixtureB333Service()
+    protected static function getFixtureB333Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB333'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB333'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB333();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB333']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB333']($container);
     }
 
     /*
@@ -5848,13 +5846,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB334
      */
-    protected function getFixtureB334Service()
+    protected static function getFixtureB334Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB334'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB334'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB334();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB334']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB334']($container);
     }
 
     /*
@@ -5862,13 +5860,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB335
      */
-    protected function getFixtureB335Service()
+    protected static function getFixtureB335Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB335'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB335'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB335();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB335']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB335']($container);
     }
 
     /*
@@ -5876,13 +5874,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB336
      */
-    protected function getFixtureB336Service()
+    protected static function getFixtureB336Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB336'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB336'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB336();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB336']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB336']($container);
     }
 
     /*
@@ -5890,13 +5888,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB337
      */
-    protected function getFixtureB337Service()
+    protected static function getFixtureB337Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB337'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB337'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB337();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB337']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB337']($container);
     }
 
     /*
@@ -5904,13 +5902,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB338
      */
-    protected function getFixtureB338Service()
+    protected static function getFixtureB338Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB338'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB338'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB338();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB338']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB338']($container);
     }
 
     /*
@@ -5918,13 +5916,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB339
      */
-    protected function getFixtureB339Service()
+    protected static function getFixtureB339Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB339'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB339'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB339();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB339']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB339']($container);
     }
 
     /*
@@ -5932,13 +5930,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB34
      */
-    protected function getFixtureB34Service()
+    protected static function getFixtureB34Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB34'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB34'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB34();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB34']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB34']($container);
     }
 
     /*
@@ -5946,13 +5944,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB340
      */
-    protected function getFixtureB340Service()
+    protected static function getFixtureB340Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB340'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB340'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB340();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB340']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB340']($container);
     }
 
     /*
@@ -5960,13 +5958,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB341
      */
-    protected function getFixtureB341Service()
+    protected static function getFixtureB341Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB341'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB341'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB341();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB341']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB341']($container);
     }
 
     /*
@@ -5974,13 +5972,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB342
      */
-    protected function getFixtureB342Service()
+    protected static function getFixtureB342Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB342'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB342'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB342();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB342']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB342']($container);
     }
 
     /*
@@ -5988,13 +5986,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB343
      */
-    protected function getFixtureB343Service()
+    protected static function getFixtureB343Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB343'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB343'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB343();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB343']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB343']($container);
     }
 
     /*
@@ -6002,13 +6000,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB344
      */
-    protected function getFixtureB344Service()
+    protected static function getFixtureB344Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB344'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB344'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB344();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB344']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB344']($container);
     }
 
     /*
@@ -6016,13 +6014,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB345
      */
-    protected function getFixtureB345Service()
+    protected static function getFixtureB345Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB345'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB345'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB345();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB345']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB345']($container);
     }
 
     /*
@@ -6030,13 +6028,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB346
      */
-    protected function getFixtureB346Service()
+    protected static function getFixtureB346Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB346'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB346'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB346();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB346']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB346']($container);
     }
 
     /*
@@ -6044,13 +6042,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB347
      */
-    protected function getFixtureB347Service()
+    protected static function getFixtureB347Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB347'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB347'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB347();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB347']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB347']($container);
     }
 
     /*
@@ -6058,13 +6056,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB348
      */
-    protected function getFixtureB348Service()
+    protected static function getFixtureB348Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB348'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB348'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB348();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB348']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB348']($container);
     }
 
     /*
@@ -6072,13 +6070,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB349
      */
-    protected function getFixtureB349Service()
+    protected static function getFixtureB349Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB349'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB349'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB349();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB349']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB349']($container);
     }
 
     /*
@@ -6086,13 +6084,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB35
      */
-    protected function getFixtureB35Service()
+    protected static function getFixtureB35Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB35'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB35'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB35();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB35']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB35']($container);
     }
 
     /*
@@ -6100,13 +6098,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB350
      */
-    protected function getFixtureB350Service()
+    protected static function getFixtureB350Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB350'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB350'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB350();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB350']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB350']($container);
     }
 
     /*
@@ -6114,13 +6112,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB351
      */
-    protected function getFixtureB351Service()
+    protected static function getFixtureB351Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB351'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB351'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB351();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB351']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB351']($container);
     }
 
     /*
@@ -6128,13 +6126,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB352
      */
-    protected function getFixtureB352Service()
+    protected static function getFixtureB352Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB352'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB352'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB352();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB352']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB352']($container);
     }
 
     /*
@@ -6142,13 +6140,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB353
      */
-    protected function getFixtureB353Service()
+    protected static function getFixtureB353Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB353'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB353'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB353();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB353']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB353']($container);
     }
 
     /*
@@ -6156,13 +6154,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB354
      */
-    protected function getFixtureB354Service()
+    protected static function getFixtureB354Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB354'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB354'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB354();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB354']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB354']($container);
     }
 
     /*
@@ -6170,13 +6168,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB355
      */
-    protected function getFixtureB355Service()
+    protected static function getFixtureB355Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB355'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB355'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB355();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB355']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB355']($container);
     }
 
     /*
@@ -6184,13 +6182,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB356
      */
-    protected function getFixtureB356Service()
+    protected static function getFixtureB356Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB356'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB356'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB356();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB356']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB356']($container);
     }
 
     /*
@@ -6198,13 +6196,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB357
      */
-    protected function getFixtureB357Service()
+    protected static function getFixtureB357Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB357'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB357'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB357();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB357']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB357']($container);
     }
 
     /*
@@ -6212,13 +6210,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB358
      */
-    protected function getFixtureB358Service()
+    protected static function getFixtureB358Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB358'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB358'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB358();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB358']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB358']($container);
     }
 
     /*
@@ -6226,13 +6224,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB359
      */
-    protected function getFixtureB359Service()
+    protected static function getFixtureB359Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB359'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB359'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB359();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB359']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB359']($container);
     }
 
     /*
@@ -6240,13 +6238,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB36
      */
-    protected function getFixtureB36Service()
+    protected static function getFixtureB36Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB36'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB36'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB36();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB36']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB36']($container);
     }
 
     /*
@@ -6254,13 +6252,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB360
      */
-    protected function getFixtureB360Service()
+    protected static function getFixtureB360Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB360'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB360'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB360();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB360']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB360']($container);
     }
 
     /*
@@ -6268,13 +6266,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB361
      */
-    protected function getFixtureB361Service()
+    protected static function getFixtureB361Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB361'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB361'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB361();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB361']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB361']($container);
     }
 
     /*
@@ -6282,13 +6280,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB362
      */
-    protected function getFixtureB362Service()
+    protected static function getFixtureB362Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB362'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB362'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB362();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB362']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB362']($container);
     }
 
     /*
@@ -6296,13 +6294,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB363
      */
-    protected function getFixtureB363Service()
+    protected static function getFixtureB363Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB363'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB363'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB363();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB363']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB363']($container);
     }
 
     /*
@@ -6310,13 +6308,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB364
      */
-    protected function getFixtureB364Service()
+    protected static function getFixtureB364Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB364'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB364'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB364();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB364']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB364']($container);
     }
 
     /*
@@ -6324,13 +6322,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB365
      */
-    protected function getFixtureB365Service()
+    protected static function getFixtureB365Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB365'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB365'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB365();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB365']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB365']($container);
     }
 
     /*
@@ -6338,13 +6336,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB366
      */
-    protected function getFixtureB366Service()
+    protected static function getFixtureB366Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB366'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB366'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB366();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB366']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB366']($container);
     }
 
     /*
@@ -6352,13 +6350,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB367
      */
-    protected function getFixtureB367Service()
+    protected static function getFixtureB367Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB367'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB367'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB367();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB367']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB367']($container);
     }
 
     /*
@@ -6366,13 +6364,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB368
      */
-    protected function getFixtureB368Service()
+    protected static function getFixtureB368Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB368'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB368'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB368();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB368']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB368']($container);
     }
 
     /*
@@ -6380,13 +6378,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB369
      */
-    protected function getFixtureB369Service()
+    protected static function getFixtureB369Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB369'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB369'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB369();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB369']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB369']($container);
     }
 
     /*
@@ -6394,13 +6392,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB37
      */
-    protected function getFixtureB37Service()
+    protected static function getFixtureB37Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB37'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB37'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB37();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB37']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB37']($container);
     }
 
     /*
@@ -6408,13 +6406,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB370
      */
-    protected function getFixtureB370Service()
+    protected static function getFixtureB370Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB370'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB370'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB370();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB370']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB370']($container);
     }
 
     /*
@@ -6422,13 +6420,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB371
      */
-    protected function getFixtureB371Service()
+    protected static function getFixtureB371Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB371'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB371'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB371();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB371']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB371']($container);
     }
 
     /*
@@ -6436,13 +6434,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB372
      */
-    protected function getFixtureB372Service()
+    protected static function getFixtureB372Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB372'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB372'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB372();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB372']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB372']($container);
     }
 
     /*
@@ -6450,13 +6448,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB373
      */
-    protected function getFixtureB373Service()
+    protected static function getFixtureB373Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB373'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB373'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB373();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB373']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB373']($container);
     }
 
     /*
@@ -6464,13 +6462,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB374
      */
-    protected function getFixtureB374Service()
+    protected static function getFixtureB374Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB374'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB374'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB374();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB374']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB374']($container);
     }
 
     /*
@@ -6478,13 +6476,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB375
      */
-    protected function getFixtureB375Service()
+    protected static function getFixtureB375Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB375'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB375'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB375();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB375']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB375']($container);
     }
 
     /*
@@ -6492,13 +6490,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB376
      */
-    protected function getFixtureB376Service()
+    protected static function getFixtureB376Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB376'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB376'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB376();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB376']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB376']($container);
     }
 
     /*
@@ -6506,13 +6504,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB377
      */
-    protected function getFixtureB377Service()
+    protected static function getFixtureB377Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB377'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB377'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB377();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB377']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB377']($container);
     }
 
     /*
@@ -6520,13 +6518,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB378
      */
-    protected function getFixtureB378Service()
+    protected static function getFixtureB378Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB378'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB378'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB378();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB378']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB378']($container);
     }
 
     /*
@@ -6534,13 +6532,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB379
      */
-    protected function getFixtureB379Service()
+    protected static function getFixtureB379Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB379'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB379'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB379();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB379']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB379']($container);
     }
 
     /*
@@ -6548,13 +6546,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB38
      */
-    protected function getFixtureB38Service()
+    protected static function getFixtureB38Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB38'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB38'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB38();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB38']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB38']($container);
     }
 
     /*
@@ -6562,13 +6560,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB380
      */
-    protected function getFixtureB380Service()
+    protected static function getFixtureB380Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB380'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB380'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB380();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB380']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB380']($container);
     }
 
     /*
@@ -6576,13 +6574,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB381
      */
-    protected function getFixtureB381Service()
+    protected static function getFixtureB381Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB381'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB381'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB381();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB381']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB381']($container);
     }
 
     /*
@@ -6590,13 +6588,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB382
      */
-    protected function getFixtureB382Service()
+    protected static function getFixtureB382Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB382'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB382'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB382();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB382']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB382']($container);
     }
 
     /*
@@ -6604,13 +6602,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB383
      */
-    protected function getFixtureB383Service()
+    protected static function getFixtureB383Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB383'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB383'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB383();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB383']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB383']($container);
     }
 
     /*
@@ -6618,13 +6616,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB384
      */
-    protected function getFixtureB384Service()
+    protected static function getFixtureB384Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB384'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB384'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB384();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB384']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB384']($container);
     }
 
     /*
@@ -6632,13 +6630,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB385
      */
-    protected function getFixtureB385Service()
+    protected static function getFixtureB385Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB385'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB385'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB385();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB385']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB385']($container);
     }
 
     /*
@@ -6646,13 +6644,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB386
      */
-    protected function getFixtureB386Service()
+    protected static function getFixtureB386Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB386'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB386'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB386();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB386']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB386']($container);
     }
 
     /*
@@ -6660,13 +6658,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB387
      */
-    protected function getFixtureB387Service()
+    protected static function getFixtureB387Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB387'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB387'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB387();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB387']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB387']($container);
     }
 
     /*
@@ -6674,13 +6672,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB388
      */
-    protected function getFixtureB388Service()
+    protected static function getFixtureB388Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB388'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB388'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB388();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB388']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB388']($container);
     }
 
     /*
@@ -6688,13 +6686,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB389
      */
-    protected function getFixtureB389Service()
+    protected static function getFixtureB389Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB389'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB389'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB389();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB389']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB389']($container);
     }
 
     /*
@@ -6702,13 +6700,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB39
      */
-    protected function getFixtureB39Service()
+    protected static function getFixtureB39Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB39'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB39'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB39();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB39']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB39']($container);
     }
 
     /*
@@ -6716,13 +6714,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB390
      */
-    protected function getFixtureB390Service()
+    protected static function getFixtureB390Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB390'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB390'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB390();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB390']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB390']($container);
     }
 
     /*
@@ -6730,13 +6728,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB391
      */
-    protected function getFixtureB391Service()
+    protected static function getFixtureB391Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB391'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB391'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB391();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB391']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB391']($container);
     }
 
     /*
@@ -6744,13 +6742,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB392
      */
-    protected function getFixtureB392Service()
+    protected static function getFixtureB392Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB392'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB392'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB392();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB392']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB392']($container);
     }
 
     /*
@@ -6758,13 +6756,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB393
      */
-    protected function getFixtureB393Service()
+    protected static function getFixtureB393Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB393'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB393'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB393();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB393']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB393']($container);
     }
 
     /*
@@ -6772,13 +6770,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB394
      */
-    protected function getFixtureB394Service()
+    protected static function getFixtureB394Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB394'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB394'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB394();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB394']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB394']($container);
     }
 
     /*
@@ -6786,13 +6784,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB395
      */
-    protected function getFixtureB395Service()
+    protected static function getFixtureB395Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB395'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB395'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB395();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB395']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB395']($container);
     }
 
     /*
@@ -6800,13 +6798,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB396
      */
-    protected function getFixtureB396Service()
+    protected static function getFixtureB396Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB396'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB396'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB396();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB396']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB396']($container);
     }
 
     /*
@@ -6814,13 +6812,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB397
      */
-    protected function getFixtureB397Service()
+    protected static function getFixtureB397Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB397'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB397'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB397();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB397']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB397']($container);
     }
 
     /*
@@ -6828,13 +6826,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB398
      */
-    protected function getFixtureB398Service()
+    protected static function getFixtureB398Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB398'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB398'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB398();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB398']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB398']($container);
     }
 
     /*
@@ -6842,13 +6840,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB399
      */
-    protected function getFixtureB399Service()
+    protected static function getFixtureB399Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB399'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB399'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB399();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB399']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB399']($container);
     }
 
     /*
@@ -6856,13 +6854,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB4
      */
-    protected function getFixtureB4Service()
+    protected static function getFixtureB4Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB4'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB4'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB4();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB4']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB4']($container);
     }
 
     /*
@@ -6870,13 +6868,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB40
      */
-    protected function getFixtureB40Service()
+    protected static function getFixtureB40Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB40'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB40'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB40();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB40']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB40']($container);
     }
 
     /*
@@ -6884,13 +6882,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB400
      */
-    protected function getFixtureB400Service()
+    protected static function getFixtureB400Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB400'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB400'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB400();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB400']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB400']($container);
     }
 
     /*
@@ -6898,13 +6896,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB401
      */
-    protected function getFixtureB401Service()
+    protected static function getFixtureB401Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB401'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB401'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB401();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB401']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB401']($container);
     }
 
     /*
@@ -6912,13 +6910,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB402
      */
-    protected function getFixtureB402Service()
+    protected static function getFixtureB402Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB402'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB402'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB402();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB402']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB402']($container);
     }
 
     /*
@@ -6926,13 +6924,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB403
      */
-    protected function getFixtureB403Service()
+    protected static function getFixtureB403Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB403'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB403'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB403();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB403']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB403']($container);
     }
 
     /*
@@ -6940,13 +6938,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB404
      */
-    protected function getFixtureB404Service()
+    protected static function getFixtureB404Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB404'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB404'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB404();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB404']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB404']($container);
     }
 
     /*
@@ -6954,13 +6952,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB405
      */
-    protected function getFixtureB405Service()
+    protected static function getFixtureB405Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB405'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB405'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB405();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB405']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB405']($container);
     }
 
     /*
@@ -6968,13 +6966,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB406
      */
-    protected function getFixtureB406Service()
+    protected static function getFixtureB406Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB406'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB406'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB406();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB406']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB406']($container);
     }
 
     /*
@@ -6982,13 +6980,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB407
      */
-    protected function getFixtureB407Service()
+    protected static function getFixtureB407Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB407'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB407'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB407();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB407']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB407']($container);
     }
 
     /*
@@ -6996,13 +6994,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB408
      */
-    protected function getFixtureB408Service()
+    protected static function getFixtureB408Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB408'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB408'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB408();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB408']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB408']($container);
     }
 
     /*
@@ -7010,13 +7008,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB409
      */
-    protected function getFixtureB409Service()
+    protected static function getFixtureB409Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB409'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB409'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB409();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB409']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB409']($container);
     }
 
     /*
@@ -7024,13 +7022,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB41
      */
-    protected function getFixtureB41Service()
+    protected static function getFixtureB41Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB41'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB41'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB41();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB41']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB41']($container);
     }
 
     /*
@@ -7038,13 +7036,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB410
      */
-    protected function getFixtureB410Service()
+    protected static function getFixtureB410Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB410'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB410'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB410();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB410']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB410']($container);
     }
 
     /*
@@ -7052,13 +7050,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB411
      */
-    protected function getFixtureB411Service()
+    protected static function getFixtureB411Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB411'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB411'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB411();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB411']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB411']($container);
     }
 
     /*
@@ -7066,13 +7064,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB412
      */
-    protected function getFixtureB412Service()
+    protected static function getFixtureB412Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB412'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB412'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB412();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB412']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB412']($container);
     }
 
     /*
@@ -7080,13 +7078,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB413
      */
-    protected function getFixtureB413Service()
+    protected static function getFixtureB413Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB413'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB413'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB413();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB413']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB413']($container);
     }
 
     /*
@@ -7094,13 +7092,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB414
      */
-    protected function getFixtureB414Service()
+    protected static function getFixtureB414Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB414'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB414'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB414();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB414']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB414']($container);
     }
 
     /*
@@ -7108,13 +7106,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB415
      */
-    protected function getFixtureB415Service()
+    protected static function getFixtureB415Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB415'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB415'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB415();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB415']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB415']($container);
     }
 
     /*
@@ -7122,13 +7120,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB416
      */
-    protected function getFixtureB416Service()
+    protected static function getFixtureB416Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB416'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB416'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB416();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB416']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB416']($container);
     }
 
     /*
@@ -7136,13 +7134,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB417
      */
-    protected function getFixtureB417Service()
+    protected static function getFixtureB417Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB417'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB417'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB417();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB417']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB417']($container);
     }
 
     /*
@@ -7150,13 +7148,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB418
      */
-    protected function getFixtureB418Service()
+    protected static function getFixtureB418Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB418'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB418'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB418();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB418']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB418']($container);
     }
 
     /*
@@ -7164,13 +7162,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB419
      */
-    protected function getFixtureB419Service()
+    protected static function getFixtureB419Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB419'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB419'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB419();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB419']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB419']($container);
     }
 
     /*
@@ -7178,13 +7176,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB42
      */
-    protected function getFixtureB42Service()
+    protected static function getFixtureB42Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB42'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB42'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB42();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB42']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB42']($container);
     }
 
     /*
@@ -7192,13 +7190,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB420
      */
-    protected function getFixtureB420Service()
+    protected static function getFixtureB420Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB420'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB420'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB420();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB420']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB420']($container);
     }
 
     /*
@@ -7206,13 +7204,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB421
      */
-    protected function getFixtureB421Service()
+    protected static function getFixtureB421Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB421'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB421'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB421();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB421']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB421']($container);
     }
 
     /*
@@ -7220,13 +7218,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB422
      */
-    protected function getFixtureB422Service()
+    protected static function getFixtureB422Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB422'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB422'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB422();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB422']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB422']($container);
     }
 
     /*
@@ -7234,13 +7232,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB423
      */
-    protected function getFixtureB423Service()
+    protected static function getFixtureB423Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB423'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB423'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB423();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB423']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB423']($container);
     }
 
     /*
@@ -7248,13 +7246,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB424
      */
-    protected function getFixtureB424Service()
+    protected static function getFixtureB424Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB424'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB424'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB424();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB424']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB424']($container);
     }
 
     /*
@@ -7262,13 +7260,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB425
      */
-    protected function getFixtureB425Service()
+    protected static function getFixtureB425Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB425'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB425'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB425();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB425']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB425']($container);
     }
 
     /*
@@ -7276,13 +7274,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB426
      */
-    protected function getFixtureB426Service()
+    protected static function getFixtureB426Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB426'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB426'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB426();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB426']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB426']($container);
     }
 
     /*
@@ -7290,13 +7288,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB427
      */
-    protected function getFixtureB427Service()
+    protected static function getFixtureB427Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB427'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB427'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB427();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB427']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB427']($container);
     }
 
     /*
@@ -7304,13 +7302,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB428
      */
-    protected function getFixtureB428Service()
+    protected static function getFixtureB428Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB428'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB428'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB428();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB428']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB428']($container);
     }
 
     /*
@@ -7318,13 +7316,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB429
      */
-    protected function getFixtureB429Service()
+    protected static function getFixtureB429Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB429'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB429'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB429();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB429']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB429']($container);
     }
 
     /*
@@ -7332,13 +7330,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB43
      */
-    protected function getFixtureB43Service()
+    protected static function getFixtureB43Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB43'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB43'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB43();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB43']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB43']($container);
     }
 
     /*
@@ -7346,13 +7344,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB430
      */
-    protected function getFixtureB430Service()
+    protected static function getFixtureB430Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB430'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB430'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB430();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB430']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB430']($container);
     }
 
     /*
@@ -7360,13 +7358,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB431
      */
-    protected function getFixtureB431Service()
+    protected static function getFixtureB431Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB431'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB431'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB431();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB431']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB431']($container);
     }
 
     /*
@@ -7374,13 +7372,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB432
      */
-    protected function getFixtureB432Service()
+    protected static function getFixtureB432Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB432'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB432'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB432();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB432']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB432']($container);
     }
 
     /*
@@ -7388,13 +7386,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB433
      */
-    protected function getFixtureB433Service()
+    protected static function getFixtureB433Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB433'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB433'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB433();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB433']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB433']($container);
     }
 
     /*
@@ -7402,13 +7400,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB434
      */
-    protected function getFixtureB434Service()
+    protected static function getFixtureB434Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB434'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB434'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB434();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB434']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB434']($container);
     }
 
     /*
@@ -7416,13 +7414,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB435
      */
-    protected function getFixtureB435Service()
+    protected static function getFixtureB435Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB435'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB435'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB435();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB435']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB435']($container);
     }
 
     /*
@@ -7430,13 +7428,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB436
      */
-    protected function getFixtureB436Service()
+    protected static function getFixtureB436Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB436'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB436'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB436();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB436']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB436']($container);
     }
 
     /*
@@ -7444,13 +7442,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB437
      */
-    protected function getFixtureB437Service()
+    protected static function getFixtureB437Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB437'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB437'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB437();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB437']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB437']($container);
     }
 
     /*
@@ -7458,13 +7456,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB438
      */
-    protected function getFixtureB438Service()
+    protected static function getFixtureB438Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB438'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB438'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB438();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB438']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB438']($container);
     }
 
     /*
@@ -7472,13 +7470,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB439
      */
-    protected function getFixtureB439Service()
+    protected static function getFixtureB439Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB439'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB439'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB439();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB439']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB439']($container);
     }
 
     /*
@@ -7486,13 +7484,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB44
      */
-    protected function getFixtureB44Service()
+    protected static function getFixtureB44Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB44'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB44'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB44();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB44']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB44']($container);
     }
 
     /*
@@ -7500,13 +7498,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB440
      */
-    protected function getFixtureB440Service()
+    protected static function getFixtureB440Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB440'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB440'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB440();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB440']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB440']($container);
     }
 
     /*
@@ -7514,13 +7512,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB441
      */
-    protected function getFixtureB441Service()
+    protected static function getFixtureB441Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB441'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB441'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB441();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB441']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB441']($container);
     }
 
     /*
@@ -7528,13 +7526,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB442
      */
-    protected function getFixtureB442Service()
+    protected static function getFixtureB442Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB442'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB442'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB442();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB442']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB442']($container);
     }
 
     /*
@@ -7542,13 +7540,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB443
      */
-    protected function getFixtureB443Service()
+    protected static function getFixtureB443Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB443'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB443'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB443();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB443']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB443']($container);
     }
 
     /*
@@ -7556,13 +7554,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB444
      */
-    protected function getFixtureB444Service()
+    protected static function getFixtureB444Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB444'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB444'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB444();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB444']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB444']($container);
     }
 
     /*
@@ -7570,13 +7568,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB445
      */
-    protected function getFixtureB445Service()
+    protected static function getFixtureB445Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB445'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB445'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB445();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB445']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB445']($container);
     }
 
     /*
@@ -7584,13 +7582,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB446
      */
-    protected function getFixtureB446Service()
+    protected static function getFixtureB446Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB446'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB446'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB446();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB446']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB446']($container);
     }
 
     /*
@@ -7598,13 +7596,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB447
      */
-    protected function getFixtureB447Service()
+    protected static function getFixtureB447Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB447'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB447'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB447();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB447']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB447']($container);
     }
 
     /*
@@ -7612,13 +7610,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB448
      */
-    protected function getFixtureB448Service()
+    protected static function getFixtureB448Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB448'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB448'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB448();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB448']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB448']($container);
     }
 
     /*
@@ -7626,13 +7624,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB449
      */
-    protected function getFixtureB449Service()
+    protected static function getFixtureB449Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB449'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB449'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB449();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB449']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB449']($container);
     }
 
     /*
@@ -7640,13 +7638,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB45
      */
-    protected function getFixtureB45Service()
+    protected static function getFixtureB45Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB45'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB45'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB45();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB45']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB45']($container);
     }
 
     /*
@@ -7654,13 +7652,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB450
      */
-    protected function getFixtureB450Service()
+    protected static function getFixtureB450Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB450'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB450'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB450();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB450']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB450']($container);
     }
 
     /*
@@ -7668,13 +7666,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB451
      */
-    protected function getFixtureB451Service()
+    protected static function getFixtureB451Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB451'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB451'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB451();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB451']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB451']($container);
     }
 
     /*
@@ -7682,13 +7680,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB452
      */
-    protected function getFixtureB452Service()
+    protected static function getFixtureB452Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB452'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB452'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB452();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB452']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB452']($container);
     }
 
     /*
@@ -7696,13 +7694,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB453
      */
-    protected function getFixtureB453Service()
+    protected static function getFixtureB453Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB453'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB453'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB453();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB453']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB453']($container);
     }
 
     /*
@@ -7710,13 +7708,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB454
      */
-    protected function getFixtureB454Service()
+    protected static function getFixtureB454Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB454'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB454'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB454();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB454']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB454']($container);
     }
 
     /*
@@ -7724,13 +7722,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB455
      */
-    protected function getFixtureB455Service()
+    protected static function getFixtureB455Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB455'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB455'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB455();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB455']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB455']($container);
     }
 
     /*
@@ -7738,13 +7736,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB456
      */
-    protected function getFixtureB456Service()
+    protected static function getFixtureB456Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB456'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB456'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB456();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB456']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB456']($container);
     }
 
     /*
@@ -7752,13 +7750,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB457
      */
-    protected function getFixtureB457Service()
+    protected static function getFixtureB457Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB457'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB457'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB457();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB457']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB457']($container);
     }
 
     /*
@@ -7766,13 +7764,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB458
      */
-    protected function getFixtureB458Service()
+    protected static function getFixtureB458Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB458'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB458'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB458();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB458']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB458']($container);
     }
 
     /*
@@ -7780,13 +7778,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB459
      */
-    protected function getFixtureB459Service()
+    protected static function getFixtureB459Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB459'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB459'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB459();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB459']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB459']($container);
     }
 
     /*
@@ -7794,13 +7792,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB46
      */
-    protected function getFixtureB46Service()
+    protected static function getFixtureB46Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB46'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB46'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB46();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB46']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB46']($container);
     }
 
     /*
@@ -7808,13 +7806,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB460
      */
-    protected function getFixtureB460Service()
+    protected static function getFixtureB460Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB460'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB460'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB460();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB460']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB460']($container);
     }
 
     /*
@@ -7822,13 +7820,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB461
      */
-    protected function getFixtureB461Service()
+    protected static function getFixtureB461Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB461'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB461'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB461();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB461']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB461']($container);
     }
 
     /*
@@ -7836,13 +7834,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB462
      */
-    protected function getFixtureB462Service()
+    protected static function getFixtureB462Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB462'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB462'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB462();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB462']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB462']($container);
     }
 
     /*
@@ -7850,13 +7848,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB463
      */
-    protected function getFixtureB463Service()
+    protected static function getFixtureB463Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB463'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB463'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB463();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB463']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB463']($container);
     }
 
     /*
@@ -7864,13 +7862,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB464
      */
-    protected function getFixtureB464Service()
+    protected static function getFixtureB464Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB464'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB464'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB464();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB464']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB464']($container);
     }
 
     /*
@@ -7878,13 +7876,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB465
      */
-    protected function getFixtureB465Service()
+    protected static function getFixtureB465Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB465'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB465'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB465();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB465']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB465']($container);
     }
 
     /*
@@ -7892,13 +7890,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB466
      */
-    protected function getFixtureB466Service()
+    protected static function getFixtureB466Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB466'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB466'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB466();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB466']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB466']($container);
     }
 
     /*
@@ -7906,13 +7904,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB467
      */
-    protected function getFixtureB467Service()
+    protected static function getFixtureB467Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB467'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB467'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB467();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB467']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB467']($container);
     }
 
     /*
@@ -7920,13 +7918,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB468
      */
-    protected function getFixtureB468Service()
+    protected static function getFixtureB468Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB468'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB468'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB468();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB468']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB468']($container);
     }
 
     /*
@@ -7934,13 +7932,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB469
      */
-    protected function getFixtureB469Service()
+    protected static function getFixtureB469Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB469'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB469'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB469();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB469']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB469']($container);
     }
 
     /*
@@ -7948,13 +7946,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB47
      */
-    protected function getFixtureB47Service()
+    protected static function getFixtureB47Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB47'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB47'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB47();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB47']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB47']($container);
     }
 
     /*
@@ -7962,13 +7960,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB470
      */
-    protected function getFixtureB470Service()
+    protected static function getFixtureB470Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB470'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB470'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB470();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB470']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB470']($container);
     }
 
     /*
@@ -7976,13 +7974,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB471
      */
-    protected function getFixtureB471Service()
+    protected static function getFixtureB471Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB471'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB471'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB471();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB471']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB471']($container);
     }
 
     /*
@@ -7990,13 +7988,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB472
      */
-    protected function getFixtureB472Service()
+    protected static function getFixtureB472Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB472'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB472'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB472();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB472']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB472']($container);
     }
 
     /*
@@ -8004,13 +8002,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB473
      */
-    protected function getFixtureB473Service()
+    protected static function getFixtureB473Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB473'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB473'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB473();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB473']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB473']($container);
     }
 
     /*
@@ -8018,13 +8016,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB474
      */
-    protected function getFixtureB474Service()
+    protected static function getFixtureB474Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB474'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB474'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB474();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB474']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB474']($container);
     }
 
     /*
@@ -8032,13 +8030,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB475
      */
-    protected function getFixtureB475Service()
+    protected static function getFixtureB475Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB475'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB475'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB475();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB475']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB475']($container);
     }
 
     /*
@@ -8046,13 +8044,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB476
      */
-    protected function getFixtureB476Service()
+    protected static function getFixtureB476Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB476'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB476'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB476();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB476']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB476']($container);
     }
 
     /*
@@ -8060,13 +8058,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB477
      */
-    protected function getFixtureB477Service()
+    protected static function getFixtureB477Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB477'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB477'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB477();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB477']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB477']($container);
     }
 
     /*
@@ -8074,13 +8072,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB478
      */
-    protected function getFixtureB478Service()
+    protected static function getFixtureB478Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB478'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB478'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB478();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB478']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB478']($container);
     }
 
     /*
@@ -8088,13 +8086,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB479
      */
-    protected function getFixtureB479Service()
+    protected static function getFixtureB479Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB479'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB479'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB479();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB479']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB479']($container);
     }
 
     /*
@@ -8102,13 +8100,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB48
      */
-    protected function getFixtureB48Service()
+    protected static function getFixtureB48Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB48'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB48'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB48();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB48']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB48']($container);
     }
 
     /*
@@ -8116,13 +8114,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB480
      */
-    protected function getFixtureB480Service()
+    protected static function getFixtureB480Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB480'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB480'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB480();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB480']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB480']($container);
     }
 
     /*
@@ -8130,13 +8128,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB481
      */
-    protected function getFixtureB481Service()
+    protected static function getFixtureB481Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB481'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB481'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB481();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB481']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB481']($container);
     }
 
     /*
@@ -8144,13 +8142,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB482
      */
-    protected function getFixtureB482Service()
+    protected static function getFixtureB482Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB482'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB482'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB482();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB482']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB482']($container);
     }
 
     /*
@@ -8158,13 +8156,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB483
      */
-    protected function getFixtureB483Service()
+    protected static function getFixtureB483Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB483'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB483'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB483();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB483']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB483']($container);
     }
 
     /*
@@ -8172,13 +8170,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB484
      */
-    protected function getFixtureB484Service()
+    protected static function getFixtureB484Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB484'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB484'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB484();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB484']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB484']($container);
     }
 
     /*
@@ -8186,13 +8184,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB485
      */
-    protected function getFixtureB485Service()
+    protected static function getFixtureB485Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB485'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB485'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB485();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB485']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB485']($container);
     }
 
     /*
@@ -8200,13 +8198,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB486
      */
-    protected function getFixtureB486Service()
+    protected static function getFixtureB486Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB486'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB486'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB486();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB486']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB486']($container);
     }
 
     /*
@@ -8214,13 +8212,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB487
      */
-    protected function getFixtureB487Service()
+    protected static function getFixtureB487Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB487'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB487'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB487();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB487']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB487']($container);
     }
 
     /*
@@ -8228,13 +8226,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB488
      */
-    protected function getFixtureB488Service()
+    protected static function getFixtureB488Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB488'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB488'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB488();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB488']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB488']($container);
     }
 
     /*
@@ -8242,13 +8240,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB489
      */
-    protected function getFixtureB489Service()
+    protected static function getFixtureB489Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB489'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB489'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB489();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB489']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB489']($container);
     }
 
     /*
@@ -8256,13 +8254,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB49
      */
-    protected function getFixtureB49Service()
+    protected static function getFixtureB49Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB49'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB49'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB49();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB49']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB49']($container);
     }
 
     /*
@@ -8270,13 +8268,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB490
      */
-    protected function getFixtureB490Service()
+    protected static function getFixtureB490Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB490'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB490'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB490();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB490']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB490']($container);
     }
 
     /*
@@ -8284,13 +8282,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB491
      */
-    protected function getFixtureB491Service()
+    protected static function getFixtureB491Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB491'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB491'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB491();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB491']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB491']($container);
     }
 
     /*
@@ -8298,13 +8296,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB492
      */
-    protected function getFixtureB492Service()
+    protected static function getFixtureB492Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB492'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB492'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB492();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB492']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB492']($container);
     }
 
     /*
@@ -8312,13 +8310,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB493
      */
-    protected function getFixtureB493Service()
+    protected static function getFixtureB493Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB493'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB493'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB493();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB493']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB493']($container);
     }
 
     /*
@@ -8326,13 +8324,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB494
      */
-    protected function getFixtureB494Service()
+    protected static function getFixtureB494Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB494'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB494'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB494();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB494']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB494']($container);
     }
 
     /*
@@ -8340,13 +8338,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB495
      */
-    protected function getFixtureB495Service()
+    protected static function getFixtureB495Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB495'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB495'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB495();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB495']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB495']($container);
     }
 
     /*
@@ -8354,13 +8352,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB496
      */
-    protected function getFixtureB496Service()
+    protected static function getFixtureB496Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB496'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB496'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB496();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB496']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB496']($container);
     }
 
     /*
@@ -8368,13 +8366,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB497
      */
-    protected function getFixtureB497Service()
+    protected static function getFixtureB497Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB497'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB497'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB497();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB497']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB497']($container);
     }
 
     /*
@@ -8382,13 +8380,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB498
      */
-    protected function getFixtureB498Service()
+    protected static function getFixtureB498Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB498'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB498'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB498();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB498']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB498']($container);
     }
 
     /*
@@ -8396,13 +8394,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB499
      */
-    protected function getFixtureB499Service()
+    protected static function getFixtureB499Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB499'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB499'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB499();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB499']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB499']($container);
     }
 
     /*
@@ -8410,13 +8408,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB5
      */
-    protected function getFixtureB5Service()
+    protected static function getFixtureB5Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB5'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB5'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB5();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB5']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB5']($container);
     }
 
     /*
@@ -8424,13 +8422,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB50
      */
-    protected function getFixtureB50Service()
+    protected static function getFixtureB50Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB50'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB50'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB50();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB50']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB50']($container);
     }
 
     /*
@@ -8438,13 +8436,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB500
      */
-    protected function getFixtureB500Service()
+    protected static function getFixtureB500Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB500'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB500'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB500();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB500']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB500']($container);
     }
 
     /*
@@ -8452,13 +8450,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB501
      */
-    protected function getFixtureB501Service()
+    protected static function getFixtureB501Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB501'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB501'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB501();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB501']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB501']($container);
     }
 
     /*
@@ -8466,13 +8464,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB502
      */
-    protected function getFixtureB502Service()
+    protected static function getFixtureB502Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB502'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB502'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB502();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB502']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB502']($container);
     }
 
     /*
@@ -8480,13 +8478,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB503
      */
-    protected function getFixtureB503Service()
+    protected static function getFixtureB503Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB503'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB503'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB503();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB503']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB503']($container);
     }
 
     /*
@@ -8494,13 +8492,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB504
      */
-    protected function getFixtureB504Service()
+    protected static function getFixtureB504Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB504'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB504'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB504();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB504']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB504']($container);
     }
 
     /*
@@ -8508,13 +8506,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB505
      */
-    protected function getFixtureB505Service()
+    protected static function getFixtureB505Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB505'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB505'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB505();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB505']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB505']($container);
     }
 
     /*
@@ -8522,13 +8520,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB506
      */
-    protected function getFixtureB506Service()
+    protected static function getFixtureB506Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB506'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB506'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB506();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB506']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB506']($container);
     }
 
     /*
@@ -8536,13 +8534,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB507
      */
-    protected function getFixtureB507Service()
+    protected static function getFixtureB507Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB507'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB507'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB507();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB507']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB507']($container);
     }
 
     /*
@@ -8550,13 +8548,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB508
      */
-    protected function getFixtureB508Service()
+    protected static function getFixtureB508Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB508'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB508'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB508();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB508']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB508']($container);
     }
 
     /*
@@ -8564,13 +8562,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB509
      */
-    protected function getFixtureB509Service()
+    protected static function getFixtureB509Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB509'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB509'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB509();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB509']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB509']($container);
     }
 
     /*
@@ -8578,13 +8576,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB51
      */
-    protected function getFixtureB51Service()
+    protected static function getFixtureB51Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB51'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB51'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB51();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB51']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB51']($container);
     }
 
     /*
@@ -8592,13 +8590,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB510
      */
-    protected function getFixtureB510Service()
+    protected static function getFixtureB510Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB510'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB510'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB510();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB510']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB510']($container);
     }
 
     /*
@@ -8606,13 +8604,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB511
      */
-    protected function getFixtureB511Service()
+    protected static function getFixtureB511Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB511'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB511'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB511();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB511']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB511']($container);
     }
 
     /*
@@ -8620,13 +8618,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB512
      */
-    protected function getFixtureB512Service()
+    protected static function getFixtureB512Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB512'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB512'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB512();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB512']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB512']($container);
     }
 
     /*
@@ -8634,13 +8632,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB513
      */
-    protected function getFixtureB513Service()
+    protected static function getFixtureB513Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB513'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB513'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB513();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB513']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB513']($container);
     }
 
     /*
@@ -8648,13 +8646,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB514
      */
-    protected function getFixtureB514Service()
+    protected static function getFixtureB514Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB514'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB514'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB514();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB514']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB514']($container);
     }
 
     /*
@@ -8662,13 +8660,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB515
      */
-    protected function getFixtureB515Service()
+    protected static function getFixtureB515Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB515'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB515'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB515();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB515']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB515']($container);
     }
 
     /*
@@ -8676,13 +8674,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB516
      */
-    protected function getFixtureB516Service()
+    protected static function getFixtureB516Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB516'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB516'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB516();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB516']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB516']($container);
     }
 
     /*
@@ -8690,13 +8688,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB517
      */
-    protected function getFixtureB517Service()
+    protected static function getFixtureB517Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB517'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB517'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB517();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB517']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB517']($container);
     }
 
     /*
@@ -8704,13 +8702,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB518
      */
-    protected function getFixtureB518Service()
+    protected static function getFixtureB518Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB518'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB518'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB518();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB518']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB518']($container);
     }
 
     /*
@@ -8718,13 +8716,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB519
      */
-    protected function getFixtureB519Service()
+    protected static function getFixtureB519Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB519'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB519'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB519();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB519']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB519']($container);
     }
 
     /*
@@ -8732,13 +8730,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB52
      */
-    protected function getFixtureB52Service()
+    protected static function getFixtureB52Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB52'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB52'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB52();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB52']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB52']($container);
     }
 
     /*
@@ -8746,13 +8744,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB520
      */
-    protected function getFixtureB520Service()
+    protected static function getFixtureB520Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB520'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB520'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB520();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB520']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB520']($container);
     }
 
     /*
@@ -8760,13 +8758,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB521
      */
-    protected function getFixtureB521Service()
+    protected static function getFixtureB521Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB521'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB521'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB521();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB521']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB521']($container);
     }
 
     /*
@@ -8774,13 +8772,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB522
      */
-    protected function getFixtureB522Service()
+    protected static function getFixtureB522Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB522'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB522'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB522();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB522']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB522']($container);
     }
 
     /*
@@ -8788,13 +8786,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB523
      */
-    protected function getFixtureB523Service()
+    protected static function getFixtureB523Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB523'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB523'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB523();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB523']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB523']($container);
     }
 
     /*
@@ -8802,13 +8800,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB524
      */
-    protected function getFixtureB524Service()
+    protected static function getFixtureB524Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB524'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB524'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB524();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB524']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB524']($container);
     }
 
     /*
@@ -8816,13 +8814,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB525
      */
-    protected function getFixtureB525Service()
+    protected static function getFixtureB525Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB525'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB525'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB525();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB525']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB525']($container);
     }
 
     /*
@@ -8830,13 +8828,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB526
      */
-    protected function getFixtureB526Service()
+    protected static function getFixtureB526Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB526'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB526'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB526();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB526']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB526']($container);
     }
 
     /*
@@ -8844,13 +8842,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB527
      */
-    protected function getFixtureB527Service()
+    protected static function getFixtureB527Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB527'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB527'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB527();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB527']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB527']($container);
     }
 
     /*
@@ -8858,13 +8856,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB528
      */
-    protected function getFixtureB528Service()
+    protected static function getFixtureB528Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB528'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB528'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB528();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB528']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB528']($container);
     }
 
     /*
@@ -8872,13 +8870,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB529
      */
-    protected function getFixtureB529Service()
+    protected static function getFixtureB529Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB529'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB529'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB529();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB529']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB529']($container);
     }
 
     /*
@@ -8886,13 +8884,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB53
      */
-    protected function getFixtureB53Service()
+    protected static function getFixtureB53Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB53'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB53'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB53();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB53']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB53']($container);
     }
 
     /*
@@ -8900,13 +8898,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB530
      */
-    protected function getFixtureB530Service()
+    protected static function getFixtureB530Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB530'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB530'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB530();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB530']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB530']($container);
     }
 
     /*
@@ -8914,13 +8912,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB531
      */
-    protected function getFixtureB531Service()
+    protected static function getFixtureB531Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB531'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB531'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB531();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB531']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB531']($container);
     }
 
     /*
@@ -8928,13 +8926,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB532
      */
-    protected function getFixtureB532Service()
+    protected static function getFixtureB532Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB532'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB532'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB532();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB532']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB532']($container);
     }
 
     /*
@@ -8942,13 +8940,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB533
      */
-    protected function getFixtureB533Service()
+    protected static function getFixtureB533Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB533'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB533'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB533();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB533']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB533']($container);
     }
 
     /*
@@ -8956,13 +8954,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB534
      */
-    protected function getFixtureB534Service()
+    protected static function getFixtureB534Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB534'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB534'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB534();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB534']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB534']($container);
     }
 
     /*
@@ -8970,13 +8968,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB535
      */
-    protected function getFixtureB535Service()
+    protected static function getFixtureB535Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB535'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB535'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB535();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB535']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB535']($container);
     }
 
     /*
@@ -8984,13 +8982,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB536
      */
-    protected function getFixtureB536Service()
+    protected static function getFixtureB536Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB536'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB536'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB536();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB536']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB536']($container);
     }
 
     /*
@@ -8998,13 +8996,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB537
      */
-    protected function getFixtureB537Service()
+    protected static function getFixtureB537Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB537'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB537'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB537();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB537']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB537']($container);
     }
 
     /*
@@ -9012,13 +9010,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB538
      */
-    protected function getFixtureB538Service()
+    protected static function getFixtureB538Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB538'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB538'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB538();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB538']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB538']($container);
     }
 
     /*
@@ -9026,13 +9024,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB539
      */
-    protected function getFixtureB539Service()
+    protected static function getFixtureB539Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB539'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB539'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB539();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB539']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB539']($container);
     }
 
     /*
@@ -9040,13 +9038,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB54
      */
-    protected function getFixtureB54Service()
+    protected static function getFixtureB54Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB54'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB54'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB54();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB54']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB54']($container);
     }
 
     /*
@@ -9054,13 +9052,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB540
      */
-    protected function getFixtureB540Service()
+    protected static function getFixtureB540Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB540'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB540'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB540();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB540']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB540']($container);
     }
 
     /*
@@ -9068,13 +9066,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB541
      */
-    protected function getFixtureB541Service()
+    protected static function getFixtureB541Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB541'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB541'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB541();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB541']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB541']($container);
     }
 
     /*
@@ -9082,13 +9080,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB542
      */
-    protected function getFixtureB542Service()
+    protected static function getFixtureB542Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB542'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB542'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB542();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB542']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB542']($container);
     }
 
     /*
@@ -9096,13 +9094,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB543
      */
-    protected function getFixtureB543Service()
+    protected static function getFixtureB543Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB543'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB543'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB543();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB543']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB543']($container);
     }
 
     /*
@@ -9110,13 +9108,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB544
      */
-    protected function getFixtureB544Service()
+    protected static function getFixtureB544Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB544'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB544'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB544();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB544']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB544']($container);
     }
 
     /*
@@ -9124,13 +9122,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB545
      */
-    protected function getFixtureB545Service()
+    protected static function getFixtureB545Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB545'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB545'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB545();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB545']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB545']($container);
     }
 
     /*
@@ -9138,13 +9136,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB546
      */
-    protected function getFixtureB546Service()
+    protected static function getFixtureB546Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB546'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB546'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB546();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB546']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB546']($container);
     }
 
     /*
@@ -9152,13 +9150,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB547
      */
-    protected function getFixtureB547Service()
+    protected static function getFixtureB547Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB547'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB547'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB547();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB547']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB547']($container);
     }
 
     /*
@@ -9166,13 +9164,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB548
      */
-    protected function getFixtureB548Service()
+    protected static function getFixtureB548Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB548'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB548'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB548();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB548']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB548']($container);
     }
 
     /*
@@ -9180,13 +9178,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB549
      */
-    protected function getFixtureB549Service()
+    protected static function getFixtureB549Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB549'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB549'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB549();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB549']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB549']($container);
     }
 
     /*
@@ -9194,13 +9192,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB55
      */
-    protected function getFixtureB55Service()
+    protected static function getFixtureB55Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB55'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB55'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB55();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB55']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB55']($container);
     }
 
     /*
@@ -9208,13 +9206,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB550
      */
-    protected function getFixtureB550Service()
+    protected static function getFixtureB550Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB550'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB550'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB550();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB550']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB550']($container);
     }
 
     /*
@@ -9222,13 +9220,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB551
      */
-    protected function getFixtureB551Service()
+    protected static function getFixtureB551Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB551'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB551'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB551();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB551']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB551']($container);
     }
 
     /*
@@ -9236,13 +9234,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB552
      */
-    protected function getFixtureB552Service()
+    protected static function getFixtureB552Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB552'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB552'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB552();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB552']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB552']($container);
     }
 
     /*
@@ -9250,13 +9248,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB553
      */
-    protected function getFixtureB553Service()
+    protected static function getFixtureB553Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB553'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB553'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB553();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB553']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB553']($container);
     }
 
     /*
@@ -9264,13 +9262,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB554
      */
-    protected function getFixtureB554Service()
+    protected static function getFixtureB554Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB554'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB554'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB554();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB554']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB554']($container);
     }
 
     /*
@@ -9278,13 +9276,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB555
      */
-    protected function getFixtureB555Service()
+    protected static function getFixtureB555Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB555'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB555'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB555();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB555']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB555']($container);
     }
 
     /*
@@ -9292,13 +9290,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB556
      */
-    protected function getFixtureB556Service()
+    protected static function getFixtureB556Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB556'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB556'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB556();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB556']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB556']($container);
     }
 
     /*
@@ -9306,13 +9304,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB557
      */
-    protected function getFixtureB557Service()
+    protected static function getFixtureB557Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB557'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB557'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB557();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB557']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB557']($container);
     }
 
     /*
@@ -9320,13 +9318,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB558
      */
-    protected function getFixtureB558Service()
+    protected static function getFixtureB558Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB558'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB558'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB558();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB558']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB558']($container);
     }
 
     /*
@@ -9334,13 +9332,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB559
      */
-    protected function getFixtureB559Service()
+    protected static function getFixtureB559Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB559'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB559'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB559();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB559']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB559']($container);
     }
 
     /*
@@ -9348,13 +9346,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB56
      */
-    protected function getFixtureB56Service()
+    protected static function getFixtureB56Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB56'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB56'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB56();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB56']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB56']($container);
     }
 
     /*
@@ -9362,13 +9360,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB560
      */
-    protected function getFixtureB560Service()
+    protected static function getFixtureB560Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB560'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB560'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB560();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB560']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB560']($container);
     }
 
     /*
@@ -9376,13 +9374,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB561
      */
-    protected function getFixtureB561Service()
+    protected static function getFixtureB561Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB561'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB561'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB561();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB561']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB561']($container);
     }
 
     /*
@@ -9390,13 +9388,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB562
      */
-    protected function getFixtureB562Service()
+    protected static function getFixtureB562Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB562'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB562'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB562();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB562']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB562']($container);
     }
 
     /*
@@ -9404,13 +9402,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB563
      */
-    protected function getFixtureB563Service()
+    protected static function getFixtureB563Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB563'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB563'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB563();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB563']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB563']($container);
     }
 
     /*
@@ -9418,13 +9416,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB564
      */
-    protected function getFixtureB564Service()
+    protected static function getFixtureB564Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB564'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB564'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB564();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB564']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB564']($container);
     }
 
     /*
@@ -9432,13 +9430,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB565
      */
-    protected function getFixtureB565Service()
+    protected static function getFixtureB565Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB565'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB565'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB565();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB565']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB565']($container);
     }
 
     /*
@@ -9446,13 +9444,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB566
      */
-    protected function getFixtureB566Service()
+    protected static function getFixtureB566Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB566'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB566'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB566();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB566']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB566']($container);
     }
 
     /*
@@ -9460,13 +9458,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB567
      */
-    protected function getFixtureB567Service()
+    protected static function getFixtureB567Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB567'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB567'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB567();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB567']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB567']($container);
     }
 
     /*
@@ -9474,13 +9472,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB568
      */
-    protected function getFixtureB568Service()
+    protected static function getFixtureB568Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB568'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB568'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB568();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB568']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB568']($container);
     }
 
     /*
@@ -9488,13 +9486,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB569
      */
-    protected function getFixtureB569Service()
+    protected static function getFixtureB569Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB569'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB569'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB569();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB569']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB569']($container);
     }
 
     /*
@@ -9502,13 +9500,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB57
      */
-    protected function getFixtureB57Service()
+    protected static function getFixtureB57Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB57'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB57'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB57();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB57']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB57']($container);
     }
 
     /*
@@ -9516,13 +9514,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB570
      */
-    protected function getFixtureB570Service()
+    protected static function getFixtureB570Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB570'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB570'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB570();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB570']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB570']($container);
     }
 
     /*
@@ -9530,13 +9528,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB571
      */
-    protected function getFixtureB571Service()
+    protected static function getFixtureB571Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB571'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB571'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB571();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB571']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB571']($container);
     }
 
     /*
@@ -9544,13 +9542,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB572
      */
-    protected function getFixtureB572Service()
+    protected static function getFixtureB572Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB572'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB572'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB572();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB572']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB572']($container);
     }
 
     /*
@@ -9558,13 +9556,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB573
      */
-    protected function getFixtureB573Service()
+    protected static function getFixtureB573Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB573'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB573'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB573();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB573']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB573']($container);
     }
 
     /*
@@ -9572,13 +9570,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB574
      */
-    protected function getFixtureB574Service()
+    protected static function getFixtureB574Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB574'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB574'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB574();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB574']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB574']($container);
     }
 
     /*
@@ -9586,13 +9584,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB575
      */
-    protected function getFixtureB575Service()
+    protected static function getFixtureB575Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB575'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB575'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB575();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB575']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB575']($container);
     }
 
     /*
@@ -9600,13 +9598,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB576
      */
-    protected function getFixtureB576Service()
+    protected static function getFixtureB576Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB576'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB576'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB576();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB576']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB576']($container);
     }
 
     /*
@@ -9614,13 +9612,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB577
      */
-    protected function getFixtureB577Service()
+    protected static function getFixtureB577Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB577'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB577'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB577();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB577']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB577']($container);
     }
 
     /*
@@ -9628,13 +9626,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB578
      */
-    protected function getFixtureB578Service()
+    protected static function getFixtureB578Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB578'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB578'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB578();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB578']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB578']($container);
     }
 
     /*
@@ -9642,13 +9640,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB579
      */
-    protected function getFixtureB579Service()
+    protected static function getFixtureB579Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB579'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB579'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB579();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB579']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB579']($container);
     }
 
     /*
@@ -9656,13 +9654,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB58
      */
-    protected function getFixtureB58Service()
+    protected static function getFixtureB58Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB58'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB58'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB58();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB58']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB58']($container);
     }
 
     /*
@@ -9670,13 +9668,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB580
      */
-    protected function getFixtureB580Service()
+    protected static function getFixtureB580Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB580'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB580'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB580();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB580']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB580']($container);
     }
 
     /*
@@ -9684,13 +9682,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB581
      */
-    protected function getFixtureB581Service()
+    protected static function getFixtureB581Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB581'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB581'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB581();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB581']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB581']($container);
     }
 
     /*
@@ -9698,13 +9696,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB582
      */
-    protected function getFixtureB582Service()
+    protected static function getFixtureB582Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB582'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB582'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB582();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB582']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB582']($container);
     }
 
     /*
@@ -9712,13 +9710,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB583
      */
-    protected function getFixtureB583Service()
+    protected static function getFixtureB583Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB583'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB583'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB583();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB583']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB583']($container);
     }
 
     /*
@@ -9726,13 +9724,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB584
      */
-    protected function getFixtureB584Service()
+    protected static function getFixtureB584Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB584'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB584'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB584();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB584']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB584']($container);
     }
 
     /*
@@ -9740,13 +9738,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB585
      */
-    protected function getFixtureB585Service()
+    protected static function getFixtureB585Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB585'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB585'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB585();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB585']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB585']($container);
     }
 
     /*
@@ -9754,13 +9752,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB586
      */
-    protected function getFixtureB586Service()
+    protected static function getFixtureB586Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB586'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB586'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB586();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB586']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB586']($container);
     }
 
     /*
@@ -9768,13 +9766,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB587
      */
-    protected function getFixtureB587Service()
+    protected static function getFixtureB587Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB587'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB587'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB587();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB587']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB587']($container);
     }
 
     /*
@@ -9782,13 +9780,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB588
      */
-    protected function getFixtureB588Service()
+    protected static function getFixtureB588Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB588'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB588'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB588();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB588']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB588']($container);
     }
 
     /*
@@ -9796,13 +9794,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB589
      */
-    protected function getFixtureB589Service()
+    protected static function getFixtureB589Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB589'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB589'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB589();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB589']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB589']($container);
     }
 
     /*
@@ -9810,13 +9808,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB59
      */
-    protected function getFixtureB59Service()
+    protected static function getFixtureB59Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB59'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB59'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB59();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB59']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB59']($container);
     }
 
     /*
@@ -9824,13 +9822,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB590
      */
-    protected function getFixtureB590Service()
+    protected static function getFixtureB590Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB590'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB590'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB590();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB590']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB590']($container);
     }
 
     /*
@@ -9838,13 +9836,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB591
      */
-    protected function getFixtureB591Service()
+    protected static function getFixtureB591Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB591'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB591'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB591();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB591']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB591']($container);
     }
 
     /*
@@ -9852,13 +9850,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB592
      */
-    protected function getFixtureB592Service()
+    protected static function getFixtureB592Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB592'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB592'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB592();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB592']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB592']($container);
     }
 
     /*
@@ -9866,13 +9864,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB593
      */
-    protected function getFixtureB593Service()
+    protected static function getFixtureB593Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB593'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB593'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB593();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB593']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB593']($container);
     }
 
     /*
@@ -9880,13 +9878,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB594
      */
-    protected function getFixtureB594Service()
+    protected static function getFixtureB594Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB594'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB594'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB594();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB594']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB594']($container);
     }
 
     /*
@@ -9894,13 +9892,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB595
      */
-    protected function getFixtureB595Service()
+    protected static function getFixtureB595Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB595'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB595'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB595();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB595']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB595']($container);
     }
 
     /*
@@ -9908,13 +9906,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB596
      */
-    protected function getFixtureB596Service()
+    protected static function getFixtureB596Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB596'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB596'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB596();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB596']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB596']($container);
     }
 
     /*
@@ -9922,13 +9920,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB597
      */
-    protected function getFixtureB597Service()
+    protected static function getFixtureB597Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB597'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB597'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB597();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB597']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB597']($container);
     }
 
     /*
@@ -9936,13 +9934,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB598
      */
-    protected function getFixtureB598Service()
+    protected static function getFixtureB598Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB598'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB598'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB598();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB598']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB598']($container);
     }
 
     /*
@@ -9950,13 +9948,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB599
      */
-    protected function getFixtureB599Service()
+    protected static function getFixtureB599Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB599'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB599'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB599();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB599']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB599']($container);
     }
 
     /*
@@ -9964,13 +9962,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB6
      */
-    protected function getFixtureB6Service()
+    protected static function getFixtureB6Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB6'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB6'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB6();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB6']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB6']($container);
     }
 
     /*
@@ -9978,13 +9976,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB60
      */
-    protected function getFixtureB60Service()
+    protected static function getFixtureB60Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB60'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB60'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB60();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB60']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB60']($container);
     }
 
     /*
@@ -9992,13 +9990,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB600
      */
-    protected function getFixtureB600Service()
+    protected static function getFixtureB600Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB600'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB600'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB600();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB600']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB600']($container);
     }
 
     /*
@@ -10006,13 +10004,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB601
      */
-    protected function getFixtureB601Service()
+    protected static function getFixtureB601Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB601'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB601'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB601();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB601']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB601']($container);
     }
 
     /*
@@ -10020,13 +10018,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB602
      */
-    protected function getFixtureB602Service()
+    protected static function getFixtureB602Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB602'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB602'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB602();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB602']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB602']($container);
     }
 
     /*
@@ -10034,13 +10032,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB603
      */
-    protected function getFixtureB603Service()
+    protected static function getFixtureB603Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB603'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB603'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB603();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB603']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB603']($container);
     }
 
     /*
@@ -10048,13 +10046,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB604
      */
-    protected function getFixtureB604Service()
+    protected static function getFixtureB604Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB604'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB604'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB604();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB604']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB604']($container);
     }
 
     /*
@@ -10062,13 +10060,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB605
      */
-    protected function getFixtureB605Service()
+    protected static function getFixtureB605Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB605'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB605'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB605();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB605']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB605']($container);
     }
 
     /*
@@ -10076,13 +10074,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB606
      */
-    protected function getFixtureB606Service()
+    protected static function getFixtureB606Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB606'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB606'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB606();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB606']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB606']($container);
     }
 
     /*
@@ -10090,13 +10088,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB607
      */
-    protected function getFixtureB607Service()
+    protected static function getFixtureB607Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB607'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB607'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB607();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB607']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB607']($container);
     }
 
     /*
@@ -10104,13 +10102,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB608
      */
-    protected function getFixtureB608Service()
+    protected static function getFixtureB608Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB608'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB608'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB608();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB608']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB608']($container);
     }
 
     /*
@@ -10118,13 +10116,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB609
      */
-    protected function getFixtureB609Service()
+    protected static function getFixtureB609Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB609'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB609'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB609();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB609']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB609']($container);
     }
 
     /*
@@ -10132,13 +10130,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB61
      */
-    protected function getFixtureB61Service()
+    protected static function getFixtureB61Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB61'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB61'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB61();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB61']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB61']($container);
     }
 
     /*
@@ -10146,13 +10144,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB610
      */
-    protected function getFixtureB610Service()
+    protected static function getFixtureB610Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB610'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB610'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB610();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB610']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB610']($container);
     }
 
     /*
@@ -10160,13 +10158,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB611
      */
-    protected function getFixtureB611Service()
+    protected static function getFixtureB611Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB611'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB611'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB611();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB611']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB611']($container);
     }
 
     /*
@@ -10174,13 +10172,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB612
      */
-    protected function getFixtureB612Service()
+    protected static function getFixtureB612Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB612'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB612'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB612();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB612']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB612']($container);
     }
 
     /*
@@ -10188,13 +10186,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB613
      */
-    protected function getFixtureB613Service()
+    protected static function getFixtureB613Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB613'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB613'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB613();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB613']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB613']($container);
     }
 
     /*
@@ -10202,13 +10200,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB614
      */
-    protected function getFixtureB614Service()
+    protected static function getFixtureB614Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB614'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB614'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB614();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB614']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB614']($container);
     }
 
     /*
@@ -10216,13 +10214,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB615
      */
-    protected function getFixtureB615Service()
+    protected static function getFixtureB615Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB615'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB615'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB615();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB615']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB615']($container);
     }
 
     /*
@@ -10230,13 +10228,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB616
      */
-    protected function getFixtureB616Service()
+    protected static function getFixtureB616Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB616'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB616'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB616();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB616']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB616']($container);
     }
 
     /*
@@ -10244,13 +10242,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB617
      */
-    protected function getFixtureB617Service()
+    protected static function getFixtureB617Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB617'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB617'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB617();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB617']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB617']($container);
     }
 
     /*
@@ -10258,13 +10256,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB618
      */
-    protected function getFixtureB618Service()
+    protected static function getFixtureB618Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB618'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB618'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB618();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB618']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB618']($container);
     }
 
     /*
@@ -10272,13 +10270,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB619
      */
-    protected function getFixtureB619Service()
+    protected static function getFixtureB619Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB619'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB619'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB619();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB619']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB619']($container);
     }
 
     /*
@@ -10286,13 +10284,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB62
      */
-    protected function getFixtureB62Service()
+    protected static function getFixtureB62Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB62'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB62'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB62();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB62']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB62']($container);
     }
 
     /*
@@ -10300,13 +10298,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB620
      */
-    protected function getFixtureB620Service()
+    protected static function getFixtureB620Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB620'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB620'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB620();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB620']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB620']($container);
     }
 
     /*
@@ -10314,13 +10312,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB621
      */
-    protected function getFixtureB621Service()
+    protected static function getFixtureB621Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB621'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB621'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB621();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB621']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB621']($container);
     }
 
     /*
@@ -10328,13 +10326,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB622
      */
-    protected function getFixtureB622Service()
+    protected static function getFixtureB622Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB622'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB622'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB622();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB622']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB622']($container);
     }
 
     /*
@@ -10342,13 +10340,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB623
      */
-    protected function getFixtureB623Service()
+    protected static function getFixtureB623Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB623'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB623'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB623();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB623']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB623']($container);
     }
 
     /*
@@ -10356,13 +10354,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB624
      */
-    protected function getFixtureB624Service()
+    protected static function getFixtureB624Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB624'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB624'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB624();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB624']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB624']($container);
     }
 
     /*
@@ -10370,13 +10368,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB625
      */
-    protected function getFixtureB625Service()
+    protected static function getFixtureB625Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB625'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB625'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB625();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB625']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB625']($container);
     }
 
     /*
@@ -10384,13 +10382,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB626
      */
-    protected function getFixtureB626Service()
+    protected static function getFixtureB626Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB626'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB626'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB626();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB626']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB626']($container);
     }
 
     /*
@@ -10398,13 +10396,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB627
      */
-    protected function getFixtureB627Service()
+    protected static function getFixtureB627Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB627'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB627'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB627();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB627']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB627']($container);
     }
 
     /*
@@ -10412,13 +10410,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB628
      */
-    protected function getFixtureB628Service()
+    protected static function getFixtureB628Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB628'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB628'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB628();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB628']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB628']($container);
     }
 
     /*
@@ -10426,13 +10424,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB629
      */
-    protected function getFixtureB629Service()
+    protected static function getFixtureB629Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB629'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB629'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB629();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB629']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB629']($container);
     }
 
     /*
@@ -10440,13 +10438,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB63
      */
-    protected function getFixtureB63Service()
+    protected static function getFixtureB63Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB63'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB63'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB63();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB63']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB63']($container);
     }
 
     /*
@@ -10454,13 +10452,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB630
      */
-    protected function getFixtureB630Service()
+    protected static function getFixtureB630Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB630'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB630'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB630();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB630']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB630']($container);
     }
 
     /*
@@ -10468,13 +10466,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB631
      */
-    protected function getFixtureB631Service()
+    protected static function getFixtureB631Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB631'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB631'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB631();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB631']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB631']($container);
     }
 
     /*
@@ -10482,13 +10480,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB632
      */
-    protected function getFixtureB632Service()
+    protected static function getFixtureB632Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB632'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB632'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB632();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB632']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB632']($container);
     }
 
     /*
@@ -10496,13 +10494,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB633
      */
-    protected function getFixtureB633Service()
+    protected static function getFixtureB633Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB633'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB633'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB633();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB633']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB633']($container);
     }
 
     /*
@@ -10510,13 +10508,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB634
      */
-    protected function getFixtureB634Service()
+    protected static function getFixtureB634Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB634'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB634'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB634();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB634']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB634']($container);
     }
 
     /*
@@ -10524,13 +10522,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB635
      */
-    protected function getFixtureB635Service()
+    protected static function getFixtureB635Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB635'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB635'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB635();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB635']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB635']($container);
     }
 
     /*
@@ -10538,13 +10536,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB636
      */
-    protected function getFixtureB636Service()
+    protected static function getFixtureB636Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB636'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB636'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB636();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB636']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB636']($container);
     }
 
     /*
@@ -10552,13 +10550,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB637
      */
-    protected function getFixtureB637Service()
+    protected static function getFixtureB637Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB637'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB637'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB637();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB637']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB637']($container);
     }
 
     /*
@@ -10566,13 +10564,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB638
      */
-    protected function getFixtureB638Service()
+    protected static function getFixtureB638Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB638'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB638'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB638();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB638']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB638']($container);
     }
 
     /*
@@ -10580,13 +10578,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB639
      */
-    protected function getFixtureB639Service()
+    protected static function getFixtureB639Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB639'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB639'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB639();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB639']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB639']($container);
     }
 
     /*
@@ -10594,13 +10592,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB64
      */
-    protected function getFixtureB64Service()
+    protected static function getFixtureB64Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB64'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB64'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB64();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB64']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB64']($container);
     }
 
     /*
@@ -10608,13 +10606,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB640
      */
-    protected function getFixtureB640Service()
+    protected static function getFixtureB640Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB640'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB640'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB640();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB640']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB640']($container);
     }
 
     /*
@@ -10622,13 +10620,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB641
      */
-    protected function getFixtureB641Service()
+    protected static function getFixtureB641Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB641'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB641'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB641();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB641']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB641']($container);
     }
 
     /*
@@ -10636,13 +10634,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB642
      */
-    protected function getFixtureB642Service()
+    protected static function getFixtureB642Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB642'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB642'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB642();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB642']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB642']($container);
     }
 
     /*
@@ -10650,13 +10648,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB643
      */
-    protected function getFixtureB643Service()
+    protected static function getFixtureB643Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB643'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB643'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB643();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB643']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB643']($container);
     }
 
     /*
@@ -10664,13 +10662,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB644
      */
-    protected function getFixtureB644Service()
+    protected static function getFixtureB644Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB644'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB644'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB644();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB644']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB644']($container);
     }
 
     /*
@@ -10678,13 +10676,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB645
      */
-    protected function getFixtureB645Service()
+    protected static function getFixtureB645Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB645'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB645'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB645();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB645']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB645']($container);
     }
 
     /*
@@ -10692,13 +10690,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB646
      */
-    protected function getFixtureB646Service()
+    protected static function getFixtureB646Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB646'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB646'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB646();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB646']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB646']($container);
     }
 
     /*
@@ -10706,13 +10704,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB647
      */
-    protected function getFixtureB647Service()
+    protected static function getFixtureB647Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB647'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB647'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB647();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB647']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB647']($container);
     }
 
     /*
@@ -10720,13 +10718,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB648
      */
-    protected function getFixtureB648Service()
+    protected static function getFixtureB648Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB648'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB648'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB648();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB648']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB648']($container);
     }
 
     /*
@@ -10734,13 +10732,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB649
      */
-    protected function getFixtureB649Service()
+    protected static function getFixtureB649Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB649'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB649'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB649();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB649']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB649']($container);
     }
 
     /*
@@ -10748,13 +10746,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB65
      */
-    protected function getFixtureB65Service()
+    protected static function getFixtureB65Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB65'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB65'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB65();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB65']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB65']($container);
     }
 
     /*
@@ -10762,13 +10760,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB650
      */
-    protected function getFixtureB650Service()
+    protected static function getFixtureB650Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB650'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB650'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB650();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB650']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB650']($container);
     }
 
     /*
@@ -10776,13 +10774,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB651
      */
-    protected function getFixtureB651Service()
+    protected static function getFixtureB651Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB651'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB651'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB651();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB651']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB651']($container);
     }
 
     /*
@@ -10790,13 +10788,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB652
      */
-    protected function getFixtureB652Service()
+    protected static function getFixtureB652Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB652'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB652'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB652();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB652']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB652']($container);
     }
 
     /*
@@ -10804,13 +10802,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB653
      */
-    protected function getFixtureB653Service()
+    protected static function getFixtureB653Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB653'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB653'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB653();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB653']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB653']($container);
     }
 
     /*
@@ -10818,13 +10816,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB654
      */
-    protected function getFixtureB654Service()
+    protected static function getFixtureB654Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB654'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB654'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB654();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB654']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB654']($container);
     }
 
     /*
@@ -10832,13 +10830,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB655
      */
-    protected function getFixtureB655Service()
+    protected static function getFixtureB655Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB655'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB655'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB655();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB655']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB655']($container);
     }
 
     /*
@@ -10846,13 +10844,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB656
      */
-    protected function getFixtureB656Service()
+    protected static function getFixtureB656Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB656'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB656'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB656();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB656']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB656']($container);
     }
 
     /*
@@ -10860,13 +10858,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB657
      */
-    protected function getFixtureB657Service()
+    protected static function getFixtureB657Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB657'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB657'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB657();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB657']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB657']($container);
     }
 
     /*
@@ -10874,13 +10872,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB658
      */
-    protected function getFixtureB658Service()
+    protected static function getFixtureB658Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB658'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB658'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB658();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB658']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB658']($container);
     }
 
     /*
@@ -10888,13 +10886,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB659
      */
-    protected function getFixtureB659Service()
+    protected static function getFixtureB659Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB659'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB659'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB659();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB659']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB659']($container);
     }
 
     /*
@@ -10902,13 +10900,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB66
      */
-    protected function getFixtureB66Service()
+    protected static function getFixtureB66Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB66'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB66'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB66();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB66']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB66']($container);
     }
 
     /*
@@ -10916,13 +10914,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB660
      */
-    protected function getFixtureB660Service()
+    protected static function getFixtureB660Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB660'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB660'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB660();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB660']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB660']($container);
     }
 
     /*
@@ -10930,13 +10928,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB661
      */
-    protected function getFixtureB661Service()
+    protected static function getFixtureB661Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB661'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB661'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB661();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB661']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB661']($container);
     }
 
     /*
@@ -10944,13 +10942,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB662
      */
-    protected function getFixtureB662Service()
+    protected static function getFixtureB662Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB662'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB662'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB662();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB662']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB662']($container);
     }
 
     /*
@@ -10958,13 +10956,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB663
      */
-    protected function getFixtureB663Service()
+    protected static function getFixtureB663Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB663'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB663'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB663();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB663']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB663']($container);
     }
 
     /*
@@ -10972,13 +10970,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB664
      */
-    protected function getFixtureB664Service()
+    protected static function getFixtureB664Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB664'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB664'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB664();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB664']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB664']($container);
     }
 
     /*
@@ -10986,13 +10984,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB665
      */
-    protected function getFixtureB665Service()
+    protected static function getFixtureB665Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB665'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB665'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB665();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB665']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB665']($container);
     }
 
     /*
@@ -11000,13 +10998,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB666
      */
-    protected function getFixtureB666Service()
+    protected static function getFixtureB666Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB666'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB666'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB666();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB666']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB666']($container);
     }
 
     /*
@@ -11014,13 +11012,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB667
      */
-    protected function getFixtureB667Service()
+    protected static function getFixtureB667Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB667'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB667'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB667();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB667']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB667']($container);
     }
 
     /*
@@ -11028,13 +11026,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB668
      */
-    protected function getFixtureB668Service()
+    protected static function getFixtureB668Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB668'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB668'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB668();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB668']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB668']($container);
     }
 
     /*
@@ -11042,13 +11040,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB669
      */
-    protected function getFixtureB669Service()
+    protected static function getFixtureB669Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB669'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB669'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB669();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB669']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB669']($container);
     }
 
     /*
@@ -11056,13 +11054,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB67
      */
-    protected function getFixtureB67Service()
+    protected static function getFixtureB67Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB67'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB67'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB67();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB67']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB67']($container);
     }
 
     /*
@@ -11070,13 +11068,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB670
      */
-    protected function getFixtureB670Service()
+    protected static function getFixtureB670Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB670'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB670'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB670();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB670']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB670']($container);
     }
 
     /*
@@ -11084,13 +11082,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB671
      */
-    protected function getFixtureB671Service()
+    protected static function getFixtureB671Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB671'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB671'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB671();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB671']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB671']($container);
     }
 
     /*
@@ -11098,13 +11096,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB672
      */
-    protected function getFixtureB672Service()
+    protected static function getFixtureB672Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB672'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB672'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB672();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB672']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB672']($container);
     }
 
     /*
@@ -11112,13 +11110,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB673
      */
-    protected function getFixtureB673Service()
+    protected static function getFixtureB673Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB673'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB673'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB673();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB673']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB673']($container);
     }
 
     /*
@@ -11126,13 +11124,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB674
      */
-    protected function getFixtureB674Service()
+    protected static function getFixtureB674Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB674'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB674'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB674();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB674']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB674']($container);
     }
 
     /*
@@ -11140,13 +11138,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB675
      */
-    protected function getFixtureB675Service()
+    protected static function getFixtureB675Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB675'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB675'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB675();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB675']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB675']($container);
     }
 
     /*
@@ -11154,13 +11152,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB676
      */
-    protected function getFixtureB676Service()
+    protected static function getFixtureB676Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB676'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB676'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB676();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB676']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB676']($container);
     }
 
     /*
@@ -11168,13 +11166,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB677
      */
-    protected function getFixtureB677Service()
+    protected static function getFixtureB677Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB677'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB677'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB677();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB677']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB677']($container);
     }
 
     /*
@@ -11182,13 +11180,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB678
      */
-    protected function getFixtureB678Service()
+    protected static function getFixtureB678Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB678'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB678'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB678();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB678']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB678']($container);
     }
 
     /*
@@ -11196,13 +11194,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB679
      */
-    protected function getFixtureB679Service()
+    protected static function getFixtureB679Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB679'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB679'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB679();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB679']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB679']($container);
     }
 
     /*
@@ -11210,13 +11208,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB68
      */
-    protected function getFixtureB68Service()
+    protected static function getFixtureB68Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB68'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB68'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB68();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB68']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB68']($container);
     }
 
     /*
@@ -11224,13 +11222,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB680
      */
-    protected function getFixtureB680Service()
+    protected static function getFixtureB680Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB680'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB680'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB680();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB680']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB680']($container);
     }
 
     /*
@@ -11238,13 +11236,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB681
      */
-    protected function getFixtureB681Service()
+    protected static function getFixtureB681Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB681'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB681'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB681();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB681']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB681']($container);
     }
 
     /*
@@ -11252,13 +11250,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB682
      */
-    protected function getFixtureB682Service()
+    protected static function getFixtureB682Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB682'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB682'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB682();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB682']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB682']($container);
     }
 
     /*
@@ -11266,13 +11264,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB683
      */
-    protected function getFixtureB683Service()
+    protected static function getFixtureB683Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB683'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB683'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB683();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB683']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB683']($container);
     }
 
     /*
@@ -11280,13 +11278,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB684
      */
-    protected function getFixtureB684Service()
+    protected static function getFixtureB684Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB684'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB684'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB684();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB684']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB684']($container);
     }
 
     /*
@@ -11294,13 +11292,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB685
      */
-    protected function getFixtureB685Service()
+    protected static function getFixtureB685Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB685'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB685'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB685();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB685']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB685']($container);
     }
 
     /*
@@ -11308,13 +11306,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB686
      */
-    protected function getFixtureB686Service()
+    protected static function getFixtureB686Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB686'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB686'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB686();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB686']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB686']($container);
     }
 
     /*
@@ -11322,13 +11320,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB687
      */
-    protected function getFixtureB687Service()
+    protected static function getFixtureB687Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB687'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB687'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB687();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB687']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB687']($container);
     }
 
     /*
@@ -11336,13 +11334,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB688
      */
-    protected function getFixtureB688Service()
+    protected static function getFixtureB688Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB688'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB688'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB688();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB688']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB688']($container);
     }
 
     /*
@@ -11350,13 +11348,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB689
      */
-    protected function getFixtureB689Service()
+    protected static function getFixtureB689Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB689'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB689'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB689();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB689']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB689']($container);
     }
 
     /*
@@ -11364,13 +11362,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB69
      */
-    protected function getFixtureB69Service()
+    protected static function getFixtureB69Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB69'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB69'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB69();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB69']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB69']($container);
     }
 
     /*
@@ -11378,13 +11376,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB690
      */
-    protected function getFixtureB690Service()
+    protected static function getFixtureB690Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB690'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB690'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB690();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB690']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB690']($container);
     }
 
     /*
@@ -11392,13 +11390,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB691
      */
-    protected function getFixtureB691Service()
+    protected static function getFixtureB691Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB691'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB691'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB691();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB691']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB691']($container);
     }
 
     /*
@@ -11406,13 +11404,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB692
      */
-    protected function getFixtureB692Service()
+    protected static function getFixtureB692Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB692'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB692'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB692();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB692']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB692']($container);
     }
 
     /*
@@ -11420,13 +11418,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB693
      */
-    protected function getFixtureB693Service()
+    protected static function getFixtureB693Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB693'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB693'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB693();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB693']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB693']($container);
     }
 
     /*
@@ -11434,13 +11432,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB694
      */
-    protected function getFixtureB694Service()
+    protected static function getFixtureB694Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB694'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB694'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB694();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB694']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB694']($container);
     }
 
     /*
@@ -11448,13 +11446,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB695
      */
-    protected function getFixtureB695Service()
+    protected static function getFixtureB695Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB695'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB695'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB695();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB695']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB695']($container);
     }
 
     /*
@@ -11462,13 +11460,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB696
      */
-    protected function getFixtureB696Service()
+    protected static function getFixtureB696Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB696'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB696'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB696();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB696']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB696']($container);
     }
 
     /*
@@ -11476,13 +11474,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB697
      */
-    protected function getFixtureB697Service()
+    protected static function getFixtureB697Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB697'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB697'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB697();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB697']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB697']($container);
     }
 
     /*
@@ -11490,13 +11488,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB698
      */
-    protected function getFixtureB698Service()
+    protected static function getFixtureB698Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB698'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB698'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB698();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB698']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB698']($container);
     }
 
     /*
@@ -11504,13 +11502,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB699
      */
-    protected function getFixtureB699Service()
+    protected static function getFixtureB699Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB699'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB699'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB699();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB699']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB699']($container);
     }
 
     /*
@@ -11518,13 +11516,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB7
      */
-    protected function getFixtureB7Service()
+    protected static function getFixtureB7Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB7'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB7'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB7();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB7']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB7']($container);
     }
 
     /*
@@ -11532,13 +11530,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB70
      */
-    protected function getFixtureB70Service()
+    protected static function getFixtureB70Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB70'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB70'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB70();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB70']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB70']($container);
     }
 
     /*
@@ -11546,13 +11544,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB700
      */
-    protected function getFixtureB700Service()
+    protected static function getFixtureB700Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB700'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB700'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB700();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB700']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB700']($container);
     }
 
     /*
@@ -11560,13 +11558,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB701
      */
-    protected function getFixtureB701Service()
+    protected static function getFixtureB701Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB701'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB701'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB701();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB701']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB701']($container);
     }
 
     /*
@@ -11574,13 +11572,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB702
      */
-    protected function getFixtureB702Service()
+    protected static function getFixtureB702Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB702'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB702'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB702();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB702']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB702']($container);
     }
 
     /*
@@ -11588,13 +11586,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB703
      */
-    protected function getFixtureB703Service()
+    protected static function getFixtureB703Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB703'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB703'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB703();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB703']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB703']($container);
     }
 
     /*
@@ -11602,13 +11600,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB704
      */
-    protected function getFixtureB704Service()
+    protected static function getFixtureB704Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB704'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB704'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB704();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB704']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB704']($container);
     }
 
     /*
@@ -11616,13 +11614,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB705
      */
-    protected function getFixtureB705Service()
+    protected static function getFixtureB705Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB705'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB705'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB705();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB705']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB705']($container);
     }
 
     /*
@@ -11630,13 +11628,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB706
      */
-    protected function getFixtureB706Service()
+    protected static function getFixtureB706Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB706'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB706'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB706();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB706']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB706']($container);
     }
 
     /*
@@ -11644,13 +11642,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB707
      */
-    protected function getFixtureB707Service()
+    protected static function getFixtureB707Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB707'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB707'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB707();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB707']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB707']($container);
     }
 
     /*
@@ -11658,13 +11656,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB708
      */
-    protected function getFixtureB708Service()
+    protected static function getFixtureB708Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB708'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB708'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB708();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB708']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB708']($container);
     }
 
     /*
@@ -11672,13 +11670,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB709
      */
-    protected function getFixtureB709Service()
+    protected static function getFixtureB709Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB709'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB709'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB709();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB709']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB709']($container);
     }
 
     /*
@@ -11686,13 +11684,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB71
      */
-    protected function getFixtureB71Service()
+    protected static function getFixtureB71Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB71'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB71'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB71();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB71']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB71']($container);
     }
 
     /*
@@ -11700,13 +11698,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB710
      */
-    protected function getFixtureB710Service()
+    protected static function getFixtureB710Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB710'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB710'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB710();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB710']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB710']($container);
     }
 
     /*
@@ -11714,13 +11712,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB711
      */
-    protected function getFixtureB711Service()
+    protected static function getFixtureB711Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB711'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB711'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB711();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB711']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB711']($container);
     }
 
     /*
@@ -11728,13 +11726,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB712
      */
-    protected function getFixtureB712Service()
+    protected static function getFixtureB712Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB712'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB712'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB712();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB712']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB712']($container);
     }
 
     /*
@@ -11742,13 +11740,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB713
      */
-    protected function getFixtureB713Service()
+    protected static function getFixtureB713Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB713'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB713'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB713();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB713']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB713']($container);
     }
 
     /*
@@ -11756,13 +11754,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB714
      */
-    protected function getFixtureB714Service()
+    protected static function getFixtureB714Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB714'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB714'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB714();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB714']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB714']($container);
     }
 
     /*
@@ -11770,13 +11768,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB715
      */
-    protected function getFixtureB715Service()
+    protected static function getFixtureB715Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB715'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB715'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB715();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB715']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB715']($container);
     }
 
     /*
@@ -11784,13 +11782,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB716
      */
-    protected function getFixtureB716Service()
+    protected static function getFixtureB716Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB716'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB716'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB716();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB716']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB716']($container);
     }
 
     /*
@@ -11798,13 +11796,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB717
      */
-    protected function getFixtureB717Service()
+    protected static function getFixtureB717Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB717'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB717'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB717();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB717']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB717']($container);
     }
 
     /*
@@ -11812,13 +11810,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB718
      */
-    protected function getFixtureB718Service()
+    protected static function getFixtureB718Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB718'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB718'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB718();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB718']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB718']($container);
     }
 
     /*
@@ -11826,13 +11824,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB719
      */
-    protected function getFixtureB719Service()
+    protected static function getFixtureB719Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB719'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB719'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB719();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB719']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB719']($container);
     }
 
     /*
@@ -11840,13 +11838,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB72
      */
-    protected function getFixtureB72Service()
+    protected static function getFixtureB72Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB72'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB72'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB72();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB72']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB72']($container);
     }
 
     /*
@@ -11854,13 +11852,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB720
      */
-    protected function getFixtureB720Service()
+    protected static function getFixtureB720Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB720'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB720'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB720();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB720']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB720']($container);
     }
 
     /*
@@ -11868,13 +11866,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB721
      */
-    protected function getFixtureB721Service()
+    protected static function getFixtureB721Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB721'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB721'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB721();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB721']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB721']($container);
     }
 
     /*
@@ -11882,13 +11880,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB722
      */
-    protected function getFixtureB722Service()
+    protected static function getFixtureB722Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB722'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB722'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB722();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB722']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB722']($container);
     }
 
     /*
@@ -11896,13 +11894,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB723
      */
-    protected function getFixtureB723Service()
+    protected static function getFixtureB723Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB723'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB723'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB723();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB723']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB723']($container);
     }
 
     /*
@@ -11910,13 +11908,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB724
      */
-    protected function getFixtureB724Service()
+    protected static function getFixtureB724Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB724'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB724'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB724();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB724']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB724']($container);
     }
 
     /*
@@ -11924,13 +11922,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB725
      */
-    protected function getFixtureB725Service()
+    protected static function getFixtureB725Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB725'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB725'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB725();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB725']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB725']($container);
     }
 
     /*
@@ -11938,13 +11936,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB726
      */
-    protected function getFixtureB726Service()
+    protected static function getFixtureB726Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB726'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB726'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB726();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB726']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB726']($container);
     }
 
     /*
@@ -11952,13 +11950,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB727
      */
-    protected function getFixtureB727Service()
+    protected static function getFixtureB727Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB727'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB727'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB727();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB727']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB727']($container);
     }
 
     /*
@@ -11966,13 +11964,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB728
      */
-    protected function getFixtureB728Service()
+    protected static function getFixtureB728Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB728'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB728'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB728();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB728']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB728']($container);
     }
 
     /*
@@ -11980,13 +11978,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB729
      */
-    protected function getFixtureB729Service()
+    protected static function getFixtureB729Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB729'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB729'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB729();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB729']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB729']($container);
     }
 
     /*
@@ -11994,13 +11992,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB73
      */
-    protected function getFixtureB73Service()
+    protected static function getFixtureB73Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB73'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB73'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB73();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB73']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB73']($container);
     }
 
     /*
@@ -12008,13 +12006,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB730
      */
-    protected function getFixtureB730Service()
+    protected static function getFixtureB730Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB730'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB730'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB730();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB730']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB730']($container);
     }
 
     /*
@@ -12022,13 +12020,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB731
      */
-    protected function getFixtureB731Service()
+    protected static function getFixtureB731Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB731'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB731'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB731();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB731']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB731']($container);
     }
 
     /*
@@ -12036,13 +12034,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB732
      */
-    protected function getFixtureB732Service()
+    protected static function getFixtureB732Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB732'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB732'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB732();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB732']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB732']($container);
     }
 
     /*
@@ -12050,13 +12048,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB733
      */
-    protected function getFixtureB733Service()
+    protected static function getFixtureB733Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB733'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB733'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB733();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB733']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB733']($container);
     }
 
     /*
@@ -12064,13 +12062,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB734
      */
-    protected function getFixtureB734Service()
+    protected static function getFixtureB734Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB734'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB734'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB734();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB734']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB734']($container);
     }
 
     /*
@@ -12078,13 +12076,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB735
      */
-    protected function getFixtureB735Service()
+    protected static function getFixtureB735Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB735'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB735'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB735();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB735']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB735']($container);
     }
 
     /*
@@ -12092,13 +12090,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB736
      */
-    protected function getFixtureB736Service()
+    protected static function getFixtureB736Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB736'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB736'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB736();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB736']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB736']($container);
     }
 
     /*
@@ -12106,13 +12104,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB737
      */
-    protected function getFixtureB737Service()
+    protected static function getFixtureB737Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB737'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB737'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB737();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB737']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB737']($container);
     }
 
     /*
@@ -12120,13 +12118,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB738
      */
-    protected function getFixtureB738Service()
+    protected static function getFixtureB738Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB738'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB738'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB738();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB738']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB738']($container);
     }
 
     /*
@@ -12134,13 +12132,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB739
      */
-    protected function getFixtureB739Service()
+    protected static function getFixtureB739Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB739'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB739'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB739();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB739']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB739']($container);
     }
 
     /*
@@ -12148,13 +12146,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB74
      */
-    protected function getFixtureB74Service()
+    protected static function getFixtureB74Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB74'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB74'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB74();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB74']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB74']($container);
     }
 
     /*
@@ -12162,13 +12160,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB740
      */
-    protected function getFixtureB740Service()
+    protected static function getFixtureB740Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB740'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB740'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB740();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB740']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB740']($container);
     }
 
     /*
@@ -12176,13 +12174,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB741
      */
-    protected function getFixtureB741Service()
+    protected static function getFixtureB741Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB741'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB741'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB741();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB741']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB741']($container);
     }
 
     /*
@@ -12190,13 +12188,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB742
      */
-    protected function getFixtureB742Service()
+    protected static function getFixtureB742Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB742'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB742'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB742();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB742']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB742']($container);
     }
 
     /*
@@ -12204,13 +12202,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB743
      */
-    protected function getFixtureB743Service()
+    protected static function getFixtureB743Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB743'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB743'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB743();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB743']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB743']($container);
     }
 
     /*
@@ -12218,13 +12216,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB744
      */
-    protected function getFixtureB744Service()
+    protected static function getFixtureB744Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB744'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB744'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB744();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB744']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB744']($container);
     }
 
     /*
@@ -12232,13 +12230,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB745
      */
-    protected function getFixtureB745Service()
+    protected static function getFixtureB745Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB745'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB745'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB745();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB745']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB745']($container);
     }
 
     /*
@@ -12246,13 +12244,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB746
      */
-    protected function getFixtureB746Service()
+    protected static function getFixtureB746Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB746'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB746'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB746();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB746']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB746']($container);
     }
 
     /*
@@ -12260,13 +12258,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB747
      */
-    protected function getFixtureB747Service()
+    protected static function getFixtureB747Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB747'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB747'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB747();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB747']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB747']($container);
     }
 
     /*
@@ -12274,13 +12272,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB748
      */
-    protected function getFixtureB748Service()
+    protected static function getFixtureB748Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB748'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB748'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB748();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB748']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB748']($container);
     }
 
     /*
@@ -12288,13 +12286,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB749
      */
-    protected function getFixtureB749Service()
+    protected static function getFixtureB749Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB749'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB749'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB749();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB749']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB749']($container);
     }
 
     /*
@@ -12302,13 +12300,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB75
      */
-    protected function getFixtureB75Service()
+    protected static function getFixtureB75Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB75'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB75'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB75();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB75']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB75']($container);
     }
 
     /*
@@ -12316,13 +12314,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB750
      */
-    protected function getFixtureB750Service()
+    protected static function getFixtureB750Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB750'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB750'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB750();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB750']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB750']($container);
     }
 
     /*
@@ -12330,13 +12328,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB751
      */
-    protected function getFixtureB751Service()
+    protected static function getFixtureB751Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB751'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB751'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB751();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB751']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB751']($container);
     }
 
     /*
@@ -12344,13 +12342,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB752
      */
-    protected function getFixtureB752Service()
+    protected static function getFixtureB752Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB752'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB752'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB752();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB752']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB752']($container);
     }
 
     /*
@@ -12358,13 +12356,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB753
      */
-    protected function getFixtureB753Service()
+    protected static function getFixtureB753Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB753'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB753'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB753();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB753']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB753']($container);
     }
 
     /*
@@ -12372,13 +12370,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB754
      */
-    protected function getFixtureB754Service()
+    protected static function getFixtureB754Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB754'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB754'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB754();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB754']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB754']($container);
     }
 
     /*
@@ -12386,13 +12384,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB755
      */
-    protected function getFixtureB755Service()
+    protected static function getFixtureB755Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB755'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB755'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB755();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB755']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB755']($container);
     }
 
     /*
@@ -12400,13 +12398,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB756
      */
-    protected function getFixtureB756Service()
+    protected static function getFixtureB756Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB756'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB756'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB756();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB756']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB756']($container);
     }
 
     /*
@@ -12414,13 +12412,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB757
      */
-    protected function getFixtureB757Service()
+    protected static function getFixtureB757Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB757'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB757'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB757();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB757']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB757']($container);
     }
 
     /*
@@ -12428,13 +12426,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB758
      */
-    protected function getFixtureB758Service()
+    protected static function getFixtureB758Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB758'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB758'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB758();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB758']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB758']($container);
     }
 
     /*
@@ -12442,13 +12440,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB759
      */
-    protected function getFixtureB759Service()
+    protected static function getFixtureB759Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB759'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB759'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB759();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB759']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB759']($container);
     }
 
     /*
@@ -12456,13 +12454,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB76
      */
-    protected function getFixtureB76Service()
+    protected static function getFixtureB76Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB76'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB76'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB76();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB76']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB76']($container);
     }
 
     /*
@@ -12470,13 +12468,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB760
      */
-    protected function getFixtureB760Service()
+    protected static function getFixtureB760Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB760'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB760'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB760();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB760']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB760']($container);
     }
 
     /*
@@ -12484,13 +12482,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB761
      */
-    protected function getFixtureB761Service()
+    protected static function getFixtureB761Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB761'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB761'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB761();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB761']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB761']($container);
     }
 
     /*
@@ -12498,13 +12496,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB762
      */
-    protected function getFixtureB762Service()
+    protected static function getFixtureB762Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB762'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB762'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB762();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB762']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB762']($container);
     }
 
     /*
@@ -12512,13 +12510,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB763
      */
-    protected function getFixtureB763Service()
+    protected static function getFixtureB763Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB763'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB763'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB763();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB763']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB763']($container);
     }
 
     /*
@@ -12526,13 +12524,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB764
      */
-    protected function getFixtureB764Service()
+    protected static function getFixtureB764Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB764'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB764'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB764();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB764']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB764']($container);
     }
 
     /*
@@ -12540,13 +12538,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB765
      */
-    protected function getFixtureB765Service()
+    protected static function getFixtureB765Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB765'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB765'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB765();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB765']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB765']($container);
     }
 
     /*
@@ -12554,13 +12552,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB766
      */
-    protected function getFixtureB766Service()
+    protected static function getFixtureB766Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB766'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB766'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB766();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB766']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB766']($container);
     }
 
     /*
@@ -12568,13 +12566,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB767
      */
-    protected function getFixtureB767Service()
+    protected static function getFixtureB767Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB767'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB767'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB767();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB767']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB767']($container);
     }
 
     /*
@@ -12582,13 +12580,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB768
      */
-    protected function getFixtureB768Service()
+    protected static function getFixtureB768Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB768'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB768'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB768();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB768']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB768']($container);
     }
 
     /*
@@ -12596,13 +12594,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB769
      */
-    protected function getFixtureB769Service()
+    protected static function getFixtureB769Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB769'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB769'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB769();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB769']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB769']($container);
     }
 
     /*
@@ -12610,13 +12608,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB77
      */
-    protected function getFixtureB77Service()
+    protected static function getFixtureB77Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB77'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB77'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB77();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB77']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB77']($container);
     }
 
     /*
@@ -12624,13 +12622,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB770
      */
-    protected function getFixtureB770Service()
+    protected static function getFixtureB770Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB770'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB770'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB770();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB770']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB770']($container);
     }
 
     /*
@@ -12638,13 +12636,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB771
      */
-    protected function getFixtureB771Service()
+    protected static function getFixtureB771Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB771'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB771'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB771();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB771']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB771']($container);
     }
 
     /*
@@ -12652,13 +12650,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB772
      */
-    protected function getFixtureB772Service()
+    protected static function getFixtureB772Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB772'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB772'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB772();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB772']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB772']($container);
     }
 
     /*
@@ -12666,13 +12664,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB773
      */
-    protected function getFixtureB773Service()
+    protected static function getFixtureB773Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB773'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB773'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB773();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB773']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB773']($container);
     }
 
     /*
@@ -12680,13 +12678,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB774
      */
-    protected function getFixtureB774Service()
+    protected static function getFixtureB774Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB774'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB774'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB774();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB774']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB774']($container);
     }
 
     /*
@@ -12694,13 +12692,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB775
      */
-    protected function getFixtureB775Service()
+    protected static function getFixtureB775Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB775'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB775'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB775();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB775']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB775']($container);
     }
 
     /*
@@ -12708,13 +12706,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB776
      */
-    protected function getFixtureB776Service()
+    protected static function getFixtureB776Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB776'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB776'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB776();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB776']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB776']($container);
     }
 
     /*
@@ -12722,13 +12720,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB777
      */
-    protected function getFixtureB777Service()
+    protected static function getFixtureB777Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB777'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB777'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB777();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB777']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB777']($container);
     }
 
     /*
@@ -12736,13 +12734,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB778
      */
-    protected function getFixtureB778Service()
+    protected static function getFixtureB778Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB778'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB778'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB778();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB778']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB778']($container);
     }
 
     /*
@@ -12750,13 +12748,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB779
      */
-    protected function getFixtureB779Service()
+    protected static function getFixtureB779Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB779'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB779'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB779();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB779']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB779']($container);
     }
 
     /*
@@ -12764,13 +12762,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB78
      */
-    protected function getFixtureB78Service()
+    protected static function getFixtureB78Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB78'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB78'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB78();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB78']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB78']($container);
     }
 
     /*
@@ -12778,13 +12776,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB780
      */
-    protected function getFixtureB780Service()
+    protected static function getFixtureB780Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB780'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB780'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB780();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB780']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB780']($container);
     }
 
     /*
@@ -12792,13 +12790,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB781
      */
-    protected function getFixtureB781Service()
+    protected static function getFixtureB781Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB781'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB781'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB781();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB781']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB781']($container);
     }
 
     /*
@@ -12806,13 +12804,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB782
      */
-    protected function getFixtureB782Service()
+    protected static function getFixtureB782Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB782'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB782'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB782();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB782']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB782']($container);
     }
 
     /*
@@ -12820,13 +12818,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB783
      */
-    protected function getFixtureB783Service()
+    protected static function getFixtureB783Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB783'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB783'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB783();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB783']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB783']($container);
     }
 
     /*
@@ -12834,13 +12832,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB784
      */
-    protected function getFixtureB784Service()
+    protected static function getFixtureB784Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB784'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB784'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB784();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB784']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB784']($container);
     }
 
     /*
@@ -12848,13 +12846,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB785
      */
-    protected function getFixtureB785Service()
+    protected static function getFixtureB785Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB785'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB785'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB785();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB785']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB785']($container);
     }
 
     /*
@@ -12862,13 +12860,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB786
      */
-    protected function getFixtureB786Service()
+    protected static function getFixtureB786Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB786'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB786'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB786();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB786']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB786']($container);
     }
 
     /*
@@ -12876,13 +12874,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB787
      */
-    protected function getFixtureB787Service()
+    protected static function getFixtureB787Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB787'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB787'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB787();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB787']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB787']($container);
     }
 
     /*
@@ -12890,13 +12888,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB788
      */
-    protected function getFixtureB788Service()
+    protected static function getFixtureB788Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB788'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB788'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB788();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB788']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB788']($container);
     }
 
     /*
@@ -12904,13 +12902,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB789
      */
-    protected function getFixtureB789Service()
+    protected static function getFixtureB789Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB789'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB789'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB789();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB789']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB789']($container);
     }
 
     /*
@@ -12918,13 +12916,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB79
      */
-    protected function getFixtureB79Service()
+    protected static function getFixtureB79Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB79'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB79'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB79();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB79']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB79']($container);
     }
 
     /*
@@ -12932,13 +12930,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB790
      */
-    protected function getFixtureB790Service()
+    protected static function getFixtureB790Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB790'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB790'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB790();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB790']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB790']($container);
     }
 
     /*
@@ -12946,13 +12944,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB791
      */
-    protected function getFixtureB791Service()
+    protected static function getFixtureB791Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB791'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB791'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB791();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB791']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB791']($container);
     }
 
     /*
@@ -12960,13 +12958,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB792
      */
-    protected function getFixtureB792Service()
+    protected static function getFixtureB792Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB792'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB792'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB792();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB792']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB792']($container);
     }
 
     /*
@@ -12974,13 +12972,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB793
      */
-    protected function getFixtureB793Service()
+    protected static function getFixtureB793Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB793'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB793'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB793();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB793']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB793']($container);
     }
 
     /*
@@ -12988,13 +12986,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB794
      */
-    protected function getFixtureB794Service()
+    protected static function getFixtureB794Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB794'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB794'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB794();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB794']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB794']($container);
     }
 
     /*
@@ -13002,13 +13000,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB795
      */
-    protected function getFixtureB795Service()
+    protected static function getFixtureB795Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB795'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB795'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB795();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB795']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB795']($container);
     }
 
     /*
@@ -13016,13 +13014,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB796
      */
-    protected function getFixtureB796Service()
+    protected static function getFixtureB796Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB796'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB796'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB796();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB796']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB796']($container);
     }
 
     /*
@@ -13030,13 +13028,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB797
      */
-    protected function getFixtureB797Service()
+    protected static function getFixtureB797Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB797'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB797'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB797();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB797']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB797']($container);
     }
 
     /*
@@ -13044,13 +13042,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB798
      */
-    protected function getFixtureB798Service()
+    protected static function getFixtureB798Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB798'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB798'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB798();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB798']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB798']($container);
     }
 
     /*
@@ -13058,13 +13056,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB799
      */
-    protected function getFixtureB799Service()
+    protected static function getFixtureB799Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB799'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB799'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB799();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB799']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB799']($container);
     }
 
     /*
@@ -13072,13 +13070,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB8
      */
-    protected function getFixtureB8Service()
+    protected static function getFixtureB8Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB8'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB8'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB8();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB8']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB8']($container);
     }
 
     /*
@@ -13086,13 +13084,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB80
      */
-    protected function getFixtureB80Service()
+    protected static function getFixtureB80Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB80'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB80'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB80();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB80']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB80']($container);
     }
 
     /*
@@ -13100,13 +13098,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB800
      */
-    protected function getFixtureB800Service()
+    protected static function getFixtureB800Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB800'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB800'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB800();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB800']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB800']($container);
     }
 
     /*
@@ -13114,13 +13112,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB801
      */
-    protected function getFixtureB801Service()
+    protected static function getFixtureB801Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB801'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB801'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB801();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB801']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB801']($container);
     }
 
     /*
@@ -13128,13 +13126,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB802
      */
-    protected function getFixtureB802Service()
+    protected static function getFixtureB802Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB802'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB802'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB802();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB802']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB802']($container);
     }
 
     /*
@@ -13142,13 +13140,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB803
      */
-    protected function getFixtureB803Service()
+    protected static function getFixtureB803Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB803'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB803'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB803();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB803']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB803']($container);
     }
 
     /*
@@ -13156,13 +13154,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB804
      */
-    protected function getFixtureB804Service()
+    protected static function getFixtureB804Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB804'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB804'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB804();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB804']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB804']($container);
     }
 
     /*
@@ -13170,13 +13168,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB805
      */
-    protected function getFixtureB805Service()
+    protected static function getFixtureB805Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB805'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB805'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB805();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB805']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB805']($container);
     }
 
     /*
@@ -13184,13 +13182,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB806
      */
-    protected function getFixtureB806Service()
+    protected static function getFixtureB806Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB806'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB806'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB806();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB806']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB806']($container);
     }
 
     /*
@@ -13198,13 +13196,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB807
      */
-    protected function getFixtureB807Service()
+    protected static function getFixtureB807Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB807'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB807'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB807();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB807']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB807']($container);
     }
 
     /*
@@ -13212,13 +13210,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB808
      */
-    protected function getFixtureB808Service()
+    protected static function getFixtureB808Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB808'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB808'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB808();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB808']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB808']($container);
     }
 
     /*
@@ -13226,13 +13224,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB809
      */
-    protected function getFixtureB809Service()
+    protected static function getFixtureB809Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB809'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB809'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB809();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB809']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB809']($container);
     }
 
     /*
@@ -13240,13 +13238,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB81
      */
-    protected function getFixtureB81Service()
+    protected static function getFixtureB81Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB81'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB81'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB81();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB81']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB81']($container);
     }
 
     /*
@@ -13254,13 +13252,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB810
      */
-    protected function getFixtureB810Service()
+    protected static function getFixtureB810Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB810'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB810'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB810();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB810']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB810']($container);
     }
 
     /*
@@ -13268,13 +13266,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB811
      */
-    protected function getFixtureB811Service()
+    protected static function getFixtureB811Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB811'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB811'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB811();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB811']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB811']($container);
     }
 
     /*
@@ -13282,13 +13280,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB812
      */
-    protected function getFixtureB812Service()
+    protected static function getFixtureB812Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB812'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB812'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB812();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB812']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB812']($container);
     }
 
     /*
@@ -13296,13 +13294,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB813
      */
-    protected function getFixtureB813Service()
+    protected static function getFixtureB813Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB813'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB813'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB813();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB813']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB813']($container);
     }
 
     /*
@@ -13310,13 +13308,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB814
      */
-    protected function getFixtureB814Service()
+    protected static function getFixtureB814Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB814'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB814'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB814();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB814']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB814']($container);
     }
 
     /*
@@ -13324,13 +13322,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB815
      */
-    protected function getFixtureB815Service()
+    protected static function getFixtureB815Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB815'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB815'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB815();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB815']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB815']($container);
     }
 
     /*
@@ -13338,13 +13336,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB816
      */
-    protected function getFixtureB816Service()
+    protected static function getFixtureB816Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB816'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB816'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB816();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB816']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB816']($container);
     }
 
     /*
@@ -13352,13 +13350,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB817
      */
-    protected function getFixtureB817Service()
+    protected static function getFixtureB817Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB817'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB817'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB817();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB817']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB817']($container);
     }
 
     /*
@@ -13366,13 +13364,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB818
      */
-    protected function getFixtureB818Service()
+    protected static function getFixtureB818Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB818'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB818'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB818();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB818']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB818']($container);
     }
 
     /*
@@ -13380,13 +13378,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB819
      */
-    protected function getFixtureB819Service()
+    protected static function getFixtureB819Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB819'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB819'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB819();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB819']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB819']($container);
     }
 
     /*
@@ -13394,13 +13392,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB82
      */
-    protected function getFixtureB82Service()
+    protected static function getFixtureB82Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB82'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB82'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB82();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB82']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB82']($container);
     }
 
     /*
@@ -13408,13 +13406,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB820
      */
-    protected function getFixtureB820Service()
+    protected static function getFixtureB820Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB820'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB820'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB820();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB820']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB820']($container);
     }
 
     /*
@@ -13422,13 +13420,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB821
      */
-    protected function getFixtureB821Service()
+    protected static function getFixtureB821Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB821'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB821'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB821();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB821']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB821']($container);
     }
 
     /*
@@ -13436,13 +13434,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB822
      */
-    protected function getFixtureB822Service()
+    protected static function getFixtureB822Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB822'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB822'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB822();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB822']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB822']($container);
     }
 
     /*
@@ -13450,13 +13448,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB823
      */
-    protected function getFixtureB823Service()
+    protected static function getFixtureB823Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB823'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB823'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB823();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB823']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB823']($container);
     }
 
     /*
@@ -13464,13 +13462,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB824
      */
-    protected function getFixtureB824Service()
+    protected static function getFixtureB824Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB824'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB824'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB824();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB824']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB824']($container);
     }
 
     /*
@@ -13478,13 +13476,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB825
      */
-    protected function getFixtureB825Service()
+    protected static function getFixtureB825Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB825'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB825'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB825();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB825']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB825']($container);
     }
 
     /*
@@ -13492,13 +13490,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB826
      */
-    protected function getFixtureB826Service()
+    protected static function getFixtureB826Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB826'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB826'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB826();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB826']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB826']($container);
     }
 
     /*
@@ -13506,13 +13504,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB827
      */
-    protected function getFixtureB827Service()
+    protected static function getFixtureB827Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB827'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB827'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB827();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB827']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB827']($container);
     }
 
     /*
@@ -13520,13 +13518,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB828
      */
-    protected function getFixtureB828Service()
+    protected static function getFixtureB828Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB828'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB828'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB828();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB828']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB828']($container);
     }
 
     /*
@@ -13534,13 +13532,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB829
      */
-    protected function getFixtureB829Service()
+    protected static function getFixtureB829Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB829'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB829'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB829();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB829']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB829']($container);
     }
 
     /*
@@ -13548,13 +13546,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB83
      */
-    protected function getFixtureB83Service()
+    protected static function getFixtureB83Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB83'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB83'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB83();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB83']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB83']($container);
     }
 
     /*
@@ -13562,13 +13560,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB830
      */
-    protected function getFixtureB830Service()
+    protected static function getFixtureB830Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB830'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB830'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB830();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB830']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB830']($container);
     }
 
     /*
@@ -13576,13 +13574,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB831
      */
-    protected function getFixtureB831Service()
+    protected static function getFixtureB831Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB831'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB831'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB831();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB831']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB831']($container);
     }
 
     /*
@@ -13590,13 +13588,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB832
      */
-    protected function getFixtureB832Service()
+    protected static function getFixtureB832Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB832'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB832'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB832();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB832']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB832']($container);
     }
 
     /*
@@ -13604,13 +13602,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB833
      */
-    protected function getFixtureB833Service()
+    protected static function getFixtureB833Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB833'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB833'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB833();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB833']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB833']($container);
     }
 
     /*
@@ -13618,13 +13616,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB834
      */
-    protected function getFixtureB834Service()
+    protected static function getFixtureB834Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB834'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB834'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB834();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB834']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB834']($container);
     }
 
     /*
@@ -13632,13 +13630,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB835
      */
-    protected function getFixtureB835Service()
+    protected static function getFixtureB835Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB835'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB835'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB835();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB835']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB835']($container);
     }
 
     /*
@@ -13646,13 +13644,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB836
      */
-    protected function getFixtureB836Service()
+    protected static function getFixtureB836Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB836'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB836'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB836();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB836']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB836']($container);
     }
 
     /*
@@ -13660,13 +13658,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB837
      */
-    protected function getFixtureB837Service()
+    protected static function getFixtureB837Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB837'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB837'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB837();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB837']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB837']($container);
     }
 
     /*
@@ -13674,13 +13672,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB838
      */
-    protected function getFixtureB838Service()
+    protected static function getFixtureB838Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB838'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB838'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB838();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB838']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB838']($container);
     }
 
     /*
@@ -13688,13 +13686,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB839
      */
-    protected function getFixtureB839Service()
+    protected static function getFixtureB839Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB839'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB839'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB839();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB839']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB839']($container);
     }
 
     /*
@@ -13702,13 +13700,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB84
      */
-    protected function getFixtureB84Service()
+    protected static function getFixtureB84Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB84'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB84'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB84();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB84']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB84']($container);
     }
 
     /*
@@ -13716,13 +13714,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB840
      */
-    protected function getFixtureB840Service()
+    protected static function getFixtureB840Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB840'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB840'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB840();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB840']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB840']($container);
     }
 
     /*
@@ -13730,13 +13728,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB841
      */
-    protected function getFixtureB841Service()
+    protected static function getFixtureB841Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB841'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB841'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB841();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB841']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB841']($container);
     }
 
     /*
@@ -13744,13 +13742,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB842
      */
-    protected function getFixtureB842Service()
+    protected static function getFixtureB842Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB842'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB842'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB842();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB842']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB842']($container);
     }
 
     /*
@@ -13758,13 +13756,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB843
      */
-    protected function getFixtureB843Service()
+    protected static function getFixtureB843Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB843'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB843'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB843();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB843']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB843']($container);
     }
 
     /*
@@ -13772,13 +13770,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB844
      */
-    protected function getFixtureB844Service()
+    protected static function getFixtureB844Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB844'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB844'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB844();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB844']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB844']($container);
     }
 
     /*
@@ -13786,13 +13784,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB845
      */
-    protected function getFixtureB845Service()
+    protected static function getFixtureB845Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB845'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB845'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB845();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB845']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB845']($container);
     }
 
     /*
@@ -13800,13 +13798,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB846
      */
-    protected function getFixtureB846Service()
+    protected static function getFixtureB846Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB846'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB846'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB846();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB846']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB846']($container);
     }
 
     /*
@@ -13814,13 +13812,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB847
      */
-    protected function getFixtureB847Service()
+    protected static function getFixtureB847Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB847'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB847'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB847();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB847']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB847']($container);
     }
 
     /*
@@ -13828,13 +13826,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB848
      */
-    protected function getFixtureB848Service()
+    protected static function getFixtureB848Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB848'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB848'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB848();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB848']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB848']($container);
     }
 
     /*
@@ -13842,13 +13840,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB849
      */
-    protected function getFixtureB849Service()
+    protected static function getFixtureB849Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB849'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB849'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB849();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB849']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB849']($container);
     }
 
     /*
@@ -13856,13 +13854,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB85
      */
-    protected function getFixtureB85Service()
+    protected static function getFixtureB85Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB85'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB85'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB85();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB85']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB85']($container);
     }
 
     /*
@@ -13870,13 +13868,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB850
      */
-    protected function getFixtureB850Service()
+    protected static function getFixtureB850Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB850'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB850'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB850();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB850']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB850']($container);
     }
 
     /*
@@ -13884,13 +13882,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB851
      */
-    protected function getFixtureB851Service()
+    protected static function getFixtureB851Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB851'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB851'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB851();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB851']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB851']($container);
     }
 
     /*
@@ -13898,13 +13896,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB852
      */
-    protected function getFixtureB852Service()
+    protected static function getFixtureB852Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB852'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB852'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB852();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB852']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB852']($container);
     }
 
     /*
@@ -13912,13 +13910,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB853
      */
-    protected function getFixtureB853Service()
+    protected static function getFixtureB853Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB853'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB853'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB853();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB853']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB853']($container);
     }
 
     /*
@@ -13926,13 +13924,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB854
      */
-    protected function getFixtureB854Service()
+    protected static function getFixtureB854Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB854'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB854'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB854();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB854']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB854']($container);
     }
 
     /*
@@ -13940,13 +13938,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB855
      */
-    protected function getFixtureB855Service()
+    protected static function getFixtureB855Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB855'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB855'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB855();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB855']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB855']($container);
     }
 
     /*
@@ -13954,13 +13952,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB856
      */
-    protected function getFixtureB856Service()
+    protected static function getFixtureB856Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB856'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB856'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB856();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB856']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB856']($container);
     }
 
     /*
@@ -13968,13 +13966,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB857
      */
-    protected function getFixtureB857Service()
+    protected static function getFixtureB857Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB857'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB857'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB857();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB857']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB857']($container);
     }
 
     /*
@@ -13982,13 +13980,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB858
      */
-    protected function getFixtureB858Service()
+    protected static function getFixtureB858Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB858'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB858'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB858();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB858']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB858']($container);
     }
 
     /*
@@ -13996,13 +13994,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB859
      */
-    protected function getFixtureB859Service()
+    protected static function getFixtureB859Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB859'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB859'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB859();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB859']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB859']($container);
     }
 
     /*
@@ -14010,13 +14008,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB86
      */
-    protected function getFixtureB86Service()
+    protected static function getFixtureB86Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB86'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB86'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB86();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB86']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB86']($container);
     }
 
     /*
@@ -14024,13 +14022,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB860
      */
-    protected function getFixtureB860Service()
+    protected static function getFixtureB860Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB860'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB860'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB860();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB860']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB860']($container);
     }
 
     /*
@@ -14038,13 +14036,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB861
      */
-    protected function getFixtureB861Service()
+    protected static function getFixtureB861Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB861'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB861'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB861();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB861']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB861']($container);
     }
 
     /*
@@ -14052,13 +14050,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB862
      */
-    protected function getFixtureB862Service()
+    protected static function getFixtureB862Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB862'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB862'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB862();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB862']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB862']($container);
     }
 
     /*
@@ -14066,13 +14064,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB863
      */
-    protected function getFixtureB863Service()
+    protected static function getFixtureB863Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB863'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB863'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB863();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB863']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB863']($container);
     }
 
     /*
@@ -14080,13 +14078,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB864
      */
-    protected function getFixtureB864Service()
+    protected static function getFixtureB864Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB864'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB864'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB864();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB864']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB864']($container);
     }
 
     /*
@@ -14094,13 +14092,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB865
      */
-    protected function getFixtureB865Service()
+    protected static function getFixtureB865Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB865'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB865'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB865();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB865']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB865']($container);
     }
 
     /*
@@ -14108,13 +14106,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB866
      */
-    protected function getFixtureB866Service()
+    protected static function getFixtureB866Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB866'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB866'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB866();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB866']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB866']($container);
     }
 
     /*
@@ -14122,13 +14120,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB867
      */
-    protected function getFixtureB867Service()
+    protected static function getFixtureB867Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB867'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB867'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB867();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB867']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB867']($container);
     }
 
     /*
@@ -14136,13 +14134,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB868
      */
-    protected function getFixtureB868Service()
+    protected static function getFixtureB868Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB868'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB868'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB868();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB868']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB868']($container);
     }
 
     /*
@@ -14150,13 +14148,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB869
      */
-    protected function getFixtureB869Service()
+    protected static function getFixtureB869Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB869'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB869'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB869();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB869']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB869']($container);
     }
 
     /*
@@ -14164,13 +14162,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB87
      */
-    protected function getFixtureB87Service()
+    protected static function getFixtureB87Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB87'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB87'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB87();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB87']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB87']($container);
     }
 
     /*
@@ -14178,13 +14176,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB870
      */
-    protected function getFixtureB870Service()
+    protected static function getFixtureB870Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB870'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB870'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB870();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB870']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB870']($container);
     }
 
     /*
@@ -14192,13 +14190,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB871
      */
-    protected function getFixtureB871Service()
+    protected static function getFixtureB871Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB871'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB871'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB871();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB871']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB871']($container);
     }
 
     /*
@@ -14206,13 +14204,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB872
      */
-    protected function getFixtureB872Service()
+    protected static function getFixtureB872Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB872'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB872'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB872();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB872']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB872']($container);
     }
 
     /*
@@ -14220,13 +14218,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB873
      */
-    protected function getFixtureB873Service()
+    protected static function getFixtureB873Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB873'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB873'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB873();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB873']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB873']($container);
     }
 
     /*
@@ -14234,13 +14232,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB874
      */
-    protected function getFixtureB874Service()
+    protected static function getFixtureB874Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB874'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB874'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB874();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB874']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB874']($container);
     }
 
     /*
@@ -14248,13 +14246,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB875
      */
-    protected function getFixtureB875Service()
+    protected static function getFixtureB875Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB875'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB875'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB875();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB875']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB875']($container);
     }
 
     /*
@@ -14262,13 +14260,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB876
      */
-    protected function getFixtureB876Service()
+    protected static function getFixtureB876Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB876'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB876'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB876();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB876']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB876']($container);
     }
 
     /*
@@ -14276,13 +14274,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB877
      */
-    protected function getFixtureB877Service()
+    protected static function getFixtureB877Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB877'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB877'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB877();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB877']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB877']($container);
     }
 
     /*
@@ -14290,13 +14288,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB878
      */
-    protected function getFixtureB878Service()
+    protected static function getFixtureB878Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB878'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB878'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB878();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB878']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB878']($container);
     }
 
     /*
@@ -14304,13 +14302,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB879
      */
-    protected function getFixtureB879Service()
+    protected static function getFixtureB879Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB879'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB879'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB879();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB879']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB879']($container);
     }
 
     /*
@@ -14318,13 +14316,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB88
      */
-    protected function getFixtureB88Service()
+    protected static function getFixtureB88Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB88'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB88'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB88();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB88']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB88']($container);
     }
 
     /*
@@ -14332,13 +14330,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB880
      */
-    protected function getFixtureB880Service()
+    protected static function getFixtureB880Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB880'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB880'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB880();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB880']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB880']($container);
     }
 
     /*
@@ -14346,13 +14344,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB881
      */
-    protected function getFixtureB881Service()
+    protected static function getFixtureB881Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB881'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB881'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB881();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB881']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB881']($container);
     }
 
     /*
@@ -14360,13 +14358,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB882
      */
-    protected function getFixtureB882Service()
+    protected static function getFixtureB882Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB882'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB882'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB882();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB882']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB882']($container);
     }
 
     /*
@@ -14374,13 +14372,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB883
      */
-    protected function getFixtureB883Service()
+    protected static function getFixtureB883Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB883'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB883'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB883();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB883']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB883']($container);
     }
 
     /*
@@ -14388,13 +14386,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB884
      */
-    protected function getFixtureB884Service()
+    protected static function getFixtureB884Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB884'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB884'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB884();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB884']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB884']($container);
     }
 
     /*
@@ -14402,13 +14400,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB885
      */
-    protected function getFixtureB885Service()
+    protected static function getFixtureB885Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB885'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB885'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB885();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB885']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB885']($container);
     }
 
     /*
@@ -14416,13 +14414,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB886
      */
-    protected function getFixtureB886Service()
+    protected static function getFixtureB886Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB886'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB886'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB886();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB886']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB886']($container);
     }
 
     /*
@@ -14430,13 +14428,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB887
      */
-    protected function getFixtureB887Service()
+    protected static function getFixtureB887Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB887'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB887'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB887();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB887']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB887']($container);
     }
 
     /*
@@ -14444,13 +14442,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB888
      */
-    protected function getFixtureB888Service()
+    protected static function getFixtureB888Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB888'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB888'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB888();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB888']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB888']($container);
     }
 
     /*
@@ -14458,13 +14456,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB889
      */
-    protected function getFixtureB889Service()
+    protected static function getFixtureB889Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB889'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB889'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB889();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB889']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB889']($container);
     }
 
     /*
@@ -14472,13 +14470,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB89
      */
-    protected function getFixtureB89Service()
+    protected static function getFixtureB89Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB89'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB89'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB89();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB89']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB89']($container);
     }
 
     /*
@@ -14486,13 +14484,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB890
      */
-    protected function getFixtureB890Service()
+    protected static function getFixtureB890Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB890'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB890'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB890();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB890']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB890']($container);
     }
 
     /*
@@ -14500,13 +14498,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB891
      */
-    protected function getFixtureB891Service()
+    protected static function getFixtureB891Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB891'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB891'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB891();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB891']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB891']($container);
     }
 
     /*
@@ -14514,13 +14512,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB892
      */
-    protected function getFixtureB892Service()
+    protected static function getFixtureB892Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB892'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB892'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB892();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB892']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB892']($container);
     }
 
     /*
@@ -14528,13 +14526,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB893
      */
-    protected function getFixtureB893Service()
+    protected static function getFixtureB893Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB893'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB893'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB893();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB893']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB893']($container);
     }
 
     /*
@@ -14542,13 +14540,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB894
      */
-    protected function getFixtureB894Service()
+    protected static function getFixtureB894Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB894'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB894'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB894();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB894']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB894']($container);
     }
 
     /*
@@ -14556,13 +14554,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB895
      */
-    protected function getFixtureB895Service()
+    protected static function getFixtureB895Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB895'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB895'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB895();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB895']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB895']($container);
     }
 
     /*
@@ -14570,13 +14568,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB896
      */
-    protected function getFixtureB896Service()
+    protected static function getFixtureB896Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB896'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB896'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB896();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB896']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB896']($container);
     }
 
     /*
@@ -14584,13 +14582,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB897
      */
-    protected function getFixtureB897Service()
+    protected static function getFixtureB897Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB897'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB897'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB897();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB897']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB897']($container);
     }
 
     /*
@@ -14598,13 +14596,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB898
      */
-    protected function getFixtureB898Service()
+    protected static function getFixtureB898Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB898'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB898'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB898();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB898']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB898']($container);
     }
 
     /*
@@ -14612,13 +14610,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB899
      */
-    protected function getFixtureB899Service()
+    protected static function getFixtureB899Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB899'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB899'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB899();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB899']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB899']($container);
     }
 
     /*
@@ -14626,13 +14624,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB9
      */
-    protected function getFixtureB9Service()
+    protected static function getFixtureB9Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB9'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB9'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB9();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB9']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB9']($container);
     }
 
     /*
@@ -14640,13 +14638,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB90
      */
-    protected function getFixtureB90Service()
+    protected static function getFixtureB90Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB90'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB90'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB90();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB90']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB90']($container);
     }
 
     /*
@@ -14654,13 +14652,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB900
      */
-    protected function getFixtureB900Service()
+    protected static function getFixtureB900Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB900'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB900'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB900();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB900']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB900']($container);
     }
 
     /*
@@ -14668,13 +14666,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB901
      */
-    protected function getFixtureB901Service()
+    protected static function getFixtureB901Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB901'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB901'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB901();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB901']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB901']($container);
     }
 
     /*
@@ -14682,13 +14680,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB902
      */
-    protected function getFixtureB902Service()
+    protected static function getFixtureB902Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB902'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB902'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB902();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB902']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB902']($container);
     }
 
     /*
@@ -14696,13 +14694,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB903
      */
-    protected function getFixtureB903Service()
+    protected static function getFixtureB903Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB903'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB903'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB903();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB903']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB903']($container);
     }
 
     /*
@@ -14710,13 +14708,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB904
      */
-    protected function getFixtureB904Service()
+    protected static function getFixtureB904Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB904'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB904'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB904();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB904']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB904']($container);
     }
 
     /*
@@ -14724,13 +14722,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB905
      */
-    protected function getFixtureB905Service()
+    protected static function getFixtureB905Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB905'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB905'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB905();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB905']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB905']($container);
     }
 
     /*
@@ -14738,13 +14736,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB906
      */
-    protected function getFixtureB906Service()
+    protected static function getFixtureB906Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB906'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB906'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB906();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB906']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB906']($container);
     }
 
     /*
@@ -14752,13 +14750,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB907
      */
-    protected function getFixtureB907Service()
+    protected static function getFixtureB907Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB907'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB907'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB907();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB907']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB907']($container);
     }
 
     /*
@@ -14766,13 +14764,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB908
      */
-    protected function getFixtureB908Service()
+    protected static function getFixtureB908Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB908'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB908'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB908();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB908']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB908']($container);
     }
 
     /*
@@ -14780,13 +14778,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB909
      */
-    protected function getFixtureB909Service()
+    protected static function getFixtureB909Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB909'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB909'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB909();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB909']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB909']($container);
     }
 
     /*
@@ -14794,13 +14792,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB91
      */
-    protected function getFixtureB91Service()
+    protected static function getFixtureB91Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB91'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB91'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB91();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB91']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB91']($container);
     }
 
     /*
@@ -14808,13 +14806,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB910
      */
-    protected function getFixtureB910Service()
+    protected static function getFixtureB910Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB910'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB910'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB910();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB910']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB910']($container);
     }
 
     /*
@@ -14822,13 +14820,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB911
      */
-    protected function getFixtureB911Service()
+    protected static function getFixtureB911Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB911'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB911'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB911();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB911']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB911']($container);
     }
 
     /*
@@ -14836,13 +14834,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB912
      */
-    protected function getFixtureB912Service()
+    protected static function getFixtureB912Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB912'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB912'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB912();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB912']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB912']($container);
     }
 
     /*
@@ -14850,13 +14848,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB913
      */
-    protected function getFixtureB913Service()
+    protected static function getFixtureB913Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB913'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB913'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB913();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB913']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB913']($container);
     }
 
     /*
@@ -14864,13 +14862,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB914
      */
-    protected function getFixtureB914Service()
+    protected static function getFixtureB914Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB914'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB914'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB914();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB914']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB914']($container);
     }
 
     /*
@@ -14878,13 +14876,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB915
      */
-    protected function getFixtureB915Service()
+    protected static function getFixtureB915Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB915'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB915'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB915();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB915']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB915']($container);
     }
 
     /*
@@ -14892,13 +14890,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB916
      */
-    protected function getFixtureB916Service()
+    protected static function getFixtureB916Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB916'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB916'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB916();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB916']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB916']($container);
     }
 
     /*
@@ -14906,13 +14904,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB917
      */
-    protected function getFixtureB917Service()
+    protected static function getFixtureB917Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB917'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB917'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB917();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB917']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB917']($container);
     }
 
     /*
@@ -14920,13 +14918,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB918
      */
-    protected function getFixtureB918Service()
+    protected static function getFixtureB918Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB918'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB918'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB918();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB918']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB918']($container);
     }
 
     /*
@@ -14934,13 +14932,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB919
      */
-    protected function getFixtureB919Service()
+    protected static function getFixtureB919Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB919'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB919'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB919();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB919']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB919']($container);
     }
 
     /*
@@ -14948,13 +14946,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB92
      */
-    protected function getFixtureB92Service()
+    protected static function getFixtureB92Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB92'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB92'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB92();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB92']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB92']($container);
     }
 
     /*
@@ -14962,13 +14960,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB920
      */
-    protected function getFixtureB920Service()
+    protected static function getFixtureB920Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB920'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB920'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB920();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB920']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB920']($container);
     }
 
     /*
@@ -14976,13 +14974,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB921
      */
-    protected function getFixtureB921Service()
+    protected static function getFixtureB921Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB921'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB921'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB921();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB921']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB921']($container);
     }
 
     /*
@@ -14990,13 +14988,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB922
      */
-    protected function getFixtureB922Service()
+    protected static function getFixtureB922Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB922'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB922'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB922();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB922']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB922']($container);
     }
 
     /*
@@ -15004,13 +15002,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB923
      */
-    protected function getFixtureB923Service()
+    protected static function getFixtureB923Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB923'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB923'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB923();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB923']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB923']($container);
     }
 
     /*
@@ -15018,13 +15016,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB924
      */
-    protected function getFixtureB924Service()
+    protected static function getFixtureB924Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB924'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB924'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB924();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB924']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB924']($container);
     }
 
     /*
@@ -15032,13 +15030,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB925
      */
-    protected function getFixtureB925Service()
+    protected static function getFixtureB925Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB925'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB925'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB925();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB925']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB925']($container);
     }
 
     /*
@@ -15046,13 +15044,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB926
      */
-    protected function getFixtureB926Service()
+    protected static function getFixtureB926Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB926'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB926'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB926();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB926']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB926']($container);
     }
 
     /*
@@ -15060,13 +15058,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB927
      */
-    protected function getFixtureB927Service()
+    protected static function getFixtureB927Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB927'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB927'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB927();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB927']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB927']($container);
     }
 
     /*
@@ -15074,13 +15072,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB928
      */
-    protected function getFixtureB928Service()
+    protected static function getFixtureB928Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB928'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB928'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB928();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB928']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB928']($container);
     }
 
     /*
@@ -15088,13 +15086,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB929
      */
-    protected function getFixtureB929Service()
+    protected static function getFixtureB929Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB929'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB929'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB929();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB929']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB929']($container);
     }
 
     /*
@@ -15102,13 +15100,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB93
      */
-    protected function getFixtureB93Service()
+    protected static function getFixtureB93Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB93'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB93'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB93();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB93']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB93']($container);
     }
 
     /*
@@ -15116,13 +15114,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB930
      */
-    protected function getFixtureB930Service()
+    protected static function getFixtureB930Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB930'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB930'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB930();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB930']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB930']($container);
     }
 
     /*
@@ -15130,13 +15128,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB931
      */
-    protected function getFixtureB931Service()
+    protected static function getFixtureB931Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB931'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB931'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB931();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB931']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB931']($container);
     }
 
     /*
@@ -15144,13 +15142,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB932
      */
-    protected function getFixtureB932Service()
+    protected static function getFixtureB932Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB932'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB932'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB932();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB932']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB932']($container);
     }
 
     /*
@@ -15158,13 +15156,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB933
      */
-    protected function getFixtureB933Service()
+    protected static function getFixtureB933Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB933'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB933'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB933();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB933']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB933']($container);
     }
 
     /*
@@ -15172,13 +15170,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB934
      */
-    protected function getFixtureB934Service()
+    protected static function getFixtureB934Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB934'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB934'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB934();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB934']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB934']($container);
     }
 
     /*
@@ -15186,13 +15184,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB935
      */
-    protected function getFixtureB935Service()
+    protected static function getFixtureB935Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB935'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB935'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB935();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB935']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB935']($container);
     }
 
     /*
@@ -15200,13 +15198,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB936
      */
-    protected function getFixtureB936Service()
+    protected static function getFixtureB936Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB936'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB936'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB936();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB936']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB936']($container);
     }
 
     /*
@@ -15214,13 +15212,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB937
      */
-    protected function getFixtureB937Service()
+    protected static function getFixtureB937Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB937'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB937'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB937();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB937']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB937']($container);
     }
 
     /*
@@ -15228,13 +15226,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB938
      */
-    protected function getFixtureB938Service()
+    protected static function getFixtureB938Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB938'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB938'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB938();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB938']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB938']($container);
     }
 
     /*
@@ -15242,13 +15240,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB939
      */
-    protected function getFixtureB939Service()
+    protected static function getFixtureB939Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB939'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB939'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB939();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB939']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB939']($container);
     }
 
     /*
@@ -15256,13 +15254,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB94
      */
-    protected function getFixtureB94Service()
+    protected static function getFixtureB94Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB94'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB94'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB94();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB94']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB94']($container);
     }
 
     /*
@@ -15270,13 +15268,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB940
      */
-    protected function getFixtureB940Service()
+    protected static function getFixtureB940Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB940'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB940'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB940();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB940']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB940']($container);
     }
 
     /*
@@ -15284,13 +15282,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB941
      */
-    protected function getFixtureB941Service()
+    protected static function getFixtureB941Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB941'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB941'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB941();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB941']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB941']($container);
     }
 
     /*
@@ -15298,13 +15296,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB942
      */
-    protected function getFixtureB942Service()
+    protected static function getFixtureB942Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB942'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB942'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB942();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB942']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB942']($container);
     }
 
     /*
@@ -15312,13 +15310,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB943
      */
-    protected function getFixtureB943Service()
+    protected static function getFixtureB943Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB943'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB943'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB943();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB943']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB943']($container);
     }
 
     /*
@@ -15326,13 +15324,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB944
      */
-    protected function getFixtureB944Service()
+    protected static function getFixtureB944Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB944'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB944'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB944();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB944']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB944']($container);
     }
 
     /*
@@ -15340,13 +15338,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB945
      */
-    protected function getFixtureB945Service()
+    protected static function getFixtureB945Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB945'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB945'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB945();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB945']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB945']($container);
     }
 
     /*
@@ -15354,13 +15352,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB946
      */
-    protected function getFixtureB946Service()
+    protected static function getFixtureB946Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB946'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB946'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB946();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB946']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB946']($container);
     }
 
     /*
@@ -15368,13 +15366,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB947
      */
-    protected function getFixtureB947Service()
+    protected static function getFixtureB947Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB947'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB947'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB947();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB947']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB947']($container);
     }
 
     /*
@@ -15382,13 +15380,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB948
      */
-    protected function getFixtureB948Service()
+    protected static function getFixtureB948Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB948'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB948'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB948();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB948']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB948']($container);
     }
 
     /*
@@ -15396,13 +15394,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB949
      */
-    protected function getFixtureB949Service()
+    protected static function getFixtureB949Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB949'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB949'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB949();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB949']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB949']($container);
     }
 
     /*
@@ -15410,13 +15408,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB95
      */
-    protected function getFixtureB95Service()
+    protected static function getFixtureB95Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB95'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB95'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB95();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB95']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB95']($container);
     }
 
     /*
@@ -15424,13 +15422,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB950
      */
-    protected function getFixtureB950Service()
+    protected static function getFixtureB950Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB950'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB950'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB950();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB950']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB950']($container);
     }
 
     /*
@@ -15438,13 +15436,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB951
      */
-    protected function getFixtureB951Service()
+    protected static function getFixtureB951Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB951'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB951'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB951();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB951']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB951']($container);
     }
 
     /*
@@ -15452,13 +15450,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB952
      */
-    protected function getFixtureB952Service()
+    protected static function getFixtureB952Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB952'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB952'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB952();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB952']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB952']($container);
     }
 
     /*
@@ -15466,13 +15464,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB953
      */
-    protected function getFixtureB953Service()
+    protected static function getFixtureB953Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB953'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB953'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB953();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB953']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB953']($container);
     }
 
     /*
@@ -15480,13 +15478,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB954
      */
-    protected function getFixtureB954Service()
+    protected static function getFixtureB954Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB954'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB954'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB954();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB954']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB954']($container);
     }
 
     /*
@@ -15494,13 +15492,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB955
      */
-    protected function getFixtureB955Service()
+    protected static function getFixtureB955Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB955'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB955'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB955();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB955']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB955']($container);
     }
 
     /*
@@ -15508,13 +15506,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB956
      */
-    protected function getFixtureB956Service()
+    protected static function getFixtureB956Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB956'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB956'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB956();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB956']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB956']($container);
     }
 
     /*
@@ -15522,13 +15520,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB957
      */
-    protected function getFixtureB957Service()
+    protected static function getFixtureB957Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB957'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB957'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB957();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB957']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB957']($container);
     }
 
     /*
@@ -15536,13 +15534,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB958
      */
-    protected function getFixtureB958Service()
+    protected static function getFixtureB958Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB958'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB958'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB958();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB958']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB958']($container);
     }
 
     /*
@@ -15550,13 +15548,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB959
      */
-    protected function getFixtureB959Service()
+    protected static function getFixtureB959Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB959'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB959'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB959();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB959']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB959']($container);
     }
 
     /*
@@ -15564,13 +15562,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB96
      */
-    protected function getFixtureB96Service()
+    protected static function getFixtureB96Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB96'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB96'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB96();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB96']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB96']($container);
     }
 
     /*
@@ -15578,13 +15576,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB960
      */
-    protected function getFixtureB960Service()
+    protected static function getFixtureB960Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB960'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB960'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB960();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB960']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB960']($container);
     }
 
     /*
@@ -15592,13 +15590,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB961
      */
-    protected function getFixtureB961Service()
+    protected static function getFixtureB961Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB961'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB961'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB961();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB961']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB961']($container);
     }
 
     /*
@@ -15606,13 +15604,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB962
      */
-    protected function getFixtureB962Service()
+    protected static function getFixtureB962Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB962'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB962'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB962();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB962']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB962']($container);
     }
 
     /*
@@ -15620,13 +15618,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB963
      */
-    protected function getFixtureB963Service()
+    protected static function getFixtureB963Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB963'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB963'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB963();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB963']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB963']($container);
     }
 
     /*
@@ -15634,13 +15632,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB964
      */
-    protected function getFixtureB964Service()
+    protected static function getFixtureB964Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB964'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB964'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB964();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB964']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB964']($container);
     }
 
     /*
@@ -15648,13 +15646,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB965
      */
-    protected function getFixtureB965Service()
+    protected static function getFixtureB965Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB965'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB965'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB965();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB965']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB965']($container);
     }
 
     /*
@@ -15662,13 +15660,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB966
      */
-    protected function getFixtureB966Service()
+    protected static function getFixtureB966Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB966'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB966'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB966();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB966']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB966']($container);
     }
 
     /*
@@ -15676,13 +15674,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB967
      */
-    protected function getFixtureB967Service()
+    protected static function getFixtureB967Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB967'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB967'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB967();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB967']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB967']($container);
     }
 
     /*
@@ -15690,13 +15688,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB968
      */
-    protected function getFixtureB968Service()
+    protected static function getFixtureB968Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB968'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB968'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB968();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB968']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB968']($container);
     }
 
     /*
@@ -15704,13 +15702,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB969
      */
-    protected function getFixtureB969Service()
+    protected static function getFixtureB969Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB969'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB969'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB969();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB969']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB969']($container);
     }
 
     /*
@@ -15718,13 +15716,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB97
      */
-    protected function getFixtureB97Service()
+    protected static function getFixtureB97Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB97'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB97'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB97();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB97']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB97']($container);
     }
 
     /*
@@ -15732,13 +15730,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB970
      */
-    protected function getFixtureB970Service()
+    protected static function getFixtureB970Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB970'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB970'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB970();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB970']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB970']($container);
     }
 
     /*
@@ -15746,13 +15744,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB971
      */
-    protected function getFixtureB971Service()
+    protected static function getFixtureB971Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB971'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB971'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB971();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB971']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB971']($container);
     }
 
     /*
@@ -15760,13 +15758,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB972
      */
-    protected function getFixtureB972Service()
+    protected static function getFixtureB972Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB972'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB972'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB972();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB972']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB972']($container);
     }
 
     /*
@@ -15774,13 +15772,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB973
      */
-    protected function getFixtureB973Service()
+    protected static function getFixtureB973Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB973'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB973'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB973();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB973']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB973']($container);
     }
 
     /*
@@ -15788,13 +15786,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB974
      */
-    protected function getFixtureB974Service()
+    protected static function getFixtureB974Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB974'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB974'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB974();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB974']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB974']($container);
     }
 
     /*
@@ -15802,13 +15800,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB975
      */
-    protected function getFixtureB975Service()
+    protected static function getFixtureB975Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB975'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB975'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB975();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB975']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB975']($container);
     }
 
     /*
@@ -15816,13 +15814,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB976
      */
-    protected function getFixtureB976Service()
+    protected static function getFixtureB976Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB976'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB976'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB976();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB976']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB976']($container);
     }
 
     /*
@@ -15830,13 +15828,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB977
      */
-    protected function getFixtureB977Service()
+    protected static function getFixtureB977Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB977'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB977'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB977();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB977']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB977']($container);
     }
 
     /*
@@ -15844,13 +15842,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB978
      */
-    protected function getFixtureB978Service()
+    protected static function getFixtureB978Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB978'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB978'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB978();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB978']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB978']($container);
     }
 
     /*
@@ -15858,13 +15856,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB979
      */
-    protected function getFixtureB979Service()
+    protected static function getFixtureB979Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB979'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB979'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB979();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB979']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB979']($container);
     }
 
     /*
@@ -15872,13 +15870,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB98
      */
-    protected function getFixtureB98Service()
+    protected static function getFixtureB98Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB98'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB98'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB98();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB98']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB98']($container);
     }
 
     /*
@@ -15886,13 +15884,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB980
      */
-    protected function getFixtureB980Service()
+    protected static function getFixtureB980Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB980'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB980'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB980();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB980']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB980']($container);
     }
 
     /*
@@ -15900,13 +15898,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB981
      */
-    protected function getFixtureB981Service()
+    protected static function getFixtureB981Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB981'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB981'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB981();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB981']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB981']($container);
     }
 
     /*
@@ -15914,13 +15912,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB982
      */
-    protected function getFixtureB982Service()
+    protected static function getFixtureB982Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB982'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB982'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB982();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB982']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB982']($container);
     }
 
     /*
@@ -15928,13 +15926,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB983
      */
-    protected function getFixtureB983Service()
+    protected static function getFixtureB983Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB983'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB983'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB983();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB983']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB983']($container);
     }
 
     /*
@@ -15942,13 +15940,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB984
      */
-    protected function getFixtureB984Service()
+    protected static function getFixtureB984Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB984'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB984'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB984();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB984']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB984']($container);
     }
 
     /*
@@ -15956,13 +15954,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB985
      */
-    protected function getFixtureB985Service()
+    protected static function getFixtureB985Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB985'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB985'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB985();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB985']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB985']($container);
     }
 
     /*
@@ -15970,13 +15968,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB986
      */
-    protected function getFixtureB986Service()
+    protected static function getFixtureB986Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB986'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB986'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB986();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB986']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB986']($container);
     }
 
     /*
@@ -15984,13 +15982,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB987
      */
-    protected function getFixtureB987Service()
+    protected static function getFixtureB987Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB987'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB987'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB987();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB987']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB987']($container);
     }
 
     /*
@@ -15998,13 +15996,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB988
      */
-    protected function getFixtureB988Service()
+    protected static function getFixtureB988Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB988'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB988'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB988();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB988']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB988']($container);
     }
 
     /*
@@ -16012,13 +16010,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB989
      */
-    protected function getFixtureB989Service()
+    protected static function getFixtureB989Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB989'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB989'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB989();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB989']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB989']($container);
     }
 
     /*
@@ -16026,13 +16024,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB99
      */
-    protected function getFixtureB99Service()
+    protected static function getFixtureB99Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB99'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB99'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB99();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB99']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB99']($container);
     }
 
     /*
@@ -16040,13 +16038,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB990
      */
-    protected function getFixtureB990Service()
+    protected static function getFixtureB990Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB990'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB990'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB990();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB990']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB990']($container);
     }
 
     /*
@@ -16054,13 +16052,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB991
      */
-    protected function getFixtureB991Service()
+    protected static function getFixtureB991Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB991'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB991'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB991();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB991']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB991']($container);
     }
 
     /*
@@ -16068,13 +16066,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB992
      */
-    protected function getFixtureB992Service()
+    protected static function getFixtureB992Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB992'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB992'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB992();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB992']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB992']($container);
     }
 
     /*
@@ -16082,13 +16080,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB993
      */
-    protected function getFixtureB993Service()
+    protected static function getFixtureB993Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB993'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB993'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB993();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB993']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB993']($container);
     }
 
     /*
@@ -16096,13 +16094,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB994
      */
-    protected function getFixtureB994Service()
+    protected static function getFixtureB994Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB994'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB994'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB994();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB994']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB994']($container);
     }
 
     /*
@@ -16110,13 +16108,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB995
      */
-    protected function getFixtureB995Service()
+    protected static function getFixtureB995Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB995'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB995'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB995();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB995']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB995']($container);
     }
 
     /*
@@ -16124,13 +16122,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB996
      */
-    protected function getFixtureB996Service()
+    protected static function getFixtureB996Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB996'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB996'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB996();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB996']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB996']($container);
     }
 
     /*
@@ -16138,13 +16136,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB997
      */
-    protected function getFixtureB997Service()
+    protected static function getFixtureB997Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB997'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB997'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB997();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB997']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB997']($container);
     }
 
     /*
@@ -16152,13 +16150,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB998
      */
-    protected function getFixtureB998Service()
+    protected static function getFixtureB998Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB998'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB998'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB998();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB998']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB998']($container);
     }
 
     /*
@@ -16166,13 +16164,13 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB999
      */
-    protected function getFixtureB999Service()
+    protected static function getFixtureB999Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB999'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB999'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\B\FixtureB999();
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB999']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\B\\FixtureB999']($container);
     }
 
     /*
@@ -16180,28 +16178,28 @@ class CompiledPrototypeContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\C\FixtureC1000
      */
-    protected function getFixtureC1000Service()
+    protected static function getFixtureC1000Service($container)
     {
-        $this->factories['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000'] = function () {
+        $container->factories['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000'] = function ($container) {
             return new \DiContainerBenchmarks\Fixture\C\FixtureC1000(new \DiContainerBenchmarks\Fixture\C\FixtureC999(new \DiContainerBenchmarks\Fixture\C\FixtureC998(new \DiContainerBenchmarks\Fixture\C\FixtureC997(new \DiContainerBenchmarks\Fixture\C\FixtureC996(new \DiContainerBenchmarks\Fixture\C\FixtureC995(new \DiContainerBenchmarks\Fixture\C\FixtureC994(new \DiContainerBenchmarks\Fixture\C\FixtureC993(new \DiContainerBenchmarks\Fixture\C\FixtureC992(new \DiContainerBenchmarks\Fixture\C\FixtureC991(new \DiContainerBenchmarks\Fixture\C\FixtureC990(new \DiContainerBenchmarks\Fixture\C\FixtureC989(new \DiContainerBenchmarks\Fixture\C\FixtureC988(new \DiContainerBenchmarks\Fixture\C\FixtureC987(new \DiContainerBenchmarks\Fixture\C\FixtureC986(new \DiContainerBenchmarks\Fixture\C\FixtureC985(new \DiContainerBenchmarks\Fixture\C\FixtureC984(new \DiContainerBenchmarks\Fixture\C\FixtureC983(new \DiContainerBenchmarks\Fixture\C\FixtureC982(new \DiContainerBenchmarks\Fixture\C\FixtureC981(new \DiContainerBenchmarks\Fixture\C\FixtureC980(new \DiContainerBenchmarks\Fixture\C\FixtureC979(new \DiContainerBenchmarks\Fixture\C\FixtureC978(new \DiContainerBenchmarks\Fixture\C\FixtureC977(new \DiContainerBenchmarks\Fixture\C\FixtureC976(new \DiContainerBenchmarks\Fixture\C\FixtureC975(new \DiContainerBenchmarks\Fixture\C\FixtureC974(new \DiContainerBenchmarks\Fixture\C\FixtureC973(new \DiContainerBenchmarks\Fixture\C\FixtureC972(new \DiContainerBenchmarks\Fixture\C\FixtureC971(new \DiContainerBenchmarks\Fixture\C\FixtureC970(new \DiContainerBenchmarks\Fixture\C\FixtureC969(new \DiContainerBenchmarks\Fixture\C\FixtureC968(new \DiContainerBenchmarks\Fixture\C\FixtureC967(new \DiContainerBenchmarks\Fixture\C\FixtureC966(new \DiContainerBenchmarks\Fixture\C\FixtureC965(new \DiContainerBenchmarks\Fixture\C\FixtureC964(new \DiContainerBenchmarks\Fixture\C\FixtureC963(new \DiContainerBenchmarks\Fixture\C\FixtureC962(new \DiContainerBenchmarks\Fixture\C\FixtureC961(new \DiContainerBenchmarks\Fixture\C\FixtureC960(new \DiContainerBenchmarks\Fixture\C\FixtureC959(new \DiContainerBenchmarks\Fixture\C\FixtureC958(new \DiContainerBenchmarks\Fixture\C\FixtureC957(new \DiContainerBenchmarks\Fixture\C\FixtureC956(new \DiContainerBenchmarks\Fixture\C\FixtureC955(new \DiContainerBenchmarks\Fixture\C\FixtureC954(new \DiContainerBenchmarks\Fixture\C\FixtureC953(new \DiContainerBenchmarks\Fixture\C\FixtureC952(new \DiContainerBenchmarks\Fixture\C\FixtureC951(new \DiContainerBenchmarks\Fixture\C\FixtureC950(new \DiContainerBenchmarks\Fixture\C\FixtureC949(new \DiContainerBenchmarks\Fixture\C\FixtureC948(new \DiContainerBenchmarks\Fixture\C\FixtureC947(new \DiContainerBenchmarks\Fixture\C\FixtureC946(new \DiContainerBenchmarks\Fixture\C\FixtureC945(new \DiContainerBenchmarks\Fixture\C\FixtureC944(new \DiContainerBenchmarks\Fixture\C\FixtureC943(new \DiContainerBenchmarks\Fixture\C\FixtureC942(new \DiContainerBenchmarks\Fixture\C\FixtureC941(new \DiContainerBenchmarks\Fixture\C\FixtureC940(new \DiContainerBenchmarks\Fixture\C\FixtureC939(new \DiContainerBenchmarks\Fixture\C\FixtureC938(new \DiContainerBenchmarks\Fixture\C\FixtureC937(new \DiContainerBenchmarks\Fixture\C\FixtureC936(new \DiContainerBenchmarks\Fixture\C\FixtureC935(new \DiContainerBenchmarks\Fixture\C\FixtureC934(new \DiContainerBenchmarks\Fixture\C\FixtureC933(new \DiContainerBenchmarks\Fixture\C\FixtureC932(new \DiContainerBenchmarks\Fixture\C\FixtureC931(new \DiContainerBenchmarks\Fixture\C\FixtureC930(new \DiContainerBenchmarks\Fixture\C\FixtureC929(new \DiContainerBenchmarks\Fixture\C\FixtureC928(new \DiContainerBenchmarks\Fixture\C\FixtureC927(new \DiContainerBenchmarks\Fixture\C\FixtureC926(new \DiContainerBenchmarks\Fixture\C\FixtureC925(new \DiContainerBenchmarks\Fixture\C\FixtureC924(new \DiContainerBenchmarks\Fixture\C\FixtureC923(new \DiContainerBenchmarks\Fixture\C\FixtureC922(new \DiContainerBenchmarks\Fixture\C\FixtureC921(new \DiContainerBenchmarks\Fixture\C\FixtureC920(new \DiContainerBenchmarks\Fixture\C\FixtureC919(new \DiContainerBenchmarks\Fixture\C\FixtureC918(new \DiContainerBenchmarks\Fixture\C\FixtureC917(new \DiContainerBenchmarks\Fixture\C\FixtureC916(new \DiContainerBenchmarks\Fixture\C\FixtureC915(new \DiContainerBenchmarks\Fixture\C\FixtureC914(new \DiContainerBenchmarks\Fixture\C\FixtureC913(new \DiContainerBenchmarks\Fixture\C\FixtureC912(new \DiContainerBenchmarks\Fixture\C\FixtureC911(new \DiContainerBenchmarks\Fixture\C\FixtureC910(new \DiContainerBenchmarks\Fixture\C\FixtureC909(new \DiContainerBenchmarks\Fixture\C\FixtureC908(new \DiContainerBenchmarks\Fixture\C\FixtureC907(new \DiContainerBenchmarks\Fixture\C\FixtureC906(new \DiContainerBenchmarks\Fixture\C\FixtureC905(new \DiContainerBenchmarks\Fixture\C\FixtureC904(new \DiContainerBenchmarks\Fixture\C\FixtureC903(new \DiContainerBenchmarks\Fixture\C\FixtureC902(new \DiContainerBenchmarks\Fixture\C\FixtureC901(new \DiContainerBenchmarks\Fixture\C\FixtureC900(new \DiContainerBenchmarks\Fixture\C\FixtureC899(new \DiContainerBenchmarks\Fixture\C\FixtureC898(new \DiContainerBenchmarks\Fixture\C\FixtureC897(new \DiContainerBenchmarks\Fixture\C\FixtureC896(new \DiContainerBenchmarks\Fixture\C\FixtureC895(new \DiContainerBenchmarks\Fixture\C\FixtureC894(new \DiContainerBenchmarks\Fixture\C\FixtureC893(new \DiContainerBenchmarks\Fixture\C\FixtureC892(new \DiContainerBenchmarks\Fixture\C\FixtureC891(new \DiContainerBenchmarks\Fixture\C\FixtureC890(new \DiContainerBenchmarks\Fixture\C\FixtureC889(new \DiContainerBenchmarks\Fixture\C\FixtureC888(new \DiContainerBenchmarks\Fixture\C\FixtureC887(new \DiContainerBenchmarks\Fixture\C\FixtureC886(new \DiContainerBenchmarks\Fixture\C\FixtureC885(new \DiContainerBenchmarks\Fixture\C\FixtureC884(new \DiContainerBenchmarks\Fixture\C\FixtureC883(new \DiContainerBenchmarks\Fixture\C\FixtureC882(new \DiContainerBenchmarks\Fixture\C\FixtureC881(new \DiContainerBenchmarks\Fixture\C\FixtureC880(new \DiContainerBenchmarks\Fixture\C\FixtureC879(new \DiContainerBenchmarks\Fixture\C\FixtureC878(new \DiContainerBenchmarks\Fixture\C\FixtureC877(new \DiContainerBenchmarks\Fixture\C\FixtureC876(new \DiContainerBenchmarks\Fixture\C\FixtureC875(new \DiContainerBenchmarks\Fixture\C\FixtureC874(new \DiContainerBenchmarks\Fixture\C\FixtureC873(new \DiContainerBenchmarks\Fixture\C\FixtureC872(new \DiContainerBenchmarks\Fixture\C\FixtureC871(new \DiContainerBenchmarks\Fixture\C\FixtureC870(new \DiContainerBenchmarks\Fixture\C\FixtureC869(new \DiContainerBenchmarks\Fixture\C\FixtureC868(new \DiContainerBenchmarks\Fixture\C\FixtureC867(new \DiContainerBenchmarks\Fixture\C\FixtureC866(new \DiContainerBenchmarks\Fixture\C\FixtureC865(new \DiContainerBenchmarks\Fixture\C\FixtureC864(new \DiContainerBenchmarks\Fixture\C\FixtureC863(new \DiContainerBenchmarks\Fixture\C\FixtureC862(new \DiContainerBenchmarks\Fixture\C\FixtureC861(new \DiContainerBenchmarks\Fixture\C\FixtureC860(new \DiContainerBenchmarks\Fixture\C\FixtureC859(new \DiContainerBenchmarks\Fixture\C\FixtureC858(new \DiContainerBenchmarks\Fixture\C\FixtureC857(new \DiContainerBenchmarks\Fixture\C\FixtureC856(new \DiContainerBenchmarks\Fixture\C\FixtureC855(new \DiContainerBenchmarks\Fixture\C\FixtureC854(new \DiContainerBenchmarks\Fixture\C\FixtureC853(new \DiContainerBenchmarks\Fixture\C\FixtureC852(new \DiContainerBenchmarks\Fixture\C\FixtureC851(new \DiContainerBenchmarks\Fixture\C\FixtureC850(new \DiContainerBenchmarks\Fixture\C\FixtureC849(new \DiContainerBenchmarks\Fixture\C\FixtureC848(new \DiContainerBenchmarks\Fixture\C\FixtureC847(new \DiContainerBenchmarks\Fixture\C\FixtureC846(new \DiContainerBenchmarks\Fixture\C\FixtureC845(new \DiContainerBenchmarks\Fixture\C\FixtureC844(new \DiContainerBenchmarks\Fixture\C\FixtureC843(new \DiContainerBenchmarks\Fixture\C\FixtureC842(new \DiContainerBenchmarks\Fixture\C\FixtureC841(new \DiContainerBenchmarks\Fixture\C\FixtureC840(new \DiContainerBenchmarks\Fixture\C\FixtureC839(new \DiContainerBenchmarks\Fixture\C\FixtureC838(new \DiContainerBenchmarks\Fixture\C\FixtureC837(new \DiContainerBenchmarks\Fixture\C\FixtureC836(new \DiContainerBenchmarks\Fixture\C\FixtureC835(new \DiContainerBenchmarks\Fixture\C\FixtureC834(new \DiContainerBenchmarks\Fixture\C\FixtureC833(new \DiContainerBenchmarks\Fixture\C\FixtureC832(new \DiContainerBenchmarks\Fixture\C\FixtureC831(new \DiContainerBenchmarks\Fixture\C\FixtureC830(new \DiContainerBenchmarks\Fixture\C\FixtureC829(new \DiContainerBenchmarks\Fixture\C\FixtureC828(new \DiContainerBenchmarks\Fixture\C\FixtureC827(new \DiContainerBenchmarks\Fixture\C\FixtureC826(new \DiContainerBenchmarks\Fixture\C\FixtureC825(new \DiContainerBenchmarks\Fixture\C\FixtureC824(new \DiContainerBenchmarks\Fixture\C\FixtureC823(new \DiContainerBenchmarks\Fixture\C\FixtureC822(new \DiContainerBenchmarks\Fixture\C\FixtureC821(new \DiContainerBenchmarks\Fixture\C\FixtureC820(new \DiContainerBenchmarks\Fixture\C\FixtureC819(new \DiContainerBenchmarks\Fixture\C\FixtureC818(new \DiContainerBenchmarks\Fixture\C\FixtureC817(new \DiContainerBenchmarks\Fixture\C\FixtureC816(new \DiContainerBenchmarks\Fixture\C\FixtureC815(new \DiContainerBenchmarks\Fixture\C\FixtureC814(new \DiContainerBenchmarks\Fixture\C\FixtureC813(new \DiContainerBenchmarks\Fixture\C\FixtureC812(new \DiContainerBenchmarks\Fixture\C\FixtureC811(new \DiContainerBenchmarks\Fixture\C\FixtureC810(new \DiContainerBenchmarks\Fixture\C\FixtureC809(new \DiContainerBenchmarks\Fixture\C\FixtureC808(new \DiContainerBenchmarks\Fixture\C\FixtureC807(new \DiContainerBenchmarks\Fixture\C\FixtureC806(new \DiContainerBenchmarks\Fixture\C\FixtureC805(new \DiContainerBenchmarks\Fixture\C\FixtureC804(new \DiContainerBenchmarks\Fixture\C\FixtureC803(new \DiContainerBenchmarks\Fixture\C\FixtureC802(new \DiContainerBenchmarks\Fixture\C\FixtureC801(new \DiContainerBenchmarks\Fixture\C\FixtureC800(new \DiContainerBenchmarks\Fixture\C\FixtureC799(new \DiContainerBenchmarks\Fixture\C\FixtureC798(new \DiContainerBenchmarks\Fixture\C\FixtureC797(new \DiContainerBenchmarks\Fixture\C\FixtureC796(new \DiContainerBenchmarks\Fixture\C\FixtureC795(new \DiContainerBenchmarks\Fixture\C\FixtureC794(new \DiContainerBenchmarks\Fixture\C\FixtureC793(new \DiContainerBenchmarks\Fixture\C\FixtureC792(new \DiContainerBenchmarks\Fixture\C\FixtureC791(new \DiContainerBenchmarks\Fixture\C\FixtureC790(new \DiContainerBenchmarks\Fixture\C\FixtureC789(new \DiContainerBenchmarks\Fixture\C\FixtureC788(new \DiContainerBenchmarks\Fixture\C\FixtureC787(new \DiContainerBenchmarks\Fixture\C\FixtureC786(new \DiContainerBenchmarks\Fixture\C\FixtureC785(new \DiContainerBenchmarks\Fixture\C\FixtureC784(new \DiContainerBenchmarks\Fixture\C\FixtureC783(new \DiContainerBenchmarks\Fixture\C\FixtureC782(new \DiContainerBenchmarks\Fixture\C\FixtureC781(new \DiContainerBenchmarks\Fixture\C\FixtureC780(new \DiContainerBenchmarks\Fixture\C\FixtureC779(new \DiContainerBenchmarks\Fixture\C\FixtureC778(new \DiContainerBenchmarks\Fixture\C\FixtureC777(new \DiContainerBenchmarks\Fixture\C\FixtureC776(new \DiContainerBenchmarks\Fixture\C\FixtureC775(new \DiContainerBenchmarks\Fixture\C\FixtureC774(new \DiContainerBenchmarks\Fixture\C\FixtureC773(new \DiContainerBenchmarks\Fixture\C\FixtureC772(new \DiContainerBenchmarks\Fixture\C\FixtureC771(new \DiContainerBenchmarks\Fixture\C\FixtureC770(new \DiContainerBenchmarks\Fixture\C\FixtureC769(new \DiContainerBenchmarks\Fixture\C\FixtureC768(new \DiContainerBenchmarks\Fixture\C\FixtureC767(new \DiContainerBenchmarks\Fixture\C\FixtureC766(new \DiContainerBenchmarks\Fixture\C\FixtureC765(new \DiContainerBenchmarks\Fixture\C\FixtureC764(new \DiContainerBenchmarks\Fixture\C\FixtureC763(new \DiContainerBenchmarks\Fixture\C\FixtureC762(new \DiContainerBenchmarks\Fixture\C\FixtureC761(new \DiContainerBenchmarks\Fixture\C\FixtureC760(new \DiContainerBenchmarks\Fixture\C\FixtureC759(new \DiContainerBenchmarks\Fixture\C\FixtureC758(new \DiContainerBenchmarks\Fixture\C\FixtureC757(new \DiContainerBenchmarks\Fixture\C\FixtureC756(new \DiContainerBenchmarks\Fixture\C\FixtureC755(new \DiContainerBenchmarks\Fixture\C\FixtureC754(new \DiContainerBenchmarks\Fixture\C\FixtureC753(new \DiContainerBenchmarks\Fixture\C\FixtureC752(new \DiContainerBenchmarks\Fixture\C\FixtureC751(new \DiContainerBenchmarks\Fixture\C\FixtureC750(new \DiContainerBenchmarks\Fixture\C\FixtureC749(new \DiContainerBenchmarks\Fixture\C\FixtureC748(new \DiContainerBenchmarks\Fixture\C\FixtureC747(new \DiContainerBenchmarks\Fixture\C\FixtureC746(new \DiContainerBenchmarks\Fixture\C\FixtureC745(new \DiContainerBenchmarks\Fixture\C\FixtureC744(new \DiContainerBenchmarks\Fixture\C\FixtureC743(new \DiContainerBenchmarks\Fixture\C\FixtureC742(new \DiContainerBenchmarks\Fixture\C\FixtureC741(new \DiContainerBenchmarks\Fixture\C\FixtureC740(new \DiContainerBenchmarks\Fixture\C\FixtureC739(new \DiContainerBenchmarks\Fixture\C\FixtureC738(new \DiContainerBenchmarks\Fixture\C\FixtureC737(new \DiContainerBenchmarks\Fixture\C\FixtureC736(new \DiContainerBenchmarks\Fixture\C\FixtureC735(new \DiContainerBenchmarks\Fixture\C\FixtureC734(new \DiContainerBenchmarks\Fixture\C\FixtureC733(new \DiContainerBenchmarks\Fixture\C\FixtureC732(new \DiContainerBenchmarks\Fixture\C\FixtureC731(new \DiContainerBenchmarks\Fixture\C\FixtureC730(new \DiContainerBenchmarks\Fixture\C\FixtureC729(new \DiContainerBenchmarks\Fixture\C\FixtureC728(new \DiContainerBenchmarks\Fixture\C\FixtureC727(new \DiContainerBenchmarks\Fixture\C\FixtureC726(new \DiContainerBenchmarks\Fixture\C\FixtureC725(new \DiContainerBenchmarks\Fixture\C\FixtureC724(new \DiContainerBenchmarks\Fixture\C\FixtureC723(new \DiContainerBenchmarks\Fixture\C\FixtureC722(new \DiContainerBenchmarks\Fixture\C\FixtureC721(new \DiContainerBenchmarks\Fixture\C\FixtureC720(new \DiContainerBenchmarks\Fixture\C\FixtureC719(new \DiContainerBenchmarks\Fixture\C\FixtureC718(new \DiContainerBenchmarks\Fixture\C\FixtureC717(new \DiContainerBenchmarks\Fixture\C\FixtureC716(new \DiContainerBenchmarks\Fixture\C\FixtureC715(new \DiContainerBenchmarks\Fixture\C\FixtureC714(new \DiContainerBenchmarks\Fixture\C\FixtureC713(new \DiContainerBenchmarks\Fixture\C\FixtureC712(new \DiContainerBenchmarks\Fixture\C\FixtureC711(new \DiContainerBenchmarks\Fixture\C\FixtureC710(new \DiContainerBenchmarks\Fixture\C\FixtureC709(new \DiContainerBenchmarks\Fixture\C\FixtureC708(new \DiContainerBenchmarks\Fixture\C\FixtureC707(new \DiContainerBenchmarks\Fixture\C\FixtureC706(new \DiContainerBenchmarks\Fixture\C\FixtureC705(new \DiContainerBenchmarks\Fixture\C\FixtureC704(new \DiContainerBenchmarks\Fixture\C\FixtureC703(new \DiContainerBenchmarks\Fixture\C\FixtureC702(new \DiContainerBenchmarks\Fixture\C\FixtureC701(new \DiContainerBenchmarks\Fixture\C\FixtureC700(new \DiContainerBenchmarks\Fixture\C\FixtureC699(new \DiContainerBenchmarks\Fixture\C\FixtureC698(new \DiContainerBenchmarks\Fixture\C\FixtureC697(new \DiContainerBenchmarks\Fixture\C\FixtureC696(new \DiContainerBenchmarks\Fixture\C\FixtureC695(new \DiContainerBenchmarks\Fixture\C\FixtureC694(new \DiContainerBenchmarks\Fixture\C\FixtureC693(new \DiContainerBenchmarks\Fixture\C\FixtureC692(new \DiContainerBenchmarks\Fixture\C\FixtureC691(new \DiContainerBenchmarks\Fixture\C\FixtureC690(new \DiContainerBenchmarks\Fixture\C\FixtureC689(new \DiContainerBenchmarks\Fixture\C\FixtureC688(new \DiContainerBenchmarks\Fixture\C\FixtureC687(new \DiContainerBenchmarks\Fixture\C\FixtureC686(new \DiContainerBenchmarks\Fixture\C\FixtureC685(new \DiContainerBenchmarks\Fixture\C\FixtureC684(new \DiContainerBenchmarks\Fixture\C\FixtureC683(new \DiContainerBenchmarks\Fixture\C\FixtureC682(new \DiContainerBenchmarks\Fixture\C\FixtureC681(new \DiContainerBenchmarks\Fixture\C\FixtureC680(new \DiContainerBenchmarks\Fixture\C\FixtureC679(new \DiContainerBenchmarks\Fixture\C\FixtureC678(new \DiContainerBenchmarks\Fixture\C\FixtureC677(new \DiContainerBenchmarks\Fixture\C\FixtureC676(new \DiContainerBenchmarks\Fixture\C\FixtureC675(new \DiContainerBenchmarks\Fixture\C\FixtureC674(new \DiContainerBenchmarks\Fixture\C\FixtureC673(new \DiContainerBenchmarks\Fixture\C\FixtureC672(new \DiContainerBenchmarks\Fixture\C\FixtureC671(new \DiContainerBenchmarks\Fixture\C\FixtureC670(new \DiContainerBenchmarks\Fixture\C\FixtureC669(new \DiContainerBenchmarks\Fixture\C\FixtureC668(new \DiContainerBenchmarks\Fixture\C\FixtureC667(new \DiContainerBenchmarks\Fixture\C\FixtureC666(new \DiContainerBenchmarks\Fixture\C\FixtureC665(new \DiContainerBenchmarks\Fixture\C\FixtureC664(new \DiContainerBenchmarks\Fixture\C\FixtureC663(new \DiContainerBenchmarks\Fixture\C\FixtureC662(new \DiContainerBenchmarks\Fixture\C\FixtureC661(new \DiContainerBenchmarks\Fixture\C\FixtureC660(new \DiContainerBenchmarks\Fixture\C\FixtureC659(new \DiContainerBenchmarks\Fixture\C\FixtureC658(new \DiContainerBenchmarks\Fixture\C\FixtureC657(new \DiContainerBenchmarks\Fixture\C\FixtureC656(new \DiContainerBenchmarks\Fixture\C\FixtureC655(new \DiContainerBenchmarks\Fixture\C\FixtureC654(new \DiContainerBenchmarks\Fixture\C\FixtureC653(new \DiContainerBenchmarks\Fixture\C\FixtureC652(new \DiContainerBenchmarks\Fixture\C\FixtureC651(new \DiContainerBenchmarks\Fixture\C\FixtureC650(new \DiContainerBenchmarks\Fixture\C\FixtureC649(new \DiContainerBenchmarks\Fixture\C\FixtureC648(new \DiContainerBenchmarks\Fixture\C\FixtureC647(new \DiContainerBenchmarks\Fixture\C\FixtureC646(new \DiContainerBenchmarks\Fixture\C\FixtureC645(new \DiContainerBenchmarks\Fixture\C\FixtureC644(new \DiContainerBenchmarks\Fixture\C\FixtureC643(new \DiContainerBenchmarks\Fixture\C\FixtureC642(new \DiContainerBenchmarks\Fixture\C\FixtureC641(new \DiContainerBenchmarks\Fixture\C\FixtureC640(new \DiContainerBenchmarks\Fixture\C\FixtureC639(new \DiContainerBenchmarks\Fixture\C\FixtureC638(new \DiContainerBenchmarks\Fixture\C\FixtureC637(new \DiContainerBenchmarks\Fixture\C\FixtureC636(new \DiContainerBenchmarks\Fixture\C\FixtureC635(new \DiContainerBenchmarks\Fixture\C\FixtureC634(new \DiContainerBenchmarks\Fixture\C\FixtureC633(new \DiContainerBenchmarks\Fixture\C\FixtureC632(new \DiContainerBenchmarks\Fixture\C\FixtureC631(new \DiContainerBenchmarks\Fixture\C\FixtureC630(new \DiContainerBenchmarks\Fixture\C\FixtureC629(new \DiContainerBenchmarks\Fixture\C\FixtureC628(new \DiContainerBenchmarks\Fixture\C\FixtureC627(new \DiContainerBenchmarks\Fixture\C\FixtureC626(new \DiContainerBenchmarks\Fixture\C\FixtureC625(new \DiContainerBenchmarks\Fixture\C\FixtureC624(new \DiContainerBenchmarks\Fixture\C\FixtureC623(new \DiContainerBenchmarks\Fixture\C\FixtureC622(new \DiContainerBenchmarks\Fixture\C\FixtureC621(new \DiContainerBenchmarks\Fixture\C\FixtureC620(new \DiContainerBenchmarks\Fixture\C\FixtureC619(new \DiContainerBenchmarks\Fixture\C\FixtureC618(new \DiContainerBenchmarks\Fixture\C\FixtureC617(new \DiContainerBenchmarks\Fixture\C\FixtureC616(new \DiContainerBenchmarks\Fixture\C\FixtureC615(new \DiContainerBenchmarks\Fixture\C\FixtureC614(new \DiContainerBenchmarks\Fixture\C\FixtureC613(new \DiContainerBenchmarks\Fixture\C\FixtureC612(new \DiContainerBenchmarks\Fixture\C\FixtureC611(new \DiContainerBenchmarks\Fixture\C\FixtureC610(new \DiContainerBenchmarks\Fixture\C\FixtureC609(new \DiContainerBenchmarks\Fixture\C\FixtureC608(new \DiContainerBenchmarks\Fixture\C\FixtureC607(new \DiContainerBenchmarks\Fixture\C\FixtureC606(new \DiContainerBenchmarks\Fixture\C\FixtureC605(new \DiContainerBenchmarks\Fixture\C\FixtureC604(new \DiContainerBenchmarks\Fixture\C\FixtureC603(new \DiContainerBenchmarks\Fixture\C\FixtureC602(new \DiContainerBenchmarks\Fixture\C\FixtureC601(new \DiContainerBenchmarks\Fixture\C\FixtureC600(new \DiContainerBenchmarks\Fixture\C\FixtureC599(new \DiContainerBenchmarks\Fixture\C\FixtureC598(new \DiContainerBenchmarks\Fixture\C\FixtureC597(new \DiContainerBenchmarks\Fixture\C\FixtureC596(new \DiContainerBenchmarks\Fixture\C\FixtureC595(new \DiContainerBenchmarks\Fixture\C\FixtureC594(new \DiContainerBenchmarks\Fixture\C\FixtureC593(new \DiContainerBenchmarks\Fixture\C\FixtureC592(new \DiContainerBenchmarks\Fixture\C\FixtureC591(new \DiContainerBenchmarks\Fixture\C\FixtureC590(new \DiContainerBenchmarks\Fixture\C\FixtureC589(new \DiContainerBenchmarks\Fixture\C\FixtureC588(new \DiContainerBenchmarks\Fixture\C\FixtureC587(new \DiContainerBenchmarks\Fixture\C\FixtureC586(new \DiContainerBenchmarks\Fixture\C\FixtureC585(new \DiContainerBenchmarks\Fixture\C\FixtureC584(new \DiContainerBenchmarks\Fixture\C\FixtureC583(new \DiContainerBenchmarks\Fixture\C\FixtureC582(new \DiContainerBenchmarks\Fixture\C\FixtureC581(new \DiContainerBenchmarks\Fixture\C\FixtureC580(new \DiContainerBenchmarks\Fixture\C\FixtureC579(new \DiContainerBenchmarks\Fixture\C\FixtureC578(new \DiContainerBenchmarks\Fixture\C\FixtureC577(new \DiContainerBenchmarks\Fixture\C\FixtureC576(new \DiContainerBenchmarks\Fixture\C\FixtureC575(new \DiContainerBenchmarks\Fixture\C\FixtureC574(new \DiContainerBenchmarks\Fixture\C\FixtureC573(new \DiContainerBenchmarks\Fixture\C\FixtureC572(new \DiContainerBenchmarks\Fixture\C\FixtureC571(new \DiContainerBenchmarks\Fixture\C\FixtureC570(new \DiContainerBenchmarks\Fixture\C\FixtureC569(new \DiContainerBenchmarks\Fixture\C\FixtureC568(new \DiContainerBenchmarks\Fixture\C\FixtureC567(new \DiContainerBenchmarks\Fixture\C\FixtureC566(new \DiContainerBenchmarks\Fixture\C\FixtureC565(new \DiContainerBenchmarks\Fixture\C\FixtureC564(new \DiContainerBenchmarks\Fixture\C\FixtureC563(new \DiContainerBenchmarks\Fixture\C\FixtureC562(new \DiContainerBenchmarks\Fixture\C\FixtureC561(new \DiContainerBenchmarks\Fixture\C\FixtureC560(new \DiContainerBenchmarks\Fixture\C\FixtureC559(new \DiContainerBenchmarks\Fixture\C\FixtureC558(new \DiContainerBenchmarks\Fixture\C\FixtureC557(new \DiContainerBenchmarks\Fixture\C\FixtureC556(new \DiContainerBenchmarks\Fixture\C\FixtureC555(new \DiContainerBenchmarks\Fixture\C\FixtureC554(new \DiContainerBenchmarks\Fixture\C\FixtureC553(new \DiContainerBenchmarks\Fixture\C\FixtureC552(new \DiContainerBenchmarks\Fixture\C\FixtureC551(new \DiContainerBenchmarks\Fixture\C\FixtureC550(new \DiContainerBenchmarks\Fixture\C\FixtureC549(new \DiContainerBenchmarks\Fixture\C\FixtureC548(new \DiContainerBenchmarks\Fixture\C\FixtureC547(new \DiContainerBenchmarks\Fixture\C\FixtureC546(new \DiContainerBenchmarks\Fixture\C\FixtureC545(new \DiContainerBenchmarks\Fixture\C\FixtureC544(new \DiContainerBenchmarks\Fixture\C\FixtureC543(new \DiContainerBenchmarks\Fixture\C\FixtureC542(new \DiContainerBenchmarks\Fixture\C\FixtureC541(new \DiContainerBenchmarks\Fixture\C\FixtureC540(new \DiContainerBenchmarks\Fixture\C\FixtureC539(new \DiContainerBenchmarks\Fixture\C\FixtureC538(new \DiContainerBenchmarks\Fixture\C\FixtureC537(new \DiContainerBenchmarks\Fixture\C\FixtureC536(new \DiContainerBenchmarks\Fixture\C\FixtureC535(new \DiContainerBenchmarks\Fixture\C\FixtureC534(new \DiContainerBenchmarks\Fixture\C\FixtureC533(new \DiContainerBenchmarks\Fixture\C\FixtureC532(new \DiContainerBenchmarks\Fixture\C\FixtureC531(new \DiContainerBenchmarks\Fixture\C\FixtureC530(new \DiContainerBenchmarks\Fixture\C\FixtureC529(new \DiContainerBenchmarks\Fixture\C\FixtureC528(new \DiContainerBenchmarks\Fixture\C\FixtureC527(new \DiContainerBenchmarks\Fixture\C\FixtureC526(new \DiContainerBenchmarks\Fixture\C\FixtureC525(new \DiContainerBenchmarks\Fixture\C\FixtureC524(new \DiContainerBenchmarks\Fixture\C\FixtureC523(new \DiContainerBenchmarks\Fixture\C\FixtureC522(new \DiContainerBenchmarks\Fixture\C\FixtureC521(new \DiContainerBenchmarks\Fixture\C\FixtureC520(new \DiContainerBenchmarks\Fixture\C\FixtureC519(new \DiContainerBenchmarks\Fixture\C\FixtureC518(new \DiContainerBenchmarks\Fixture\C\FixtureC517(new \DiContainerBenchmarks\Fixture\C\FixtureC516(new \DiContainerBenchmarks\Fixture\C\FixtureC515(new \DiContainerBenchmarks\Fixture\C\FixtureC514(new \DiContainerBenchmarks\Fixture\C\FixtureC513(new \DiContainerBenchmarks\Fixture\C\FixtureC512(new \DiContainerBenchmarks\Fixture\C\FixtureC511(new \DiContainerBenchmarks\Fixture\C\FixtureC510(new \DiContainerBenchmarks\Fixture\C\FixtureC509(new \DiContainerBenchmarks\Fixture\C\FixtureC508(new \DiContainerBenchmarks\Fixture\C\FixtureC507(new \DiContainerBenchmarks\Fixture\C\FixtureC506(new \DiContainerBenchmarks\Fixture\C\FixtureC505(new \DiContainerBenchmarks\Fixture\C\FixtureC504(new \DiContainerBenchmarks\Fixture\C\FixtureC503(new \DiContainerBenchmarks\Fixture\C\FixtureC502(new \DiContainerBenchmarks\Fixture\C\FixtureC501(new \DiContainerBenchmarks\Fixture\C\FixtureC500(new \DiContainerBenchmarks\Fixture\C\FixtureC499(new \DiContainerBenchmarks\Fixture\C\FixtureC498(new \DiContainerBenchmarks\Fixture\C\FixtureC497(new \DiContainerBenchmarks\Fixture\C\FixtureC496(new \DiContainerBenchmarks\Fixture\C\FixtureC495(new \DiContainerBenchmarks\Fixture\C\FixtureC494(new \DiContainerBenchmarks\Fixture\C\FixtureC493(new \DiContainerBenchmarks\Fixture\C\FixtureC492(new \DiContainerBenchmarks\Fixture\C\FixtureC491(new \DiContainerBenchmarks\Fixture\C\FixtureC490(new \DiContainerBenchmarks\Fixture\C\FixtureC489(new \DiContainerBenchmarks\Fixture\C\FixtureC488(new \DiContainerBenchmarks\Fixture\C\FixtureC487(new \DiContainerBenchmarks\Fixture\C\FixtureC486(new \DiContainerBenchmarks\Fixture\C\FixtureC485(new \DiContainerBenchmarks\Fixture\C\FixtureC484(new \DiContainerBenchmarks\Fixture\C\FixtureC483(new \DiContainerBenchmarks\Fixture\C\FixtureC482(new \DiContainerBenchmarks\Fixture\C\FixtureC481(new \DiContainerBenchmarks\Fixture\C\FixtureC480(new \DiContainerBenchmarks\Fixture\C\FixtureC479(new \DiContainerBenchmarks\Fixture\C\FixtureC478(new \DiContainerBenchmarks\Fixture\C\FixtureC477(new \DiContainerBenchmarks\Fixture\C\FixtureC476(new \DiContainerBenchmarks\Fixture\C\FixtureC475(new \DiContainerBenchmarks\Fixture\C\FixtureC474(new \DiContainerBenchmarks\Fixture\C\FixtureC473(new \DiContainerBenchmarks\Fixture\C\FixtureC472(new \DiContainerBenchmarks\Fixture\C\FixtureC471(new \DiContainerBenchmarks\Fixture\C\FixtureC470(new \DiContainerBenchmarks\Fixture\C\FixtureC469(new \DiContainerBenchmarks\Fixture\C\FixtureC468(new \DiContainerBenchmarks\Fixture\C\FixtureC467(new \DiContainerBenchmarks\Fixture\C\FixtureC466(new \DiContainerBenchmarks\Fixture\C\FixtureC465(new \DiContainerBenchmarks\Fixture\C\FixtureC464(new \DiContainerBenchmarks\Fixture\C\FixtureC463(new \DiContainerBenchmarks\Fixture\C\FixtureC462(new \DiContainerBenchmarks\Fixture\C\FixtureC461(new \DiContainerBenchmarks\Fixture\C\FixtureC460(new \DiContainerBenchmarks\Fixture\C\FixtureC459(new \DiContainerBenchmarks\Fixture\C\FixtureC458(new \DiContainerBenchmarks\Fixture\C\FixtureC457(new \DiContainerBenchmarks\Fixture\C\FixtureC456(new \DiContainerBenchmarks\Fixture\C\FixtureC455(new \DiContainerBenchmarks\Fixture\C\FixtureC454(new \DiContainerBenchmarks\Fixture\C\FixtureC453(new \DiContainerBenchmarks\Fixture\C\FixtureC452(new \DiContainerBenchmarks\Fixture\C\FixtureC451(new \DiContainerBenchmarks\Fixture\C\FixtureC450(new \DiContainerBenchmarks\Fixture\C\FixtureC449(new \DiContainerBenchmarks\Fixture\C\FixtureC448(new \DiContainerBenchmarks\Fixture\C\FixtureC447(new \DiContainerBenchmarks\Fixture\C\FixtureC446(new \DiContainerBenchmarks\Fixture\C\FixtureC445(new \DiContainerBenchmarks\Fixture\C\FixtureC444(new \DiContainerBenchmarks\Fixture\C\FixtureC443(new \DiContainerBenchmarks\Fixture\C\FixtureC442(new \DiContainerBenchmarks\Fixture\C\FixtureC441(new \DiContainerBenchmarks\Fixture\C\FixtureC440(new \DiContainerBenchmarks\Fixture\C\FixtureC439(new \DiContainerBenchmarks\Fixture\C\FixtureC438(new \DiContainerBenchmarks\Fixture\C\FixtureC437(new \DiContainerBenchmarks\Fixture\C\FixtureC436(new \DiContainerBenchmarks\Fixture\C\FixtureC435(new \DiContainerBenchmarks\Fixture\C\FixtureC434(new \DiContainerBenchmarks\Fixture\C\FixtureC433(new \DiContainerBenchmarks\Fixture\C\FixtureC432(new \DiContainerBenchmarks\Fixture\C\FixtureC431(new \DiContainerBenchmarks\Fixture\C\FixtureC430(new \DiContainerBenchmarks\Fixture\C\FixtureC429(new \DiContainerBenchmarks\Fixture\C\FixtureC428(new \DiContainerBenchmarks\Fixture\C\FixtureC427(new \DiContainerBenchmarks\Fixture\C\FixtureC426(new \DiContainerBenchmarks\Fixture\C\FixtureC425(new \DiContainerBenchmarks\Fixture\C\FixtureC424(new \DiContainerBenchmarks\Fixture\C\FixtureC423(new \DiContainerBenchmarks\Fixture\C\FixtureC422(new \DiContainerBenchmarks\Fixture\C\FixtureC421(new \DiContainerBenchmarks\Fixture\C\FixtureC420(new \DiContainerBenchmarks\Fixture\C\FixtureC419(new \DiContainerBenchmarks\Fixture\C\FixtureC418(new \DiContainerBenchmarks\Fixture\C\FixtureC417(new \DiContainerBenchmarks\Fixture\C\FixtureC416(new \DiContainerBenchmarks\Fixture\C\FixtureC415(new \DiContainerBenchmarks\Fixture\C\FixtureC414(new \DiContainerBenchmarks\Fixture\C\FixtureC413(new \DiContainerBenchmarks\Fixture\C\FixtureC412(new \DiContainerBenchmarks\Fixture\C\FixtureC411(new \DiContainerBenchmarks\Fixture\C\FixtureC410(new \DiContainerBenchmarks\Fixture\C\FixtureC409(new \DiContainerBenchmarks\Fixture\C\FixtureC408(new \DiContainerBenchmarks\Fixture\C\FixtureC407(new \DiContainerBenchmarks\Fixture\C\FixtureC406(new \DiContainerBenchmarks\Fixture\C\FixtureC405(new \DiContainerBenchmarks\Fixture\C\FixtureC404(new \DiContainerBenchmarks\Fixture\C\FixtureC403(new \DiContainerBenchmarks\Fixture\C\FixtureC402(new \DiContainerBenchmarks\Fixture\C\FixtureC401(new \DiContainerBenchmarks\Fixture\C\FixtureC400(new \DiContainerBenchmarks\Fixture\C\FixtureC399(new \DiContainerBenchmarks\Fixture\C\FixtureC398(new \DiContainerBenchmarks\Fixture\C\FixtureC397(new \DiContainerBenchmarks\Fixture\C\FixtureC396(new \DiContainerBenchmarks\Fixture\C\FixtureC395(new \DiContainerBenchmarks\Fixture\C\FixtureC394(new \DiContainerBenchmarks\Fixture\C\FixtureC393(new \DiContainerBenchmarks\Fixture\C\FixtureC392(new \DiContainerBenchmarks\Fixture\C\FixtureC391(new \DiContainerBenchmarks\Fixture\C\FixtureC390(new \DiContainerBenchmarks\Fixture\C\FixtureC389(new \DiContainerBenchmarks\Fixture\C\FixtureC388(new \DiContainerBenchmarks\Fixture\C\FixtureC387(new \DiContainerBenchmarks\Fixture\C\FixtureC386(new \DiContainerBenchmarks\Fixture\C\FixtureC385(new \DiContainerBenchmarks\Fixture\C\FixtureC384(new \DiContainerBenchmarks\Fixture\C\FixtureC383(new \DiContainerBenchmarks\Fixture\C\FixtureC382(new \DiContainerBenchmarks\Fixture\C\FixtureC381(new \DiContainerBenchmarks\Fixture\C\FixtureC380(new \DiContainerBenchmarks\Fixture\C\FixtureC379(new \DiContainerBenchmarks\Fixture\C\FixtureC378(new \DiContainerBenchmarks\Fixture\C\FixtureC377(new \DiContainerBenchmarks\Fixture\C\FixtureC376(new \DiContainerBenchmarks\Fixture\C\FixtureC375(new \DiContainerBenchmarks\Fixture\C\FixtureC374(new \DiContainerBenchmarks\Fixture\C\FixtureC373(new \DiContainerBenchmarks\Fixture\C\FixtureC372(new \DiContainerBenchmarks\Fixture\C\FixtureC371(new \DiContainerBenchmarks\Fixture\C\FixtureC370(new \DiContainerBenchmarks\Fixture\C\FixtureC369(new \DiContainerBenchmarks\Fixture\C\FixtureC368(new \DiContainerBenchmarks\Fixture\C\FixtureC367(new \DiContainerBenchmarks\Fixture\C\FixtureC366(new \DiContainerBenchmarks\Fixture\C\FixtureC365(new \DiContainerBenchmarks\Fixture\C\FixtureC364(new \DiContainerBenchmarks\Fixture\C\FixtureC363(new \DiContainerBenchmarks\Fixture\C\FixtureC362(new \DiContainerBenchmarks\Fixture\C\FixtureC361(new \DiContainerBenchmarks\Fixture\C\FixtureC360(new \DiContainerBenchmarks\Fixture\C\FixtureC359(new \DiContainerBenchmarks\Fixture\C\FixtureC358(new \DiContainerBenchmarks\Fixture\C\FixtureC357(new \DiContainerBenchmarks\Fixture\C\FixtureC356(new \DiContainerBenchmarks\Fixture\C\FixtureC355(new \DiContainerBenchmarks\Fixture\C\FixtureC354(new \DiContainerBenchmarks\Fixture\C\FixtureC353(new \DiContainerBenchmarks\Fixture\C\FixtureC352(new \DiContainerBenchmarks\Fixture\C\FixtureC351(new \DiContainerBenchmarks\Fixture\C\FixtureC350(new \DiContainerBenchmarks\Fixture\C\FixtureC349(new \DiContainerBenchmarks\Fixture\C\FixtureC348(new \DiContainerBenchmarks\Fixture\C\FixtureC347(new \DiContainerBenchmarks\Fixture\C\FixtureC346(new \DiContainerBenchmarks\Fixture\C\FixtureC345(new \DiContainerBenchmarks\Fixture\C\FixtureC344(new \DiContainerBenchmarks\Fixture\C\FixtureC343(new \DiContainerBenchmarks\Fixture\C\FixtureC342(new \DiContainerBenchmarks\Fixture\C\FixtureC341(new \DiContainerBenchmarks\Fixture\C\FixtureC340(new \DiContainerBenchmarks\Fixture\C\FixtureC339(new \DiContainerBenchmarks\Fixture\C\FixtureC338(new \DiContainerBenchmarks\Fixture\C\FixtureC337(new \DiContainerBenchmarks\Fixture\C\FixtureC336(new \DiContainerBenchmarks\Fixture\C\FixtureC335(new \DiContainerBenchmarks\Fixture\C\FixtureC334(new \DiContainerBenchmarks\Fixture\C\FixtureC333(new \DiContainerBenchmarks\Fixture\C\FixtureC332(new \DiContainerBenchmarks\Fixture\C\FixtureC331(new \DiContainerBenchmarks\Fixture\C\FixtureC330(new \DiContainerBenchmarks\Fixture\C\FixtureC329(new \DiContainerBenchmarks\Fixture\C\FixtureC328(new \DiContainerBenchmarks\Fixture\C\FixtureC327(new \DiContainerBenchmarks\Fixture\C\FixtureC326(new \DiContainerBenchmarks\Fixture\C\FixtureC325(new \DiContainerBenchmarks\Fixture\C\FixtureC324(new \DiContainerBenchmarks\Fixture\C\FixtureC323(new \DiContainerBenchmarks\Fixture\C\FixtureC322(new \DiContainerBenchmarks\Fixture\C\FixtureC321(new \DiContainerBenchmarks\Fixture\C\FixtureC320(new \DiContainerBenchmarks\Fixture\C\FixtureC319(new \DiContainerBenchmarks\Fixture\C\FixtureC318(new \DiContainerBenchmarks\Fixture\C\FixtureC317(new \DiContainerBenchmarks\Fixture\C\FixtureC316(new \DiContainerBenchmarks\Fixture\C\FixtureC315(new \DiContainerBenchmarks\Fixture\C\FixtureC314(new \DiContainerBenchmarks\Fixture\C\FixtureC313(new \DiContainerBenchmarks\Fixture\C\FixtureC312(new \DiContainerBenchmarks\Fixture\C\FixtureC311(new \DiContainerBenchmarks\Fixture\C\FixtureC310(new \DiContainerBenchmarks\Fixture\C\FixtureC309(new \DiContainerBenchmarks\Fixture\C\FixtureC308(new \DiContainerBenchmarks\Fixture\C\FixtureC307(new \DiContainerBenchmarks\Fixture\C\FixtureC306(new \DiContainerBenchmarks\Fixture\C\FixtureC305(new \DiContainerBenchmarks\Fixture\C\FixtureC304(new \DiContainerBenchmarks\Fixture\C\FixtureC303(new \DiContainerBenchmarks\Fixture\C\FixtureC302(new \DiContainerBenchmarks\Fixture\C\FixtureC301(new \DiContainerBenchmarks\Fixture\C\FixtureC300(new \DiContainerBenchmarks\Fixture\C\FixtureC299(new \DiContainerBenchmarks\Fixture\C\FixtureC298(new \DiContainerBenchmarks\Fixture\C\FixtureC297(new \DiContainerBenchmarks\Fixture\C\FixtureC296(new \DiContainerBenchmarks\Fixture\C\FixtureC295(new \DiContainerBenchmarks\Fixture\C\FixtureC294(new \DiContainerBenchmarks\Fixture\C\FixtureC293(new \DiContainerBenchmarks\Fixture\C\FixtureC292(new \DiContainerBenchmarks\Fixture\C\FixtureC291(new \DiContainerBenchmarks\Fixture\C\FixtureC290(new \DiContainerBenchmarks\Fixture\C\FixtureC289(new \DiContainerBenchmarks\Fixture\C\FixtureC288(new \DiContainerBenchmarks\Fixture\C\FixtureC287(new \DiContainerBenchmarks\Fixture\C\FixtureC286(new \DiContainerBenchmarks\Fixture\C\FixtureC285(new \DiContainerBenchmarks\Fixture\C\FixtureC284(new \DiContainerBenchmarks\Fixture\C\FixtureC283(new \DiContainerBenchmarks\Fixture\C\FixtureC282(new \DiContainerBenchmarks\Fixture\C\FixtureC281(new \DiContainerBenchmarks\Fixture\C\FixtureC280(new \DiContainerBenchmarks\Fixture\C\FixtureC279(new \DiContainerBenchmarks\Fixture\C\FixtureC278(new \DiContainerBenchmarks\Fixture\C\FixtureC277(new \DiContainerBenchmarks\Fixture\C\FixtureC276(new \DiContainerBenchmarks\Fixture\C\FixtureC275(new \DiContainerBenchmarks\Fixture\C\FixtureC274(new \DiContainerBenchmarks\Fixture\C\FixtureC273(new \DiContainerBenchmarks\Fixture\C\FixtureC272(new \DiContainerBenchmarks\Fixture\C\FixtureC271(new \DiContainerBenchmarks\Fixture\C\FixtureC270(new \DiContainerBenchmarks\Fixture\C\FixtureC269(new \DiContainerBenchmarks\Fixture\C\FixtureC268(new \DiContainerBenchmarks\Fixture\C\FixtureC267(new \DiContainerBenchmarks\Fixture\C\FixtureC266(new \DiContainerBenchmarks\Fixture\C\FixtureC265(new \DiContainerBenchmarks\Fixture\C\FixtureC264(new \DiContainerBenchmarks\Fixture\C\FixtureC263(new \DiContainerBenchmarks\Fixture\C\FixtureC262(new \DiContainerBenchmarks\Fixture\C\FixtureC261(new \DiContainerBenchmarks\Fixture\C\FixtureC260(new \DiContainerBenchmarks\Fixture\C\FixtureC259(new \DiContainerBenchmarks\Fixture\C\FixtureC258(new \DiContainerBenchmarks\Fixture\C\FixtureC257(new \DiContainerBenchmarks\Fixture\C\FixtureC256(new \DiContainerBenchmarks\Fixture\C\FixtureC255(new \DiContainerBenchmarks\Fixture\C\FixtureC254(new \DiContainerBenchmarks\Fixture\C\FixtureC253(new \DiContainerBenchmarks\Fixture\C\FixtureC252(new \DiContainerBenchmarks\Fixture\C\FixtureC251(new \DiContainerBenchmarks\Fixture\C\FixtureC250(new \DiContainerBenchmarks\Fixture\C\FixtureC249(new \DiContainerBenchmarks\Fixture\C\FixtureC248(new \DiContainerBenchmarks\Fixture\C\FixtureC247(new \DiContainerBenchmarks\Fixture\C\FixtureC246(new \DiContainerBenchmarks\Fixture\C\FixtureC245(new \DiContainerBenchmarks\Fixture\C\FixtureC244(new \DiContainerBenchmarks\Fixture\C\FixtureC243(new \DiContainerBenchmarks\Fixture\C\FixtureC242(new \DiContainerBenchmarks\Fixture\C\FixtureC241(new \DiContainerBenchmarks\Fixture\C\FixtureC240(new \DiContainerBenchmarks\Fixture\C\FixtureC239(new \DiContainerBenchmarks\Fixture\C\FixtureC238(new \DiContainerBenchmarks\Fixture\C\FixtureC237(new \DiContainerBenchmarks\Fixture\C\FixtureC236(new \DiContainerBenchmarks\Fixture\C\FixtureC235(new \DiContainerBenchmarks\Fixture\C\FixtureC234(new \DiContainerBenchmarks\Fixture\C\FixtureC233(new \DiContainerBenchmarks\Fixture\C\FixtureC232(new \DiContainerBenchmarks\Fixture\C\FixtureC231(new \DiContainerBenchmarks\Fixture\C\FixtureC230(new \DiContainerBenchmarks\Fixture\C\FixtureC229(new \DiContainerBenchmarks\Fixture\C\FixtureC228(new \DiContainerBenchmarks\Fixture\C\FixtureC227(new \DiContainerBenchmarks\Fixture\C\FixtureC226(new \DiContainerBenchmarks\Fixture\C\FixtureC225(new \DiContainerBenchmarks\Fixture\C\FixtureC224(new \DiContainerBenchmarks\Fixture\C\FixtureC223(new \DiContainerBenchmarks\Fixture\C\FixtureC222(new \DiContainerBenchmarks\Fixture\C\FixtureC221(new \DiContainerBenchmarks\Fixture\C\FixtureC220(new \DiContainerBenchmarks\Fixture\C\FixtureC219(new \DiContainerBenchmarks\Fixture\C\FixtureC218(new \DiContainerBenchmarks\Fixture\C\FixtureC217(new \DiContainerBenchmarks\Fixture\C\FixtureC216(new \DiContainerBenchmarks\Fixture\C\FixtureC215(new \DiContainerBenchmarks\Fixture\C\FixtureC214(new \DiContainerBenchmarks\Fixture\C\FixtureC213(new \DiContainerBenchmarks\Fixture\C\FixtureC212(new \DiContainerBenchmarks\Fixture\C\FixtureC211(new \DiContainerBenchmarks\Fixture\C\FixtureC210(new \DiContainerBenchmarks\Fixture\C\FixtureC209(new \DiContainerBenchmarks\Fixture\C\FixtureC208(new \DiContainerBenchmarks\Fixture\C\FixtureC207(new \DiContainerBenchmarks\Fixture\C\FixtureC206(new \DiContainerBenchmarks\Fixture\C\FixtureC205(new \DiContainerBenchmarks\Fixture\C\FixtureC204(new \DiContainerBenchmarks\Fixture\C\FixtureC203(new \DiContainerBenchmarks\Fixture\C\FixtureC202(new \DiContainerBenchmarks\Fixture\C\FixtureC201(new \DiContainerBenchmarks\Fixture\C\FixtureC200(new \DiContainerBenchmarks\Fixture\C\FixtureC199(new \DiContainerBenchmarks\Fixture\C\FixtureC198(new \DiContainerBenchmarks\Fixture\C\FixtureC197(new \DiContainerBenchmarks\Fixture\C\FixtureC196(new \DiContainerBenchmarks\Fixture\C\FixtureC195(new \DiContainerBenchmarks\Fixture\C\FixtureC194(new \DiContainerBenchmarks\Fixture\C\FixtureC193(new \DiContainerBenchmarks\Fixture\C\FixtureC192(new \DiContainerBenchmarks\Fixture\C\FixtureC191(new \DiContainerBenchmarks\Fixture\C\FixtureC190(new \DiContainerBenchmarks\Fixture\C\FixtureC189(new \DiContainerBenchmarks\Fixture\C\FixtureC188(new \DiContainerBenchmarks\Fixture\C\FixtureC187(new \DiContainerBenchmarks\Fixture\C\FixtureC186(new \DiContainerBenchmarks\Fixture\C\FixtureC185(new \DiContainerBenchmarks\Fixture\C\FixtureC184(new \DiContainerBenchmarks\Fixture\C\FixtureC183(new \DiContainerBenchmarks\Fixture\C\FixtureC182(new \DiContainerBenchmarks\Fixture\C\FixtureC181(new \DiContainerBenchmarks\Fixture\C\FixtureC180(new \DiContainerBenchmarks\Fixture\C\FixtureC179(new \DiContainerBenchmarks\Fixture\C\FixtureC178(new \DiContainerBenchmarks\Fixture\C\FixtureC177(new \DiContainerBenchmarks\Fixture\C\FixtureC176(new \DiContainerBenchmarks\Fixture\C\FixtureC175(new \DiContainerBenchmarks\Fixture\C\FixtureC174(new \DiContainerBenchmarks\Fixture\C\FixtureC173(new \DiContainerBenchmarks\Fixture\C\FixtureC172(new \DiContainerBenchmarks\Fixture\C\FixtureC171(new \DiContainerBenchmarks\Fixture\C\FixtureC170(new \DiContainerBenchmarks\Fixture\C\FixtureC169(new \DiContainerBenchmarks\Fixture\C\FixtureC168(new \DiContainerBenchmarks\Fixture\C\FixtureC167(new \DiContainerBenchmarks\Fixture\C\FixtureC166(new \DiContainerBenchmarks\Fixture\C\FixtureC165(new \DiContainerBenchmarks\Fixture\C\FixtureC164(new \DiContainerBenchmarks\Fixture\C\FixtureC163(new \DiContainerBenchmarks\Fixture\C\FixtureC162(new \DiContainerBenchmarks\Fixture\C\FixtureC161(new \DiContainerBenchmarks\Fixture\C\FixtureC160(new \DiContainerBenchmarks\Fixture\C\FixtureC159(new \DiContainerBenchmarks\Fixture\C\FixtureC158(new \DiContainerBenchmarks\Fixture\C\FixtureC157(new \DiContainerBenchmarks\Fixture\C\FixtureC156(new \DiContainerBenchmarks\Fixture\C\FixtureC155(new \DiContainerBenchmarks\Fixture\C\FixtureC154(new \DiContainerBenchmarks\Fixture\C\FixtureC153(new \DiContainerBenchmarks\Fixture\C\FixtureC152(new \DiContainerBenchmarks\Fixture\C\FixtureC151(new \DiContainerBenchmarks\Fixture\C\FixtureC150(new \DiContainerBenchmarks\Fixture\C\FixtureC149(new \DiContainerBenchmarks\Fixture\C\FixtureC148(new \DiContainerBenchmarks\Fixture\C\FixtureC147(new \DiContainerBenchmarks\Fixture\C\FixtureC146(new \DiContainerBenchmarks\Fixture\C\FixtureC145(new \DiContainerBenchmarks\Fixture\C\FixtureC144(new \DiContainerBenchmarks\Fixture\C\FixtureC143(new \DiContainerBenchmarks\Fixture\C\FixtureC142(new \DiContainerBenchmarks\Fixture\C\FixtureC141(new \DiContainerBenchmarks\Fixture\C\FixtureC140(new \DiContainerBenchmarks\Fixture\C\FixtureC139(new \DiContainerBenchmarks\Fixture\C\FixtureC138(new \DiContainerBenchmarks\Fixture\C\FixtureC137(new \DiContainerBenchmarks\Fixture\C\FixtureC136(new \DiContainerBenchmarks\Fixture\C\FixtureC135(new \DiContainerBenchmarks\Fixture\C\FixtureC134(new \DiContainerBenchmarks\Fixture\C\FixtureC133(new \DiContainerBenchmarks\Fixture\C\FixtureC132(new \DiContainerBenchmarks\Fixture\C\FixtureC131(new \DiContainerBenchmarks\Fixture\C\FixtureC130(new \DiContainerBenchmarks\Fixture\C\FixtureC129(new \DiContainerBenchmarks\Fixture\C\FixtureC128(new \DiContainerBenchmarks\Fixture\C\FixtureC127(new \DiContainerBenchmarks\Fixture\C\FixtureC126(new \DiContainerBenchmarks\Fixture\C\FixtureC125(new \DiContainerBenchmarks\Fixture\C\FixtureC124(new \DiContainerBenchmarks\Fixture\C\FixtureC123(new \DiContainerBenchmarks\Fixture\C\FixtureC122(new \DiContainerBenchmarks\Fixture\C\FixtureC121(new \DiContainerBenchmarks\Fixture\C\FixtureC120(new \DiContainerBenchmarks\Fixture\C\FixtureC119(new \DiContainerBenchmarks\Fixture\C\FixtureC118(new \DiContainerBenchmarks\Fixture\C\FixtureC117(new \DiContainerBenchmarks\Fixture\C\FixtureC116(new \DiContainerBenchmarks\Fixture\C\FixtureC115(new \DiContainerBenchmarks\Fixture\C\FixtureC114(new \DiContainerBenchmarks\Fixture\C\FixtureC113(new \DiContainerBenchmarks\Fixture\C\FixtureC112(new \DiContainerBenchmarks\Fixture\C\FixtureC111(new \DiContainerBenchmarks\Fixture\C\FixtureC110(new \DiContainerBenchmarks\Fixture\C\FixtureC109(new \DiContainerBenchmarks\Fixture\C\FixtureC108(new \DiContainerBenchmarks\Fixture\C\FixtureC107(new \DiContainerBenchmarks\Fixture\C\FixtureC106(new \DiContainerBenchmarks\Fixture\C\FixtureC105(new \DiContainerBenchmarks\Fixture\C\FixtureC104(new \DiContainerBenchmarks\Fixture\C\FixtureC103(new \DiContainerBenchmarks\Fixture\C\FixtureC102(new \DiContainerBenchmarks\Fixture\C\FixtureC101(new \DiContainerBenchmarks\Fixture\C\FixtureC100(new \DiContainerBenchmarks\Fixture\C\FixtureC99(new \DiContainerBenchmarks\Fixture\C\FixtureC98(new \DiContainerBenchmarks\Fixture\C\FixtureC97(new \DiContainerBenchmarks\Fixture\C\FixtureC96(new \DiContainerBenchmarks\Fixture\C\FixtureC95(new \DiContainerBenchmarks\Fixture\C\FixtureC94(new \DiContainerBenchmarks\Fixture\C\FixtureC93(new \DiContainerBenchmarks\Fixture\C\FixtureC92(new \DiContainerBenchmarks\Fixture\C\FixtureC91(new \DiContainerBenchmarks\Fixture\C\FixtureC90(new \DiContainerBenchmarks\Fixture\C\FixtureC89(new \DiContainerBenchmarks\Fixture\C\FixtureC88(new \DiContainerBenchmarks\Fixture\C\FixtureC87(new \DiContainerBenchmarks\Fixture\C\FixtureC86(new \DiContainerBenchmarks\Fixture\C\FixtureC85(new \DiContainerBenchmarks\Fixture\C\FixtureC84(new \DiContainerBenchmarks\Fixture\C\FixtureC83(new \DiContainerBenchmarks\Fixture\C\FixtureC82(new \DiContainerBenchmarks\Fixture\C\FixtureC81(new \DiContainerBenchmarks\Fixture\C\FixtureC80(new \DiContainerBenchmarks\Fixture\C\FixtureC79(new \DiContainerBenchmarks\Fixture\C\FixtureC78(new \DiContainerBenchmarks\Fixture\C\FixtureC77(new \DiContainerBenchmarks\Fixture\C\FixtureC76(new \DiContainerBenchmarks\Fixture\C\FixtureC75(new \DiContainerBenchmarks\Fixture\C\FixtureC74(new \DiContainerBenchmarks\Fixture\C\FixtureC73(new \DiContainerBenchmarks\Fixture\C\FixtureC72(new \DiContainerBenchmarks\Fixture\C\FixtureC71(new \DiContainerBenchmarks\Fixture\C\FixtureC70(new \DiContainerBenchmarks\Fixture\C\FixtureC69(new \DiContainerBenchmarks\Fixture\C\FixtureC68(new \DiContainerBenchmarks\Fixture\C\FixtureC67(new \DiContainerBenchmarks\Fixture\C\FixtureC66(new \DiContainerBenchmarks\Fixture\C\FixtureC65(new \DiContainerBenchmarks\Fixture\C\FixtureC64(new \DiContainerBenchmarks\Fixture\C\FixtureC63(new \DiContainerBenchmarks\Fixture\C\FixtureC62(new \DiContainerBenchmarks\Fixture\C\FixtureC61(new \DiContainerBenchmarks\Fixture\C\FixtureC60(new \DiContainerBenchmarks\Fixture\C\FixtureC59(new \DiContainerBenchmarks\Fixture\C\FixtureC58(new \DiContainerBenchmarks\Fixture\C\FixtureC57(new \DiContainerBenchmarks\Fixture\C\FixtureC56(new \DiContainerBenchmarks\Fixture\C\FixtureC55(new \DiContainerBenchmarks\Fixture\C\FixtureC54(new \DiContainerBenchmarks\Fixture\C\FixtureC53(new \DiContainerBenchmarks\Fixture\C\FixtureC52(new \DiContainerBenchmarks\Fixture\C\FixtureC51(new \DiContainerBenchmarks\Fixture\C\FixtureC50(new \DiContainerBenchmarks\Fixture\C\FixtureC49(new \DiContainerBenchmarks\Fixture\C\FixtureC48(new \DiContainerBenchmarks\Fixture\C\FixtureC47(new \DiContainerBenchmarks\Fixture\C\FixtureC46(new \DiContainerBenchmarks\Fixture\C\FixtureC45(new \DiContainerBenchmarks\Fixture\C\FixtureC44(new \DiContainerBenchmarks\Fixture\C\FixtureC43(new \DiContainerBenchmarks\Fixture\C\FixtureC42(new \DiContainerBenchmarks\Fixture\C\FixtureC41(new \DiContainerBenchmarks\Fixture\C\FixtureC40(new \DiContainerBenchmarks\Fixture\C\FixtureC39(new \DiContainerBenchmarks\Fixture\C\FixtureC38(new \DiContainerBenchmarks\Fixture\C\FixtureC37(new \DiContainerBenchmarks\Fixture\C\FixtureC36(new \DiContainerBenchmarks\Fixture\C\FixtureC35(new \DiContainerBenchmarks\Fixture\C\FixtureC34(new \DiContainerBenchmarks\Fixture\C\FixtureC33(new \DiContainerBenchmarks\Fixture\C\FixtureC32(new \DiContainerBenchmarks\Fixture\C\FixtureC31(new \DiContainerBenchmarks\Fixture\C\FixtureC30(new \DiContainerBenchmarks\Fixture\C\FixtureC29(new \DiContainerBenchmarks\Fixture\C\FixtureC28(new \DiContainerBenchmarks\Fixture\C\FixtureC27(new \DiContainerBenchmarks\Fixture\C\FixtureC26(new \DiContainerBenchmarks\Fixture\C\FixtureC25(new \DiContainerBenchmarks\Fixture\C\FixtureC24(new \DiContainerBenchmarks\Fixture\C\FixtureC23(new \DiContainerBenchmarks\Fixture\C\FixtureC22(new \DiContainerBenchmarks\Fixture\C\FixtureC21(new \DiContainerBenchmarks\Fixture\C\FixtureC20(new \DiContainerBenchmarks\Fixture\C\FixtureC19(new \DiContainerBenchmarks\Fixture\C\FixtureC18(new \DiContainerBenchmarks\Fixture\C\FixtureC17(new \DiContainerBenchmarks\Fixture\C\FixtureC16(new \DiContainerBenchmarks\Fixture\C\FixtureC15(new \DiContainerBenchmarks\Fixture\C\FixtureC14(new \DiContainerBenchmarks\Fixture\C\FixtureC13(new \DiContainerBenchmarks\Fixture\C\FixtureC12(new \DiContainerBenchmarks\Fixture\C\FixtureC11(new \DiContainerBenchmarks\Fixture\C\FixtureC10(new \DiContainerBenchmarks\Fixture\C\FixtureC9(new \DiContainerBenchmarks\Fixture\C\FixtureC8(new \DiContainerBenchmarks\Fixture\C\FixtureC7(new \DiContainerBenchmarks\Fixture\C\FixtureC6(new \DiContainerBenchmarks\Fixture\C\FixtureC5(new \DiContainerBenchmarks\Fixture\C\FixtureC4(new \DiContainerBenchmarks\Fixture\C\FixtureC3(new \DiContainerBenchmarks\Fixture\C\FixtureC2(new \DiContainerBenchmarks\Fixture\C\FixtureC1())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
         };
 
-        return $this->factories['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000']();
+        return $container->factories['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000']($container);
     }
 
-    /**
-     * @return array|bool|float|int|string|null
-     */
-    public function getParameter(string $name)
+    public function getParameter(string $name): array|bool|string|int|float|\UnitEnum|null
     {
         if (!(isset($this->parameters[$name]) || isset($this->loadedDynamicParameters[$name]) || \array_key_exists($name, $this->parameters))) {
-            throw new InvalidArgumentException(sprintf('The parameter "%s" must be defined.', $name));
-        }
-        if (isset($this->loadedDynamicParameters[$name])) {
-            return $this->loadedDynamicParameters[$name] ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
+            throw new ParameterNotFoundException($name);
         }
 
-        return $this->parameters[$name];
+        if (isset($this->loadedDynamicParameters[$name])) {
+            $value = $this->loadedDynamicParameters[$name] ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
+        } else {
+            $value = $this->parameters[$name];
+        }
+
+        return $value;
     }
 
     public function hasParameter(string $name): bool
@@ -16216,12 +16214,12 @@ class CompiledPrototypeContainer extends Container
 
     public function getParameterBag(): ParameterBagInterface
     {
-        if (null === $this->parameterBag) {
+        if (!isset($this->parameterBag)) {
             $parameters = $this->parameters;
             foreach ($this->loadedDynamicParameters as $name => $loaded) {
                 $parameters[$name] = $loaded ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
             }
-            $this->parameterBag = new FrozenParameterBag($parameters);
+            $this->parameterBag = new FrozenParameterBag($parameters, []);
         }
 
         return $this->parameterBag;
@@ -16232,7 +16230,7 @@ class CompiledPrototypeContainer extends Container
 
     private function getDynamicParameter(string $name)
     {
-        throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
+        throw new ParameterNotFoundException($name);
     }
 
     protected function getDefaultParameters(): array

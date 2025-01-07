@@ -5,8 +5,8 @@ namespace DiContainerBenchmarks\Container\Symfony\Resource;
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\DependencyInjection\Container;
-use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Exception\LogicException;
+use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\DependencyInjection\Exception\RuntimeException;
 use Symfony\Component\DependencyInjection\ParameterBag\FrozenParameterBag;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
@@ -2142,8 +2142,6 @@ class CompiledSingletonContainer extends Container
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC997' => true,
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC998' => true,
             'DiContainerBenchmarks\\Fixture\\C\\FixtureC999' => true,
-            'Psr\\Container\\ContainerInterface' => true,
-            'Symfony\\Component\\DependencyInjection\\ContainerInterface' => true,
         ];
     }
 
@@ -2152,9 +2150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\A\FixtureA10
      */
-    protected function getFixtureA10Service()
+    protected static function getFixtureA10Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] = new \DiContainerBenchmarks\Fixture\A\FixtureA10(new \DiContainerBenchmarks\Fixture\A\FixtureA9(new \DiContainerBenchmarks\Fixture\A\FixtureA8(new \DiContainerBenchmarks\Fixture\A\FixtureA7(new \DiContainerBenchmarks\Fixture\A\FixtureA6(new \DiContainerBenchmarks\Fixture\A\FixtureA5(new \DiContainerBenchmarks\Fixture\A\FixtureA4(new \DiContainerBenchmarks\Fixture\A\FixtureA3(new \DiContainerBenchmarks\Fixture\A\FixtureA2(new \DiContainerBenchmarks\Fixture\A\FixtureA1())))))))));
+        return $container->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] = new \DiContainerBenchmarks\Fixture\A\FixtureA10(new \DiContainerBenchmarks\Fixture\A\FixtureA9(new \DiContainerBenchmarks\Fixture\A\FixtureA8(new \DiContainerBenchmarks\Fixture\A\FixtureA7(new \DiContainerBenchmarks\Fixture\A\FixtureA6(new \DiContainerBenchmarks\Fixture\A\FixtureA5(new \DiContainerBenchmarks\Fixture\A\FixtureA4(new \DiContainerBenchmarks\Fixture\A\FixtureA3(new \DiContainerBenchmarks\Fixture\A\FixtureA2(new \DiContainerBenchmarks\Fixture\A\FixtureA1())))))))));
     }
 
     /*
@@ -2162,9 +2160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\A\FixtureA100
      */
-    protected function getFixtureA100Service()
+    protected static function getFixtureA100Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA100'] = new \DiContainerBenchmarks\Fixture\A\FixtureA100(new \DiContainerBenchmarks\Fixture\A\FixtureA99(new \DiContainerBenchmarks\Fixture\A\FixtureA98(new \DiContainerBenchmarks\Fixture\A\FixtureA97(new \DiContainerBenchmarks\Fixture\A\FixtureA96(new \DiContainerBenchmarks\Fixture\A\FixtureA95(new \DiContainerBenchmarks\Fixture\A\FixtureA94(new \DiContainerBenchmarks\Fixture\A\FixtureA93(new \DiContainerBenchmarks\Fixture\A\FixtureA92(new \DiContainerBenchmarks\Fixture\A\FixtureA91(new \DiContainerBenchmarks\Fixture\A\FixtureA90(new \DiContainerBenchmarks\Fixture\A\FixtureA89(new \DiContainerBenchmarks\Fixture\A\FixtureA88(new \DiContainerBenchmarks\Fixture\A\FixtureA87(new \DiContainerBenchmarks\Fixture\A\FixtureA86(new \DiContainerBenchmarks\Fixture\A\FixtureA85(new \DiContainerBenchmarks\Fixture\A\FixtureA84(new \DiContainerBenchmarks\Fixture\A\FixtureA83(new \DiContainerBenchmarks\Fixture\A\FixtureA82(new \DiContainerBenchmarks\Fixture\A\FixtureA81(new \DiContainerBenchmarks\Fixture\A\FixtureA80(new \DiContainerBenchmarks\Fixture\A\FixtureA79(new \DiContainerBenchmarks\Fixture\A\FixtureA78(new \DiContainerBenchmarks\Fixture\A\FixtureA77(new \DiContainerBenchmarks\Fixture\A\FixtureA76(new \DiContainerBenchmarks\Fixture\A\FixtureA75(new \DiContainerBenchmarks\Fixture\A\FixtureA74(new \DiContainerBenchmarks\Fixture\A\FixtureA73(new \DiContainerBenchmarks\Fixture\A\FixtureA72(new \DiContainerBenchmarks\Fixture\A\FixtureA71(new \DiContainerBenchmarks\Fixture\A\FixtureA70(new \DiContainerBenchmarks\Fixture\A\FixtureA69(new \DiContainerBenchmarks\Fixture\A\FixtureA68(new \DiContainerBenchmarks\Fixture\A\FixtureA67(new \DiContainerBenchmarks\Fixture\A\FixtureA66(new \DiContainerBenchmarks\Fixture\A\FixtureA65(new \DiContainerBenchmarks\Fixture\A\FixtureA64(new \DiContainerBenchmarks\Fixture\A\FixtureA63(new \DiContainerBenchmarks\Fixture\A\FixtureA62(new \DiContainerBenchmarks\Fixture\A\FixtureA61(new \DiContainerBenchmarks\Fixture\A\FixtureA60(new \DiContainerBenchmarks\Fixture\A\FixtureA59(new \DiContainerBenchmarks\Fixture\A\FixtureA58(new \DiContainerBenchmarks\Fixture\A\FixtureA57(new \DiContainerBenchmarks\Fixture\A\FixtureA56(new \DiContainerBenchmarks\Fixture\A\FixtureA55(new \DiContainerBenchmarks\Fixture\A\FixtureA54(new \DiContainerBenchmarks\Fixture\A\FixtureA53(new \DiContainerBenchmarks\Fixture\A\FixtureA52(new \DiContainerBenchmarks\Fixture\A\FixtureA51(new \DiContainerBenchmarks\Fixture\A\FixtureA50(new \DiContainerBenchmarks\Fixture\A\FixtureA49(new \DiContainerBenchmarks\Fixture\A\FixtureA48(new \DiContainerBenchmarks\Fixture\A\FixtureA47(new \DiContainerBenchmarks\Fixture\A\FixtureA46(new \DiContainerBenchmarks\Fixture\A\FixtureA45(new \DiContainerBenchmarks\Fixture\A\FixtureA44(new \DiContainerBenchmarks\Fixture\A\FixtureA43(new \DiContainerBenchmarks\Fixture\A\FixtureA42(new \DiContainerBenchmarks\Fixture\A\FixtureA41(new \DiContainerBenchmarks\Fixture\A\FixtureA40(new \DiContainerBenchmarks\Fixture\A\FixtureA39(new \DiContainerBenchmarks\Fixture\A\FixtureA38(new \DiContainerBenchmarks\Fixture\A\FixtureA37(new \DiContainerBenchmarks\Fixture\A\FixtureA36(new \DiContainerBenchmarks\Fixture\A\FixtureA35(new \DiContainerBenchmarks\Fixture\A\FixtureA34(new \DiContainerBenchmarks\Fixture\A\FixtureA33(new \DiContainerBenchmarks\Fixture\A\FixtureA32(new \DiContainerBenchmarks\Fixture\A\FixtureA31(new \DiContainerBenchmarks\Fixture\A\FixtureA30(new \DiContainerBenchmarks\Fixture\A\FixtureA29(new \DiContainerBenchmarks\Fixture\A\FixtureA28(new \DiContainerBenchmarks\Fixture\A\FixtureA27(new \DiContainerBenchmarks\Fixture\A\FixtureA26(new \DiContainerBenchmarks\Fixture\A\FixtureA25(new \DiContainerBenchmarks\Fixture\A\FixtureA24(new \DiContainerBenchmarks\Fixture\A\FixtureA23(new \DiContainerBenchmarks\Fixture\A\FixtureA22(new \DiContainerBenchmarks\Fixture\A\FixtureA21(new \DiContainerBenchmarks\Fixture\A\FixtureA20(new \DiContainerBenchmarks\Fixture\A\FixtureA19(new \DiContainerBenchmarks\Fixture\A\FixtureA18(new \DiContainerBenchmarks\Fixture\A\FixtureA17(new \DiContainerBenchmarks\Fixture\A\FixtureA16(new \DiContainerBenchmarks\Fixture\A\FixtureA15(new \DiContainerBenchmarks\Fixture\A\FixtureA14(new \DiContainerBenchmarks\Fixture\A\FixtureA13(new \DiContainerBenchmarks\Fixture\A\FixtureA12(new \DiContainerBenchmarks\Fixture\A\FixtureA11(($this->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] ?? $this->getFixtureA10Service())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+        return $container->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA100'] = new \DiContainerBenchmarks\Fixture\A\FixtureA100(new \DiContainerBenchmarks\Fixture\A\FixtureA99(new \DiContainerBenchmarks\Fixture\A\FixtureA98(new \DiContainerBenchmarks\Fixture\A\FixtureA97(new \DiContainerBenchmarks\Fixture\A\FixtureA96(new \DiContainerBenchmarks\Fixture\A\FixtureA95(new \DiContainerBenchmarks\Fixture\A\FixtureA94(new \DiContainerBenchmarks\Fixture\A\FixtureA93(new \DiContainerBenchmarks\Fixture\A\FixtureA92(new \DiContainerBenchmarks\Fixture\A\FixtureA91(new \DiContainerBenchmarks\Fixture\A\FixtureA90(new \DiContainerBenchmarks\Fixture\A\FixtureA89(new \DiContainerBenchmarks\Fixture\A\FixtureA88(new \DiContainerBenchmarks\Fixture\A\FixtureA87(new \DiContainerBenchmarks\Fixture\A\FixtureA86(new \DiContainerBenchmarks\Fixture\A\FixtureA85(new \DiContainerBenchmarks\Fixture\A\FixtureA84(new \DiContainerBenchmarks\Fixture\A\FixtureA83(new \DiContainerBenchmarks\Fixture\A\FixtureA82(new \DiContainerBenchmarks\Fixture\A\FixtureA81(new \DiContainerBenchmarks\Fixture\A\FixtureA80(new \DiContainerBenchmarks\Fixture\A\FixtureA79(new \DiContainerBenchmarks\Fixture\A\FixtureA78(new \DiContainerBenchmarks\Fixture\A\FixtureA77(new \DiContainerBenchmarks\Fixture\A\FixtureA76(new \DiContainerBenchmarks\Fixture\A\FixtureA75(new \DiContainerBenchmarks\Fixture\A\FixtureA74(new \DiContainerBenchmarks\Fixture\A\FixtureA73(new \DiContainerBenchmarks\Fixture\A\FixtureA72(new \DiContainerBenchmarks\Fixture\A\FixtureA71(new \DiContainerBenchmarks\Fixture\A\FixtureA70(new \DiContainerBenchmarks\Fixture\A\FixtureA69(new \DiContainerBenchmarks\Fixture\A\FixtureA68(new \DiContainerBenchmarks\Fixture\A\FixtureA67(new \DiContainerBenchmarks\Fixture\A\FixtureA66(new \DiContainerBenchmarks\Fixture\A\FixtureA65(new \DiContainerBenchmarks\Fixture\A\FixtureA64(new \DiContainerBenchmarks\Fixture\A\FixtureA63(new \DiContainerBenchmarks\Fixture\A\FixtureA62(new \DiContainerBenchmarks\Fixture\A\FixtureA61(new \DiContainerBenchmarks\Fixture\A\FixtureA60(new \DiContainerBenchmarks\Fixture\A\FixtureA59(new \DiContainerBenchmarks\Fixture\A\FixtureA58(new \DiContainerBenchmarks\Fixture\A\FixtureA57(new \DiContainerBenchmarks\Fixture\A\FixtureA56(new \DiContainerBenchmarks\Fixture\A\FixtureA55(new \DiContainerBenchmarks\Fixture\A\FixtureA54(new \DiContainerBenchmarks\Fixture\A\FixtureA53(new \DiContainerBenchmarks\Fixture\A\FixtureA52(new \DiContainerBenchmarks\Fixture\A\FixtureA51(new \DiContainerBenchmarks\Fixture\A\FixtureA50(new \DiContainerBenchmarks\Fixture\A\FixtureA49(new \DiContainerBenchmarks\Fixture\A\FixtureA48(new \DiContainerBenchmarks\Fixture\A\FixtureA47(new \DiContainerBenchmarks\Fixture\A\FixtureA46(new \DiContainerBenchmarks\Fixture\A\FixtureA45(new \DiContainerBenchmarks\Fixture\A\FixtureA44(new \DiContainerBenchmarks\Fixture\A\FixtureA43(new \DiContainerBenchmarks\Fixture\A\FixtureA42(new \DiContainerBenchmarks\Fixture\A\FixtureA41(new \DiContainerBenchmarks\Fixture\A\FixtureA40(new \DiContainerBenchmarks\Fixture\A\FixtureA39(new \DiContainerBenchmarks\Fixture\A\FixtureA38(new \DiContainerBenchmarks\Fixture\A\FixtureA37(new \DiContainerBenchmarks\Fixture\A\FixtureA36(new \DiContainerBenchmarks\Fixture\A\FixtureA35(new \DiContainerBenchmarks\Fixture\A\FixtureA34(new \DiContainerBenchmarks\Fixture\A\FixtureA33(new \DiContainerBenchmarks\Fixture\A\FixtureA32(new \DiContainerBenchmarks\Fixture\A\FixtureA31(new \DiContainerBenchmarks\Fixture\A\FixtureA30(new \DiContainerBenchmarks\Fixture\A\FixtureA29(new \DiContainerBenchmarks\Fixture\A\FixtureA28(new \DiContainerBenchmarks\Fixture\A\FixtureA27(new \DiContainerBenchmarks\Fixture\A\FixtureA26(new \DiContainerBenchmarks\Fixture\A\FixtureA25(new \DiContainerBenchmarks\Fixture\A\FixtureA24(new \DiContainerBenchmarks\Fixture\A\FixtureA23(new \DiContainerBenchmarks\Fixture\A\FixtureA22(new \DiContainerBenchmarks\Fixture\A\FixtureA21(new \DiContainerBenchmarks\Fixture\A\FixtureA20(new \DiContainerBenchmarks\Fixture\A\FixtureA19(new \DiContainerBenchmarks\Fixture\A\FixtureA18(new \DiContainerBenchmarks\Fixture\A\FixtureA17(new \DiContainerBenchmarks\Fixture\A\FixtureA16(new \DiContainerBenchmarks\Fixture\A\FixtureA15(new \DiContainerBenchmarks\Fixture\A\FixtureA14(new \DiContainerBenchmarks\Fixture\A\FixtureA13(new \DiContainerBenchmarks\Fixture\A\FixtureA12(new \DiContainerBenchmarks\Fixture\A\FixtureA11(($container->services['DiContainerBenchmarks\\Fixture\\A\\FixtureA10'] ?? self::getFixtureA10Service($container))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
     }
 
     /*
@@ -2172,9 +2170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB1
      */
-    protected function getFixtureB1Service()
+    protected static function getFixtureB1Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB1'] = new \DiContainerBenchmarks\Fixture\B\FixtureB1();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB1'] = new \DiContainerBenchmarks\Fixture\B\FixtureB1();
     }
 
     /*
@@ -2182,9 +2180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB10
      */
-    protected function getFixtureB10Service()
+    protected static function getFixtureB10Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB10'] = new \DiContainerBenchmarks\Fixture\B\FixtureB10();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB10'] = new \DiContainerBenchmarks\Fixture\B\FixtureB10();
     }
 
     /*
@@ -2192,9 +2190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB100
      */
-    protected function getFixtureB100Service()
+    protected static function getFixtureB100Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB100'] = new \DiContainerBenchmarks\Fixture\B\FixtureB100();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB100'] = new \DiContainerBenchmarks\Fixture\B\FixtureB100();
     }
 
     /*
@@ -2202,9 +2200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB1000
      */
-    protected function getFixtureB1000Service()
+    protected static function getFixtureB1000Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000'] = new \DiContainerBenchmarks\Fixture\B\FixtureB1000();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB1000'] = new \DiContainerBenchmarks\Fixture\B\FixtureB1000();
     }
 
     /*
@@ -2212,9 +2210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB101
      */
-    protected function getFixtureB101Service()
+    protected static function getFixtureB101Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB101'] = new \DiContainerBenchmarks\Fixture\B\FixtureB101();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB101'] = new \DiContainerBenchmarks\Fixture\B\FixtureB101();
     }
 
     /*
@@ -2222,9 +2220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB102
      */
-    protected function getFixtureB102Service()
+    protected static function getFixtureB102Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB102'] = new \DiContainerBenchmarks\Fixture\B\FixtureB102();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB102'] = new \DiContainerBenchmarks\Fixture\B\FixtureB102();
     }
 
     /*
@@ -2232,9 +2230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB103
      */
-    protected function getFixtureB103Service()
+    protected static function getFixtureB103Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB103'] = new \DiContainerBenchmarks\Fixture\B\FixtureB103();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB103'] = new \DiContainerBenchmarks\Fixture\B\FixtureB103();
     }
 
     /*
@@ -2242,9 +2240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB104
      */
-    protected function getFixtureB104Service()
+    protected static function getFixtureB104Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB104'] = new \DiContainerBenchmarks\Fixture\B\FixtureB104();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB104'] = new \DiContainerBenchmarks\Fixture\B\FixtureB104();
     }
 
     /*
@@ -2252,9 +2250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB105
      */
-    protected function getFixtureB105Service()
+    protected static function getFixtureB105Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB105'] = new \DiContainerBenchmarks\Fixture\B\FixtureB105();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB105'] = new \DiContainerBenchmarks\Fixture\B\FixtureB105();
     }
 
     /*
@@ -2262,9 +2260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB106
      */
-    protected function getFixtureB106Service()
+    protected static function getFixtureB106Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB106'] = new \DiContainerBenchmarks\Fixture\B\FixtureB106();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB106'] = new \DiContainerBenchmarks\Fixture\B\FixtureB106();
     }
 
     /*
@@ -2272,9 +2270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB107
      */
-    protected function getFixtureB107Service()
+    protected static function getFixtureB107Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB107'] = new \DiContainerBenchmarks\Fixture\B\FixtureB107();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB107'] = new \DiContainerBenchmarks\Fixture\B\FixtureB107();
     }
 
     /*
@@ -2282,9 +2280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB108
      */
-    protected function getFixtureB108Service()
+    protected static function getFixtureB108Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB108'] = new \DiContainerBenchmarks\Fixture\B\FixtureB108();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB108'] = new \DiContainerBenchmarks\Fixture\B\FixtureB108();
     }
 
     /*
@@ -2292,9 +2290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB109
      */
-    protected function getFixtureB109Service()
+    protected static function getFixtureB109Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB109'] = new \DiContainerBenchmarks\Fixture\B\FixtureB109();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB109'] = new \DiContainerBenchmarks\Fixture\B\FixtureB109();
     }
 
     /*
@@ -2302,9 +2300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB11
      */
-    protected function getFixtureB11Service()
+    protected static function getFixtureB11Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB11'] = new \DiContainerBenchmarks\Fixture\B\FixtureB11();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB11'] = new \DiContainerBenchmarks\Fixture\B\FixtureB11();
     }
 
     /*
@@ -2312,9 +2310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB110
      */
-    protected function getFixtureB110Service()
+    protected static function getFixtureB110Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB110'] = new \DiContainerBenchmarks\Fixture\B\FixtureB110();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB110'] = new \DiContainerBenchmarks\Fixture\B\FixtureB110();
     }
 
     /*
@@ -2322,9 +2320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB111
      */
-    protected function getFixtureB111Service()
+    protected static function getFixtureB111Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB111'] = new \DiContainerBenchmarks\Fixture\B\FixtureB111();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB111'] = new \DiContainerBenchmarks\Fixture\B\FixtureB111();
     }
 
     /*
@@ -2332,9 +2330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB112
      */
-    protected function getFixtureB112Service()
+    protected static function getFixtureB112Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB112'] = new \DiContainerBenchmarks\Fixture\B\FixtureB112();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB112'] = new \DiContainerBenchmarks\Fixture\B\FixtureB112();
     }
 
     /*
@@ -2342,9 +2340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB113
      */
-    protected function getFixtureB113Service()
+    protected static function getFixtureB113Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB113'] = new \DiContainerBenchmarks\Fixture\B\FixtureB113();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB113'] = new \DiContainerBenchmarks\Fixture\B\FixtureB113();
     }
 
     /*
@@ -2352,9 +2350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB114
      */
-    protected function getFixtureB114Service()
+    protected static function getFixtureB114Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB114'] = new \DiContainerBenchmarks\Fixture\B\FixtureB114();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB114'] = new \DiContainerBenchmarks\Fixture\B\FixtureB114();
     }
 
     /*
@@ -2362,9 +2360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB115
      */
-    protected function getFixtureB115Service()
+    protected static function getFixtureB115Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB115'] = new \DiContainerBenchmarks\Fixture\B\FixtureB115();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB115'] = new \DiContainerBenchmarks\Fixture\B\FixtureB115();
     }
 
     /*
@@ -2372,9 +2370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB116
      */
-    protected function getFixtureB116Service()
+    protected static function getFixtureB116Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB116'] = new \DiContainerBenchmarks\Fixture\B\FixtureB116();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB116'] = new \DiContainerBenchmarks\Fixture\B\FixtureB116();
     }
 
     /*
@@ -2382,9 +2380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB117
      */
-    protected function getFixtureB117Service()
+    protected static function getFixtureB117Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB117'] = new \DiContainerBenchmarks\Fixture\B\FixtureB117();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB117'] = new \DiContainerBenchmarks\Fixture\B\FixtureB117();
     }
 
     /*
@@ -2392,9 +2390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB118
      */
-    protected function getFixtureB118Service()
+    protected static function getFixtureB118Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB118'] = new \DiContainerBenchmarks\Fixture\B\FixtureB118();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB118'] = new \DiContainerBenchmarks\Fixture\B\FixtureB118();
     }
 
     /*
@@ -2402,9 +2400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB119
      */
-    protected function getFixtureB119Service()
+    protected static function getFixtureB119Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB119'] = new \DiContainerBenchmarks\Fixture\B\FixtureB119();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB119'] = new \DiContainerBenchmarks\Fixture\B\FixtureB119();
     }
 
     /*
@@ -2412,9 +2410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB12
      */
-    protected function getFixtureB12Service()
+    protected static function getFixtureB12Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB12'] = new \DiContainerBenchmarks\Fixture\B\FixtureB12();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB12'] = new \DiContainerBenchmarks\Fixture\B\FixtureB12();
     }
 
     /*
@@ -2422,9 +2420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB120
      */
-    protected function getFixtureB120Service()
+    protected static function getFixtureB120Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB120'] = new \DiContainerBenchmarks\Fixture\B\FixtureB120();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB120'] = new \DiContainerBenchmarks\Fixture\B\FixtureB120();
     }
 
     /*
@@ -2432,9 +2430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB121
      */
-    protected function getFixtureB121Service()
+    protected static function getFixtureB121Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB121'] = new \DiContainerBenchmarks\Fixture\B\FixtureB121();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB121'] = new \DiContainerBenchmarks\Fixture\B\FixtureB121();
     }
 
     /*
@@ -2442,9 +2440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB122
      */
-    protected function getFixtureB122Service()
+    protected static function getFixtureB122Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB122'] = new \DiContainerBenchmarks\Fixture\B\FixtureB122();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB122'] = new \DiContainerBenchmarks\Fixture\B\FixtureB122();
     }
 
     /*
@@ -2452,9 +2450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB123
      */
-    protected function getFixtureB123Service()
+    protected static function getFixtureB123Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB123'] = new \DiContainerBenchmarks\Fixture\B\FixtureB123();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB123'] = new \DiContainerBenchmarks\Fixture\B\FixtureB123();
     }
 
     /*
@@ -2462,9 +2460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB124
      */
-    protected function getFixtureB124Service()
+    protected static function getFixtureB124Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB124'] = new \DiContainerBenchmarks\Fixture\B\FixtureB124();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB124'] = new \DiContainerBenchmarks\Fixture\B\FixtureB124();
     }
 
     /*
@@ -2472,9 +2470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB125
      */
-    protected function getFixtureB125Service()
+    protected static function getFixtureB125Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB125'] = new \DiContainerBenchmarks\Fixture\B\FixtureB125();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB125'] = new \DiContainerBenchmarks\Fixture\B\FixtureB125();
     }
 
     /*
@@ -2482,9 +2480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB126
      */
-    protected function getFixtureB126Service()
+    protected static function getFixtureB126Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB126'] = new \DiContainerBenchmarks\Fixture\B\FixtureB126();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB126'] = new \DiContainerBenchmarks\Fixture\B\FixtureB126();
     }
 
     /*
@@ -2492,9 +2490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB127
      */
-    protected function getFixtureB127Service()
+    protected static function getFixtureB127Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB127'] = new \DiContainerBenchmarks\Fixture\B\FixtureB127();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB127'] = new \DiContainerBenchmarks\Fixture\B\FixtureB127();
     }
 
     /*
@@ -2502,9 +2500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB128
      */
-    protected function getFixtureB128Service()
+    protected static function getFixtureB128Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB128'] = new \DiContainerBenchmarks\Fixture\B\FixtureB128();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB128'] = new \DiContainerBenchmarks\Fixture\B\FixtureB128();
     }
 
     /*
@@ -2512,9 +2510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB129
      */
-    protected function getFixtureB129Service()
+    protected static function getFixtureB129Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB129'] = new \DiContainerBenchmarks\Fixture\B\FixtureB129();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB129'] = new \DiContainerBenchmarks\Fixture\B\FixtureB129();
     }
 
     /*
@@ -2522,9 +2520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB13
      */
-    protected function getFixtureB13Service()
+    protected static function getFixtureB13Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB13'] = new \DiContainerBenchmarks\Fixture\B\FixtureB13();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB13'] = new \DiContainerBenchmarks\Fixture\B\FixtureB13();
     }
 
     /*
@@ -2532,9 +2530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB130
      */
-    protected function getFixtureB130Service()
+    protected static function getFixtureB130Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB130'] = new \DiContainerBenchmarks\Fixture\B\FixtureB130();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB130'] = new \DiContainerBenchmarks\Fixture\B\FixtureB130();
     }
 
     /*
@@ -2542,9 +2540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB131
      */
-    protected function getFixtureB131Service()
+    protected static function getFixtureB131Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB131'] = new \DiContainerBenchmarks\Fixture\B\FixtureB131();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB131'] = new \DiContainerBenchmarks\Fixture\B\FixtureB131();
     }
 
     /*
@@ -2552,9 +2550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB132
      */
-    protected function getFixtureB132Service()
+    protected static function getFixtureB132Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB132'] = new \DiContainerBenchmarks\Fixture\B\FixtureB132();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB132'] = new \DiContainerBenchmarks\Fixture\B\FixtureB132();
     }
 
     /*
@@ -2562,9 +2560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB133
      */
-    protected function getFixtureB133Service()
+    protected static function getFixtureB133Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB133'] = new \DiContainerBenchmarks\Fixture\B\FixtureB133();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB133'] = new \DiContainerBenchmarks\Fixture\B\FixtureB133();
     }
 
     /*
@@ -2572,9 +2570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB134
      */
-    protected function getFixtureB134Service()
+    protected static function getFixtureB134Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB134'] = new \DiContainerBenchmarks\Fixture\B\FixtureB134();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB134'] = new \DiContainerBenchmarks\Fixture\B\FixtureB134();
     }
 
     /*
@@ -2582,9 +2580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB135
      */
-    protected function getFixtureB135Service()
+    protected static function getFixtureB135Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB135'] = new \DiContainerBenchmarks\Fixture\B\FixtureB135();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB135'] = new \DiContainerBenchmarks\Fixture\B\FixtureB135();
     }
 
     /*
@@ -2592,9 +2590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB136
      */
-    protected function getFixtureB136Service()
+    protected static function getFixtureB136Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB136'] = new \DiContainerBenchmarks\Fixture\B\FixtureB136();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB136'] = new \DiContainerBenchmarks\Fixture\B\FixtureB136();
     }
 
     /*
@@ -2602,9 +2600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB137
      */
-    protected function getFixtureB137Service()
+    protected static function getFixtureB137Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB137'] = new \DiContainerBenchmarks\Fixture\B\FixtureB137();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB137'] = new \DiContainerBenchmarks\Fixture\B\FixtureB137();
     }
 
     /*
@@ -2612,9 +2610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB138
      */
-    protected function getFixtureB138Service()
+    protected static function getFixtureB138Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB138'] = new \DiContainerBenchmarks\Fixture\B\FixtureB138();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB138'] = new \DiContainerBenchmarks\Fixture\B\FixtureB138();
     }
 
     /*
@@ -2622,9 +2620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB139
      */
-    protected function getFixtureB139Service()
+    protected static function getFixtureB139Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB139'] = new \DiContainerBenchmarks\Fixture\B\FixtureB139();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB139'] = new \DiContainerBenchmarks\Fixture\B\FixtureB139();
     }
 
     /*
@@ -2632,9 +2630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB14
      */
-    protected function getFixtureB14Service()
+    protected static function getFixtureB14Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB14'] = new \DiContainerBenchmarks\Fixture\B\FixtureB14();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB14'] = new \DiContainerBenchmarks\Fixture\B\FixtureB14();
     }
 
     /*
@@ -2642,9 +2640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB140
      */
-    protected function getFixtureB140Service()
+    protected static function getFixtureB140Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB140'] = new \DiContainerBenchmarks\Fixture\B\FixtureB140();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB140'] = new \DiContainerBenchmarks\Fixture\B\FixtureB140();
     }
 
     /*
@@ -2652,9 +2650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB141
      */
-    protected function getFixtureB141Service()
+    protected static function getFixtureB141Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB141'] = new \DiContainerBenchmarks\Fixture\B\FixtureB141();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB141'] = new \DiContainerBenchmarks\Fixture\B\FixtureB141();
     }
 
     /*
@@ -2662,9 +2660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB142
      */
-    protected function getFixtureB142Service()
+    protected static function getFixtureB142Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB142'] = new \DiContainerBenchmarks\Fixture\B\FixtureB142();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB142'] = new \DiContainerBenchmarks\Fixture\B\FixtureB142();
     }
 
     /*
@@ -2672,9 +2670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB143
      */
-    protected function getFixtureB143Service()
+    protected static function getFixtureB143Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB143'] = new \DiContainerBenchmarks\Fixture\B\FixtureB143();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB143'] = new \DiContainerBenchmarks\Fixture\B\FixtureB143();
     }
 
     /*
@@ -2682,9 +2680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB144
      */
-    protected function getFixtureB144Service()
+    protected static function getFixtureB144Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB144'] = new \DiContainerBenchmarks\Fixture\B\FixtureB144();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB144'] = new \DiContainerBenchmarks\Fixture\B\FixtureB144();
     }
 
     /*
@@ -2692,9 +2690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB145
      */
-    protected function getFixtureB145Service()
+    protected static function getFixtureB145Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB145'] = new \DiContainerBenchmarks\Fixture\B\FixtureB145();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB145'] = new \DiContainerBenchmarks\Fixture\B\FixtureB145();
     }
 
     /*
@@ -2702,9 +2700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB146
      */
-    protected function getFixtureB146Service()
+    protected static function getFixtureB146Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB146'] = new \DiContainerBenchmarks\Fixture\B\FixtureB146();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB146'] = new \DiContainerBenchmarks\Fixture\B\FixtureB146();
     }
 
     /*
@@ -2712,9 +2710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB147
      */
-    protected function getFixtureB147Service()
+    protected static function getFixtureB147Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB147'] = new \DiContainerBenchmarks\Fixture\B\FixtureB147();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB147'] = new \DiContainerBenchmarks\Fixture\B\FixtureB147();
     }
 
     /*
@@ -2722,9 +2720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB148
      */
-    protected function getFixtureB148Service()
+    protected static function getFixtureB148Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB148'] = new \DiContainerBenchmarks\Fixture\B\FixtureB148();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB148'] = new \DiContainerBenchmarks\Fixture\B\FixtureB148();
     }
 
     /*
@@ -2732,9 +2730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB149
      */
-    protected function getFixtureB149Service()
+    protected static function getFixtureB149Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB149'] = new \DiContainerBenchmarks\Fixture\B\FixtureB149();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB149'] = new \DiContainerBenchmarks\Fixture\B\FixtureB149();
     }
 
     /*
@@ -2742,9 +2740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB15
      */
-    protected function getFixtureB15Service()
+    protected static function getFixtureB15Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB15'] = new \DiContainerBenchmarks\Fixture\B\FixtureB15();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB15'] = new \DiContainerBenchmarks\Fixture\B\FixtureB15();
     }
 
     /*
@@ -2752,9 +2750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB150
      */
-    protected function getFixtureB150Service()
+    protected static function getFixtureB150Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB150'] = new \DiContainerBenchmarks\Fixture\B\FixtureB150();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB150'] = new \DiContainerBenchmarks\Fixture\B\FixtureB150();
     }
 
     /*
@@ -2762,9 +2760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB151
      */
-    protected function getFixtureB151Service()
+    protected static function getFixtureB151Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB151'] = new \DiContainerBenchmarks\Fixture\B\FixtureB151();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB151'] = new \DiContainerBenchmarks\Fixture\B\FixtureB151();
     }
 
     /*
@@ -2772,9 +2770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB152
      */
-    protected function getFixtureB152Service()
+    protected static function getFixtureB152Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB152'] = new \DiContainerBenchmarks\Fixture\B\FixtureB152();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB152'] = new \DiContainerBenchmarks\Fixture\B\FixtureB152();
     }
 
     /*
@@ -2782,9 +2780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB153
      */
-    protected function getFixtureB153Service()
+    protected static function getFixtureB153Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB153'] = new \DiContainerBenchmarks\Fixture\B\FixtureB153();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB153'] = new \DiContainerBenchmarks\Fixture\B\FixtureB153();
     }
 
     /*
@@ -2792,9 +2790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB154
      */
-    protected function getFixtureB154Service()
+    protected static function getFixtureB154Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB154'] = new \DiContainerBenchmarks\Fixture\B\FixtureB154();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB154'] = new \DiContainerBenchmarks\Fixture\B\FixtureB154();
     }
 
     /*
@@ -2802,9 +2800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB155
      */
-    protected function getFixtureB155Service()
+    protected static function getFixtureB155Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB155'] = new \DiContainerBenchmarks\Fixture\B\FixtureB155();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB155'] = new \DiContainerBenchmarks\Fixture\B\FixtureB155();
     }
 
     /*
@@ -2812,9 +2810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB156
      */
-    protected function getFixtureB156Service()
+    protected static function getFixtureB156Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB156'] = new \DiContainerBenchmarks\Fixture\B\FixtureB156();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB156'] = new \DiContainerBenchmarks\Fixture\B\FixtureB156();
     }
 
     /*
@@ -2822,9 +2820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB157
      */
-    protected function getFixtureB157Service()
+    protected static function getFixtureB157Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB157'] = new \DiContainerBenchmarks\Fixture\B\FixtureB157();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB157'] = new \DiContainerBenchmarks\Fixture\B\FixtureB157();
     }
 
     /*
@@ -2832,9 +2830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB158
      */
-    protected function getFixtureB158Service()
+    protected static function getFixtureB158Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB158'] = new \DiContainerBenchmarks\Fixture\B\FixtureB158();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB158'] = new \DiContainerBenchmarks\Fixture\B\FixtureB158();
     }
 
     /*
@@ -2842,9 +2840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB159
      */
-    protected function getFixtureB159Service()
+    protected static function getFixtureB159Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB159'] = new \DiContainerBenchmarks\Fixture\B\FixtureB159();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB159'] = new \DiContainerBenchmarks\Fixture\B\FixtureB159();
     }
 
     /*
@@ -2852,9 +2850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB16
      */
-    protected function getFixtureB16Service()
+    protected static function getFixtureB16Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB16'] = new \DiContainerBenchmarks\Fixture\B\FixtureB16();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB16'] = new \DiContainerBenchmarks\Fixture\B\FixtureB16();
     }
 
     /*
@@ -2862,9 +2860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB160
      */
-    protected function getFixtureB160Service()
+    protected static function getFixtureB160Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB160'] = new \DiContainerBenchmarks\Fixture\B\FixtureB160();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB160'] = new \DiContainerBenchmarks\Fixture\B\FixtureB160();
     }
 
     /*
@@ -2872,9 +2870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB161
      */
-    protected function getFixtureB161Service()
+    protected static function getFixtureB161Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB161'] = new \DiContainerBenchmarks\Fixture\B\FixtureB161();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB161'] = new \DiContainerBenchmarks\Fixture\B\FixtureB161();
     }
 
     /*
@@ -2882,9 +2880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB162
      */
-    protected function getFixtureB162Service()
+    protected static function getFixtureB162Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB162'] = new \DiContainerBenchmarks\Fixture\B\FixtureB162();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB162'] = new \DiContainerBenchmarks\Fixture\B\FixtureB162();
     }
 
     /*
@@ -2892,9 +2890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB163
      */
-    protected function getFixtureB163Service()
+    protected static function getFixtureB163Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB163'] = new \DiContainerBenchmarks\Fixture\B\FixtureB163();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB163'] = new \DiContainerBenchmarks\Fixture\B\FixtureB163();
     }
 
     /*
@@ -2902,9 +2900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB164
      */
-    protected function getFixtureB164Service()
+    protected static function getFixtureB164Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB164'] = new \DiContainerBenchmarks\Fixture\B\FixtureB164();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB164'] = new \DiContainerBenchmarks\Fixture\B\FixtureB164();
     }
 
     /*
@@ -2912,9 +2910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB165
      */
-    protected function getFixtureB165Service()
+    protected static function getFixtureB165Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB165'] = new \DiContainerBenchmarks\Fixture\B\FixtureB165();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB165'] = new \DiContainerBenchmarks\Fixture\B\FixtureB165();
     }
 
     /*
@@ -2922,9 +2920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB166
      */
-    protected function getFixtureB166Service()
+    protected static function getFixtureB166Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB166'] = new \DiContainerBenchmarks\Fixture\B\FixtureB166();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB166'] = new \DiContainerBenchmarks\Fixture\B\FixtureB166();
     }
 
     /*
@@ -2932,9 +2930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB167
      */
-    protected function getFixtureB167Service()
+    protected static function getFixtureB167Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB167'] = new \DiContainerBenchmarks\Fixture\B\FixtureB167();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB167'] = new \DiContainerBenchmarks\Fixture\B\FixtureB167();
     }
 
     /*
@@ -2942,9 +2940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB168
      */
-    protected function getFixtureB168Service()
+    protected static function getFixtureB168Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB168'] = new \DiContainerBenchmarks\Fixture\B\FixtureB168();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB168'] = new \DiContainerBenchmarks\Fixture\B\FixtureB168();
     }
 
     /*
@@ -2952,9 +2950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB169
      */
-    protected function getFixtureB169Service()
+    protected static function getFixtureB169Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB169'] = new \DiContainerBenchmarks\Fixture\B\FixtureB169();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB169'] = new \DiContainerBenchmarks\Fixture\B\FixtureB169();
     }
 
     /*
@@ -2962,9 +2960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB17
      */
-    protected function getFixtureB17Service()
+    protected static function getFixtureB17Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB17'] = new \DiContainerBenchmarks\Fixture\B\FixtureB17();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB17'] = new \DiContainerBenchmarks\Fixture\B\FixtureB17();
     }
 
     /*
@@ -2972,9 +2970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB170
      */
-    protected function getFixtureB170Service()
+    protected static function getFixtureB170Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB170'] = new \DiContainerBenchmarks\Fixture\B\FixtureB170();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB170'] = new \DiContainerBenchmarks\Fixture\B\FixtureB170();
     }
 
     /*
@@ -2982,9 +2980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB171
      */
-    protected function getFixtureB171Service()
+    protected static function getFixtureB171Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB171'] = new \DiContainerBenchmarks\Fixture\B\FixtureB171();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB171'] = new \DiContainerBenchmarks\Fixture\B\FixtureB171();
     }
 
     /*
@@ -2992,9 +2990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB172
      */
-    protected function getFixtureB172Service()
+    protected static function getFixtureB172Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB172'] = new \DiContainerBenchmarks\Fixture\B\FixtureB172();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB172'] = new \DiContainerBenchmarks\Fixture\B\FixtureB172();
     }
 
     /*
@@ -3002,9 +3000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB173
      */
-    protected function getFixtureB173Service()
+    protected static function getFixtureB173Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB173'] = new \DiContainerBenchmarks\Fixture\B\FixtureB173();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB173'] = new \DiContainerBenchmarks\Fixture\B\FixtureB173();
     }
 
     /*
@@ -3012,9 +3010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB174
      */
-    protected function getFixtureB174Service()
+    protected static function getFixtureB174Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB174'] = new \DiContainerBenchmarks\Fixture\B\FixtureB174();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB174'] = new \DiContainerBenchmarks\Fixture\B\FixtureB174();
     }
 
     /*
@@ -3022,9 +3020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB175
      */
-    protected function getFixtureB175Service()
+    protected static function getFixtureB175Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB175'] = new \DiContainerBenchmarks\Fixture\B\FixtureB175();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB175'] = new \DiContainerBenchmarks\Fixture\B\FixtureB175();
     }
 
     /*
@@ -3032,9 +3030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB176
      */
-    protected function getFixtureB176Service()
+    protected static function getFixtureB176Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB176'] = new \DiContainerBenchmarks\Fixture\B\FixtureB176();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB176'] = new \DiContainerBenchmarks\Fixture\B\FixtureB176();
     }
 
     /*
@@ -3042,9 +3040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB177
      */
-    protected function getFixtureB177Service()
+    protected static function getFixtureB177Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB177'] = new \DiContainerBenchmarks\Fixture\B\FixtureB177();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB177'] = new \DiContainerBenchmarks\Fixture\B\FixtureB177();
     }
 
     /*
@@ -3052,9 +3050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB178
      */
-    protected function getFixtureB178Service()
+    protected static function getFixtureB178Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB178'] = new \DiContainerBenchmarks\Fixture\B\FixtureB178();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB178'] = new \DiContainerBenchmarks\Fixture\B\FixtureB178();
     }
 
     /*
@@ -3062,9 +3060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB179
      */
-    protected function getFixtureB179Service()
+    protected static function getFixtureB179Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB179'] = new \DiContainerBenchmarks\Fixture\B\FixtureB179();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB179'] = new \DiContainerBenchmarks\Fixture\B\FixtureB179();
     }
 
     /*
@@ -3072,9 +3070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB18
      */
-    protected function getFixtureB18Service()
+    protected static function getFixtureB18Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB18'] = new \DiContainerBenchmarks\Fixture\B\FixtureB18();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB18'] = new \DiContainerBenchmarks\Fixture\B\FixtureB18();
     }
 
     /*
@@ -3082,9 +3080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB180
      */
-    protected function getFixtureB180Service()
+    protected static function getFixtureB180Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB180'] = new \DiContainerBenchmarks\Fixture\B\FixtureB180();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB180'] = new \DiContainerBenchmarks\Fixture\B\FixtureB180();
     }
 
     /*
@@ -3092,9 +3090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB181
      */
-    protected function getFixtureB181Service()
+    protected static function getFixtureB181Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB181'] = new \DiContainerBenchmarks\Fixture\B\FixtureB181();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB181'] = new \DiContainerBenchmarks\Fixture\B\FixtureB181();
     }
 
     /*
@@ -3102,9 +3100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB182
      */
-    protected function getFixtureB182Service()
+    protected static function getFixtureB182Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB182'] = new \DiContainerBenchmarks\Fixture\B\FixtureB182();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB182'] = new \DiContainerBenchmarks\Fixture\B\FixtureB182();
     }
 
     /*
@@ -3112,9 +3110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB183
      */
-    protected function getFixtureB183Service()
+    protected static function getFixtureB183Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB183'] = new \DiContainerBenchmarks\Fixture\B\FixtureB183();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB183'] = new \DiContainerBenchmarks\Fixture\B\FixtureB183();
     }
 
     /*
@@ -3122,9 +3120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB184
      */
-    protected function getFixtureB184Service()
+    protected static function getFixtureB184Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB184'] = new \DiContainerBenchmarks\Fixture\B\FixtureB184();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB184'] = new \DiContainerBenchmarks\Fixture\B\FixtureB184();
     }
 
     /*
@@ -3132,9 +3130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB185
      */
-    protected function getFixtureB185Service()
+    protected static function getFixtureB185Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB185'] = new \DiContainerBenchmarks\Fixture\B\FixtureB185();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB185'] = new \DiContainerBenchmarks\Fixture\B\FixtureB185();
     }
 
     /*
@@ -3142,9 +3140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB186
      */
-    protected function getFixtureB186Service()
+    protected static function getFixtureB186Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB186'] = new \DiContainerBenchmarks\Fixture\B\FixtureB186();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB186'] = new \DiContainerBenchmarks\Fixture\B\FixtureB186();
     }
 
     /*
@@ -3152,9 +3150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB187
      */
-    protected function getFixtureB187Service()
+    protected static function getFixtureB187Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB187'] = new \DiContainerBenchmarks\Fixture\B\FixtureB187();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB187'] = new \DiContainerBenchmarks\Fixture\B\FixtureB187();
     }
 
     /*
@@ -3162,9 +3160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB188
      */
-    protected function getFixtureB188Service()
+    protected static function getFixtureB188Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB188'] = new \DiContainerBenchmarks\Fixture\B\FixtureB188();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB188'] = new \DiContainerBenchmarks\Fixture\B\FixtureB188();
     }
 
     /*
@@ -3172,9 +3170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB189
      */
-    protected function getFixtureB189Service()
+    protected static function getFixtureB189Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB189'] = new \DiContainerBenchmarks\Fixture\B\FixtureB189();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB189'] = new \DiContainerBenchmarks\Fixture\B\FixtureB189();
     }
 
     /*
@@ -3182,9 +3180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB19
      */
-    protected function getFixtureB19Service()
+    protected static function getFixtureB19Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB19'] = new \DiContainerBenchmarks\Fixture\B\FixtureB19();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB19'] = new \DiContainerBenchmarks\Fixture\B\FixtureB19();
     }
 
     /*
@@ -3192,9 +3190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB190
      */
-    protected function getFixtureB190Service()
+    protected static function getFixtureB190Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB190'] = new \DiContainerBenchmarks\Fixture\B\FixtureB190();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB190'] = new \DiContainerBenchmarks\Fixture\B\FixtureB190();
     }
 
     /*
@@ -3202,9 +3200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB191
      */
-    protected function getFixtureB191Service()
+    protected static function getFixtureB191Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB191'] = new \DiContainerBenchmarks\Fixture\B\FixtureB191();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB191'] = new \DiContainerBenchmarks\Fixture\B\FixtureB191();
     }
 
     /*
@@ -3212,9 +3210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB192
      */
-    protected function getFixtureB192Service()
+    protected static function getFixtureB192Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB192'] = new \DiContainerBenchmarks\Fixture\B\FixtureB192();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB192'] = new \DiContainerBenchmarks\Fixture\B\FixtureB192();
     }
 
     /*
@@ -3222,9 +3220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB193
      */
-    protected function getFixtureB193Service()
+    protected static function getFixtureB193Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB193'] = new \DiContainerBenchmarks\Fixture\B\FixtureB193();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB193'] = new \DiContainerBenchmarks\Fixture\B\FixtureB193();
     }
 
     /*
@@ -3232,9 +3230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB194
      */
-    protected function getFixtureB194Service()
+    protected static function getFixtureB194Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB194'] = new \DiContainerBenchmarks\Fixture\B\FixtureB194();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB194'] = new \DiContainerBenchmarks\Fixture\B\FixtureB194();
     }
 
     /*
@@ -3242,9 +3240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB195
      */
-    protected function getFixtureB195Service()
+    protected static function getFixtureB195Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB195'] = new \DiContainerBenchmarks\Fixture\B\FixtureB195();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB195'] = new \DiContainerBenchmarks\Fixture\B\FixtureB195();
     }
 
     /*
@@ -3252,9 +3250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB196
      */
-    protected function getFixtureB196Service()
+    protected static function getFixtureB196Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB196'] = new \DiContainerBenchmarks\Fixture\B\FixtureB196();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB196'] = new \DiContainerBenchmarks\Fixture\B\FixtureB196();
     }
 
     /*
@@ -3262,9 +3260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB197
      */
-    protected function getFixtureB197Service()
+    protected static function getFixtureB197Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB197'] = new \DiContainerBenchmarks\Fixture\B\FixtureB197();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB197'] = new \DiContainerBenchmarks\Fixture\B\FixtureB197();
     }
 
     /*
@@ -3272,9 +3270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB198
      */
-    protected function getFixtureB198Service()
+    protected static function getFixtureB198Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB198'] = new \DiContainerBenchmarks\Fixture\B\FixtureB198();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB198'] = new \DiContainerBenchmarks\Fixture\B\FixtureB198();
     }
 
     /*
@@ -3282,9 +3280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB199
      */
-    protected function getFixtureB199Service()
+    protected static function getFixtureB199Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB199'] = new \DiContainerBenchmarks\Fixture\B\FixtureB199();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB199'] = new \DiContainerBenchmarks\Fixture\B\FixtureB199();
     }
 
     /*
@@ -3292,9 +3290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB2
      */
-    protected function getFixtureB2Service()
+    protected static function getFixtureB2Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB2'] = new \DiContainerBenchmarks\Fixture\B\FixtureB2();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB2'] = new \DiContainerBenchmarks\Fixture\B\FixtureB2();
     }
 
     /*
@@ -3302,9 +3300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB20
      */
-    protected function getFixtureB20Service()
+    protected static function getFixtureB20Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB20'] = new \DiContainerBenchmarks\Fixture\B\FixtureB20();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB20'] = new \DiContainerBenchmarks\Fixture\B\FixtureB20();
     }
 
     /*
@@ -3312,9 +3310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB200
      */
-    protected function getFixtureB200Service()
+    protected static function getFixtureB200Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB200'] = new \DiContainerBenchmarks\Fixture\B\FixtureB200();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB200'] = new \DiContainerBenchmarks\Fixture\B\FixtureB200();
     }
 
     /*
@@ -3322,9 +3320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB201
      */
-    protected function getFixtureB201Service()
+    protected static function getFixtureB201Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB201'] = new \DiContainerBenchmarks\Fixture\B\FixtureB201();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB201'] = new \DiContainerBenchmarks\Fixture\B\FixtureB201();
     }
 
     /*
@@ -3332,9 +3330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB202
      */
-    protected function getFixtureB202Service()
+    protected static function getFixtureB202Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB202'] = new \DiContainerBenchmarks\Fixture\B\FixtureB202();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB202'] = new \DiContainerBenchmarks\Fixture\B\FixtureB202();
     }
 
     /*
@@ -3342,9 +3340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB203
      */
-    protected function getFixtureB203Service()
+    protected static function getFixtureB203Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB203'] = new \DiContainerBenchmarks\Fixture\B\FixtureB203();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB203'] = new \DiContainerBenchmarks\Fixture\B\FixtureB203();
     }
 
     /*
@@ -3352,9 +3350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB204
      */
-    protected function getFixtureB204Service()
+    protected static function getFixtureB204Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB204'] = new \DiContainerBenchmarks\Fixture\B\FixtureB204();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB204'] = new \DiContainerBenchmarks\Fixture\B\FixtureB204();
     }
 
     /*
@@ -3362,9 +3360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB205
      */
-    protected function getFixtureB205Service()
+    protected static function getFixtureB205Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB205'] = new \DiContainerBenchmarks\Fixture\B\FixtureB205();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB205'] = new \DiContainerBenchmarks\Fixture\B\FixtureB205();
     }
 
     /*
@@ -3372,9 +3370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB206
      */
-    protected function getFixtureB206Service()
+    protected static function getFixtureB206Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB206'] = new \DiContainerBenchmarks\Fixture\B\FixtureB206();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB206'] = new \DiContainerBenchmarks\Fixture\B\FixtureB206();
     }
 
     /*
@@ -3382,9 +3380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB207
      */
-    protected function getFixtureB207Service()
+    protected static function getFixtureB207Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB207'] = new \DiContainerBenchmarks\Fixture\B\FixtureB207();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB207'] = new \DiContainerBenchmarks\Fixture\B\FixtureB207();
     }
 
     /*
@@ -3392,9 +3390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB208
      */
-    protected function getFixtureB208Service()
+    protected static function getFixtureB208Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB208'] = new \DiContainerBenchmarks\Fixture\B\FixtureB208();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB208'] = new \DiContainerBenchmarks\Fixture\B\FixtureB208();
     }
 
     /*
@@ -3402,9 +3400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB209
      */
-    protected function getFixtureB209Service()
+    protected static function getFixtureB209Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB209'] = new \DiContainerBenchmarks\Fixture\B\FixtureB209();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB209'] = new \DiContainerBenchmarks\Fixture\B\FixtureB209();
     }
 
     /*
@@ -3412,9 +3410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB21
      */
-    protected function getFixtureB21Service()
+    protected static function getFixtureB21Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB21'] = new \DiContainerBenchmarks\Fixture\B\FixtureB21();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB21'] = new \DiContainerBenchmarks\Fixture\B\FixtureB21();
     }
 
     /*
@@ -3422,9 +3420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB210
      */
-    protected function getFixtureB210Service()
+    protected static function getFixtureB210Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB210'] = new \DiContainerBenchmarks\Fixture\B\FixtureB210();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB210'] = new \DiContainerBenchmarks\Fixture\B\FixtureB210();
     }
 
     /*
@@ -3432,9 +3430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB211
      */
-    protected function getFixtureB211Service()
+    protected static function getFixtureB211Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB211'] = new \DiContainerBenchmarks\Fixture\B\FixtureB211();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB211'] = new \DiContainerBenchmarks\Fixture\B\FixtureB211();
     }
 
     /*
@@ -3442,9 +3440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB212
      */
-    protected function getFixtureB212Service()
+    protected static function getFixtureB212Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB212'] = new \DiContainerBenchmarks\Fixture\B\FixtureB212();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB212'] = new \DiContainerBenchmarks\Fixture\B\FixtureB212();
     }
 
     /*
@@ -3452,9 +3450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB213
      */
-    protected function getFixtureB213Service()
+    protected static function getFixtureB213Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB213'] = new \DiContainerBenchmarks\Fixture\B\FixtureB213();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB213'] = new \DiContainerBenchmarks\Fixture\B\FixtureB213();
     }
 
     /*
@@ -3462,9 +3460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB214
      */
-    protected function getFixtureB214Service()
+    protected static function getFixtureB214Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB214'] = new \DiContainerBenchmarks\Fixture\B\FixtureB214();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB214'] = new \DiContainerBenchmarks\Fixture\B\FixtureB214();
     }
 
     /*
@@ -3472,9 +3470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB215
      */
-    protected function getFixtureB215Service()
+    protected static function getFixtureB215Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB215'] = new \DiContainerBenchmarks\Fixture\B\FixtureB215();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB215'] = new \DiContainerBenchmarks\Fixture\B\FixtureB215();
     }
 
     /*
@@ -3482,9 +3480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB216
      */
-    protected function getFixtureB216Service()
+    protected static function getFixtureB216Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB216'] = new \DiContainerBenchmarks\Fixture\B\FixtureB216();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB216'] = new \DiContainerBenchmarks\Fixture\B\FixtureB216();
     }
 
     /*
@@ -3492,9 +3490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB217
      */
-    protected function getFixtureB217Service()
+    protected static function getFixtureB217Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB217'] = new \DiContainerBenchmarks\Fixture\B\FixtureB217();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB217'] = new \DiContainerBenchmarks\Fixture\B\FixtureB217();
     }
 
     /*
@@ -3502,9 +3500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB218
      */
-    protected function getFixtureB218Service()
+    protected static function getFixtureB218Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB218'] = new \DiContainerBenchmarks\Fixture\B\FixtureB218();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB218'] = new \DiContainerBenchmarks\Fixture\B\FixtureB218();
     }
 
     /*
@@ -3512,9 +3510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB219
      */
-    protected function getFixtureB219Service()
+    protected static function getFixtureB219Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB219'] = new \DiContainerBenchmarks\Fixture\B\FixtureB219();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB219'] = new \DiContainerBenchmarks\Fixture\B\FixtureB219();
     }
 
     /*
@@ -3522,9 +3520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB22
      */
-    protected function getFixtureB22Service()
+    protected static function getFixtureB22Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB22'] = new \DiContainerBenchmarks\Fixture\B\FixtureB22();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB22'] = new \DiContainerBenchmarks\Fixture\B\FixtureB22();
     }
 
     /*
@@ -3532,9 +3530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB220
      */
-    protected function getFixtureB220Service()
+    protected static function getFixtureB220Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB220'] = new \DiContainerBenchmarks\Fixture\B\FixtureB220();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB220'] = new \DiContainerBenchmarks\Fixture\B\FixtureB220();
     }
 
     /*
@@ -3542,9 +3540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB221
      */
-    protected function getFixtureB221Service()
+    protected static function getFixtureB221Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB221'] = new \DiContainerBenchmarks\Fixture\B\FixtureB221();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB221'] = new \DiContainerBenchmarks\Fixture\B\FixtureB221();
     }
 
     /*
@@ -3552,9 +3550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB222
      */
-    protected function getFixtureB222Service()
+    protected static function getFixtureB222Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB222'] = new \DiContainerBenchmarks\Fixture\B\FixtureB222();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB222'] = new \DiContainerBenchmarks\Fixture\B\FixtureB222();
     }
 
     /*
@@ -3562,9 +3560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB223
      */
-    protected function getFixtureB223Service()
+    protected static function getFixtureB223Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB223'] = new \DiContainerBenchmarks\Fixture\B\FixtureB223();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB223'] = new \DiContainerBenchmarks\Fixture\B\FixtureB223();
     }
 
     /*
@@ -3572,9 +3570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB224
      */
-    protected function getFixtureB224Service()
+    protected static function getFixtureB224Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB224'] = new \DiContainerBenchmarks\Fixture\B\FixtureB224();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB224'] = new \DiContainerBenchmarks\Fixture\B\FixtureB224();
     }
 
     /*
@@ -3582,9 +3580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB225
      */
-    protected function getFixtureB225Service()
+    protected static function getFixtureB225Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB225'] = new \DiContainerBenchmarks\Fixture\B\FixtureB225();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB225'] = new \DiContainerBenchmarks\Fixture\B\FixtureB225();
     }
 
     /*
@@ -3592,9 +3590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB226
      */
-    protected function getFixtureB226Service()
+    protected static function getFixtureB226Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB226'] = new \DiContainerBenchmarks\Fixture\B\FixtureB226();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB226'] = new \DiContainerBenchmarks\Fixture\B\FixtureB226();
     }
 
     /*
@@ -3602,9 +3600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB227
      */
-    protected function getFixtureB227Service()
+    protected static function getFixtureB227Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB227'] = new \DiContainerBenchmarks\Fixture\B\FixtureB227();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB227'] = new \DiContainerBenchmarks\Fixture\B\FixtureB227();
     }
 
     /*
@@ -3612,9 +3610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB228
      */
-    protected function getFixtureB228Service()
+    protected static function getFixtureB228Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB228'] = new \DiContainerBenchmarks\Fixture\B\FixtureB228();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB228'] = new \DiContainerBenchmarks\Fixture\B\FixtureB228();
     }
 
     /*
@@ -3622,9 +3620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB229
      */
-    protected function getFixtureB229Service()
+    protected static function getFixtureB229Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB229'] = new \DiContainerBenchmarks\Fixture\B\FixtureB229();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB229'] = new \DiContainerBenchmarks\Fixture\B\FixtureB229();
     }
 
     /*
@@ -3632,9 +3630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB23
      */
-    protected function getFixtureB23Service()
+    protected static function getFixtureB23Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB23'] = new \DiContainerBenchmarks\Fixture\B\FixtureB23();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB23'] = new \DiContainerBenchmarks\Fixture\B\FixtureB23();
     }
 
     /*
@@ -3642,9 +3640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB230
      */
-    protected function getFixtureB230Service()
+    protected static function getFixtureB230Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB230'] = new \DiContainerBenchmarks\Fixture\B\FixtureB230();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB230'] = new \DiContainerBenchmarks\Fixture\B\FixtureB230();
     }
 
     /*
@@ -3652,9 +3650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB231
      */
-    protected function getFixtureB231Service()
+    protected static function getFixtureB231Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB231'] = new \DiContainerBenchmarks\Fixture\B\FixtureB231();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB231'] = new \DiContainerBenchmarks\Fixture\B\FixtureB231();
     }
 
     /*
@@ -3662,9 +3660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB232
      */
-    protected function getFixtureB232Service()
+    protected static function getFixtureB232Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB232'] = new \DiContainerBenchmarks\Fixture\B\FixtureB232();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB232'] = new \DiContainerBenchmarks\Fixture\B\FixtureB232();
     }
 
     /*
@@ -3672,9 +3670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB233
      */
-    protected function getFixtureB233Service()
+    protected static function getFixtureB233Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB233'] = new \DiContainerBenchmarks\Fixture\B\FixtureB233();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB233'] = new \DiContainerBenchmarks\Fixture\B\FixtureB233();
     }
 
     /*
@@ -3682,9 +3680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB234
      */
-    protected function getFixtureB234Service()
+    protected static function getFixtureB234Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB234'] = new \DiContainerBenchmarks\Fixture\B\FixtureB234();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB234'] = new \DiContainerBenchmarks\Fixture\B\FixtureB234();
     }
 
     /*
@@ -3692,9 +3690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB235
      */
-    protected function getFixtureB235Service()
+    protected static function getFixtureB235Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB235'] = new \DiContainerBenchmarks\Fixture\B\FixtureB235();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB235'] = new \DiContainerBenchmarks\Fixture\B\FixtureB235();
     }
 
     /*
@@ -3702,9 +3700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB236
      */
-    protected function getFixtureB236Service()
+    protected static function getFixtureB236Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB236'] = new \DiContainerBenchmarks\Fixture\B\FixtureB236();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB236'] = new \DiContainerBenchmarks\Fixture\B\FixtureB236();
     }
 
     /*
@@ -3712,9 +3710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB237
      */
-    protected function getFixtureB237Service()
+    protected static function getFixtureB237Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB237'] = new \DiContainerBenchmarks\Fixture\B\FixtureB237();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB237'] = new \DiContainerBenchmarks\Fixture\B\FixtureB237();
     }
 
     /*
@@ -3722,9 +3720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB238
      */
-    protected function getFixtureB238Service()
+    protected static function getFixtureB238Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB238'] = new \DiContainerBenchmarks\Fixture\B\FixtureB238();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB238'] = new \DiContainerBenchmarks\Fixture\B\FixtureB238();
     }
 
     /*
@@ -3732,9 +3730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB239
      */
-    protected function getFixtureB239Service()
+    protected static function getFixtureB239Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB239'] = new \DiContainerBenchmarks\Fixture\B\FixtureB239();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB239'] = new \DiContainerBenchmarks\Fixture\B\FixtureB239();
     }
 
     /*
@@ -3742,9 +3740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB24
      */
-    protected function getFixtureB24Service()
+    protected static function getFixtureB24Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB24'] = new \DiContainerBenchmarks\Fixture\B\FixtureB24();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB24'] = new \DiContainerBenchmarks\Fixture\B\FixtureB24();
     }
 
     /*
@@ -3752,9 +3750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB240
      */
-    protected function getFixtureB240Service()
+    protected static function getFixtureB240Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB240'] = new \DiContainerBenchmarks\Fixture\B\FixtureB240();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB240'] = new \DiContainerBenchmarks\Fixture\B\FixtureB240();
     }
 
     /*
@@ -3762,9 +3760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB241
      */
-    protected function getFixtureB241Service()
+    protected static function getFixtureB241Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB241'] = new \DiContainerBenchmarks\Fixture\B\FixtureB241();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB241'] = new \DiContainerBenchmarks\Fixture\B\FixtureB241();
     }
 
     /*
@@ -3772,9 +3770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB242
      */
-    protected function getFixtureB242Service()
+    protected static function getFixtureB242Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB242'] = new \DiContainerBenchmarks\Fixture\B\FixtureB242();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB242'] = new \DiContainerBenchmarks\Fixture\B\FixtureB242();
     }
 
     /*
@@ -3782,9 +3780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB243
      */
-    protected function getFixtureB243Service()
+    protected static function getFixtureB243Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB243'] = new \DiContainerBenchmarks\Fixture\B\FixtureB243();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB243'] = new \DiContainerBenchmarks\Fixture\B\FixtureB243();
     }
 
     /*
@@ -3792,9 +3790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB244
      */
-    protected function getFixtureB244Service()
+    protected static function getFixtureB244Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB244'] = new \DiContainerBenchmarks\Fixture\B\FixtureB244();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB244'] = new \DiContainerBenchmarks\Fixture\B\FixtureB244();
     }
 
     /*
@@ -3802,9 +3800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB245
      */
-    protected function getFixtureB245Service()
+    protected static function getFixtureB245Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB245'] = new \DiContainerBenchmarks\Fixture\B\FixtureB245();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB245'] = new \DiContainerBenchmarks\Fixture\B\FixtureB245();
     }
 
     /*
@@ -3812,9 +3810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB246
      */
-    protected function getFixtureB246Service()
+    protected static function getFixtureB246Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB246'] = new \DiContainerBenchmarks\Fixture\B\FixtureB246();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB246'] = new \DiContainerBenchmarks\Fixture\B\FixtureB246();
     }
 
     /*
@@ -3822,9 +3820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB247
      */
-    protected function getFixtureB247Service()
+    protected static function getFixtureB247Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB247'] = new \DiContainerBenchmarks\Fixture\B\FixtureB247();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB247'] = new \DiContainerBenchmarks\Fixture\B\FixtureB247();
     }
 
     /*
@@ -3832,9 +3830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB248
      */
-    protected function getFixtureB248Service()
+    protected static function getFixtureB248Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB248'] = new \DiContainerBenchmarks\Fixture\B\FixtureB248();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB248'] = new \DiContainerBenchmarks\Fixture\B\FixtureB248();
     }
 
     /*
@@ -3842,9 +3840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB249
      */
-    protected function getFixtureB249Service()
+    protected static function getFixtureB249Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB249'] = new \DiContainerBenchmarks\Fixture\B\FixtureB249();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB249'] = new \DiContainerBenchmarks\Fixture\B\FixtureB249();
     }
 
     /*
@@ -3852,9 +3850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB25
      */
-    protected function getFixtureB25Service()
+    protected static function getFixtureB25Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB25'] = new \DiContainerBenchmarks\Fixture\B\FixtureB25();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB25'] = new \DiContainerBenchmarks\Fixture\B\FixtureB25();
     }
 
     /*
@@ -3862,9 +3860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB250
      */
-    protected function getFixtureB250Service()
+    protected static function getFixtureB250Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB250'] = new \DiContainerBenchmarks\Fixture\B\FixtureB250();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB250'] = new \DiContainerBenchmarks\Fixture\B\FixtureB250();
     }
 
     /*
@@ -3872,9 +3870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB251
      */
-    protected function getFixtureB251Service()
+    protected static function getFixtureB251Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB251'] = new \DiContainerBenchmarks\Fixture\B\FixtureB251();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB251'] = new \DiContainerBenchmarks\Fixture\B\FixtureB251();
     }
 
     /*
@@ -3882,9 +3880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB252
      */
-    protected function getFixtureB252Service()
+    protected static function getFixtureB252Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB252'] = new \DiContainerBenchmarks\Fixture\B\FixtureB252();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB252'] = new \DiContainerBenchmarks\Fixture\B\FixtureB252();
     }
 
     /*
@@ -3892,9 +3890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB253
      */
-    protected function getFixtureB253Service()
+    protected static function getFixtureB253Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB253'] = new \DiContainerBenchmarks\Fixture\B\FixtureB253();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB253'] = new \DiContainerBenchmarks\Fixture\B\FixtureB253();
     }
 
     /*
@@ -3902,9 +3900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB254
      */
-    protected function getFixtureB254Service()
+    protected static function getFixtureB254Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB254'] = new \DiContainerBenchmarks\Fixture\B\FixtureB254();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB254'] = new \DiContainerBenchmarks\Fixture\B\FixtureB254();
     }
 
     /*
@@ -3912,9 +3910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB255
      */
-    protected function getFixtureB255Service()
+    protected static function getFixtureB255Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB255'] = new \DiContainerBenchmarks\Fixture\B\FixtureB255();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB255'] = new \DiContainerBenchmarks\Fixture\B\FixtureB255();
     }
 
     /*
@@ -3922,9 +3920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB256
      */
-    protected function getFixtureB256Service()
+    protected static function getFixtureB256Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB256'] = new \DiContainerBenchmarks\Fixture\B\FixtureB256();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB256'] = new \DiContainerBenchmarks\Fixture\B\FixtureB256();
     }
 
     /*
@@ -3932,9 +3930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB257
      */
-    protected function getFixtureB257Service()
+    protected static function getFixtureB257Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB257'] = new \DiContainerBenchmarks\Fixture\B\FixtureB257();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB257'] = new \DiContainerBenchmarks\Fixture\B\FixtureB257();
     }
 
     /*
@@ -3942,9 +3940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB258
      */
-    protected function getFixtureB258Service()
+    protected static function getFixtureB258Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB258'] = new \DiContainerBenchmarks\Fixture\B\FixtureB258();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB258'] = new \DiContainerBenchmarks\Fixture\B\FixtureB258();
     }
 
     /*
@@ -3952,9 +3950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB259
      */
-    protected function getFixtureB259Service()
+    protected static function getFixtureB259Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB259'] = new \DiContainerBenchmarks\Fixture\B\FixtureB259();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB259'] = new \DiContainerBenchmarks\Fixture\B\FixtureB259();
     }
 
     /*
@@ -3962,9 +3960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB26
      */
-    protected function getFixtureB26Service()
+    protected static function getFixtureB26Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB26'] = new \DiContainerBenchmarks\Fixture\B\FixtureB26();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB26'] = new \DiContainerBenchmarks\Fixture\B\FixtureB26();
     }
 
     /*
@@ -3972,9 +3970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB260
      */
-    protected function getFixtureB260Service()
+    protected static function getFixtureB260Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB260'] = new \DiContainerBenchmarks\Fixture\B\FixtureB260();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB260'] = new \DiContainerBenchmarks\Fixture\B\FixtureB260();
     }
 
     /*
@@ -3982,9 +3980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB261
      */
-    protected function getFixtureB261Service()
+    protected static function getFixtureB261Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB261'] = new \DiContainerBenchmarks\Fixture\B\FixtureB261();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB261'] = new \DiContainerBenchmarks\Fixture\B\FixtureB261();
     }
 
     /*
@@ -3992,9 +3990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB262
      */
-    protected function getFixtureB262Service()
+    protected static function getFixtureB262Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB262'] = new \DiContainerBenchmarks\Fixture\B\FixtureB262();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB262'] = new \DiContainerBenchmarks\Fixture\B\FixtureB262();
     }
 
     /*
@@ -4002,9 +4000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB263
      */
-    protected function getFixtureB263Service()
+    protected static function getFixtureB263Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB263'] = new \DiContainerBenchmarks\Fixture\B\FixtureB263();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB263'] = new \DiContainerBenchmarks\Fixture\B\FixtureB263();
     }
 
     /*
@@ -4012,9 +4010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB264
      */
-    protected function getFixtureB264Service()
+    protected static function getFixtureB264Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB264'] = new \DiContainerBenchmarks\Fixture\B\FixtureB264();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB264'] = new \DiContainerBenchmarks\Fixture\B\FixtureB264();
     }
 
     /*
@@ -4022,9 +4020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB265
      */
-    protected function getFixtureB265Service()
+    protected static function getFixtureB265Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB265'] = new \DiContainerBenchmarks\Fixture\B\FixtureB265();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB265'] = new \DiContainerBenchmarks\Fixture\B\FixtureB265();
     }
 
     /*
@@ -4032,9 +4030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB266
      */
-    protected function getFixtureB266Service()
+    protected static function getFixtureB266Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB266'] = new \DiContainerBenchmarks\Fixture\B\FixtureB266();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB266'] = new \DiContainerBenchmarks\Fixture\B\FixtureB266();
     }
 
     /*
@@ -4042,9 +4040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB267
      */
-    protected function getFixtureB267Service()
+    protected static function getFixtureB267Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB267'] = new \DiContainerBenchmarks\Fixture\B\FixtureB267();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB267'] = new \DiContainerBenchmarks\Fixture\B\FixtureB267();
     }
 
     /*
@@ -4052,9 +4050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB268
      */
-    protected function getFixtureB268Service()
+    protected static function getFixtureB268Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB268'] = new \DiContainerBenchmarks\Fixture\B\FixtureB268();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB268'] = new \DiContainerBenchmarks\Fixture\B\FixtureB268();
     }
 
     /*
@@ -4062,9 +4060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB269
      */
-    protected function getFixtureB269Service()
+    protected static function getFixtureB269Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB269'] = new \DiContainerBenchmarks\Fixture\B\FixtureB269();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB269'] = new \DiContainerBenchmarks\Fixture\B\FixtureB269();
     }
 
     /*
@@ -4072,9 +4070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB27
      */
-    protected function getFixtureB27Service()
+    protected static function getFixtureB27Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB27'] = new \DiContainerBenchmarks\Fixture\B\FixtureB27();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB27'] = new \DiContainerBenchmarks\Fixture\B\FixtureB27();
     }
 
     /*
@@ -4082,9 +4080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB270
      */
-    protected function getFixtureB270Service()
+    protected static function getFixtureB270Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB270'] = new \DiContainerBenchmarks\Fixture\B\FixtureB270();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB270'] = new \DiContainerBenchmarks\Fixture\B\FixtureB270();
     }
 
     /*
@@ -4092,9 +4090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB271
      */
-    protected function getFixtureB271Service()
+    protected static function getFixtureB271Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB271'] = new \DiContainerBenchmarks\Fixture\B\FixtureB271();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB271'] = new \DiContainerBenchmarks\Fixture\B\FixtureB271();
     }
 
     /*
@@ -4102,9 +4100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB272
      */
-    protected function getFixtureB272Service()
+    protected static function getFixtureB272Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB272'] = new \DiContainerBenchmarks\Fixture\B\FixtureB272();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB272'] = new \DiContainerBenchmarks\Fixture\B\FixtureB272();
     }
 
     /*
@@ -4112,9 +4110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB273
      */
-    protected function getFixtureB273Service()
+    protected static function getFixtureB273Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB273'] = new \DiContainerBenchmarks\Fixture\B\FixtureB273();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB273'] = new \DiContainerBenchmarks\Fixture\B\FixtureB273();
     }
 
     /*
@@ -4122,9 +4120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB274
      */
-    protected function getFixtureB274Service()
+    protected static function getFixtureB274Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB274'] = new \DiContainerBenchmarks\Fixture\B\FixtureB274();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB274'] = new \DiContainerBenchmarks\Fixture\B\FixtureB274();
     }
 
     /*
@@ -4132,9 +4130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB275
      */
-    protected function getFixtureB275Service()
+    protected static function getFixtureB275Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB275'] = new \DiContainerBenchmarks\Fixture\B\FixtureB275();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB275'] = new \DiContainerBenchmarks\Fixture\B\FixtureB275();
     }
 
     /*
@@ -4142,9 +4140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB276
      */
-    protected function getFixtureB276Service()
+    protected static function getFixtureB276Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB276'] = new \DiContainerBenchmarks\Fixture\B\FixtureB276();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB276'] = new \DiContainerBenchmarks\Fixture\B\FixtureB276();
     }
 
     /*
@@ -4152,9 +4150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB277
      */
-    protected function getFixtureB277Service()
+    protected static function getFixtureB277Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB277'] = new \DiContainerBenchmarks\Fixture\B\FixtureB277();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB277'] = new \DiContainerBenchmarks\Fixture\B\FixtureB277();
     }
 
     /*
@@ -4162,9 +4160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB278
      */
-    protected function getFixtureB278Service()
+    protected static function getFixtureB278Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB278'] = new \DiContainerBenchmarks\Fixture\B\FixtureB278();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB278'] = new \DiContainerBenchmarks\Fixture\B\FixtureB278();
     }
 
     /*
@@ -4172,9 +4170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB279
      */
-    protected function getFixtureB279Service()
+    protected static function getFixtureB279Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB279'] = new \DiContainerBenchmarks\Fixture\B\FixtureB279();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB279'] = new \DiContainerBenchmarks\Fixture\B\FixtureB279();
     }
 
     /*
@@ -4182,9 +4180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB28
      */
-    protected function getFixtureB28Service()
+    protected static function getFixtureB28Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB28'] = new \DiContainerBenchmarks\Fixture\B\FixtureB28();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB28'] = new \DiContainerBenchmarks\Fixture\B\FixtureB28();
     }
 
     /*
@@ -4192,9 +4190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB280
      */
-    protected function getFixtureB280Service()
+    protected static function getFixtureB280Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB280'] = new \DiContainerBenchmarks\Fixture\B\FixtureB280();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB280'] = new \DiContainerBenchmarks\Fixture\B\FixtureB280();
     }
 
     /*
@@ -4202,9 +4200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB281
      */
-    protected function getFixtureB281Service()
+    protected static function getFixtureB281Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB281'] = new \DiContainerBenchmarks\Fixture\B\FixtureB281();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB281'] = new \DiContainerBenchmarks\Fixture\B\FixtureB281();
     }
 
     /*
@@ -4212,9 +4210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB282
      */
-    protected function getFixtureB282Service()
+    protected static function getFixtureB282Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB282'] = new \DiContainerBenchmarks\Fixture\B\FixtureB282();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB282'] = new \DiContainerBenchmarks\Fixture\B\FixtureB282();
     }
 
     /*
@@ -4222,9 +4220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB283
      */
-    protected function getFixtureB283Service()
+    protected static function getFixtureB283Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB283'] = new \DiContainerBenchmarks\Fixture\B\FixtureB283();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB283'] = new \DiContainerBenchmarks\Fixture\B\FixtureB283();
     }
 
     /*
@@ -4232,9 +4230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB284
      */
-    protected function getFixtureB284Service()
+    protected static function getFixtureB284Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB284'] = new \DiContainerBenchmarks\Fixture\B\FixtureB284();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB284'] = new \DiContainerBenchmarks\Fixture\B\FixtureB284();
     }
 
     /*
@@ -4242,9 +4240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB285
      */
-    protected function getFixtureB285Service()
+    protected static function getFixtureB285Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB285'] = new \DiContainerBenchmarks\Fixture\B\FixtureB285();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB285'] = new \DiContainerBenchmarks\Fixture\B\FixtureB285();
     }
 
     /*
@@ -4252,9 +4250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB286
      */
-    protected function getFixtureB286Service()
+    protected static function getFixtureB286Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB286'] = new \DiContainerBenchmarks\Fixture\B\FixtureB286();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB286'] = new \DiContainerBenchmarks\Fixture\B\FixtureB286();
     }
 
     /*
@@ -4262,9 +4260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB287
      */
-    protected function getFixtureB287Service()
+    protected static function getFixtureB287Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB287'] = new \DiContainerBenchmarks\Fixture\B\FixtureB287();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB287'] = new \DiContainerBenchmarks\Fixture\B\FixtureB287();
     }
 
     /*
@@ -4272,9 +4270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB288
      */
-    protected function getFixtureB288Service()
+    protected static function getFixtureB288Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB288'] = new \DiContainerBenchmarks\Fixture\B\FixtureB288();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB288'] = new \DiContainerBenchmarks\Fixture\B\FixtureB288();
     }
 
     /*
@@ -4282,9 +4280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB289
      */
-    protected function getFixtureB289Service()
+    protected static function getFixtureB289Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB289'] = new \DiContainerBenchmarks\Fixture\B\FixtureB289();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB289'] = new \DiContainerBenchmarks\Fixture\B\FixtureB289();
     }
 
     /*
@@ -4292,9 +4290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB29
      */
-    protected function getFixtureB29Service()
+    protected static function getFixtureB29Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB29'] = new \DiContainerBenchmarks\Fixture\B\FixtureB29();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB29'] = new \DiContainerBenchmarks\Fixture\B\FixtureB29();
     }
 
     /*
@@ -4302,9 +4300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB290
      */
-    protected function getFixtureB290Service()
+    protected static function getFixtureB290Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB290'] = new \DiContainerBenchmarks\Fixture\B\FixtureB290();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB290'] = new \DiContainerBenchmarks\Fixture\B\FixtureB290();
     }
 
     /*
@@ -4312,9 +4310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB291
      */
-    protected function getFixtureB291Service()
+    protected static function getFixtureB291Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB291'] = new \DiContainerBenchmarks\Fixture\B\FixtureB291();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB291'] = new \DiContainerBenchmarks\Fixture\B\FixtureB291();
     }
 
     /*
@@ -4322,9 +4320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB292
      */
-    protected function getFixtureB292Service()
+    protected static function getFixtureB292Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB292'] = new \DiContainerBenchmarks\Fixture\B\FixtureB292();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB292'] = new \DiContainerBenchmarks\Fixture\B\FixtureB292();
     }
 
     /*
@@ -4332,9 +4330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB293
      */
-    protected function getFixtureB293Service()
+    protected static function getFixtureB293Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB293'] = new \DiContainerBenchmarks\Fixture\B\FixtureB293();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB293'] = new \DiContainerBenchmarks\Fixture\B\FixtureB293();
     }
 
     /*
@@ -4342,9 +4340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB294
      */
-    protected function getFixtureB294Service()
+    protected static function getFixtureB294Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB294'] = new \DiContainerBenchmarks\Fixture\B\FixtureB294();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB294'] = new \DiContainerBenchmarks\Fixture\B\FixtureB294();
     }
 
     /*
@@ -4352,9 +4350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB295
      */
-    protected function getFixtureB295Service()
+    protected static function getFixtureB295Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB295'] = new \DiContainerBenchmarks\Fixture\B\FixtureB295();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB295'] = new \DiContainerBenchmarks\Fixture\B\FixtureB295();
     }
 
     /*
@@ -4362,9 +4360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB296
      */
-    protected function getFixtureB296Service()
+    protected static function getFixtureB296Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB296'] = new \DiContainerBenchmarks\Fixture\B\FixtureB296();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB296'] = new \DiContainerBenchmarks\Fixture\B\FixtureB296();
     }
 
     /*
@@ -4372,9 +4370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB297
      */
-    protected function getFixtureB297Service()
+    protected static function getFixtureB297Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB297'] = new \DiContainerBenchmarks\Fixture\B\FixtureB297();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB297'] = new \DiContainerBenchmarks\Fixture\B\FixtureB297();
     }
 
     /*
@@ -4382,9 +4380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB298
      */
-    protected function getFixtureB298Service()
+    protected static function getFixtureB298Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB298'] = new \DiContainerBenchmarks\Fixture\B\FixtureB298();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB298'] = new \DiContainerBenchmarks\Fixture\B\FixtureB298();
     }
 
     /*
@@ -4392,9 +4390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB299
      */
-    protected function getFixtureB299Service()
+    protected static function getFixtureB299Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB299'] = new \DiContainerBenchmarks\Fixture\B\FixtureB299();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB299'] = new \DiContainerBenchmarks\Fixture\B\FixtureB299();
     }
 
     /*
@@ -4402,9 +4400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB3
      */
-    protected function getFixtureB3Service()
+    protected static function getFixtureB3Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB3'] = new \DiContainerBenchmarks\Fixture\B\FixtureB3();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB3'] = new \DiContainerBenchmarks\Fixture\B\FixtureB3();
     }
 
     /*
@@ -4412,9 +4410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB30
      */
-    protected function getFixtureB30Service()
+    protected static function getFixtureB30Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB30'] = new \DiContainerBenchmarks\Fixture\B\FixtureB30();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB30'] = new \DiContainerBenchmarks\Fixture\B\FixtureB30();
     }
 
     /*
@@ -4422,9 +4420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB300
      */
-    protected function getFixtureB300Service()
+    protected static function getFixtureB300Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB300'] = new \DiContainerBenchmarks\Fixture\B\FixtureB300();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB300'] = new \DiContainerBenchmarks\Fixture\B\FixtureB300();
     }
 
     /*
@@ -4432,9 +4430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB301
      */
-    protected function getFixtureB301Service()
+    protected static function getFixtureB301Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB301'] = new \DiContainerBenchmarks\Fixture\B\FixtureB301();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB301'] = new \DiContainerBenchmarks\Fixture\B\FixtureB301();
     }
 
     /*
@@ -4442,9 +4440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB302
      */
-    protected function getFixtureB302Service()
+    protected static function getFixtureB302Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB302'] = new \DiContainerBenchmarks\Fixture\B\FixtureB302();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB302'] = new \DiContainerBenchmarks\Fixture\B\FixtureB302();
     }
 
     /*
@@ -4452,9 +4450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB303
      */
-    protected function getFixtureB303Service()
+    protected static function getFixtureB303Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB303'] = new \DiContainerBenchmarks\Fixture\B\FixtureB303();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB303'] = new \DiContainerBenchmarks\Fixture\B\FixtureB303();
     }
 
     /*
@@ -4462,9 +4460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB304
      */
-    protected function getFixtureB304Service()
+    protected static function getFixtureB304Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB304'] = new \DiContainerBenchmarks\Fixture\B\FixtureB304();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB304'] = new \DiContainerBenchmarks\Fixture\B\FixtureB304();
     }
 
     /*
@@ -4472,9 +4470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB305
      */
-    protected function getFixtureB305Service()
+    protected static function getFixtureB305Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB305'] = new \DiContainerBenchmarks\Fixture\B\FixtureB305();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB305'] = new \DiContainerBenchmarks\Fixture\B\FixtureB305();
     }
 
     /*
@@ -4482,9 +4480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB306
      */
-    protected function getFixtureB306Service()
+    protected static function getFixtureB306Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB306'] = new \DiContainerBenchmarks\Fixture\B\FixtureB306();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB306'] = new \DiContainerBenchmarks\Fixture\B\FixtureB306();
     }
 
     /*
@@ -4492,9 +4490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB307
      */
-    protected function getFixtureB307Service()
+    protected static function getFixtureB307Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB307'] = new \DiContainerBenchmarks\Fixture\B\FixtureB307();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB307'] = new \DiContainerBenchmarks\Fixture\B\FixtureB307();
     }
 
     /*
@@ -4502,9 +4500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB308
      */
-    protected function getFixtureB308Service()
+    protected static function getFixtureB308Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB308'] = new \DiContainerBenchmarks\Fixture\B\FixtureB308();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB308'] = new \DiContainerBenchmarks\Fixture\B\FixtureB308();
     }
 
     /*
@@ -4512,9 +4510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB309
      */
-    protected function getFixtureB309Service()
+    protected static function getFixtureB309Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB309'] = new \DiContainerBenchmarks\Fixture\B\FixtureB309();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB309'] = new \DiContainerBenchmarks\Fixture\B\FixtureB309();
     }
 
     /*
@@ -4522,9 +4520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB31
      */
-    protected function getFixtureB31Service()
+    protected static function getFixtureB31Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB31'] = new \DiContainerBenchmarks\Fixture\B\FixtureB31();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB31'] = new \DiContainerBenchmarks\Fixture\B\FixtureB31();
     }
 
     /*
@@ -4532,9 +4530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB310
      */
-    protected function getFixtureB310Service()
+    protected static function getFixtureB310Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB310'] = new \DiContainerBenchmarks\Fixture\B\FixtureB310();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB310'] = new \DiContainerBenchmarks\Fixture\B\FixtureB310();
     }
 
     /*
@@ -4542,9 +4540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB311
      */
-    protected function getFixtureB311Service()
+    protected static function getFixtureB311Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB311'] = new \DiContainerBenchmarks\Fixture\B\FixtureB311();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB311'] = new \DiContainerBenchmarks\Fixture\B\FixtureB311();
     }
 
     /*
@@ -4552,9 +4550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB312
      */
-    protected function getFixtureB312Service()
+    protected static function getFixtureB312Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB312'] = new \DiContainerBenchmarks\Fixture\B\FixtureB312();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB312'] = new \DiContainerBenchmarks\Fixture\B\FixtureB312();
     }
 
     /*
@@ -4562,9 +4560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB313
      */
-    protected function getFixtureB313Service()
+    protected static function getFixtureB313Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB313'] = new \DiContainerBenchmarks\Fixture\B\FixtureB313();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB313'] = new \DiContainerBenchmarks\Fixture\B\FixtureB313();
     }
 
     /*
@@ -4572,9 +4570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB314
      */
-    protected function getFixtureB314Service()
+    protected static function getFixtureB314Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB314'] = new \DiContainerBenchmarks\Fixture\B\FixtureB314();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB314'] = new \DiContainerBenchmarks\Fixture\B\FixtureB314();
     }
 
     /*
@@ -4582,9 +4580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB315
      */
-    protected function getFixtureB315Service()
+    protected static function getFixtureB315Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB315'] = new \DiContainerBenchmarks\Fixture\B\FixtureB315();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB315'] = new \DiContainerBenchmarks\Fixture\B\FixtureB315();
     }
 
     /*
@@ -4592,9 +4590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB316
      */
-    protected function getFixtureB316Service()
+    protected static function getFixtureB316Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB316'] = new \DiContainerBenchmarks\Fixture\B\FixtureB316();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB316'] = new \DiContainerBenchmarks\Fixture\B\FixtureB316();
     }
 
     /*
@@ -4602,9 +4600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB317
      */
-    protected function getFixtureB317Service()
+    protected static function getFixtureB317Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB317'] = new \DiContainerBenchmarks\Fixture\B\FixtureB317();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB317'] = new \DiContainerBenchmarks\Fixture\B\FixtureB317();
     }
 
     /*
@@ -4612,9 +4610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB318
      */
-    protected function getFixtureB318Service()
+    protected static function getFixtureB318Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB318'] = new \DiContainerBenchmarks\Fixture\B\FixtureB318();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB318'] = new \DiContainerBenchmarks\Fixture\B\FixtureB318();
     }
 
     /*
@@ -4622,9 +4620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB319
      */
-    protected function getFixtureB319Service()
+    protected static function getFixtureB319Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB319'] = new \DiContainerBenchmarks\Fixture\B\FixtureB319();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB319'] = new \DiContainerBenchmarks\Fixture\B\FixtureB319();
     }
 
     /*
@@ -4632,9 +4630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB32
      */
-    protected function getFixtureB32Service()
+    protected static function getFixtureB32Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB32'] = new \DiContainerBenchmarks\Fixture\B\FixtureB32();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB32'] = new \DiContainerBenchmarks\Fixture\B\FixtureB32();
     }
 
     /*
@@ -4642,9 +4640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB320
      */
-    protected function getFixtureB320Service()
+    protected static function getFixtureB320Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB320'] = new \DiContainerBenchmarks\Fixture\B\FixtureB320();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB320'] = new \DiContainerBenchmarks\Fixture\B\FixtureB320();
     }
 
     /*
@@ -4652,9 +4650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB321
      */
-    protected function getFixtureB321Service()
+    protected static function getFixtureB321Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB321'] = new \DiContainerBenchmarks\Fixture\B\FixtureB321();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB321'] = new \DiContainerBenchmarks\Fixture\B\FixtureB321();
     }
 
     /*
@@ -4662,9 +4660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB322
      */
-    protected function getFixtureB322Service()
+    protected static function getFixtureB322Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB322'] = new \DiContainerBenchmarks\Fixture\B\FixtureB322();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB322'] = new \DiContainerBenchmarks\Fixture\B\FixtureB322();
     }
 
     /*
@@ -4672,9 +4670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB323
      */
-    protected function getFixtureB323Service()
+    protected static function getFixtureB323Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB323'] = new \DiContainerBenchmarks\Fixture\B\FixtureB323();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB323'] = new \DiContainerBenchmarks\Fixture\B\FixtureB323();
     }
 
     /*
@@ -4682,9 +4680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB324
      */
-    protected function getFixtureB324Service()
+    protected static function getFixtureB324Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB324'] = new \DiContainerBenchmarks\Fixture\B\FixtureB324();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB324'] = new \DiContainerBenchmarks\Fixture\B\FixtureB324();
     }
 
     /*
@@ -4692,9 +4690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB325
      */
-    protected function getFixtureB325Service()
+    protected static function getFixtureB325Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB325'] = new \DiContainerBenchmarks\Fixture\B\FixtureB325();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB325'] = new \DiContainerBenchmarks\Fixture\B\FixtureB325();
     }
 
     /*
@@ -4702,9 +4700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB326
      */
-    protected function getFixtureB326Service()
+    protected static function getFixtureB326Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB326'] = new \DiContainerBenchmarks\Fixture\B\FixtureB326();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB326'] = new \DiContainerBenchmarks\Fixture\B\FixtureB326();
     }
 
     /*
@@ -4712,9 +4710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB327
      */
-    protected function getFixtureB327Service()
+    protected static function getFixtureB327Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB327'] = new \DiContainerBenchmarks\Fixture\B\FixtureB327();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB327'] = new \DiContainerBenchmarks\Fixture\B\FixtureB327();
     }
 
     /*
@@ -4722,9 +4720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB328
      */
-    protected function getFixtureB328Service()
+    protected static function getFixtureB328Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB328'] = new \DiContainerBenchmarks\Fixture\B\FixtureB328();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB328'] = new \DiContainerBenchmarks\Fixture\B\FixtureB328();
     }
 
     /*
@@ -4732,9 +4730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB329
      */
-    protected function getFixtureB329Service()
+    protected static function getFixtureB329Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB329'] = new \DiContainerBenchmarks\Fixture\B\FixtureB329();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB329'] = new \DiContainerBenchmarks\Fixture\B\FixtureB329();
     }
 
     /*
@@ -4742,9 +4740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB33
      */
-    protected function getFixtureB33Service()
+    protected static function getFixtureB33Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB33'] = new \DiContainerBenchmarks\Fixture\B\FixtureB33();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB33'] = new \DiContainerBenchmarks\Fixture\B\FixtureB33();
     }
 
     /*
@@ -4752,9 +4750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB330
      */
-    protected function getFixtureB330Service()
+    protected static function getFixtureB330Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB330'] = new \DiContainerBenchmarks\Fixture\B\FixtureB330();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB330'] = new \DiContainerBenchmarks\Fixture\B\FixtureB330();
     }
 
     /*
@@ -4762,9 +4760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB331
      */
-    protected function getFixtureB331Service()
+    protected static function getFixtureB331Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB331'] = new \DiContainerBenchmarks\Fixture\B\FixtureB331();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB331'] = new \DiContainerBenchmarks\Fixture\B\FixtureB331();
     }
 
     /*
@@ -4772,9 +4770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB332
      */
-    protected function getFixtureB332Service()
+    protected static function getFixtureB332Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB332'] = new \DiContainerBenchmarks\Fixture\B\FixtureB332();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB332'] = new \DiContainerBenchmarks\Fixture\B\FixtureB332();
     }
 
     /*
@@ -4782,9 +4780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB333
      */
-    protected function getFixtureB333Service()
+    protected static function getFixtureB333Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB333'] = new \DiContainerBenchmarks\Fixture\B\FixtureB333();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB333'] = new \DiContainerBenchmarks\Fixture\B\FixtureB333();
     }
 
     /*
@@ -4792,9 +4790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB334
      */
-    protected function getFixtureB334Service()
+    protected static function getFixtureB334Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB334'] = new \DiContainerBenchmarks\Fixture\B\FixtureB334();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB334'] = new \DiContainerBenchmarks\Fixture\B\FixtureB334();
     }
 
     /*
@@ -4802,9 +4800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB335
      */
-    protected function getFixtureB335Service()
+    protected static function getFixtureB335Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB335'] = new \DiContainerBenchmarks\Fixture\B\FixtureB335();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB335'] = new \DiContainerBenchmarks\Fixture\B\FixtureB335();
     }
 
     /*
@@ -4812,9 +4810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB336
      */
-    protected function getFixtureB336Service()
+    protected static function getFixtureB336Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB336'] = new \DiContainerBenchmarks\Fixture\B\FixtureB336();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB336'] = new \DiContainerBenchmarks\Fixture\B\FixtureB336();
     }
 
     /*
@@ -4822,9 +4820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB337
      */
-    protected function getFixtureB337Service()
+    protected static function getFixtureB337Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB337'] = new \DiContainerBenchmarks\Fixture\B\FixtureB337();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB337'] = new \DiContainerBenchmarks\Fixture\B\FixtureB337();
     }
 
     /*
@@ -4832,9 +4830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB338
      */
-    protected function getFixtureB338Service()
+    protected static function getFixtureB338Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB338'] = new \DiContainerBenchmarks\Fixture\B\FixtureB338();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB338'] = new \DiContainerBenchmarks\Fixture\B\FixtureB338();
     }
 
     /*
@@ -4842,9 +4840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB339
      */
-    protected function getFixtureB339Service()
+    protected static function getFixtureB339Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB339'] = new \DiContainerBenchmarks\Fixture\B\FixtureB339();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB339'] = new \DiContainerBenchmarks\Fixture\B\FixtureB339();
     }
 
     /*
@@ -4852,9 +4850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB34
      */
-    protected function getFixtureB34Service()
+    protected static function getFixtureB34Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB34'] = new \DiContainerBenchmarks\Fixture\B\FixtureB34();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB34'] = new \DiContainerBenchmarks\Fixture\B\FixtureB34();
     }
 
     /*
@@ -4862,9 +4860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB340
      */
-    protected function getFixtureB340Service()
+    protected static function getFixtureB340Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB340'] = new \DiContainerBenchmarks\Fixture\B\FixtureB340();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB340'] = new \DiContainerBenchmarks\Fixture\B\FixtureB340();
     }
 
     /*
@@ -4872,9 +4870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB341
      */
-    protected function getFixtureB341Service()
+    protected static function getFixtureB341Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB341'] = new \DiContainerBenchmarks\Fixture\B\FixtureB341();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB341'] = new \DiContainerBenchmarks\Fixture\B\FixtureB341();
     }
 
     /*
@@ -4882,9 +4880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB342
      */
-    protected function getFixtureB342Service()
+    protected static function getFixtureB342Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB342'] = new \DiContainerBenchmarks\Fixture\B\FixtureB342();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB342'] = new \DiContainerBenchmarks\Fixture\B\FixtureB342();
     }
 
     /*
@@ -4892,9 +4890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB343
      */
-    protected function getFixtureB343Service()
+    protected static function getFixtureB343Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB343'] = new \DiContainerBenchmarks\Fixture\B\FixtureB343();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB343'] = new \DiContainerBenchmarks\Fixture\B\FixtureB343();
     }
 
     /*
@@ -4902,9 +4900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB344
      */
-    protected function getFixtureB344Service()
+    protected static function getFixtureB344Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB344'] = new \DiContainerBenchmarks\Fixture\B\FixtureB344();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB344'] = new \DiContainerBenchmarks\Fixture\B\FixtureB344();
     }
 
     /*
@@ -4912,9 +4910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB345
      */
-    protected function getFixtureB345Service()
+    protected static function getFixtureB345Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB345'] = new \DiContainerBenchmarks\Fixture\B\FixtureB345();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB345'] = new \DiContainerBenchmarks\Fixture\B\FixtureB345();
     }
 
     /*
@@ -4922,9 +4920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB346
      */
-    protected function getFixtureB346Service()
+    protected static function getFixtureB346Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB346'] = new \DiContainerBenchmarks\Fixture\B\FixtureB346();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB346'] = new \DiContainerBenchmarks\Fixture\B\FixtureB346();
     }
 
     /*
@@ -4932,9 +4930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB347
      */
-    protected function getFixtureB347Service()
+    protected static function getFixtureB347Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB347'] = new \DiContainerBenchmarks\Fixture\B\FixtureB347();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB347'] = new \DiContainerBenchmarks\Fixture\B\FixtureB347();
     }
 
     /*
@@ -4942,9 +4940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB348
      */
-    protected function getFixtureB348Service()
+    protected static function getFixtureB348Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB348'] = new \DiContainerBenchmarks\Fixture\B\FixtureB348();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB348'] = new \DiContainerBenchmarks\Fixture\B\FixtureB348();
     }
 
     /*
@@ -4952,9 +4950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB349
      */
-    protected function getFixtureB349Service()
+    protected static function getFixtureB349Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB349'] = new \DiContainerBenchmarks\Fixture\B\FixtureB349();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB349'] = new \DiContainerBenchmarks\Fixture\B\FixtureB349();
     }
 
     /*
@@ -4962,9 +4960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB35
      */
-    protected function getFixtureB35Service()
+    protected static function getFixtureB35Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB35'] = new \DiContainerBenchmarks\Fixture\B\FixtureB35();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB35'] = new \DiContainerBenchmarks\Fixture\B\FixtureB35();
     }
 
     /*
@@ -4972,9 +4970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB350
      */
-    protected function getFixtureB350Service()
+    protected static function getFixtureB350Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB350'] = new \DiContainerBenchmarks\Fixture\B\FixtureB350();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB350'] = new \DiContainerBenchmarks\Fixture\B\FixtureB350();
     }
 
     /*
@@ -4982,9 +4980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB351
      */
-    protected function getFixtureB351Service()
+    protected static function getFixtureB351Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB351'] = new \DiContainerBenchmarks\Fixture\B\FixtureB351();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB351'] = new \DiContainerBenchmarks\Fixture\B\FixtureB351();
     }
 
     /*
@@ -4992,9 +4990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB352
      */
-    protected function getFixtureB352Service()
+    protected static function getFixtureB352Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB352'] = new \DiContainerBenchmarks\Fixture\B\FixtureB352();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB352'] = new \DiContainerBenchmarks\Fixture\B\FixtureB352();
     }
 
     /*
@@ -5002,9 +5000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB353
      */
-    protected function getFixtureB353Service()
+    protected static function getFixtureB353Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB353'] = new \DiContainerBenchmarks\Fixture\B\FixtureB353();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB353'] = new \DiContainerBenchmarks\Fixture\B\FixtureB353();
     }
 
     /*
@@ -5012,9 +5010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB354
      */
-    protected function getFixtureB354Service()
+    protected static function getFixtureB354Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB354'] = new \DiContainerBenchmarks\Fixture\B\FixtureB354();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB354'] = new \DiContainerBenchmarks\Fixture\B\FixtureB354();
     }
 
     /*
@@ -5022,9 +5020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB355
      */
-    protected function getFixtureB355Service()
+    protected static function getFixtureB355Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB355'] = new \DiContainerBenchmarks\Fixture\B\FixtureB355();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB355'] = new \DiContainerBenchmarks\Fixture\B\FixtureB355();
     }
 
     /*
@@ -5032,9 +5030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB356
      */
-    protected function getFixtureB356Service()
+    protected static function getFixtureB356Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB356'] = new \DiContainerBenchmarks\Fixture\B\FixtureB356();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB356'] = new \DiContainerBenchmarks\Fixture\B\FixtureB356();
     }
 
     /*
@@ -5042,9 +5040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB357
      */
-    protected function getFixtureB357Service()
+    protected static function getFixtureB357Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB357'] = new \DiContainerBenchmarks\Fixture\B\FixtureB357();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB357'] = new \DiContainerBenchmarks\Fixture\B\FixtureB357();
     }
 
     /*
@@ -5052,9 +5050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB358
      */
-    protected function getFixtureB358Service()
+    protected static function getFixtureB358Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB358'] = new \DiContainerBenchmarks\Fixture\B\FixtureB358();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB358'] = new \DiContainerBenchmarks\Fixture\B\FixtureB358();
     }
 
     /*
@@ -5062,9 +5060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB359
      */
-    protected function getFixtureB359Service()
+    protected static function getFixtureB359Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB359'] = new \DiContainerBenchmarks\Fixture\B\FixtureB359();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB359'] = new \DiContainerBenchmarks\Fixture\B\FixtureB359();
     }
 
     /*
@@ -5072,9 +5070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB36
      */
-    protected function getFixtureB36Service()
+    protected static function getFixtureB36Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB36'] = new \DiContainerBenchmarks\Fixture\B\FixtureB36();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB36'] = new \DiContainerBenchmarks\Fixture\B\FixtureB36();
     }
 
     /*
@@ -5082,9 +5080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB360
      */
-    protected function getFixtureB360Service()
+    protected static function getFixtureB360Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB360'] = new \DiContainerBenchmarks\Fixture\B\FixtureB360();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB360'] = new \DiContainerBenchmarks\Fixture\B\FixtureB360();
     }
 
     /*
@@ -5092,9 +5090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB361
      */
-    protected function getFixtureB361Service()
+    protected static function getFixtureB361Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB361'] = new \DiContainerBenchmarks\Fixture\B\FixtureB361();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB361'] = new \DiContainerBenchmarks\Fixture\B\FixtureB361();
     }
 
     /*
@@ -5102,9 +5100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB362
      */
-    protected function getFixtureB362Service()
+    protected static function getFixtureB362Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB362'] = new \DiContainerBenchmarks\Fixture\B\FixtureB362();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB362'] = new \DiContainerBenchmarks\Fixture\B\FixtureB362();
     }
 
     /*
@@ -5112,9 +5110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB363
      */
-    protected function getFixtureB363Service()
+    protected static function getFixtureB363Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB363'] = new \DiContainerBenchmarks\Fixture\B\FixtureB363();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB363'] = new \DiContainerBenchmarks\Fixture\B\FixtureB363();
     }
 
     /*
@@ -5122,9 +5120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB364
      */
-    protected function getFixtureB364Service()
+    protected static function getFixtureB364Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB364'] = new \DiContainerBenchmarks\Fixture\B\FixtureB364();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB364'] = new \DiContainerBenchmarks\Fixture\B\FixtureB364();
     }
 
     /*
@@ -5132,9 +5130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB365
      */
-    protected function getFixtureB365Service()
+    protected static function getFixtureB365Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB365'] = new \DiContainerBenchmarks\Fixture\B\FixtureB365();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB365'] = new \DiContainerBenchmarks\Fixture\B\FixtureB365();
     }
 
     /*
@@ -5142,9 +5140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB366
      */
-    protected function getFixtureB366Service()
+    protected static function getFixtureB366Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB366'] = new \DiContainerBenchmarks\Fixture\B\FixtureB366();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB366'] = new \DiContainerBenchmarks\Fixture\B\FixtureB366();
     }
 
     /*
@@ -5152,9 +5150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB367
      */
-    protected function getFixtureB367Service()
+    protected static function getFixtureB367Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB367'] = new \DiContainerBenchmarks\Fixture\B\FixtureB367();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB367'] = new \DiContainerBenchmarks\Fixture\B\FixtureB367();
     }
 
     /*
@@ -5162,9 +5160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB368
      */
-    protected function getFixtureB368Service()
+    protected static function getFixtureB368Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB368'] = new \DiContainerBenchmarks\Fixture\B\FixtureB368();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB368'] = new \DiContainerBenchmarks\Fixture\B\FixtureB368();
     }
 
     /*
@@ -5172,9 +5170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB369
      */
-    protected function getFixtureB369Service()
+    protected static function getFixtureB369Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB369'] = new \DiContainerBenchmarks\Fixture\B\FixtureB369();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB369'] = new \DiContainerBenchmarks\Fixture\B\FixtureB369();
     }
 
     /*
@@ -5182,9 +5180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB37
      */
-    protected function getFixtureB37Service()
+    protected static function getFixtureB37Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB37'] = new \DiContainerBenchmarks\Fixture\B\FixtureB37();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB37'] = new \DiContainerBenchmarks\Fixture\B\FixtureB37();
     }
 
     /*
@@ -5192,9 +5190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB370
      */
-    protected function getFixtureB370Service()
+    protected static function getFixtureB370Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB370'] = new \DiContainerBenchmarks\Fixture\B\FixtureB370();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB370'] = new \DiContainerBenchmarks\Fixture\B\FixtureB370();
     }
 
     /*
@@ -5202,9 +5200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB371
      */
-    protected function getFixtureB371Service()
+    protected static function getFixtureB371Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB371'] = new \DiContainerBenchmarks\Fixture\B\FixtureB371();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB371'] = new \DiContainerBenchmarks\Fixture\B\FixtureB371();
     }
 
     /*
@@ -5212,9 +5210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB372
      */
-    protected function getFixtureB372Service()
+    protected static function getFixtureB372Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB372'] = new \DiContainerBenchmarks\Fixture\B\FixtureB372();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB372'] = new \DiContainerBenchmarks\Fixture\B\FixtureB372();
     }
 
     /*
@@ -5222,9 +5220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB373
      */
-    protected function getFixtureB373Service()
+    protected static function getFixtureB373Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB373'] = new \DiContainerBenchmarks\Fixture\B\FixtureB373();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB373'] = new \DiContainerBenchmarks\Fixture\B\FixtureB373();
     }
 
     /*
@@ -5232,9 +5230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB374
      */
-    protected function getFixtureB374Service()
+    protected static function getFixtureB374Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB374'] = new \DiContainerBenchmarks\Fixture\B\FixtureB374();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB374'] = new \DiContainerBenchmarks\Fixture\B\FixtureB374();
     }
 
     /*
@@ -5242,9 +5240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB375
      */
-    protected function getFixtureB375Service()
+    protected static function getFixtureB375Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB375'] = new \DiContainerBenchmarks\Fixture\B\FixtureB375();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB375'] = new \DiContainerBenchmarks\Fixture\B\FixtureB375();
     }
 
     /*
@@ -5252,9 +5250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB376
      */
-    protected function getFixtureB376Service()
+    protected static function getFixtureB376Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB376'] = new \DiContainerBenchmarks\Fixture\B\FixtureB376();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB376'] = new \DiContainerBenchmarks\Fixture\B\FixtureB376();
     }
 
     /*
@@ -5262,9 +5260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB377
      */
-    protected function getFixtureB377Service()
+    protected static function getFixtureB377Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB377'] = new \DiContainerBenchmarks\Fixture\B\FixtureB377();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB377'] = new \DiContainerBenchmarks\Fixture\B\FixtureB377();
     }
 
     /*
@@ -5272,9 +5270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB378
      */
-    protected function getFixtureB378Service()
+    protected static function getFixtureB378Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB378'] = new \DiContainerBenchmarks\Fixture\B\FixtureB378();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB378'] = new \DiContainerBenchmarks\Fixture\B\FixtureB378();
     }
 
     /*
@@ -5282,9 +5280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB379
      */
-    protected function getFixtureB379Service()
+    protected static function getFixtureB379Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB379'] = new \DiContainerBenchmarks\Fixture\B\FixtureB379();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB379'] = new \DiContainerBenchmarks\Fixture\B\FixtureB379();
     }
 
     /*
@@ -5292,9 +5290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB38
      */
-    protected function getFixtureB38Service()
+    protected static function getFixtureB38Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB38'] = new \DiContainerBenchmarks\Fixture\B\FixtureB38();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB38'] = new \DiContainerBenchmarks\Fixture\B\FixtureB38();
     }
 
     /*
@@ -5302,9 +5300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB380
      */
-    protected function getFixtureB380Service()
+    protected static function getFixtureB380Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB380'] = new \DiContainerBenchmarks\Fixture\B\FixtureB380();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB380'] = new \DiContainerBenchmarks\Fixture\B\FixtureB380();
     }
 
     /*
@@ -5312,9 +5310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB381
      */
-    protected function getFixtureB381Service()
+    protected static function getFixtureB381Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB381'] = new \DiContainerBenchmarks\Fixture\B\FixtureB381();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB381'] = new \DiContainerBenchmarks\Fixture\B\FixtureB381();
     }
 
     /*
@@ -5322,9 +5320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB382
      */
-    protected function getFixtureB382Service()
+    protected static function getFixtureB382Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB382'] = new \DiContainerBenchmarks\Fixture\B\FixtureB382();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB382'] = new \DiContainerBenchmarks\Fixture\B\FixtureB382();
     }
 
     /*
@@ -5332,9 +5330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB383
      */
-    protected function getFixtureB383Service()
+    protected static function getFixtureB383Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB383'] = new \DiContainerBenchmarks\Fixture\B\FixtureB383();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB383'] = new \DiContainerBenchmarks\Fixture\B\FixtureB383();
     }
 
     /*
@@ -5342,9 +5340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB384
      */
-    protected function getFixtureB384Service()
+    protected static function getFixtureB384Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB384'] = new \DiContainerBenchmarks\Fixture\B\FixtureB384();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB384'] = new \DiContainerBenchmarks\Fixture\B\FixtureB384();
     }
 
     /*
@@ -5352,9 +5350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB385
      */
-    protected function getFixtureB385Service()
+    protected static function getFixtureB385Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB385'] = new \DiContainerBenchmarks\Fixture\B\FixtureB385();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB385'] = new \DiContainerBenchmarks\Fixture\B\FixtureB385();
     }
 
     /*
@@ -5362,9 +5360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB386
      */
-    protected function getFixtureB386Service()
+    protected static function getFixtureB386Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB386'] = new \DiContainerBenchmarks\Fixture\B\FixtureB386();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB386'] = new \DiContainerBenchmarks\Fixture\B\FixtureB386();
     }
 
     /*
@@ -5372,9 +5370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB387
      */
-    protected function getFixtureB387Service()
+    protected static function getFixtureB387Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB387'] = new \DiContainerBenchmarks\Fixture\B\FixtureB387();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB387'] = new \DiContainerBenchmarks\Fixture\B\FixtureB387();
     }
 
     /*
@@ -5382,9 +5380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB388
      */
-    protected function getFixtureB388Service()
+    protected static function getFixtureB388Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB388'] = new \DiContainerBenchmarks\Fixture\B\FixtureB388();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB388'] = new \DiContainerBenchmarks\Fixture\B\FixtureB388();
     }
 
     /*
@@ -5392,9 +5390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB389
      */
-    protected function getFixtureB389Service()
+    protected static function getFixtureB389Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB389'] = new \DiContainerBenchmarks\Fixture\B\FixtureB389();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB389'] = new \DiContainerBenchmarks\Fixture\B\FixtureB389();
     }
 
     /*
@@ -5402,9 +5400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB39
      */
-    protected function getFixtureB39Service()
+    protected static function getFixtureB39Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB39'] = new \DiContainerBenchmarks\Fixture\B\FixtureB39();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB39'] = new \DiContainerBenchmarks\Fixture\B\FixtureB39();
     }
 
     /*
@@ -5412,9 +5410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB390
      */
-    protected function getFixtureB390Service()
+    protected static function getFixtureB390Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB390'] = new \DiContainerBenchmarks\Fixture\B\FixtureB390();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB390'] = new \DiContainerBenchmarks\Fixture\B\FixtureB390();
     }
 
     /*
@@ -5422,9 +5420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB391
      */
-    protected function getFixtureB391Service()
+    protected static function getFixtureB391Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB391'] = new \DiContainerBenchmarks\Fixture\B\FixtureB391();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB391'] = new \DiContainerBenchmarks\Fixture\B\FixtureB391();
     }
 
     /*
@@ -5432,9 +5430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB392
      */
-    protected function getFixtureB392Service()
+    protected static function getFixtureB392Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB392'] = new \DiContainerBenchmarks\Fixture\B\FixtureB392();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB392'] = new \DiContainerBenchmarks\Fixture\B\FixtureB392();
     }
 
     /*
@@ -5442,9 +5440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB393
      */
-    protected function getFixtureB393Service()
+    protected static function getFixtureB393Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB393'] = new \DiContainerBenchmarks\Fixture\B\FixtureB393();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB393'] = new \DiContainerBenchmarks\Fixture\B\FixtureB393();
     }
 
     /*
@@ -5452,9 +5450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB394
      */
-    protected function getFixtureB394Service()
+    protected static function getFixtureB394Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB394'] = new \DiContainerBenchmarks\Fixture\B\FixtureB394();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB394'] = new \DiContainerBenchmarks\Fixture\B\FixtureB394();
     }
 
     /*
@@ -5462,9 +5460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB395
      */
-    protected function getFixtureB395Service()
+    protected static function getFixtureB395Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB395'] = new \DiContainerBenchmarks\Fixture\B\FixtureB395();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB395'] = new \DiContainerBenchmarks\Fixture\B\FixtureB395();
     }
 
     /*
@@ -5472,9 +5470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB396
      */
-    protected function getFixtureB396Service()
+    protected static function getFixtureB396Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB396'] = new \DiContainerBenchmarks\Fixture\B\FixtureB396();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB396'] = new \DiContainerBenchmarks\Fixture\B\FixtureB396();
     }
 
     /*
@@ -5482,9 +5480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB397
      */
-    protected function getFixtureB397Service()
+    protected static function getFixtureB397Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB397'] = new \DiContainerBenchmarks\Fixture\B\FixtureB397();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB397'] = new \DiContainerBenchmarks\Fixture\B\FixtureB397();
     }
 
     /*
@@ -5492,9 +5490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB398
      */
-    protected function getFixtureB398Service()
+    protected static function getFixtureB398Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB398'] = new \DiContainerBenchmarks\Fixture\B\FixtureB398();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB398'] = new \DiContainerBenchmarks\Fixture\B\FixtureB398();
     }
 
     /*
@@ -5502,9 +5500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB399
      */
-    protected function getFixtureB399Service()
+    protected static function getFixtureB399Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB399'] = new \DiContainerBenchmarks\Fixture\B\FixtureB399();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB399'] = new \DiContainerBenchmarks\Fixture\B\FixtureB399();
     }
 
     /*
@@ -5512,9 +5510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB4
      */
-    protected function getFixtureB4Service()
+    protected static function getFixtureB4Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB4'] = new \DiContainerBenchmarks\Fixture\B\FixtureB4();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB4'] = new \DiContainerBenchmarks\Fixture\B\FixtureB4();
     }
 
     /*
@@ -5522,9 +5520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB40
      */
-    protected function getFixtureB40Service()
+    protected static function getFixtureB40Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB40'] = new \DiContainerBenchmarks\Fixture\B\FixtureB40();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB40'] = new \DiContainerBenchmarks\Fixture\B\FixtureB40();
     }
 
     /*
@@ -5532,9 +5530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB400
      */
-    protected function getFixtureB400Service()
+    protected static function getFixtureB400Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB400'] = new \DiContainerBenchmarks\Fixture\B\FixtureB400();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB400'] = new \DiContainerBenchmarks\Fixture\B\FixtureB400();
     }
 
     /*
@@ -5542,9 +5540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB401
      */
-    protected function getFixtureB401Service()
+    protected static function getFixtureB401Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB401'] = new \DiContainerBenchmarks\Fixture\B\FixtureB401();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB401'] = new \DiContainerBenchmarks\Fixture\B\FixtureB401();
     }
 
     /*
@@ -5552,9 +5550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB402
      */
-    protected function getFixtureB402Service()
+    protected static function getFixtureB402Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB402'] = new \DiContainerBenchmarks\Fixture\B\FixtureB402();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB402'] = new \DiContainerBenchmarks\Fixture\B\FixtureB402();
     }
 
     /*
@@ -5562,9 +5560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB403
      */
-    protected function getFixtureB403Service()
+    protected static function getFixtureB403Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB403'] = new \DiContainerBenchmarks\Fixture\B\FixtureB403();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB403'] = new \DiContainerBenchmarks\Fixture\B\FixtureB403();
     }
 
     /*
@@ -5572,9 +5570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB404
      */
-    protected function getFixtureB404Service()
+    protected static function getFixtureB404Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB404'] = new \DiContainerBenchmarks\Fixture\B\FixtureB404();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB404'] = new \DiContainerBenchmarks\Fixture\B\FixtureB404();
     }
 
     /*
@@ -5582,9 +5580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB405
      */
-    protected function getFixtureB405Service()
+    protected static function getFixtureB405Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB405'] = new \DiContainerBenchmarks\Fixture\B\FixtureB405();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB405'] = new \DiContainerBenchmarks\Fixture\B\FixtureB405();
     }
 
     /*
@@ -5592,9 +5590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB406
      */
-    protected function getFixtureB406Service()
+    protected static function getFixtureB406Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB406'] = new \DiContainerBenchmarks\Fixture\B\FixtureB406();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB406'] = new \DiContainerBenchmarks\Fixture\B\FixtureB406();
     }
 
     /*
@@ -5602,9 +5600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB407
      */
-    protected function getFixtureB407Service()
+    protected static function getFixtureB407Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB407'] = new \DiContainerBenchmarks\Fixture\B\FixtureB407();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB407'] = new \DiContainerBenchmarks\Fixture\B\FixtureB407();
     }
 
     /*
@@ -5612,9 +5610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB408
      */
-    protected function getFixtureB408Service()
+    protected static function getFixtureB408Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB408'] = new \DiContainerBenchmarks\Fixture\B\FixtureB408();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB408'] = new \DiContainerBenchmarks\Fixture\B\FixtureB408();
     }
 
     /*
@@ -5622,9 +5620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB409
      */
-    protected function getFixtureB409Service()
+    protected static function getFixtureB409Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB409'] = new \DiContainerBenchmarks\Fixture\B\FixtureB409();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB409'] = new \DiContainerBenchmarks\Fixture\B\FixtureB409();
     }
 
     /*
@@ -5632,9 +5630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB41
      */
-    protected function getFixtureB41Service()
+    protected static function getFixtureB41Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB41'] = new \DiContainerBenchmarks\Fixture\B\FixtureB41();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB41'] = new \DiContainerBenchmarks\Fixture\B\FixtureB41();
     }
 
     /*
@@ -5642,9 +5640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB410
      */
-    protected function getFixtureB410Service()
+    protected static function getFixtureB410Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB410'] = new \DiContainerBenchmarks\Fixture\B\FixtureB410();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB410'] = new \DiContainerBenchmarks\Fixture\B\FixtureB410();
     }
 
     /*
@@ -5652,9 +5650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB411
      */
-    protected function getFixtureB411Service()
+    protected static function getFixtureB411Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB411'] = new \DiContainerBenchmarks\Fixture\B\FixtureB411();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB411'] = new \DiContainerBenchmarks\Fixture\B\FixtureB411();
     }
 
     /*
@@ -5662,9 +5660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB412
      */
-    protected function getFixtureB412Service()
+    protected static function getFixtureB412Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB412'] = new \DiContainerBenchmarks\Fixture\B\FixtureB412();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB412'] = new \DiContainerBenchmarks\Fixture\B\FixtureB412();
     }
 
     /*
@@ -5672,9 +5670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB413
      */
-    protected function getFixtureB413Service()
+    protected static function getFixtureB413Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB413'] = new \DiContainerBenchmarks\Fixture\B\FixtureB413();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB413'] = new \DiContainerBenchmarks\Fixture\B\FixtureB413();
     }
 
     /*
@@ -5682,9 +5680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB414
      */
-    protected function getFixtureB414Service()
+    protected static function getFixtureB414Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB414'] = new \DiContainerBenchmarks\Fixture\B\FixtureB414();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB414'] = new \DiContainerBenchmarks\Fixture\B\FixtureB414();
     }
 
     /*
@@ -5692,9 +5690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB415
      */
-    protected function getFixtureB415Service()
+    protected static function getFixtureB415Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB415'] = new \DiContainerBenchmarks\Fixture\B\FixtureB415();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB415'] = new \DiContainerBenchmarks\Fixture\B\FixtureB415();
     }
 
     /*
@@ -5702,9 +5700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB416
      */
-    protected function getFixtureB416Service()
+    protected static function getFixtureB416Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB416'] = new \DiContainerBenchmarks\Fixture\B\FixtureB416();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB416'] = new \DiContainerBenchmarks\Fixture\B\FixtureB416();
     }
 
     /*
@@ -5712,9 +5710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB417
      */
-    protected function getFixtureB417Service()
+    protected static function getFixtureB417Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB417'] = new \DiContainerBenchmarks\Fixture\B\FixtureB417();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB417'] = new \DiContainerBenchmarks\Fixture\B\FixtureB417();
     }
 
     /*
@@ -5722,9 +5720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB418
      */
-    protected function getFixtureB418Service()
+    protected static function getFixtureB418Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB418'] = new \DiContainerBenchmarks\Fixture\B\FixtureB418();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB418'] = new \DiContainerBenchmarks\Fixture\B\FixtureB418();
     }
 
     /*
@@ -5732,9 +5730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB419
      */
-    protected function getFixtureB419Service()
+    protected static function getFixtureB419Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB419'] = new \DiContainerBenchmarks\Fixture\B\FixtureB419();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB419'] = new \DiContainerBenchmarks\Fixture\B\FixtureB419();
     }
 
     /*
@@ -5742,9 +5740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB42
      */
-    protected function getFixtureB42Service()
+    protected static function getFixtureB42Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB42'] = new \DiContainerBenchmarks\Fixture\B\FixtureB42();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB42'] = new \DiContainerBenchmarks\Fixture\B\FixtureB42();
     }
 
     /*
@@ -5752,9 +5750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB420
      */
-    protected function getFixtureB420Service()
+    protected static function getFixtureB420Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB420'] = new \DiContainerBenchmarks\Fixture\B\FixtureB420();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB420'] = new \DiContainerBenchmarks\Fixture\B\FixtureB420();
     }
 
     /*
@@ -5762,9 +5760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB421
      */
-    protected function getFixtureB421Service()
+    protected static function getFixtureB421Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB421'] = new \DiContainerBenchmarks\Fixture\B\FixtureB421();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB421'] = new \DiContainerBenchmarks\Fixture\B\FixtureB421();
     }
 
     /*
@@ -5772,9 +5770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB422
      */
-    protected function getFixtureB422Service()
+    protected static function getFixtureB422Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB422'] = new \DiContainerBenchmarks\Fixture\B\FixtureB422();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB422'] = new \DiContainerBenchmarks\Fixture\B\FixtureB422();
     }
 
     /*
@@ -5782,9 +5780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB423
      */
-    protected function getFixtureB423Service()
+    protected static function getFixtureB423Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB423'] = new \DiContainerBenchmarks\Fixture\B\FixtureB423();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB423'] = new \DiContainerBenchmarks\Fixture\B\FixtureB423();
     }
 
     /*
@@ -5792,9 +5790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB424
      */
-    protected function getFixtureB424Service()
+    protected static function getFixtureB424Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB424'] = new \DiContainerBenchmarks\Fixture\B\FixtureB424();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB424'] = new \DiContainerBenchmarks\Fixture\B\FixtureB424();
     }
 
     /*
@@ -5802,9 +5800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB425
      */
-    protected function getFixtureB425Service()
+    protected static function getFixtureB425Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB425'] = new \DiContainerBenchmarks\Fixture\B\FixtureB425();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB425'] = new \DiContainerBenchmarks\Fixture\B\FixtureB425();
     }
 
     /*
@@ -5812,9 +5810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB426
      */
-    protected function getFixtureB426Service()
+    protected static function getFixtureB426Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB426'] = new \DiContainerBenchmarks\Fixture\B\FixtureB426();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB426'] = new \DiContainerBenchmarks\Fixture\B\FixtureB426();
     }
 
     /*
@@ -5822,9 +5820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB427
      */
-    protected function getFixtureB427Service()
+    protected static function getFixtureB427Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB427'] = new \DiContainerBenchmarks\Fixture\B\FixtureB427();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB427'] = new \DiContainerBenchmarks\Fixture\B\FixtureB427();
     }
 
     /*
@@ -5832,9 +5830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB428
      */
-    protected function getFixtureB428Service()
+    protected static function getFixtureB428Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB428'] = new \DiContainerBenchmarks\Fixture\B\FixtureB428();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB428'] = new \DiContainerBenchmarks\Fixture\B\FixtureB428();
     }
 
     /*
@@ -5842,9 +5840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB429
      */
-    protected function getFixtureB429Service()
+    protected static function getFixtureB429Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB429'] = new \DiContainerBenchmarks\Fixture\B\FixtureB429();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB429'] = new \DiContainerBenchmarks\Fixture\B\FixtureB429();
     }
 
     /*
@@ -5852,9 +5850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB43
      */
-    protected function getFixtureB43Service()
+    protected static function getFixtureB43Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB43'] = new \DiContainerBenchmarks\Fixture\B\FixtureB43();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB43'] = new \DiContainerBenchmarks\Fixture\B\FixtureB43();
     }
 
     /*
@@ -5862,9 +5860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB430
      */
-    protected function getFixtureB430Service()
+    protected static function getFixtureB430Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB430'] = new \DiContainerBenchmarks\Fixture\B\FixtureB430();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB430'] = new \DiContainerBenchmarks\Fixture\B\FixtureB430();
     }
 
     /*
@@ -5872,9 +5870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB431
      */
-    protected function getFixtureB431Service()
+    protected static function getFixtureB431Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB431'] = new \DiContainerBenchmarks\Fixture\B\FixtureB431();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB431'] = new \DiContainerBenchmarks\Fixture\B\FixtureB431();
     }
 
     /*
@@ -5882,9 +5880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB432
      */
-    protected function getFixtureB432Service()
+    protected static function getFixtureB432Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB432'] = new \DiContainerBenchmarks\Fixture\B\FixtureB432();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB432'] = new \DiContainerBenchmarks\Fixture\B\FixtureB432();
     }
 
     /*
@@ -5892,9 +5890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB433
      */
-    protected function getFixtureB433Service()
+    protected static function getFixtureB433Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB433'] = new \DiContainerBenchmarks\Fixture\B\FixtureB433();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB433'] = new \DiContainerBenchmarks\Fixture\B\FixtureB433();
     }
 
     /*
@@ -5902,9 +5900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB434
      */
-    protected function getFixtureB434Service()
+    protected static function getFixtureB434Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB434'] = new \DiContainerBenchmarks\Fixture\B\FixtureB434();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB434'] = new \DiContainerBenchmarks\Fixture\B\FixtureB434();
     }
 
     /*
@@ -5912,9 +5910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB435
      */
-    protected function getFixtureB435Service()
+    protected static function getFixtureB435Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB435'] = new \DiContainerBenchmarks\Fixture\B\FixtureB435();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB435'] = new \DiContainerBenchmarks\Fixture\B\FixtureB435();
     }
 
     /*
@@ -5922,9 +5920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB436
      */
-    protected function getFixtureB436Service()
+    protected static function getFixtureB436Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB436'] = new \DiContainerBenchmarks\Fixture\B\FixtureB436();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB436'] = new \DiContainerBenchmarks\Fixture\B\FixtureB436();
     }
 
     /*
@@ -5932,9 +5930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB437
      */
-    protected function getFixtureB437Service()
+    protected static function getFixtureB437Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB437'] = new \DiContainerBenchmarks\Fixture\B\FixtureB437();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB437'] = new \DiContainerBenchmarks\Fixture\B\FixtureB437();
     }
 
     /*
@@ -5942,9 +5940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB438
      */
-    protected function getFixtureB438Service()
+    protected static function getFixtureB438Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB438'] = new \DiContainerBenchmarks\Fixture\B\FixtureB438();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB438'] = new \DiContainerBenchmarks\Fixture\B\FixtureB438();
     }
 
     /*
@@ -5952,9 +5950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB439
      */
-    protected function getFixtureB439Service()
+    protected static function getFixtureB439Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB439'] = new \DiContainerBenchmarks\Fixture\B\FixtureB439();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB439'] = new \DiContainerBenchmarks\Fixture\B\FixtureB439();
     }
 
     /*
@@ -5962,9 +5960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB44
      */
-    protected function getFixtureB44Service()
+    protected static function getFixtureB44Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB44'] = new \DiContainerBenchmarks\Fixture\B\FixtureB44();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB44'] = new \DiContainerBenchmarks\Fixture\B\FixtureB44();
     }
 
     /*
@@ -5972,9 +5970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB440
      */
-    protected function getFixtureB440Service()
+    protected static function getFixtureB440Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB440'] = new \DiContainerBenchmarks\Fixture\B\FixtureB440();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB440'] = new \DiContainerBenchmarks\Fixture\B\FixtureB440();
     }
 
     /*
@@ -5982,9 +5980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB441
      */
-    protected function getFixtureB441Service()
+    protected static function getFixtureB441Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB441'] = new \DiContainerBenchmarks\Fixture\B\FixtureB441();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB441'] = new \DiContainerBenchmarks\Fixture\B\FixtureB441();
     }
 
     /*
@@ -5992,9 +5990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB442
      */
-    protected function getFixtureB442Service()
+    protected static function getFixtureB442Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB442'] = new \DiContainerBenchmarks\Fixture\B\FixtureB442();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB442'] = new \DiContainerBenchmarks\Fixture\B\FixtureB442();
     }
 
     /*
@@ -6002,9 +6000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB443
      */
-    protected function getFixtureB443Service()
+    protected static function getFixtureB443Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB443'] = new \DiContainerBenchmarks\Fixture\B\FixtureB443();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB443'] = new \DiContainerBenchmarks\Fixture\B\FixtureB443();
     }
 
     /*
@@ -6012,9 +6010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB444
      */
-    protected function getFixtureB444Service()
+    protected static function getFixtureB444Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB444'] = new \DiContainerBenchmarks\Fixture\B\FixtureB444();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB444'] = new \DiContainerBenchmarks\Fixture\B\FixtureB444();
     }
 
     /*
@@ -6022,9 +6020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB445
      */
-    protected function getFixtureB445Service()
+    protected static function getFixtureB445Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB445'] = new \DiContainerBenchmarks\Fixture\B\FixtureB445();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB445'] = new \DiContainerBenchmarks\Fixture\B\FixtureB445();
     }
 
     /*
@@ -6032,9 +6030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB446
      */
-    protected function getFixtureB446Service()
+    protected static function getFixtureB446Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB446'] = new \DiContainerBenchmarks\Fixture\B\FixtureB446();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB446'] = new \DiContainerBenchmarks\Fixture\B\FixtureB446();
     }
 
     /*
@@ -6042,9 +6040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB447
      */
-    protected function getFixtureB447Service()
+    protected static function getFixtureB447Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB447'] = new \DiContainerBenchmarks\Fixture\B\FixtureB447();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB447'] = new \DiContainerBenchmarks\Fixture\B\FixtureB447();
     }
 
     /*
@@ -6052,9 +6050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB448
      */
-    protected function getFixtureB448Service()
+    protected static function getFixtureB448Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB448'] = new \DiContainerBenchmarks\Fixture\B\FixtureB448();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB448'] = new \DiContainerBenchmarks\Fixture\B\FixtureB448();
     }
 
     /*
@@ -6062,9 +6060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB449
      */
-    protected function getFixtureB449Service()
+    protected static function getFixtureB449Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB449'] = new \DiContainerBenchmarks\Fixture\B\FixtureB449();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB449'] = new \DiContainerBenchmarks\Fixture\B\FixtureB449();
     }
 
     /*
@@ -6072,9 +6070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB45
      */
-    protected function getFixtureB45Service()
+    protected static function getFixtureB45Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB45'] = new \DiContainerBenchmarks\Fixture\B\FixtureB45();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB45'] = new \DiContainerBenchmarks\Fixture\B\FixtureB45();
     }
 
     /*
@@ -6082,9 +6080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB450
      */
-    protected function getFixtureB450Service()
+    protected static function getFixtureB450Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB450'] = new \DiContainerBenchmarks\Fixture\B\FixtureB450();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB450'] = new \DiContainerBenchmarks\Fixture\B\FixtureB450();
     }
 
     /*
@@ -6092,9 +6090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB451
      */
-    protected function getFixtureB451Service()
+    protected static function getFixtureB451Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB451'] = new \DiContainerBenchmarks\Fixture\B\FixtureB451();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB451'] = new \DiContainerBenchmarks\Fixture\B\FixtureB451();
     }
 
     /*
@@ -6102,9 +6100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB452
      */
-    protected function getFixtureB452Service()
+    protected static function getFixtureB452Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB452'] = new \DiContainerBenchmarks\Fixture\B\FixtureB452();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB452'] = new \DiContainerBenchmarks\Fixture\B\FixtureB452();
     }
 
     /*
@@ -6112,9 +6110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB453
      */
-    protected function getFixtureB453Service()
+    protected static function getFixtureB453Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB453'] = new \DiContainerBenchmarks\Fixture\B\FixtureB453();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB453'] = new \DiContainerBenchmarks\Fixture\B\FixtureB453();
     }
 
     /*
@@ -6122,9 +6120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB454
      */
-    protected function getFixtureB454Service()
+    protected static function getFixtureB454Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB454'] = new \DiContainerBenchmarks\Fixture\B\FixtureB454();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB454'] = new \DiContainerBenchmarks\Fixture\B\FixtureB454();
     }
 
     /*
@@ -6132,9 +6130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB455
      */
-    protected function getFixtureB455Service()
+    protected static function getFixtureB455Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB455'] = new \DiContainerBenchmarks\Fixture\B\FixtureB455();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB455'] = new \DiContainerBenchmarks\Fixture\B\FixtureB455();
     }
 
     /*
@@ -6142,9 +6140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB456
      */
-    protected function getFixtureB456Service()
+    protected static function getFixtureB456Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB456'] = new \DiContainerBenchmarks\Fixture\B\FixtureB456();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB456'] = new \DiContainerBenchmarks\Fixture\B\FixtureB456();
     }
 
     /*
@@ -6152,9 +6150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB457
      */
-    protected function getFixtureB457Service()
+    protected static function getFixtureB457Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB457'] = new \DiContainerBenchmarks\Fixture\B\FixtureB457();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB457'] = new \DiContainerBenchmarks\Fixture\B\FixtureB457();
     }
 
     /*
@@ -6162,9 +6160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB458
      */
-    protected function getFixtureB458Service()
+    protected static function getFixtureB458Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB458'] = new \DiContainerBenchmarks\Fixture\B\FixtureB458();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB458'] = new \DiContainerBenchmarks\Fixture\B\FixtureB458();
     }
 
     /*
@@ -6172,9 +6170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB459
      */
-    protected function getFixtureB459Service()
+    protected static function getFixtureB459Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB459'] = new \DiContainerBenchmarks\Fixture\B\FixtureB459();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB459'] = new \DiContainerBenchmarks\Fixture\B\FixtureB459();
     }
 
     /*
@@ -6182,9 +6180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB46
      */
-    protected function getFixtureB46Service()
+    protected static function getFixtureB46Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB46'] = new \DiContainerBenchmarks\Fixture\B\FixtureB46();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB46'] = new \DiContainerBenchmarks\Fixture\B\FixtureB46();
     }
 
     /*
@@ -6192,9 +6190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB460
      */
-    protected function getFixtureB460Service()
+    protected static function getFixtureB460Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB460'] = new \DiContainerBenchmarks\Fixture\B\FixtureB460();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB460'] = new \DiContainerBenchmarks\Fixture\B\FixtureB460();
     }
 
     /*
@@ -6202,9 +6200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB461
      */
-    protected function getFixtureB461Service()
+    protected static function getFixtureB461Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB461'] = new \DiContainerBenchmarks\Fixture\B\FixtureB461();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB461'] = new \DiContainerBenchmarks\Fixture\B\FixtureB461();
     }
 
     /*
@@ -6212,9 +6210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB462
      */
-    protected function getFixtureB462Service()
+    protected static function getFixtureB462Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB462'] = new \DiContainerBenchmarks\Fixture\B\FixtureB462();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB462'] = new \DiContainerBenchmarks\Fixture\B\FixtureB462();
     }
 
     /*
@@ -6222,9 +6220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB463
      */
-    protected function getFixtureB463Service()
+    protected static function getFixtureB463Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB463'] = new \DiContainerBenchmarks\Fixture\B\FixtureB463();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB463'] = new \DiContainerBenchmarks\Fixture\B\FixtureB463();
     }
 
     /*
@@ -6232,9 +6230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB464
      */
-    protected function getFixtureB464Service()
+    protected static function getFixtureB464Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB464'] = new \DiContainerBenchmarks\Fixture\B\FixtureB464();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB464'] = new \DiContainerBenchmarks\Fixture\B\FixtureB464();
     }
 
     /*
@@ -6242,9 +6240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB465
      */
-    protected function getFixtureB465Service()
+    protected static function getFixtureB465Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB465'] = new \DiContainerBenchmarks\Fixture\B\FixtureB465();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB465'] = new \DiContainerBenchmarks\Fixture\B\FixtureB465();
     }
 
     /*
@@ -6252,9 +6250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB466
      */
-    protected function getFixtureB466Service()
+    protected static function getFixtureB466Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB466'] = new \DiContainerBenchmarks\Fixture\B\FixtureB466();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB466'] = new \DiContainerBenchmarks\Fixture\B\FixtureB466();
     }
 
     /*
@@ -6262,9 +6260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB467
      */
-    protected function getFixtureB467Service()
+    protected static function getFixtureB467Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB467'] = new \DiContainerBenchmarks\Fixture\B\FixtureB467();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB467'] = new \DiContainerBenchmarks\Fixture\B\FixtureB467();
     }
 
     /*
@@ -6272,9 +6270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB468
      */
-    protected function getFixtureB468Service()
+    protected static function getFixtureB468Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB468'] = new \DiContainerBenchmarks\Fixture\B\FixtureB468();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB468'] = new \DiContainerBenchmarks\Fixture\B\FixtureB468();
     }
 
     /*
@@ -6282,9 +6280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB469
      */
-    protected function getFixtureB469Service()
+    protected static function getFixtureB469Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB469'] = new \DiContainerBenchmarks\Fixture\B\FixtureB469();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB469'] = new \DiContainerBenchmarks\Fixture\B\FixtureB469();
     }
 
     /*
@@ -6292,9 +6290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB47
      */
-    protected function getFixtureB47Service()
+    protected static function getFixtureB47Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB47'] = new \DiContainerBenchmarks\Fixture\B\FixtureB47();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB47'] = new \DiContainerBenchmarks\Fixture\B\FixtureB47();
     }
 
     /*
@@ -6302,9 +6300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB470
      */
-    protected function getFixtureB470Service()
+    protected static function getFixtureB470Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB470'] = new \DiContainerBenchmarks\Fixture\B\FixtureB470();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB470'] = new \DiContainerBenchmarks\Fixture\B\FixtureB470();
     }
 
     /*
@@ -6312,9 +6310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB471
      */
-    protected function getFixtureB471Service()
+    protected static function getFixtureB471Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB471'] = new \DiContainerBenchmarks\Fixture\B\FixtureB471();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB471'] = new \DiContainerBenchmarks\Fixture\B\FixtureB471();
     }
 
     /*
@@ -6322,9 +6320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB472
      */
-    protected function getFixtureB472Service()
+    protected static function getFixtureB472Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB472'] = new \DiContainerBenchmarks\Fixture\B\FixtureB472();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB472'] = new \DiContainerBenchmarks\Fixture\B\FixtureB472();
     }
 
     /*
@@ -6332,9 +6330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB473
      */
-    protected function getFixtureB473Service()
+    protected static function getFixtureB473Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB473'] = new \DiContainerBenchmarks\Fixture\B\FixtureB473();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB473'] = new \DiContainerBenchmarks\Fixture\B\FixtureB473();
     }
 
     /*
@@ -6342,9 +6340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB474
      */
-    protected function getFixtureB474Service()
+    protected static function getFixtureB474Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB474'] = new \DiContainerBenchmarks\Fixture\B\FixtureB474();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB474'] = new \DiContainerBenchmarks\Fixture\B\FixtureB474();
     }
 
     /*
@@ -6352,9 +6350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB475
      */
-    protected function getFixtureB475Service()
+    protected static function getFixtureB475Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB475'] = new \DiContainerBenchmarks\Fixture\B\FixtureB475();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB475'] = new \DiContainerBenchmarks\Fixture\B\FixtureB475();
     }
 
     /*
@@ -6362,9 +6360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB476
      */
-    protected function getFixtureB476Service()
+    protected static function getFixtureB476Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB476'] = new \DiContainerBenchmarks\Fixture\B\FixtureB476();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB476'] = new \DiContainerBenchmarks\Fixture\B\FixtureB476();
     }
 
     /*
@@ -6372,9 +6370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB477
      */
-    protected function getFixtureB477Service()
+    protected static function getFixtureB477Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB477'] = new \DiContainerBenchmarks\Fixture\B\FixtureB477();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB477'] = new \DiContainerBenchmarks\Fixture\B\FixtureB477();
     }
 
     /*
@@ -6382,9 +6380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB478
      */
-    protected function getFixtureB478Service()
+    protected static function getFixtureB478Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB478'] = new \DiContainerBenchmarks\Fixture\B\FixtureB478();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB478'] = new \DiContainerBenchmarks\Fixture\B\FixtureB478();
     }
 
     /*
@@ -6392,9 +6390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB479
      */
-    protected function getFixtureB479Service()
+    protected static function getFixtureB479Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB479'] = new \DiContainerBenchmarks\Fixture\B\FixtureB479();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB479'] = new \DiContainerBenchmarks\Fixture\B\FixtureB479();
     }
 
     /*
@@ -6402,9 +6400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB48
      */
-    protected function getFixtureB48Service()
+    protected static function getFixtureB48Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB48'] = new \DiContainerBenchmarks\Fixture\B\FixtureB48();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB48'] = new \DiContainerBenchmarks\Fixture\B\FixtureB48();
     }
 
     /*
@@ -6412,9 +6410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB480
      */
-    protected function getFixtureB480Service()
+    protected static function getFixtureB480Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB480'] = new \DiContainerBenchmarks\Fixture\B\FixtureB480();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB480'] = new \DiContainerBenchmarks\Fixture\B\FixtureB480();
     }
 
     /*
@@ -6422,9 +6420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB481
      */
-    protected function getFixtureB481Service()
+    protected static function getFixtureB481Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB481'] = new \DiContainerBenchmarks\Fixture\B\FixtureB481();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB481'] = new \DiContainerBenchmarks\Fixture\B\FixtureB481();
     }
 
     /*
@@ -6432,9 +6430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB482
      */
-    protected function getFixtureB482Service()
+    protected static function getFixtureB482Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB482'] = new \DiContainerBenchmarks\Fixture\B\FixtureB482();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB482'] = new \DiContainerBenchmarks\Fixture\B\FixtureB482();
     }
 
     /*
@@ -6442,9 +6440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB483
      */
-    protected function getFixtureB483Service()
+    protected static function getFixtureB483Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB483'] = new \DiContainerBenchmarks\Fixture\B\FixtureB483();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB483'] = new \DiContainerBenchmarks\Fixture\B\FixtureB483();
     }
 
     /*
@@ -6452,9 +6450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB484
      */
-    protected function getFixtureB484Service()
+    protected static function getFixtureB484Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB484'] = new \DiContainerBenchmarks\Fixture\B\FixtureB484();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB484'] = new \DiContainerBenchmarks\Fixture\B\FixtureB484();
     }
 
     /*
@@ -6462,9 +6460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB485
      */
-    protected function getFixtureB485Service()
+    protected static function getFixtureB485Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB485'] = new \DiContainerBenchmarks\Fixture\B\FixtureB485();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB485'] = new \DiContainerBenchmarks\Fixture\B\FixtureB485();
     }
 
     /*
@@ -6472,9 +6470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB486
      */
-    protected function getFixtureB486Service()
+    protected static function getFixtureB486Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB486'] = new \DiContainerBenchmarks\Fixture\B\FixtureB486();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB486'] = new \DiContainerBenchmarks\Fixture\B\FixtureB486();
     }
 
     /*
@@ -6482,9 +6480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB487
      */
-    protected function getFixtureB487Service()
+    protected static function getFixtureB487Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB487'] = new \DiContainerBenchmarks\Fixture\B\FixtureB487();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB487'] = new \DiContainerBenchmarks\Fixture\B\FixtureB487();
     }
 
     /*
@@ -6492,9 +6490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB488
      */
-    protected function getFixtureB488Service()
+    protected static function getFixtureB488Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB488'] = new \DiContainerBenchmarks\Fixture\B\FixtureB488();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB488'] = new \DiContainerBenchmarks\Fixture\B\FixtureB488();
     }
 
     /*
@@ -6502,9 +6500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB489
      */
-    protected function getFixtureB489Service()
+    protected static function getFixtureB489Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB489'] = new \DiContainerBenchmarks\Fixture\B\FixtureB489();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB489'] = new \DiContainerBenchmarks\Fixture\B\FixtureB489();
     }
 
     /*
@@ -6512,9 +6510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB49
      */
-    protected function getFixtureB49Service()
+    protected static function getFixtureB49Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB49'] = new \DiContainerBenchmarks\Fixture\B\FixtureB49();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB49'] = new \DiContainerBenchmarks\Fixture\B\FixtureB49();
     }
 
     /*
@@ -6522,9 +6520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB490
      */
-    protected function getFixtureB490Service()
+    protected static function getFixtureB490Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB490'] = new \DiContainerBenchmarks\Fixture\B\FixtureB490();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB490'] = new \DiContainerBenchmarks\Fixture\B\FixtureB490();
     }
 
     /*
@@ -6532,9 +6530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB491
      */
-    protected function getFixtureB491Service()
+    protected static function getFixtureB491Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB491'] = new \DiContainerBenchmarks\Fixture\B\FixtureB491();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB491'] = new \DiContainerBenchmarks\Fixture\B\FixtureB491();
     }
 
     /*
@@ -6542,9 +6540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB492
      */
-    protected function getFixtureB492Service()
+    protected static function getFixtureB492Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB492'] = new \DiContainerBenchmarks\Fixture\B\FixtureB492();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB492'] = new \DiContainerBenchmarks\Fixture\B\FixtureB492();
     }
 
     /*
@@ -6552,9 +6550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB493
      */
-    protected function getFixtureB493Service()
+    protected static function getFixtureB493Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB493'] = new \DiContainerBenchmarks\Fixture\B\FixtureB493();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB493'] = new \DiContainerBenchmarks\Fixture\B\FixtureB493();
     }
 
     /*
@@ -6562,9 +6560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB494
      */
-    protected function getFixtureB494Service()
+    protected static function getFixtureB494Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB494'] = new \DiContainerBenchmarks\Fixture\B\FixtureB494();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB494'] = new \DiContainerBenchmarks\Fixture\B\FixtureB494();
     }
 
     /*
@@ -6572,9 +6570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB495
      */
-    protected function getFixtureB495Service()
+    protected static function getFixtureB495Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB495'] = new \DiContainerBenchmarks\Fixture\B\FixtureB495();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB495'] = new \DiContainerBenchmarks\Fixture\B\FixtureB495();
     }
 
     /*
@@ -6582,9 +6580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB496
      */
-    protected function getFixtureB496Service()
+    protected static function getFixtureB496Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB496'] = new \DiContainerBenchmarks\Fixture\B\FixtureB496();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB496'] = new \DiContainerBenchmarks\Fixture\B\FixtureB496();
     }
 
     /*
@@ -6592,9 +6590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB497
      */
-    protected function getFixtureB497Service()
+    protected static function getFixtureB497Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB497'] = new \DiContainerBenchmarks\Fixture\B\FixtureB497();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB497'] = new \DiContainerBenchmarks\Fixture\B\FixtureB497();
     }
 
     /*
@@ -6602,9 +6600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB498
      */
-    protected function getFixtureB498Service()
+    protected static function getFixtureB498Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB498'] = new \DiContainerBenchmarks\Fixture\B\FixtureB498();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB498'] = new \DiContainerBenchmarks\Fixture\B\FixtureB498();
     }
 
     /*
@@ -6612,9 +6610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB499
      */
-    protected function getFixtureB499Service()
+    protected static function getFixtureB499Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB499'] = new \DiContainerBenchmarks\Fixture\B\FixtureB499();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB499'] = new \DiContainerBenchmarks\Fixture\B\FixtureB499();
     }
 
     /*
@@ -6622,9 +6620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB5
      */
-    protected function getFixtureB5Service()
+    protected static function getFixtureB5Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB5'] = new \DiContainerBenchmarks\Fixture\B\FixtureB5();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB5'] = new \DiContainerBenchmarks\Fixture\B\FixtureB5();
     }
 
     /*
@@ -6632,9 +6630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB50
      */
-    protected function getFixtureB50Service()
+    protected static function getFixtureB50Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB50'] = new \DiContainerBenchmarks\Fixture\B\FixtureB50();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB50'] = new \DiContainerBenchmarks\Fixture\B\FixtureB50();
     }
 
     /*
@@ -6642,9 +6640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB500
      */
-    protected function getFixtureB500Service()
+    protected static function getFixtureB500Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB500'] = new \DiContainerBenchmarks\Fixture\B\FixtureB500();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB500'] = new \DiContainerBenchmarks\Fixture\B\FixtureB500();
     }
 
     /*
@@ -6652,9 +6650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB501
      */
-    protected function getFixtureB501Service()
+    protected static function getFixtureB501Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB501'] = new \DiContainerBenchmarks\Fixture\B\FixtureB501();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB501'] = new \DiContainerBenchmarks\Fixture\B\FixtureB501();
     }
 
     /*
@@ -6662,9 +6660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB502
      */
-    protected function getFixtureB502Service()
+    protected static function getFixtureB502Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB502'] = new \DiContainerBenchmarks\Fixture\B\FixtureB502();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB502'] = new \DiContainerBenchmarks\Fixture\B\FixtureB502();
     }
 
     /*
@@ -6672,9 +6670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB503
      */
-    protected function getFixtureB503Service()
+    protected static function getFixtureB503Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB503'] = new \DiContainerBenchmarks\Fixture\B\FixtureB503();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB503'] = new \DiContainerBenchmarks\Fixture\B\FixtureB503();
     }
 
     /*
@@ -6682,9 +6680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB504
      */
-    protected function getFixtureB504Service()
+    protected static function getFixtureB504Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB504'] = new \DiContainerBenchmarks\Fixture\B\FixtureB504();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB504'] = new \DiContainerBenchmarks\Fixture\B\FixtureB504();
     }
 
     /*
@@ -6692,9 +6690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB505
      */
-    protected function getFixtureB505Service()
+    protected static function getFixtureB505Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB505'] = new \DiContainerBenchmarks\Fixture\B\FixtureB505();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB505'] = new \DiContainerBenchmarks\Fixture\B\FixtureB505();
     }
 
     /*
@@ -6702,9 +6700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB506
      */
-    protected function getFixtureB506Service()
+    protected static function getFixtureB506Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB506'] = new \DiContainerBenchmarks\Fixture\B\FixtureB506();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB506'] = new \DiContainerBenchmarks\Fixture\B\FixtureB506();
     }
 
     /*
@@ -6712,9 +6710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB507
      */
-    protected function getFixtureB507Service()
+    protected static function getFixtureB507Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB507'] = new \DiContainerBenchmarks\Fixture\B\FixtureB507();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB507'] = new \DiContainerBenchmarks\Fixture\B\FixtureB507();
     }
 
     /*
@@ -6722,9 +6720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB508
      */
-    protected function getFixtureB508Service()
+    protected static function getFixtureB508Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB508'] = new \DiContainerBenchmarks\Fixture\B\FixtureB508();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB508'] = new \DiContainerBenchmarks\Fixture\B\FixtureB508();
     }
 
     /*
@@ -6732,9 +6730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB509
      */
-    protected function getFixtureB509Service()
+    protected static function getFixtureB509Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB509'] = new \DiContainerBenchmarks\Fixture\B\FixtureB509();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB509'] = new \DiContainerBenchmarks\Fixture\B\FixtureB509();
     }
 
     /*
@@ -6742,9 +6740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB51
      */
-    protected function getFixtureB51Service()
+    protected static function getFixtureB51Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB51'] = new \DiContainerBenchmarks\Fixture\B\FixtureB51();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB51'] = new \DiContainerBenchmarks\Fixture\B\FixtureB51();
     }
 
     /*
@@ -6752,9 +6750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB510
      */
-    protected function getFixtureB510Service()
+    protected static function getFixtureB510Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB510'] = new \DiContainerBenchmarks\Fixture\B\FixtureB510();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB510'] = new \DiContainerBenchmarks\Fixture\B\FixtureB510();
     }
 
     /*
@@ -6762,9 +6760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB511
      */
-    protected function getFixtureB511Service()
+    protected static function getFixtureB511Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB511'] = new \DiContainerBenchmarks\Fixture\B\FixtureB511();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB511'] = new \DiContainerBenchmarks\Fixture\B\FixtureB511();
     }
 
     /*
@@ -6772,9 +6770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB512
      */
-    protected function getFixtureB512Service()
+    protected static function getFixtureB512Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB512'] = new \DiContainerBenchmarks\Fixture\B\FixtureB512();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB512'] = new \DiContainerBenchmarks\Fixture\B\FixtureB512();
     }
 
     /*
@@ -6782,9 +6780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB513
      */
-    protected function getFixtureB513Service()
+    protected static function getFixtureB513Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB513'] = new \DiContainerBenchmarks\Fixture\B\FixtureB513();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB513'] = new \DiContainerBenchmarks\Fixture\B\FixtureB513();
     }
 
     /*
@@ -6792,9 +6790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB514
      */
-    protected function getFixtureB514Service()
+    protected static function getFixtureB514Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB514'] = new \DiContainerBenchmarks\Fixture\B\FixtureB514();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB514'] = new \DiContainerBenchmarks\Fixture\B\FixtureB514();
     }
 
     /*
@@ -6802,9 +6800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB515
      */
-    protected function getFixtureB515Service()
+    protected static function getFixtureB515Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB515'] = new \DiContainerBenchmarks\Fixture\B\FixtureB515();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB515'] = new \DiContainerBenchmarks\Fixture\B\FixtureB515();
     }
 
     /*
@@ -6812,9 +6810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB516
      */
-    protected function getFixtureB516Service()
+    protected static function getFixtureB516Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB516'] = new \DiContainerBenchmarks\Fixture\B\FixtureB516();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB516'] = new \DiContainerBenchmarks\Fixture\B\FixtureB516();
     }
 
     /*
@@ -6822,9 +6820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB517
      */
-    protected function getFixtureB517Service()
+    protected static function getFixtureB517Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB517'] = new \DiContainerBenchmarks\Fixture\B\FixtureB517();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB517'] = new \DiContainerBenchmarks\Fixture\B\FixtureB517();
     }
 
     /*
@@ -6832,9 +6830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB518
      */
-    protected function getFixtureB518Service()
+    protected static function getFixtureB518Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB518'] = new \DiContainerBenchmarks\Fixture\B\FixtureB518();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB518'] = new \DiContainerBenchmarks\Fixture\B\FixtureB518();
     }
 
     /*
@@ -6842,9 +6840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB519
      */
-    protected function getFixtureB519Service()
+    protected static function getFixtureB519Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB519'] = new \DiContainerBenchmarks\Fixture\B\FixtureB519();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB519'] = new \DiContainerBenchmarks\Fixture\B\FixtureB519();
     }
 
     /*
@@ -6852,9 +6850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB52
      */
-    protected function getFixtureB52Service()
+    protected static function getFixtureB52Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB52'] = new \DiContainerBenchmarks\Fixture\B\FixtureB52();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB52'] = new \DiContainerBenchmarks\Fixture\B\FixtureB52();
     }
 
     /*
@@ -6862,9 +6860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB520
      */
-    protected function getFixtureB520Service()
+    protected static function getFixtureB520Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB520'] = new \DiContainerBenchmarks\Fixture\B\FixtureB520();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB520'] = new \DiContainerBenchmarks\Fixture\B\FixtureB520();
     }
 
     /*
@@ -6872,9 +6870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB521
      */
-    protected function getFixtureB521Service()
+    protected static function getFixtureB521Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB521'] = new \DiContainerBenchmarks\Fixture\B\FixtureB521();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB521'] = new \DiContainerBenchmarks\Fixture\B\FixtureB521();
     }
 
     /*
@@ -6882,9 +6880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB522
      */
-    protected function getFixtureB522Service()
+    protected static function getFixtureB522Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB522'] = new \DiContainerBenchmarks\Fixture\B\FixtureB522();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB522'] = new \DiContainerBenchmarks\Fixture\B\FixtureB522();
     }
 
     /*
@@ -6892,9 +6890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB523
      */
-    protected function getFixtureB523Service()
+    protected static function getFixtureB523Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB523'] = new \DiContainerBenchmarks\Fixture\B\FixtureB523();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB523'] = new \DiContainerBenchmarks\Fixture\B\FixtureB523();
     }
 
     /*
@@ -6902,9 +6900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB524
      */
-    protected function getFixtureB524Service()
+    protected static function getFixtureB524Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB524'] = new \DiContainerBenchmarks\Fixture\B\FixtureB524();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB524'] = new \DiContainerBenchmarks\Fixture\B\FixtureB524();
     }
 
     /*
@@ -6912,9 +6910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB525
      */
-    protected function getFixtureB525Service()
+    protected static function getFixtureB525Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB525'] = new \DiContainerBenchmarks\Fixture\B\FixtureB525();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB525'] = new \DiContainerBenchmarks\Fixture\B\FixtureB525();
     }
 
     /*
@@ -6922,9 +6920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB526
      */
-    protected function getFixtureB526Service()
+    protected static function getFixtureB526Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB526'] = new \DiContainerBenchmarks\Fixture\B\FixtureB526();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB526'] = new \DiContainerBenchmarks\Fixture\B\FixtureB526();
     }
 
     /*
@@ -6932,9 +6930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB527
      */
-    protected function getFixtureB527Service()
+    protected static function getFixtureB527Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB527'] = new \DiContainerBenchmarks\Fixture\B\FixtureB527();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB527'] = new \DiContainerBenchmarks\Fixture\B\FixtureB527();
     }
 
     /*
@@ -6942,9 +6940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB528
      */
-    protected function getFixtureB528Service()
+    protected static function getFixtureB528Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB528'] = new \DiContainerBenchmarks\Fixture\B\FixtureB528();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB528'] = new \DiContainerBenchmarks\Fixture\B\FixtureB528();
     }
 
     /*
@@ -6952,9 +6950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB529
      */
-    protected function getFixtureB529Service()
+    protected static function getFixtureB529Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB529'] = new \DiContainerBenchmarks\Fixture\B\FixtureB529();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB529'] = new \DiContainerBenchmarks\Fixture\B\FixtureB529();
     }
 
     /*
@@ -6962,9 +6960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB53
      */
-    protected function getFixtureB53Service()
+    protected static function getFixtureB53Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB53'] = new \DiContainerBenchmarks\Fixture\B\FixtureB53();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB53'] = new \DiContainerBenchmarks\Fixture\B\FixtureB53();
     }
 
     /*
@@ -6972,9 +6970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB530
      */
-    protected function getFixtureB530Service()
+    protected static function getFixtureB530Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB530'] = new \DiContainerBenchmarks\Fixture\B\FixtureB530();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB530'] = new \DiContainerBenchmarks\Fixture\B\FixtureB530();
     }
 
     /*
@@ -6982,9 +6980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB531
      */
-    protected function getFixtureB531Service()
+    protected static function getFixtureB531Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB531'] = new \DiContainerBenchmarks\Fixture\B\FixtureB531();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB531'] = new \DiContainerBenchmarks\Fixture\B\FixtureB531();
     }
 
     /*
@@ -6992,9 +6990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB532
      */
-    protected function getFixtureB532Service()
+    protected static function getFixtureB532Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB532'] = new \DiContainerBenchmarks\Fixture\B\FixtureB532();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB532'] = new \DiContainerBenchmarks\Fixture\B\FixtureB532();
     }
 
     /*
@@ -7002,9 +7000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB533
      */
-    protected function getFixtureB533Service()
+    protected static function getFixtureB533Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB533'] = new \DiContainerBenchmarks\Fixture\B\FixtureB533();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB533'] = new \DiContainerBenchmarks\Fixture\B\FixtureB533();
     }
 
     /*
@@ -7012,9 +7010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB534
      */
-    protected function getFixtureB534Service()
+    protected static function getFixtureB534Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB534'] = new \DiContainerBenchmarks\Fixture\B\FixtureB534();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB534'] = new \DiContainerBenchmarks\Fixture\B\FixtureB534();
     }
 
     /*
@@ -7022,9 +7020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB535
      */
-    protected function getFixtureB535Service()
+    protected static function getFixtureB535Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB535'] = new \DiContainerBenchmarks\Fixture\B\FixtureB535();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB535'] = new \DiContainerBenchmarks\Fixture\B\FixtureB535();
     }
 
     /*
@@ -7032,9 +7030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB536
      */
-    protected function getFixtureB536Service()
+    protected static function getFixtureB536Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB536'] = new \DiContainerBenchmarks\Fixture\B\FixtureB536();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB536'] = new \DiContainerBenchmarks\Fixture\B\FixtureB536();
     }
 
     /*
@@ -7042,9 +7040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB537
      */
-    protected function getFixtureB537Service()
+    protected static function getFixtureB537Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB537'] = new \DiContainerBenchmarks\Fixture\B\FixtureB537();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB537'] = new \DiContainerBenchmarks\Fixture\B\FixtureB537();
     }
 
     /*
@@ -7052,9 +7050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB538
      */
-    protected function getFixtureB538Service()
+    protected static function getFixtureB538Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB538'] = new \DiContainerBenchmarks\Fixture\B\FixtureB538();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB538'] = new \DiContainerBenchmarks\Fixture\B\FixtureB538();
     }
 
     /*
@@ -7062,9 +7060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB539
      */
-    protected function getFixtureB539Service()
+    protected static function getFixtureB539Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB539'] = new \DiContainerBenchmarks\Fixture\B\FixtureB539();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB539'] = new \DiContainerBenchmarks\Fixture\B\FixtureB539();
     }
 
     /*
@@ -7072,9 +7070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB54
      */
-    protected function getFixtureB54Service()
+    protected static function getFixtureB54Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB54'] = new \DiContainerBenchmarks\Fixture\B\FixtureB54();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB54'] = new \DiContainerBenchmarks\Fixture\B\FixtureB54();
     }
 
     /*
@@ -7082,9 +7080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB540
      */
-    protected function getFixtureB540Service()
+    protected static function getFixtureB540Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB540'] = new \DiContainerBenchmarks\Fixture\B\FixtureB540();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB540'] = new \DiContainerBenchmarks\Fixture\B\FixtureB540();
     }
 
     /*
@@ -7092,9 +7090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB541
      */
-    protected function getFixtureB541Service()
+    protected static function getFixtureB541Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB541'] = new \DiContainerBenchmarks\Fixture\B\FixtureB541();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB541'] = new \DiContainerBenchmarks\Fixture\B\FixtureB541();
     }
 
     /*
@@ -7102,9 +7100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB542
      */
-    protected function getFixtureB542Service()
+    protected static function getFixtureB542Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB542'] = new \DiContainerBenchmarks\Fixture\B\FixtureB542();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB542'] = new \DiContainerBenchmarks\Fixture\B\FixtureB542();
     }
 
     /*
@@ -7112,9 +7110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB543
      */
-    protected function getFixtureB543Service()
+    protected static function getFixtureB543Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB543'] = new \DiContainerBenchmarks\Fixture\B\FixtureB543();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB543'] = new \DiContainerBenchmarks\Fixture\B\FixtureB543();
     }
 
     /*
@@ -7122,9 +7120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB544
      */
-    protected function getFixtureB544Service()
+    protected static function getFixtureB544Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB544'] = new \DiContainerBenchmarks\Fixture\B\FixtureB544();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB544'] = new \DiContainerBenchmarks\Fixture\B\FixtureB544();
     }
 
     /*
@@ -7132,9 +7130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB545
      */
-    protected function getFixtureB545Service()
+    protected static function getFixtureB545Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB545'] = new \DiContainerBenchmarks\Fixture\B\FixtureB545();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB545'] = new \DiContainerBenchmarks\Fixture\B\FixtureB545();
     }
 
     /*
@@ -7142,9 +7140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB546
      */
-    protected function getFixtureB546Service()
+    protected static function getFixtureB546Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB546'] = new \DiContainerBenchmarks\Fixture\B\FixtureB546();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB546'] = new \DiContainerBenchmarks\Fixture\B\FixtureB546();
     }
 
     /*
@@ -7152,9 +7150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB547
      */
-    protected function getFixtureB547Service()
+    protected static function getFixtureB547Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB547'] = new \DiContainerBenchmarks\Fixture\B\FixtureB547();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB547'] = new \DiContainerBenchmarks\Fixture\B\FixtureB547();
     }
 
     /*
@@ -7162,9 +7160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB548
      */
-    protected function getFixtureB548Service()
+    protected static function getFixtureB548Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB548'] = new \DiContainerBenchmarks\Fixture\B\FixtureB548();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB548'] = new \DiContainerBenchmarks\Fixture\B\FixtureB548();
     }
 
     /*
@@ -7172,9 +7170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB549
      */
-    protected function getFixtureB549Service()
+    protected static function getFixtureB549Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB549'] = new \DiContainerBenchmarks\Fixture\B\FixtureB549();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB549'] = new \DiContainerBenchmarks\Fixture\B\FixtureB549();
     }
 
     /*
@@ -7182,9 +7180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB55
      */
-    protected function getFixtureB55Service()
+    protected static function getFixtureB55Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB55'] = new \DiContainerBenchmarks\Fixture\B\FixtureB55();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB55'] = new \DiContainerBenchmarks\Fixture\B\FixtureB55();
     }
 
     /*
@@ -7192,9 +7190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB550
      */
-    protected function getFixtureB550Service()
+    protected static function getFixtureB550Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB550'] = new \DiContainerBenchmarks\Fixture\B\FixtureB550();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB550'] = new \DiContainerBenchmarks\Fixture\B\FixtureB550();
     }
 
     /*
@@ -7202,9 +7200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB551
      */
-    protected function getFixtureB551Service()
+    protected static function getFixtureB551Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB551'] = new \DiContainerBenchmarks\Fixture\B\FixtureB551();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB551'] = new \DiContainerBenchmarks\Fixture\B\FixtureB551();
     }
 
     /*
@@ -7212,9 +7210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB552
      */
-    protected function getFixtureB552Service()
+    protected static function getFixtureB552Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB552'] = new \DiContainerBenchmarks\Fixture\B\FixtureB552();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB552'] = new \DiContainerBenchmarks\Fixture\B\FixtureB552();
     }
 
     /*
@@ -7222,9 +7220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB553
      */
-    protected function getFixtureB553Service()
+    protected static function getFixtureB553Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB553'] = new \DiContainerBenchmarks\Fixture\B\FixtureB553();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB553'] = new \DiContainerBenchmarks\Fixture\B\FixtureB553();
     }
 
     /*
@@ -7232,9 +7230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB554
      */
-    protected function getFixtureB554Service()
+    protected static function getFixtureB554Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB554'] = new \DiContainerBenchmarks\Fixture\B\FixtureB554();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB554'] = new \DiContainerBenchmarks\Fixture\B\FixtureB554();
     }
 
     /*
@@ -7242,9 +7240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB555
      */
-    protected function getFixtureB555Service()
+    protected static function getFixtureB555Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB555'] = new \DiContainerBenchmarks\Fixture\B\FixtureB555();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB555'] = new \DiContainerBenchmarks\Fixture\B\FixtureB555();
     }
 
     /*
@@ -7252,9 +7250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB556
      */
-    protected function getFixtureB556Service()
+    protected static function getFixtureB556Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB556'] = new \DiContainerBenchmarks\Fixture\B\FixtureB556();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB556'] = new \DiContainerBenchmarks\Fixture\B\FixtureB556();
     }
 
     /*
@@ -7262,9 +7260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB557
      */
-    protected function getFixtureB557Service()
+    protected static function getFixtureB557Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB557'] = new \DiContainerBenchmarks\Fixture\B\FixtureB557();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB557'] = new \DiContainerBenchmarks\Fixture\B\FixtureB557();
     }
 
     /*
@@ -7272,9 +7270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB558
      */
-    protected function getFixtureB558Service()
+    protected static function getFixtureB558Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB558'] = new \DiContainerBenchmarks\Fixture\B\FixtureB558();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB558'] = new \DiContainerBenchmarks\Fixture\B\FixtureB558();
     }
 
     /*
@@ -7282,9 +7280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB559
      */
-    protected function getFixtureB559Service()
+    protected static function getFixtureB559Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB559'] = new \DiContainerBenchmarks\Fixture\B\FixtureB559();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB559'] = new \DiContainerBenchmarks\Fixture\B\FixtureB559();
     }
 
     /*
@@ -7292,9 +7290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB56
      */
-    protected function getFixtureB56Service()
+    protected static function getFixtureB56Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB56'] = new \DiContainerBenchmarks\Fixture\B\FixtureB56();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB56'] = new \DiContainerBenchmarks\Fixture\B\FixtureB56();
     }
 
     /*
@@ -7302,9 +7300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB560
      */
-    protected function getFixtureB560Service()
+    protected static function getFixtureB560Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB560'] = new \DiContainerBenchmarks\Fixture\B\FixtureB560();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB560'] = new \DiContainerBenchmarks\Fixture\B\FixtureB560();
     }
 
     /*
@@ -7312,9 +7310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB561
      */
-    protected function getFixtureB561Service()
+    protected static function getFixtureB561Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB561'] = new \DiContainerBenchmarks\Fixture\B\FixtureB561();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB561'] = new \DiContainerBenchmarks\Fixture\B\FixtureB561();
     }
 
     /*
@@ -7322,9 +7320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB562
      */
-    protected function getFixtureB562Service()
+    protected static function getFixtureB562Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB562'] = new \DiContainerBenchmarks\Fixture\B\FixtureB562();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB562'] = new \DiContainerBenchmarks\Fixture\B\FixtureB562();
     }
 
     /*
@@ -7332,9 +7330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB563
      */
-    protected function getFixtureB563Service()
+    protected static function getFixtureB563Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB563'] = new \DiContainerBenchmarks\Fixture\B\FixtureB563();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB563'] = new \DiContainerBenchmarks\Fixture\B\FixtureB563();
     }
 
     /*
@@ -7342,9 +7340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB564
      */
-    protected function getFixtureB564Service()
+    protected static function getFixtureB564Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB564'] = new \DiContainerBenchmarks\Fixture\B\FixtureB564();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB564'] = new \DiContainerBenchmarks\Fixture\B\FixtureB564();
     }
 
     /*
@@ -7352,9 +7350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB565
      */
-    protected function getFixtureB565Service()
+    protected static function getFixtureB565Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB565'] = new \DiContainerBenchmarks\Fixture\B\FixtureB565();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB565'] = new \DiContainerBenchmarks\Fixture\B\FixtureB565();
     }
 
     /*
@@ -7362,9 +7360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB566
      */
-    protected function getFixtureB566Service()
+    protected static function getFixtureB566Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB566'] = new \DiContainerBenchmarks\Fixture\B\FixtureB566();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB566'] = new \DiContainerBenchmarks\Fixture\B\FixtureB566();
     }
 
     /*
@@ -7372,9 +7370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB567
      */
-    protected function getFixtureB567Service()
+    protected static function getFixtureB567Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB567'] = new \DiContainerBenchmarks\Fixture\B\FixtureB567();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB567'] = new \DiContainerBenchmarks\Fixture\B\FixtureB567();
     }
 
     /*
@@ -7382,9 +7380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB568
      */
-    protected function getFixtureB568Service()
+    protected static function getFixtureB568Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB568'] = new \DiContainerBenchmarks\Fixture\B\FixtureB568();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB568'] = new \DiContainerBenchmarks\Fixture\B\FixtureB568();
     }
 
     /*
@@ -7392,9 +7390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB569
      */
-    protected function getFixtureB569Service()
+    protected static function getFixtureB569Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB569'] = new \DiContainerBenchmarks\Fixture\B\FixtureB569();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB569'] = new \DiContainerBenchmarks\Fixture\B\FixtureB569();
     }
 
     /*
@@ -7402,9 +7400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB57
      */
-    protected function getFixtureB57Service()
+    protected static function getFixtureB57Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB57'] = new \DiContainerBenchmarks\Fixture\B\FixtureB57();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB57'] = new \DiContainerBenchmarks\Fixture\B\FixtureB57();
     }
 
     /*
@@ -7412,9 +7410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB570
      */
-    protected function getFixtureB570Service()
+    protected static function getFixtureB570Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB570'] = new \DiContainerBenchmarks\Fixture\B\FixtureB570();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB570'] = new \DiContainerBenchmarks\Fixture\B\FixtureB570();
     }
 
     /*
@@ -7422,9 +7420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB571
      */
-    protected function getFixtureB571Service()
+    protected static function getFixtureB571Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB571'] = new \DiContainerBenchmarks\Fixture\B\FixtureB571();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB571'] = new \DiContainerBenchmarks\Fixture\B\FixtureB571();
     }
 
     /*
@@ -7432,9 +7430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB572
      */
-    protected function getFixtureB572Service()
+    protected static function getFixtureB572Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB572'] = new \DiContainerBenchmarks\Fixture\B\FixtureB572();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB572'] = new \DiContainerBenchmarks\Fixture\B\FixtureB572();
     }
 
     /*
@@ -7442,9 +7440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB573
      */
-    protected function getFixtureB573Service()
+    protected static function getFixtureB573Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB573'] = new \DiContainerBenchmarks\Fixture\B\FixtureB573();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB573'] = new \DiContainerBenchmarks\Fixture\B\FixtureB573();
     }
 
     /*
@@ -7452,9 +7450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB574
      */
-    protected function getFixtureB574Service()
+    protected static function getFixtureB574Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB574'] = new \DiContainerBenchmarks\Fixture\B\FixtureB574();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB574'] = new \DiContainerBenchmarks\Fixture\B\FixtureB574();
     }
 
     /*
@@ -7462,9 +7460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB575
      */
-    protected function getFixtureB575Service()
+    protected static function getFixtureB575Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB575'] = new \DiContainerBenchmarks\Fixture\B\FixtureB575();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB575'] = new \DiContainerBenchmarks\Fixture\B\FixtureB575();
     }
 
     /*
@@ -7472,9 +7470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB576
      */
-    protected function getFixtureB576Service()
+    protected static function getFixtureB576Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB576'] = new \DiContainerBenchmarks\Fixture\B\FixtureB576();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB576'] = new \DiContainerBenchmarks\Fixture\B\FixtureB576();
     }
 
     /*
@@ -7482,9 +7480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB577
      */
-    protected function getFixtureB577Service()
+    protected static function getFixtureB577Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB577'] = new \DiContainerBenchmarks\Fixture\B\FixtureB577();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB577'] = new \DiContainerBenchmarks\Fixture\B\FixtureB577();
     }
 
     /*
@@ -7492,9 +7490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB578
      */
-    protected function getFixtureB578Service()
+    protected static function getFixtureB578Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB578'] = new \DiContainerBenchmarks\Fixture\B\FixtureB578();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB578'] = new \DiContainerBenchmarks\Fixture\B\FixtureB578();
     }
 
     /*
@@ -7502,9 +7500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB579
      */
-    protected function getFixtureB579Service()
+    protected static function getFixtureB579Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB579'] = new \DiContainerBenchmarks\Fixture\B\FixtureB579();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB579'] = new \DiContainerBenchmarks\Fixture\B\FixtureB579();
     }
 
     /*
@@ -7512,9 +7510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB58
      */
-    protected function getFixtureB58Service()
+    protected static function getFixtureB58Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB58'] = new \DiContainerBenchmarks\Fixture\B\FixtureB58();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB58'] = new \DiContainerBenchmarks\Fixture\B\FixtureB58();
     }
 
     /*
@@ -7522,9 +7520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB580
      */
-    protected function getFixtureB580Service()
+    protected static function getFixtureB580Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB580'] = new \DiContainerBenchmarks\Fixture\B\FixtureB580();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB580'] = new \DiContainerBenchmarks\Fixture\B\FixtureB580();
     }
 
     /*
@@ -7532,9 +7530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB581
      */
-    protected function getFixtureB581Service()
+    protected static function getFixtureB581Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB581'] = new \DiContainerBenchmarks\Fixture\B\FixtureB581();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB581'] = new \DiContainerBenchmarks\Fixture\B\FixtureB581();
     }
 
     /*
@@ -7542,9 +7540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB582
      */
-    protected function getFixtureB582Service()
+    protected static function getFixtureB582Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB582'] = new \DiContainerBenchmarks\Fixture\B\FixtureB582();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB582'] = new \DiContainerBenchmarks\Fixture\B\FixtureB582();
     }
 
     /*
@@ -7552,9 +7550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB583
      */
-    protected function getFixtureB583Service()
+    protected static function getFixtureB583Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB583'] = new \DiContainerBenchmarks\Fixture\B\FixtureB583();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB583'] = new \DiContainerBenchmarks\Fixture\B\FixtureB583();
     }
 
     /*
@@ -7562,9 +7560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB584
      */
-    protected function getFixtureB584Service()
+    protected static function getFixtureB584Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB584'] = new \DiContainerBenchmarks\Fixture\B\FixtureB584();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB584'] = new \DiContainerBenchmarks\Fixture\B\FixtureB584();
     }
 
     /*
@@ -7572,9 +7570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB585
      */
-    protected function getFixtureB585Service()
+    protected static function getFixtureB585Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB585'] = new \DiContainerBenchmarks\Fixture\B\FixtureB585();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB585'] = new \DiContainerBenchmarks\Fixture\B\FixtureB585();
     }
 
     /*
@@ -7582,9 +7580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB586
      */
-    protected function getFixtureB586Service()
+    protected static function getFixtureB586Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB586'] = new \DiContainerBenchmarks\Fixture\B\FixtureB586();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB586'] = new \DiContainerBenchmarks\Fixture\B\FixtureB586();
     }
 
     /*
@@ -7592,9 +7590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB587
      */
-    protected function getFixtureB587Service()
+    protected static function getFixtureB587Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB587'] = new \DiContainerBenchmarks\Fixture\B\FixtureB587();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB587'] = new \DiContainerBenchmarks\Fixture\B\FixtureB587();
     }
 
     /*
@@ -7602,9 +7600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB588
      */
-    protected function getFixtureB588Service()
+    protected static function getFixtureB588Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB588'] = new \DiContainerBenchmarks\Fixture\B\FixtureB588();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB588'] = new \DiContainerBenchmarks\Fixture\B\FixtureB588();
     }
 
     /*
@@ -7612,9 +7610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB589
      */
-    protected function getFixtureB589Service()
+    protected static function getFixtureB589Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB589'] = new \DiContainerBenchmarks\Fixture\B\FixtureB589();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB589'] = new \DiContainerBenchmarks\Fixture\B\FixtureB589();
     }
 
     /*
@@ -7622,9 +7620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB59
      */
-    protected function getFixtureB59Service()
+    protected static function getFixtureB59Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB59'] = new \DiContainerBenchmarks\Fixture\B\FixtureB59();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB59'] = new \DiContainerBenchmarks\Fixture\B\FixtureB59();
     }
 
     /*
@@ -7632,9 +7630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB590
      */
-    protected function getFixtureB590Service()
+    protected static function getFixtureB590Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB590'] = new \DiContainerBenchmarks\Fixture\B\FixtureB590();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB590'] = new \DiContainerBenchmarks\Fixture\B\FixtureB590();
     }
 
     /*
@@ -7642,9 +7640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB591
      */
-    protected function getFixtureB591Service()
+    protected static function getFixtureB591Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB591'] = new \DiContainerBenchmarks\Fixture\B\FixtureB591();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB591'] = new \DiContainerBenchmarks\Fixture\B\FixtureB591();
     }
 
     /*
@@ -7652,9 +7650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB592
      */
-    protected function getFixtureB592Service()
+    protected static function getFixtureB592Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB592'] = new \DiContainerBenchmarks\Fixture\B\FixtureB592();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB592'] = new \DiContainerBenchmarks\Fixture\B\FixtureB592();
     }
 
     /*
@@ -7662,9 +7660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB593
      */
-    protected function getFixtureB593Service()
+    protected static function getFixtureB593Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB593'] = new \DiContainerBenchmarks\Fixture\B\FixtureB593();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB593'] = new \DiContainerBenchmarks\Fixture\B\FixtureB593();
     }
 
     /*
@@ -7672,9 +7670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB594
      */
-    protected function getFixtureB594Service()
+    protected static function getFixtureB594Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB594'] = new \DiContainerBenchmarks\Fixture\B\FixtureB594();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB594'] = new \DiContainerBenchmarks\Fixture\B\FixtureB594();
     }
 
     /*
@@ -7682,9 +7680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB595
      */
-    protected function getFixtureB595Service()
+    protected static function getFixtureB595Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB595'] = new \DiContainerBenchmarks\Fixture\B\FixtureB595();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB595'] = new \DiContainerBenchmarks\Fixture\B\FixtureB595();
     }
 
     /*
@@ -7692,9 +7690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB596
      */
-    protected function getFixtureB596Service()
+    protected static function getFixtureB596Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB596'] = new \DiContainerBenchmarks\Fixture\B\FixtureB596();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB596'] = new \DiContainerBenchmarks\Fixture\B\FixtureB596();
     }
 
     /*
@@ -7702,9 +7700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB597
      */
-    protected function getFixtureB597Service()
+    protected static function getFixtureB597Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB597'] = new \DiContainerBenchmarks\Fixture\B\FixtureB597();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB597'] = new \DiContainerBenchmarks\Fixture\B\FixtureB597();
     }
 
     /*
@@ -7712,9 +7710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB598
      */
-    protected function getFixtureB598Service()
+    protected static function getFixtureB598Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB598'] = new \DiContainerBenchmarks\Fixture\B\FixtureB598();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB598'] = new \DiContainerBenchmarks\Fixture\B\FixtureB598();
     }
 
     /*
@@ -7722,9 +7720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB599
      */
-    protected function getFixtureB599Service()
+    protected static function getFixtureB599Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB599'] = new \DiContainerBenchmarks\Fixture\B\FixtureB599();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB599'] = new \DiContainerBenchmarks\Fixture\B\FixtureB599();
     }
 
     /*
@@ -7732,9 +7730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB6
      */
-    protected function getFixtureB6Service()
+    protected static function getFixtureB6Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB6'] = new \DiContainerBenchmarks\Fixture\B\FixtureB6();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB6'] = new \DiContainerBenchmarks\Fixture\B\FixtureB6();
     }
 
     /*
@@ -7742,9 +7740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB60
      */
-    protected function getFixtureB60Service()
+    protected static function getFixtureB60Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB60'] = new \DiContainerBenchmarks\Fixture\B\FixtureB60();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB60'] = new \DiContainerBenchmarks\Fixture\B\FixtureB60();
     }
 
     /*
@@ -7752,9 +7750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB600
      */
-    protected function getFixtureB600Service()
+    protected static function getFixtureB600Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB600'] = new \DiContainerBenchmarks\Fixture\B\FixtureB600();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB600'] = new \DiContainerBenchmarks\Fixture\B\FixtureB600();
     }
 
     /*
@@ -7762,9 +7760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB601
      */
-    protected function getFixtureB601Service()
+    protected static function getFixtureB601Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB601'] = new \DiContainerBenchmarks\Fixture\B\FixtureB601();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB601'] = new \DiContainerBenchmarks\Fixture\B\FixtureB601();
     }
 
     /*
@@ -7772,9 +7770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB602
      */
-    protected function getFixtureB602Service()
+    protected static function getFixtureB602Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB602'] = new \DiContainerBenchmarks\Fixture\B\FixtureB602();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB602'] = new \DiContainerBenchmarks\Fixture\B\FixtureB602();
     }
 
     /*
@@ -7782,9 +7780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB603
      */
-    protected function getFixtureB603Service()
+    protected static function getFixtureB603Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB603'] = new \DiContainerBenchmarks\Fixture\B\FixtureB603();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB603'] = new \DiContainerBenchmarks\Fixture\B\FixtureB603();
     }
 
     /*
@@ -7792,9 +7790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB604
      */
-    protected function getFixtureB604Service()
+    protected static function getFixtureB604Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB604'] = new \DiContainerBenchmarks\Fixture\B\FixtureB604();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB604'] = new \DiContainerBenchmarks\Fixture\B\FixtureB604();
     }
 
     /*
@@ -7802,9 +7800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB605
      */
-    protected function getFixtureB605Service()
+    protected static function getFixtureB605Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB605'] = new \DiContainerBenchmarks\Fixture\B\FixtureB605();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB605'] = new \DiContainerBenchmarks\Fixture\B\FixtureB605();
     }
 
     /*
@@ -7812,9 +7810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB606
      */
-    protected function getFixtureB606Service()
+    protected static function getFixtureB606Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB606'] = new \DiContainerBenchmarks\Fixture\B\FixtureB606();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB606'] = new \DiContainerBenchmarks\Fixture\B\FixtureB606();
     }
 
     /*
@@ -7822,9 +7820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB607
      */
-    protected function getFixtureB607Service()
+    protected static function getFixtureB607Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB607'] = new \DiContainerBenchmarks\Fixture\B\FixtureB607();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB607'] = new \DiContainerBenchmarks\Fixture\B\FixtureB607();
     }
 
     /*
@@ -7832,9 +7830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB608
      */
-    protected function getFixtureB608Service()
+    protected static function getFixtureB608Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB608'] = new \DiContainerBenchmarks\Fixture\B\FixtureB608();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB608'] = new \DiContainerBenchmarks\Fixture\B\FixtureB608();
     }
 
     /*
@@ -7842,9 +7840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB609
      */
-    protected function getFixtureB609Service()
+    protected static function getFixtureB609Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB609'] = new \DiContainerBenchmarks\Fixture\B\FixtureB609();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB609'] = new \DiContainerBenchmarks\Fixture\B\FixtureB609();
     }
 
     /*
@@ -7852,9 +7850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB61
      */
-    protected function getFixtureB61Service()
+    protected static function getFixtureB61Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB61'] = new \DiContainerBenchmarks\Fixture\B\FixtureB61();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB61'] = new \DiContainerBenchmarks\Fixture\B\FixtureB61();
     }
 
     /*
@@ -7862,9 +7860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB610
      */
-    protected function getFixtureB610Service()
+    protected static function getFixtureB610Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB610'] = new \DiContainerBenchmarks\Fixture\B\FixtureB610();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB610'] = new \DiContainerBenchmarks\Fixture\B\FixtureB610();
     }
 
     /*
@@ -7872,9 +7870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB611
      */
-    protected function getFixtureB611Service()
+    protected static function getFixtureB611Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB611'] = new \DiContainerBenchmarks\Fixture\B\FixtureB611();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB611'] = new \DiContainerBenchmarks\Fixture\B\FixtureB611();
     }
 
     /*
@@ -7882,9 +7880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB612
      */
-    protected function getFixtureB612Service()
+    protected static function getFixtureB612Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB612'] = new \DiContainerBenchmarks\Fixture\B\FixtureB612();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB612'] = new \DiContainerBenchmarks\Fixture\B\FixtureB612();
     }
 
     /*
@@ -7892,9 +7890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB613
      */
-    protected function getFixtureB613Service()
+    protected static function getFixtureB613Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB613'] = new \DiContainerBenchmarks\Fixture\B\FixtureB613();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB613'] = new \DiContainerBenchmarks\Fixture\B\FixtureB613();
     }
 
     /*
@@ -7902,9 +7900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB614
      */
-    protected function getFixtureB614Service()
+    protected static function getFixtureB614Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB614'] = new \DiContainerBenchmarks\Fixture\B\FixtureB614();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB614'] = new \DiContainerBenchmarks\Fixture\B\FixtureB614();
     }
 
     /*
@@ -7912,9 +7910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB615
      */
-    protected function getFixtureB615Service()
+    protected static function getFixtureB615Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB615'] = new \DiContainerBenchmarks\Fixture\B\FixtureB615();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB615'] = new \DiContainerBenchmarks\Fixture\B\FixtureB615();
     }
 
     /*
@@ -7922,9 +7920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB616
      */
-    protected function getFixtureB616Service()
+    protected static function getFixtureB616Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB616'] = new \DiContainerBenchmarks\Fixture\B\FixtureB616();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB616'] = new \DiContainerBenchmarks\Fixture\B\FixtureB616();
     }
 
     /*
@@ -7932,9 +7930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB617
      */
-    protected function getFixtureB617Service()
+    protected static function getFixtureB617Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB617'] = new \DiContainerBenchmarks\Fixture\B\FixtureB617();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB617'] = new \DiContainerBenchmarks\Fixture\B\FixtureB617();
     }
 
     /*
@@ -7942,9 +7940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB618
      */
-    protected function getFixtureB618Service()
+    protected static function getFixtureB618Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB618'] = new \DiContainerBenchmarks\Fixture\B\FixtureB618();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB618'] = new \DiContainerBenchmarks\Fixture\B\FixtureB618();
     }
 
     /*
@@ -7952,9 +7950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB619
      */
-    protected function getFixtureB619Service()
+    protected static function getFixtureB619Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB619'] = new \DiContainerBenchmarks\Fixture\B\FixtureB619();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB619'] = new \DiContainerBenchmarks\Fixture\B\FixtureB619();
     }
 
     /*
@@ -7962,9 +7960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB62
      */
-    protected function getFixtureB62Service()
+    protected static function getFixtureB62Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB62'] = new \DiContainerBenchmarks\Fixture\B\FixtureB62();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB62'] = new \DiContainerBenchmarks\Fixture\B\FixtureB62();
     }
 
     /*
@@ -7972,9 +7970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB620
      */
-    protected function getFixtureB620Service()
+    protected static function getFixtureB620Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB620'] = new \DiContainerBenchmarks\Fixture\B\FixtureB620();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB620'] = new \DiContainerBenchmarks\Fixture\B\FixtureB620();
     }
 
     /*
@@ -7982,9 +7980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB621
      */
-    protected function getFixtureB621Service()
+    protected static function getFixtureB621Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB621'] = new \DiContainerBenchmarks\Fixture\B\FixtureB621();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB621'] = new \DiContainerBenchmarks\Fixture\B\FixtureB621();
     }
 
     /*
@@ -7992,9 +7990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB622
      */
-    protected function getFixtureB622Service()
+    protected static function getFixtureB622Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB622'] = new \DiContainerBenchmarks\Fixture\B\FixtureB622();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB622'] = new \DiContainerBenchmarks\Fixture\B\FixtureB622();
     }
 
     /*
@@ -8002,9 +8000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB623
      */
-    protected function getFixtureB623Service()
+    protected static function getFixtureB623Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB623'] = new \DiContainerBenchmarks\Fixture\B\FixtureB623();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB623'] = new \DiContainerBenchmarks\Fixture\B\FixtureB623();
     }
 
     /*
@@ -8012,9 +8010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB624
      */
-    protected function getFixtureB624Service()
+    protected static function getFixtureB624Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB624'] = new \DiContainerBenchmarks\Fixture\B\FixtureB624();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB624'] = new \DiContainerBenchmarks\Fixture\B\FixtureB624();
     }
 
     /*
@@ -8022,9 +8020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB625
      */
-    protected function getFixtureB625Service()
+    protected static function getFixtureB625Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB625'] = new \DiContainerBenchmarks\Fixture\B\FixtureB625();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB625'] = new \DiContainerBenchmarks\Fixture\B\FixtureB625();
     }
 
     /*
@@ -8032,9 +8030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB626
      */
-    protected function getFixtureB626Service()
+    protected static function getFixtureB626Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB626'] = new \DiContainerBenchmarks\Fixture\B\FixtureB626();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB626'] = new \DiContainerBenchmarks\Fixture\B\FixtureB626();
     }
 
     /*
@@ -8042,9 +8040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB627
      */
-    protected function getFixtureB627Service()
+    protected static function getFixtureB627Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB627'] = new \DiContainerBenchmarks\Fixture\B\FixtureB627();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB627'] = new \DiContainerBenchmarks\Fixture\B\FixtureB627();
     }
 
     /*
@@ -8052,9 +8050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB628
      */
-    protected function getFixtureB628Service()
+    protected static function getFixtureB628Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB628'] = new \DiContainerBenchmarks\Fixture\B\FixtureB628();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB628'] = new \DiContainerBenchmarks\Fixture\B\FixtureB628();
     }
 
     /*
@@ -8062,9 +8060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB629
      */
-    protected function getFixtureB629Service()
+    protected static function getFixtureB629Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB629'] = new \DiContainerBenchmarks\Fixture\B\FixtureB629();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB629'] = new \DiContainerBenchmarks\Fixture\B\FixtureB629();
     }
 
     /*
@@ -8072,9 +8070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB63
      */
-    protected function getFixtureB63Service()
+    protected static function getFixtureB63Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB63'] = new \DiContainerBenchmarks\Fixture\B\FixtureB63();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB63'] = new \DiContainerBenchmarks\Fixture\B\FixtureB63();
     }
 
     /*
@@ -8082,9 +8080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB630
      */
-    protected function getFixtureB630Service()
+    protected static function getFixtureB630Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB630'] = new \DiContainerBenchmarks\Fixture\B\FixtureB630();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB630'] = new \DiContainerBenchmarks\Fixture\B\FixtureB630();
     }
 
     /*
@@ -8092,9 +8090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB631
      */
-    protected function getFixtureB631Service()
+    protected static function getFixtureB631Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB631'] = new \DiContainerBenchmarks\Fixture\B\FixtureB631();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB631'] = new \DiContainerBenchmarks\Fixture\B\FixtureB631();
     }
 
     /*
@@ -8102,9 +8100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB632
      */
-    protected function getFixtureB632Service()
+    protected static function getFixtureB632Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB632'] = new \DiContainerBenchmarks\Fixture\B\FixtureB632();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB632'] = new \DiContainerBenchmarks\Fixture\B\FixtureB632();
     }
 
     /*
@@ -8112,9 +8110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB633
      */
-    protected function getFixtureB633Service()
+    protected static function getFixtureB633Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB633'] = new \DiContainerBenchmarks\Fixture\B\FixtureB633();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB633'] = new \DiContainerBenchmarks\Fixture\B\FixtureB633();
     }
 
     /*
@@ -8122,9 +8120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB634
      */
-    protected function getFixtureB634Service()
+    protected static function getFixtureB634Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB634'] = new \DiContainerBenchmarks\Fixture\B\FixtureB634();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB634'] = new \DiContainerBenchmarks\Fixture\B\FixtureB634();
     }
 
     /*
@@ -8132,9 +8130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB635
      */
-    protected function getFixtureB635Service()
+    protected static function getFixtureB635Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB635'] = new \DiContainerBenchmarks\Fixture\B\FixtureB635();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB635'] = new \DiContainerBenchmarks\Fixture\B\FixtureB635();
     }
 
     /*
@@ -8142,9 +8140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB636
      */
-    protected function getFixtureB636Service()
+    protected static function getFixtureB636Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB636'] = new \DiContainerBenchmarks\Fixture\B\FixtureB636();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB636'] = new \DiContainerBenchmarks\Fixture\B\FixtureB636();
     }
 
     /*
@@ -8152,9 +8150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB637
      */
-    protected function getFixtureB637Service()
+    protected static function getFixtureB637Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB637'] = new \DiContainerBenchmarks\Fixture\B\FixtureB637();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB637'] = new \DiContainerBenchmarks\Fixture\B\FixtureB637();
     }
 
     /*
@@ -8162,9 +8160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB638
      */
-    protected function getFixtureB638Service()
+    protected static function getFixtureB638Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB638'] = new \DiContainerBenchmarks\Fixture\B\FixtureB638();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB638'] = new \DiContainerBenchmarks\Fixture\B\FixtureB638();
     }
 
     /*
@@ -8172,9 +8170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB639
      */
-    protected function getFixtureB639Service()
+    protected static function getFixtureB639Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB639'] = new \DiContainerBenchmarks\Fixture\B\FixtureB639();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB639'] = new \DiContainerBenchmarks\Fixture\B\FixtureB639();
     }
 
     /*
@@ -8182,9 +8180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB64
      */
-    protected function getFixtureB64Service()
+    protected static function getFixtureB64Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB64'] = new \DiContainerBenchmarks\Fixture\B\FixtureB64();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB64'] = new \DiContainerBenchmarks\Fixture\B\FixtureB64();
     }
 
     /*
@@ -8192,9 +8190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB640
      */
-    protected function getFixtureB640Service()
+    protected static function getFixtureB640Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB640'] = new \DiContainerBenchmarks\Fixture\B\FixtureB640();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB640'] = new \DiContainerBenchmarks\Fixture\B\FixtureB640();
     }
 
     /*
@@ -8202,9 +8200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB641
      */
-    protected function getFixtureB641Service()
+    protected static function getFixtureB641Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB641'] = new \DiContainerBenchmarks\Fixture\B\FixtureB641();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB641'] = new \DiContainerBenchmarks\Fixture\B\FixtureB641();
     }
 
     /*
@@ -8212,9 +8210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB642
      */
-    protected function getFixtureB642Service()
+    protected static function getFixtureB642Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB642'] = new \DiContainerBenchmarks\Fixture\B\FixtureB642();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB642'] = new \DiContainerBenchmarks\Fixture\B\FixtureB642();
     }
 
     /*
@@ -8222,9 +8220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB643
      */
-    protected function getFixtureB643Service()
+    protected static function getFixtureB643Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB643'] = new \DiContainerBenchmarks\Fixture\B\FixtureB643();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB643'] = new \DiContainerBenchmarks\Fixture\B\FixtureB643();
     }
 
     /*
@@ -8232,9 +8230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB644
      */
-    protected function getFixtureB644Service()
+    protected static function getFixtureB644Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB644'] = new \DiContainerBenchmarks\Fixture\B\FixtureB644();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB644'] = new \DiContainerBenchmarks\Fixture\B\FixtureB644();
     }
 
     /*
@@ -8242,9 +8240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB645
      */
-    protected function getFixtureB645Service()
+    protected static function getFixtureB645Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB645'] = new \DiContainerBenchmarks\Fixture\B\FixtureB645();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB645'] = new \DiContainerBenchmarks\Fixture\B\FixtureB645();
     }
 
     /*
@@ -8252,9 +8250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB646
      */
-    protected function getFixtureB646Service()
+    protected static function getFixtureB646Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB646'] = new \DiContainerBenchmarks\Fixture\B\FixtureB646();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB646'] = new \DiContainerBenchmarks\Fixture\B\FixtureB646();
     }
 
     /*
@@ -8262,9 +8260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB647
      */
-    protected function getFixtureB647Service()
+    protected static function getFixtureB647Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB647'] = new \DiContainerBenchmarks\Fixture\B\FixtureB647();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB647'] = new \DiContainerBenchmarks\Fixture\B\FixtureB647();
     }
 
     /*
@@ -8272,9 +8270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB648
      */
-    protected function getFixtureB648Service()
+    protected static function getFixtureB648Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB648'] = new \DiContainerBenchmarks\Fixture\B\FixtureB648();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB648'] = new \DiContainerBenchmarks\Fixture\B\FixtureB648();
     }
 
     /*
@@ -8282,9 +8280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB649
      */
-    protected function getFixtureB649Service()
+    protected static function getFixtureB649Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB649'] = new \DiContainerBenchmarks\Fixture\B\FixtureB649();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB649'] = new \DiContainerBenchmarks\Fixture\B\FixtureB649();
     }
 
     /*
@@ -8292,9 +8290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB65
      */
-    protected function getFixtureB65Service()
+    protected static function getFixtureB65Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB65'] = new \DiContainerBenchmarks\Fixture\B\FixtureB65();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB65'] = new \DiContainerBenchmarks\Fixture\B\FixtureB65();
     }
 
     /*
@@ -8302,9 +8300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB650
      */
-    protected function getFixtureB650Service()
+    protected static function getFixtureB650Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB650'] = new \DiContainerBenchmarks\Fixture\B\FixtureB650();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB650'] = new \DiContainerBenchmarks\Fixture\B\FixtureB650();
     }
 
     /*
@@ -8312,9 +8310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB651
      */
-    protected function getFixtureB651Service()
+    protected static function getFixtureB651Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB651'] = new \DiContainerBenchmarks\Fixture\B\FixtureB651();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB651'] = new \DiContainerBenchmarks\Fixture\B\FixtureB651();
     }
 
     /*
@@ -8322,9 +8320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB652
      */
-    protected function getFixtureB652Service()
+    protected static function getFixtureB652Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB652'] = new \DiContainerBenchmarks\Fixture\B\FixtureB652();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB652'] = new \DiContainerBenchmarks\Fixture\B\FixtureB652();
     }
 
     /*
@@ -8332,9 +8330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB653
      */
-    protected function getFixtureB653Service()
+    protected static function getFixtureB653Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB653'] = new \DiContainerBenchmarks\Fixture\B\FixtureB653();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB653'] = new \DiContainerBenchmarks\Fixture\B\FixtureB653();
     }
 
     /*
@@ -8342,9 +8340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB654
      */
-    protected function getFixtureB654Service()
+    protected static function getFixtureB654Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB654'] = new \DiContainerBenchmarks\Fixture\B\FixtureB654();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB654'] = new \DiContainerBenchmarks\Fixture\B\FixtureB654();
     }
 
     /*
@@ -8352,9 +8350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB655
      */
-    protected function getFixtureB655Service()
+    protected static function getFixtureB655Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB655'] = new \DiContainerBenchmarks\Fixture\B\FixtureB655();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB655'] = new \DiContainerBenchmarks\Fixture\B\FixtureB655();
     }
 
     /*
@@ -8362,9 +8360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB656
      */
-    protected function getFixtureB656Service()
+    protected static function getFixtureB656Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB656'] = new \DiContainerBenchmarks\Fixture\B\FixtureB656();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB656'] = new \DiContainerBenchmarks\Fixture\B\FixtureB656();
     }
 
     /*
@@ -8372,9 +8370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB657
      */
-    protected function getFixtureB657Service()
+    protected static function getFixtureB657Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB657'] = new \DiContainerBenchmarks\Fixture\B\FixtureB657();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB657'] = new \DiContainerBenchmarks\Fixture\B\FixtureB657();
     }
 
     /*
@@ -8382,9 +8380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB658
      */
-    protected function getFixtureB658Service()
+    protected static function getFixtureB658Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB658'] = new \DiContainerBenchmarks\Fixture\B\FixtureB658();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB658'] = new \DiContainerBenchmarks\Fixture\B\FixtureB658();
     }
 
     /*
@@ -8392,9 +8390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB659
      */
-    protected function getFixtureB659Service()
+    protected static function getFixtureB659Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB659'] = new \DiContainerBenchmarks\Fixture\B\FixtureB659();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB659'] = new \DiContainerBenchmarks\Fixture\B\FixtureB659();
     }
 
     /*
@@ -8402,9 +8400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB66
      */
-    protected function getFixtureB66Service()
+    protected static function getFixtureB66Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB66'] = new \DiContainerBenchmarks\Fixture\B\FixtureB66();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB66'] = new \DiContainerBenchmarks\Fixture\B\FixtureB66();
     }
 
     /*
@@ -8412,9 +8410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB660
      */
-    protected function getFixtureB660Service()
+    protected static function getFixtureB660Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB660'] = new \DiContainerBenchmarks\Fixture\B\FixtureB660();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB660'] = new \DiContainerBenchmarks\Fixture\B\FixtureB660();
     }
 
     /*
@@ -8422,9 +8420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB661
      */
-    protected function getFixtureB661Service()
+    protected static function getFixtureB661Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB661'] = new \DiContainerBenchmarks\Fixture\B\FixtureB661();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB661'] = new \DiContainerBenchmarks\Fixture\B\FixtureB661();
     }
 
     /*
@@ -8432,9 +8430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB662
      */
-    protected function getFixtureB662Service()
+    protected static function getFixtureB662Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB662'] = new \DiContainerBenchmarks\Fixture\B\FixtureB662();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB662'] = new \DiContainerBenchmarks\Fixture\B\FixtureB662();
     }
 
     /*
@@ -8442,9 +8440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB663
      */
-    protected function getFixtureB663Service()
+    protected static function getFixtureB663Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB663'] = new \DiContainerBenchmarks\Fixture\B\FixtureB663();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB663'] = new \DiContainerBenchmarks\Fixture\B\FixtureB663();
     }
 
     /*
@@ -8452,9 +8450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB664
      */
-    protected function getFixtureB664Service()
+    protected static function getFixtureB664Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB664'] = new \DiContainerBenchmarks\Fixture\B\FixtureB664();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB664'] = new \DiContainerBenchmarks\Fixture\B\FixtureB664();
     }
 
     /*
@@ -8462,9 +8460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB665
      */
-    protected function getFixtureB665Service()
+    protected static function getFixtureB665Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB665'] = new \DiContainerBenchmarks\Fixture\B\FixtureB665();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB665'] = new \DiContainerBenchmarks\Fixture\B\FixtureB665();
     }
 
     /*
@@ -8472,9 +8470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB666
      */
-    protected function getFixtureB666Service()
+    protected static function getFixtureB666Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB666'] = new \DiContainerBenchmarks\Fixture\B\FixtureB666();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB666'] = new \DiContainerBenchmarks\Fixture\B\FixtureB666();
     }
 
     /*
@@ -8482,9 +8480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB667
      */
-    protected function getFixtureB667Service()
+    protected static function getFixtureB667Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB667'] = new \DiContainerBenchmarks\Fixture\B\FixtureB667();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB667'] = new \DiContainerBenchmarks\Fixture\B\FixtureB667();
     }
 
     /*
@@ -8492,9 +8490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB668
      */
-    protected function getFixtureB668Service()
+    protected static function getFixtureB668Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB668'] = new \DiContainerBenchmarks\Fixture\B\FixtureB668();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB668'] = new \DiContainerBenchmarks\Fixture\B\FixtureB668();
     }
 
     /*
@@ -8502,9 +8500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB669
      */
-    protected function getFixtureB669Service()
+    protected static function getFixtureB669Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB669'] = new \DiContainerBenchmarks\Fixture\B\FixtureB669();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB669'] = new \DiContainerBenchmarks\Fixture\B\FixtureB669();
     }
 
     /*
@@ -8512,9 +8510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB67
      */
-    protected function getFixtureB67Service()
+    protected static function getFixtureB67Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB67'] = new \DiContainerBenchmarks\Fixture\B\FixtureB67();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB67'] = new \DiContainerBenchmarks\Fixture\B\FixtureB67();
     }
 
     /*
@@ -8522,9 +8520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB670
      */
-    protected function getFixtureB670Service()
+    protected static function getFixtureB670Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB670'] = new \DiContainerBenchmarks\Fixture\B\FixtureB670();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB670'] = new \DiContainerBenchmarks\Fixture\B\FixtureB670();
     }
 
     /*
@@ -8532,9 +8530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB671
      */
-    protected function getFixtureB671Service()
+    protected static function getFixtureB671Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB671'] = new \DiContainerBenchmarks\Fixture\B\FixtureB671();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB671'] = new \DiContainerBenchmarks\Fixture\B\FixtureB671();
     }
 
     /*
@@ -8542,9 +8540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB672
      */
-    protected function getFixtureB672Service()
+    protected static function getFixtureB672Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB672'] = new \DiContainerBenchmarks\Fixture\B\FixtureB672();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB672'] = new \DiContainerBenchmarks\Fixture\B\FixtureB672();
     }
 
     /*
@@ -8552,9 +8550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB673
      */
-    protected function getFixtureB673Service()
+    protected static function getFixtureB673Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB673'] = new \DiContainerBenchmarks\Fixture\B\FixtureB673();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB673'] = new \DiContainerBenchmarks\Fixture\B\FixtureB673();
     }
 
     /*
@@ -8562,9 +8560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB674
      */
-    protected function getFixtureB674Service()
+    protected static function getFixtureB674Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB674'] = new \DiContainerBenchmarks\Fixture\B\FixtureB674();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB674'] = new \DiContainerBenchmarks\Fixture\B\FixtureB674();
     }
 
     /*
@@ -8572,9 +8570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB675
      */
-    protected function getFixtureB675Service()
+    protected static function getFixtureB675Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB675'] = new \DiContainerBenchmarks\Fixture\B\FixtureB675();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB675'] = new \DiContainerBenchmarks\Fixture\B\FixtureB675();
     }
 
     /*
@@ -8582,9 +8580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB676
      */
-    protected function getFixtureB676Service()
+    protected static function getFixtureB676Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB676'] = new \DiContainerBenchmarks\Fixture\B\FixtureB676();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB676'] = new \DiContainerBenchmarks\Fixture\B\FixtureB676();
     }
 
     /*
@@ -8592,9 +8590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB677
      */
-    protected function getFixtureB677Service()
+    protected static function getFixtureB677Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB677'] = new \DiContainerBenchmarks\Fixture\B\FixtureB677();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB677'] = new \DiContainerBenchmarks\Fixture\B\FixtureB677();
     }
 
     /*
@@ -8602,9 +8600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB678
      */
-    protected function getFixtureB678Service()
+    protected static function getFixtureB678Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB678'] = new \DiContainerBenchmarks\Fixture\B\FixtureB678();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB678'] = new \DiContainerBenchmarks\Fixture\B\FixtureB678();
     }
 
     /*
@@ -8612,9 +8610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB679
      */
-    protected function getFixtureB679Service()
+    protected static function getFixtureB679Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB679'] = new \DiContainerBenchmarks\Fixture\B\FixtureB679();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB679'] = new \DiContainerBenchmarks\Fixture\B\FixtureB679();
     }
 
     /*
@@ -8622,9 +8620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB68
      */
-    protected function getFixtureB68Service()
+    protected static function getFixtureB68Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB68'] = new \DiContainerBenchmarks\Fixture\B\FixtureB68();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB68'] = new \DiContainerBenchmarks\Fixture\B\FixtureB68();
     }
 
     /*
@@ -8632,9 +8630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB680
      */
-    protected function getFixtureB680Service()
+    protected static function getFixtureB680Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB680'] = new \DiContainerBenchmarks\Fixture\B\FixtureB680();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB680'] = new \DiContainerBenchmarks\Fixture\B\FixtureB680();
     }
 
     /*
@@ -8642,9 +8640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB681
      */
-    protected function getFixtureB681Service()
+    protected static function getFixtureB681Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB681'] = new \DiContainerBenchmarks\Fixture\B\FixtureB681();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB681'] = new \DiContainerBenchmarks\Fixture\B\FixtureB681();
     }
 
     /*
@@ -8652,9 +8650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB682
      */
-    protected function getFixtureB682Service()
+    protected static function getFixtureB682Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB682'] = new \DiContainerBenchmarks\Fixture\B\FixtureB682();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB682'] = new \DiContainerBenchmarks\Fixture\B\FixtureB682();
     }
 
     /*
@@ -8662,9 +8660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB683
      */
-    protected function getFixtureB683Service()
+    protected static function getFixtureB683Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB683'] = new \DiContainerBenchmarks\Fixture\B\FixtureB683();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB683'] = new \DiContainerBenchmarks\Fixture\B\FixtureB683();
     }
 
     /*
@@ -8672,9 +8670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB684
      */
-    protected function getFixtureB684Service()
+    protected static function getFixtureB684Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB684'] = new \DiContainerBenchmarks\Fixture\B\FixtureB684();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB684'] = new \DiContainerBenchmarks\Fixture\B\FixtureB684();
     }
 
     /*
@@ -8682,9 +8680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB685
      */
-    protected function getFixtureB685Service()
+    protected static function getFixtureB685Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB685'] = new \DiContainerBenchmarks\Fixture\B\FixtureB685();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB685'] = new \DiContainerBenchmarks\Fixture\B\FixtureB685();
     }
 
     /*
@@ -8692,9 +8690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB686
      */
-    protected function getFixtureB686Service()
+    protected static function getFixtureB686Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB686'] = new \DiContainerBenchmarks\Fixture\B\FixtureB686();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB686'] = new \DiContainerBenchmarks\Fixture\B\FixtureB686();
     }
 
     /*
@@ -8702,9 +8700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB687
      */
-    protected function getFixtureB687Service()
+    protected static function getFixtureB687Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB687'] = new \DiContainerBenchmarks\Fixture\B\FixtureB687();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB687'] = new \DiContainerBenchmarks\Fixture\B\FixtureB687();
     }
 
     /*
@@ -8712,9 +8710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB688
      */
-    protected function getFixtureB688Service()
+    protected static function getFixtureB688Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB688'] = new \DiContainerBenchmarks\Fixture\B\FixtureB688();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB688'] = new \DiContainerBenchmarks\Fixture\B\FixtureB688();
     }
 
     /*
@@ -8722,9 +8720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB689
      */
-    protected function getFixtureB689Service()
+    protected static function getFixtureB689Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB689'] = new \DiContainerBenchmarks\Fixture\B\FixtureB689();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB689'] = new \DiContainerBenchmarks\Fixture\B\FixtureB689();
     }
 
     /*
@@ -8732,9 +8730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB69
      */
-    protected function getFixtureB69Service()
+    protected static function getFixtureB69Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB69'] = new \DiContainerBenchmarks\Fixture\B\FixtureB69();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB69'] = new \DiContainerBenchmarks\Fixture\B\FixtureB69();
     }
 
     /*
@@ -8742,9 +8740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB690
      */
-    protected function getFixtureB690Service()
+    protected static function getFixtureB690Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB690'] = new \DiContainerBenchmarks\Fixture\B\FixtureB690();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB690'] = new \DiContainerBenchmarks\Fixture\B\FixtureB690();
     }
 
     /*
@@ -8752,9 +8750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB691
      */
-    protected function getFixtureB691Service()
+    protected static function getFixtureB691Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB691'] = new \DiContainerBenchmarks\Fixture\B\FixtureB691();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB691'] = new \DiContainerBenchmarks\Fixture\B\FixtureB691();
     }
 
     /*
@@ -8762,9 +8760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB692
      */
-    protected function getFixtureB692Service()
+    protected static function getFixtureB692Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB692'] = new \DiContainerBenchmarks\Fixture\B\FixtureB692();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB692'] = new \DiContainerBenchmarks\Fixture\B\FixtureB692();
     }
 
     /*
@@ -8772,9 +8770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB693
      */
-    protected function getFixtureB693Service()
+    protected static function getFixtureB693Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB693'] = new \DiContainerBenchmarks\Fixture\B\FixtureB693();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB693'] = new \DiContainerBenchmarks\Fixture\B\FixtureB693();
     }
 
     /*
@@ -8782,9 +8780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB694
      */
-    protected function getFixtureB694Service()
+    protected static function getFixtureB694Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB694'] = new \DiContainerBenchmarks\Fixture\B\FixtureB694();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB694'] = new \DiContainerBenchmarks\Fixture\B\FixtureB694();
     }
 
     /*
@@ -8792,9 +8790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB695
      */
-    protected function getFixtureB695Service()
+    protected static function getFixtureB695Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB695'] = new \DiContainerBenchmarks\Fixture\B\FixtureB695();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB695'] = new \DiContainerBenchmarks\Fixture\B\FixtureB695();
     }
 
     /*
@@ -8802,9 +8800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB696
      */
-    protected function getFixtureB696Service()
+    protected static function getFixtureB696Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB696'] = new \DiContainerBenchmarks\Fixture\B\FixtureB696();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB696'] = new \DiContainerBenchmarks\Fixture\B\FixtureB696();
     }
 
     /*
@@ -8812,9 +8810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB697
      */
-    protected function getFixtureB697Service()
+    protected static function getFixtureB697Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB697'] = new \DiContainerBenchmarks\Fixture\B\FixtureB697();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB697'] = new \DiContainerBenchmarks\Fixture\B\FixtureB697();
     }
 
     /*
@@ -8822,9 +8820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB698
      */
-    protected function getFixtureB698Service()
+    protected static function getFixtureB698Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB698'] = new \DiContainerBenchmarks\Fixture\B\FixtureB698();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB698'] = new \DiContainerBenchmarks\Fixture\B\FixtureB698();
     }
 
     /*
@@ -8832,9 +8830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB699
      */
-    protected function getFixtureB699Service()
+    protected static function getFixtureB699Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB699'] = new \DiContainerBenchmarks\Fixture\B\FixtureB699();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB699'] = new \DiContainerBenchmarks\Fixture\B\FixtureB699();
     }
 
     /*
@@ -8842,9 +8840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB7
      */
-    protected function getFixtureB7Service()
+    protected static function getFixtureB7Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB7'] = new \DiContainerBenchmarks\Fixture\B\FixtureB7();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB7'] = new \DiContainerBenchmarks\Fixture\B\FixtureB7();
     }
 
     /*
@@ -8852,9 +8850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB70
      */
-    protected function getFixtureB70Service()
+    protected static function getFixtureB70Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB70'] = new \DiContainerBenchmarks\Fixture\B\FixtureB70();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB70'] = new \DiContainerBenchmarks\Fixture\B\FixtureB70();
     }
 
     /*
@@ -8862,9 +8860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB700
      */
-    protected function getFixtureB700Service()
+    protected static function getFixtureB700Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB700'] = new \DiContainerBenchmarks\Fixture\B\FixtureB700();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB700'] = new \DiContainerBenchmarks\Fixture\B\FixtureB700();
     }
 
     /*
@@ -8872,9 +8870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB701
      */
-    protected function getFixtureB701Service()
+    protected static function getFixtureB701Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB701'] = new \DiContainerBenchmarks\Fixture\B\FixtureB701();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB701'] = new \DiContainerBenchmarks\Fixture\B\FixtureB701();
     }
 
     /*
@@ -8882,9 +8880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB702
      */
-    protected function getFixtureB702Service()
+    protected static function getFixtureB702Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB702'] = new \DiContainerBenchmarks\Fixture\B\FixtureB702();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB702'] = new \DiContainerBenchmarks\Fixture\B\FixtureB702();
     }
 
     /*
@@ -8892,9 +8890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB703
      */
-    protected function getFixtureB703Service()
+    protected static function getFixtureB703Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB703'] = new \DiContainerBenchmarks\Fixture\B\FixtureB703();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB703'] = new \DiContainerBenchmarks\Fixture\B\FixtureB703();
     }
 
     /*
@@ -8902,9 +8900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB704
      */
-    protected function getFixtureB704Service()
+    protected static function getFixtureB704Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB704'] = new \DiContainerBenchmarks\Fixture\B\FixtureB704();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB704'] = new \DiContainerBenchmarks\Fixture\B\FixtureB704();
     }
 
     /*
@@ -8912,9 +8910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB705
      */
-    protected function getFixtureB705Service()
+    protected static function getFixtureB705Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB705'] = new \DiContainerBenchmarks\Fixture\B\FixtureB705();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB705'] = new \DiContainerBenchmarks\Fixture\B\FixtureB705();
     }
 
     /*
@@ -8922,9 +8920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB706
      */
-    protected function getFixtureB706Service()
+    protected static function getFixtureB706Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB706'] = new \DiContainerBenchmarks\Fixture\B\FixtureB706();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB706'] = new \DiContainerBenchmarks\Fixture\B\FixtureB706();
     }
 
     /*
@@ -8932,9 +8930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB707
      */
-    protected function getFixtureB707Service()
+    protected static function getFixtureB707Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB707'] = new \DiContainerBenchmarks\Fixture\B\FixtureB707();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB707'] = new \DiContainerBenchmarks\Fixture\B\FixtureB707();
     }
 
     /*
@@ -8942,9 +8940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB708
      */
-    protected function getFixtureB708Service()
+    protected static function getFixtureB708Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB708'] = new \DiContainerBenchmarks\Fixture\B\FixtureB708();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB708'] = new \DiContainerBenchmarks\Fixture\B\FixtureB708();
     }
 
     /*
@@ -8952,9 +8950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB709
      */
-    protected function getFixtureB709Service()
+    protected static function getFixtureB709Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB709'] = new \DiContainerBenchmarks\Fixture\B\FixtureB709();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB709'] = new \DiContainerBenchmarks\Fixture\B\FixtureB709();
     }
 
     /*
@@ -8962,9 +8960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB71
      */
-    protected function getFixtureB71Service()
+    protected static function getFixtureB71Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB71'] = new \DiContainerBenchmarks\Fixture\B\FixtureB71();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB71'] = new \DiContainerBenchmarks\Fixture\B\FixtureB71();
     }
 
     /*
@@ -8972,9 +8970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB710
      */
-    protected function getFixtureB710Service()
+    protected static function getFixtureB710Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB710'] = new \DiContainerBenchmarks\Fixture\B\FixtureB710();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB710'] = new \DiContainerBenchmarks\Fixture\B\FixtureB710();
     }
 
     /*
@@ -8982,9 +8980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB711
      */
-    protected function getFixtureB711Service()
+    protected static function getFixtureB711Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB711'] = new \DiContainerBenchmarks\Fixture\B\FixtureB711();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB711'] = new \DiContainerBenchmarks\Fixture\B\FixtureB711();
     }
 
     /*
@@ -8992,9 +8990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB712
      */
-    protected function getFixtureB712Service()
+    protected static function getFixtureB712Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB712'] = new \DiContainerBenchmarks\Fixture\B\FixtureB712();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB712'] = new \DiContainerBenchmarks\Fixture\B\FixtureB712();
     }
 
     /*
@@ -9002,9 +9000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB713
      */
-    protected function getFixtureB713Service()
+    protected static function getFixtureB713Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB713'] = new \DiContainerBenchmarks\Fixture\B\FixtureB713();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB713'] = new \DiContainerBenchmarks\Fixture\B\FixtureB713();
     }
 
     /*
@@ -9012,9 +9010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB714
      */
-    protected function getFixtureB714Service()
+    protected static function getFixtureB714Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB714'] = new \DiContainerBenchmarks\Fixture\B\FixtureB714();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB714'] = new \DiContainerBenchmarks\Fixture\B\FixtureB714();
     }
 
     /*
@@ -9022,9 +9020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB715
      */
-    protected function getFixtureB715Service()
+    protected static function getFixtureB715Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB715'] = new \DiContainerBenchmarks\Fixture\B\FixtureB715();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB715'] = new \DiContainerBenchmarks\Fixture\B\FixtureB715();
     }
 
     /*
@@ -9032,9 +9030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB716
      */
-    protected function getFixtureB716Service()
+    protected static function getFixtureB716Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB716'] = new \DiContainerBenchmarks\Fixture\B\FixtureB716();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB716'] = new \DiContainerBenchmarks\Fixture\B\FixtureB716();
     }
 
     /*
@@ -9042,9 +9040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB717
      */
-    protected function getFixtureB717Service()
+    protected static function getFixtureB717Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB717'] = new \DiContainerBenchmarks\Fixture\B\FixtureB717();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB717'] = new \DiContainerBenchmarks\Fixture\B\FixtureB717();
     }
 
     /*
@@ -9052,9 +9050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB718
      */
-    protected function getFixtureB718Service()
+    protected static function getFixtureB718Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB718'] = new \DiContainerBenchmarks\Fixture\B\FixtureB718();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB718'] = new \DiContainerBenchmarks\Fixture\B\FixtureB718();
     }
 
     /*
@@ -9062,9 +9060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB719
      */
-    protected function getFixtureB719Service()
+    protected static function getFixtureB719Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB719'] = new \DiContainerBenchmarks\Fixture\B\FixtureB719();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB719'] = new \DiContainerBenchmarks\Fixture\B\FixtureB719();
     }
 
     /*
@@ -9072,9 +9070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB72
      */
-    protected function getFixtureB72Service()
+    protected static function getFixtureB72Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB72'] = new \DiContainerBenchmarks\Fixture\B\FixtureB72();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB72'] = new \DiContainerBenchmarks\Fixture\B\FixtureB72();
     }
 
     /*
@@ -9082,9 +9080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB720
      */
-    protected function getFixtureB720Service()
+    protected static function getFixtureB720Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB720'] = new \DiContainerBenchmarks\Fixture\B\FixtureB720();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB720'] = new \DiContainerBenchmarks\Fixture\B\FixtureB720();
     }
 
     /*
@@ -9092,9 +9090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB721
      */
-    protected function getFixtureB721Service()
+    protected static function getFixtureB721Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB721'] = new \DiContainerBenchmarks\Fixture\B\FixtureB721();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB721'] = new \DiContainerBenchmarks\Fixture\B\FixtureB721();
     }
 
     /*
@@ -9102,9 +9100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB722
      */
-    protected function getFixtureB722Service()
+    protected static function getFixtureB722Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB722'] = new \DiContainerBenchmarks\Fixture\B\FixtureB722();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB722'] = new \DiContainerBenchmarks\Fixture\B\FixtureB722();
     }
 
     /*
@@ -9112,9 +9110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB723
      */
-    protected function getFixtureB723Service()
+    protected static function getFixtureB723Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB723'] = new \DiContainerBenchmarks\Fixture\B\FixtureB723();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB723'] = new \DiContainerBenchmarks\Fixture\B\FixtureB723();
     }
 
     /*
@@ -9122,9 +9120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB724
      */
-    protected function getFixtureB724Service()
+    protected static function getFixtureB724Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB724'] = new \DiContainerBenchmarks\Fixture\B\FixtureB724();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB724'] = new \DiContainerBenchmarks\Fixture\B\FixtureB724();
     }
 
     /*
@@ -9132,9 +9130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB725
      */
-    protected function getFixtureB725Service()
+    protected static function getFixtureB725Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB725'] = new \DiContainerBenchmarks\Fixture\B\FixtureB725();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB725'] = new \DiContainerBenchmarks\Fixture\B\FixtureB725();
     }
 
     /*
@@ -9142,9 +9140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB726
      */
-    protected function getFixtureB726Service()
+    protected static function getFixtureB726Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB726'] = new \DiContainerBenchmarks\Fixture\B\FixtureB726();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB726'] = new \DiContainerBenchmarks\Fixture\B\FixtureB726();
     }
 
     /*
@@ -9152,9 +9150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB727
      */
-    protected function getFixtureB727Service()
+    protected static function getFixtureB727Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB727'] = new \DiContainerBenchmarks\Fixture\B\FixtureB727();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB727'] = new \DiContainerBenchmarks\Fixture\B\FixtureB727();
     }
 
     /*
@@ -9162,9 +9160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB728
      */
-    protected function getFixtureB728Service()
+    protected static function getFixtureB728Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB728'] = new \DiContainerBenchmarks\Fixture\B\FixtureB728();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB728'] = new \DiContainerBenchmarks\Fixture\B\FixtureB728();
     }
 
     /*
@@ -9172,9 +9170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB729
      */
-    protected function getFixtureB729Service()
+    protected static function getFixtureB729Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB729'] = new \DiContainerBenchmarks\Fixture\B\FixtureB729();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB729'] = new \DiContainerBenchmarks\Fixture\B\FixtureB729();
     }
 
     /*
@@ -9182,9 +9180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB73
      */
-    protected function getFixtureB73Service()
+    protected static function getFixtureB73Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB73'] = new \DiContainerBenchmarks\Fixture\B\FixtureB73();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB73'] = new \DiContainerBenchmarks\Fixture\B\FixtureB73();
     }
 
     /*
@@ -9192,9 +9190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB730
      */
-    protected function getFixtureB730Service()
+    protected static function getFixtureB730Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB730'] = new \DiContainerBenchmarks\Fixture\B\FixtureB730();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB730'] = new \DiContainerBenchmarks\Fixture\B\FixtureB730();
     }
 
     /*
@@ -9202,9 +9200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB731
      */
-    protected function getFixtureB731Service()
+    protected static function getFixtureB731Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB731'] = new \DiContainerBenchmarks\Fixture\B\FixtureB731();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB731'] = new \DiContainerBenchmarks\Fixture\B\FixtureB731();
     }
 
     /*
@@ -9212,9 +9210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB732
      */
-    protected function getFixtureB732Service()
+    protected static function getFixtureB732Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB732'] = new \DiContainerBenchmarks\Fixture\B\FixtureB732();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB732'] = new \DiContainerBenchmarks\Fixture\B\FixtureB732();
     }
 
     /*
@@ -9222,9 +9220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB733
      */
-    protected function getFixtureB733Service()
+    protected static function getFixtureB733Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB733'] = new \DiContainerBenchmarks\Fixture\B\FixtureB733();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB733'] = new \DiContainerBenchmarks\Fixture\B\FixtureB733();
     }
 
     /*
@@ -9232,9 +9230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB734
      */
-    protected function getFixtureB734Service()
+    protected static function getFixtureB734Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB734'] = new \DiContainerBenchmarks\Fixture\B\FixtureB734();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB734'] = new \DiContainerBenchmarks\Fixture\B\FixtureB734();
     }
 
     /*
@@ -9242,9 +9240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB735
      */
-    protected function getFixtureB735Service()
+    protected static function getFixtureB735Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB735'] = new \DiContainerBenchmarks\Fixture\B\FixtureB735();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB735'] = new \DiContainerBenchmarks\Fixture\B\FixtureB735();
     }
 
     /*
@@ -9252,9 +9250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB736
      */
-    protected function getFixtureB736Service()
+    protected static function getFixtureB736Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB736'] = new \DiContainerBenchmarks\Fixture\B\FixtureB736();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB736'] = new \DiContainerBenchmarks\Fixture\B\FixtureB736();
     }
 
     /*
@@ -9262,9 +9260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB737
      */
-    protected function getFixtureB737Service()
+    protected static function getFixtureB737Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB737'] = new \DiContainerBenchmarks\Fixture\B\FixtureB737();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB737'] = new \DiContainerBenchmarks\Fixture\B\FixtureB737();
     }
 
     /*
@@ -9272,9 +9270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB738
      */
-    protected function getFixtureB738Service()
+    protected static function getFixtureB738Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB738'] = new \DiContainerBenchmarks\Fixture\B\FixtureB738();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB738'] = new \DiContainerBenchmarks\Fixture\B\FixtureB738();
     }
 
     /*
@@ -9282,9 +9280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB739
      */
-    protected function getFixtureB739Service()
+    protected static function getFixtureB739Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB739'] = new \DiContainerBenchmarks\Fixture\B\FixtureB739();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB739'] = new \DiContainerBenchmarks\Fixture\B\FixtureB739();
     }
 
     /*
@@ -9292,9 +9290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB74
      */
-    protected function getFixtureB74Service()
+    protected static function getFixtureB74Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB74'] = new \DiContainerBenchmarks\Fixture\B\FixtureB74();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB74'] = new \DiContainerBenchmarks\Fixture\B\FixtureB74();
     }
 
     /*
@@ -9302,9 +9300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB740
      */
-    protected function getFixtureB740Service()
+    protected static function getFixtureB740Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB740'] = new \DiContainerBenchmarks\Fixture\B\FixtureB740();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB740'] = new \DiContainerBenchmarks\Fixture\B\FixtureB740();
     }
 
     /*
@@ -9312,9 +9310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB741
      */
-    protected function getFixtureB741Service()
+    protected static function getFixtureB741Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB741'] = new \DiContainerBenchmarks\Fixture\B\FixtureB741();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB741'] = new \DiContainerBenchmarks\Fixture\B\FixtureB741();
     }
 
     /*
@@ -9322,9 +9320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB742
      */
-    protected function getFixtureB742Service()
+    protected static function getFixtureB742Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB742'] = new \DiContainerBenchmarks\Fixture\B\FixtureB742();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB742'] = new \DiContainerBenchmarks\Fixture\B\FixtureB742();
     }
 
     /*
@@ -9332,9 +9330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB743
      */
-    protected function getFixtureB743Service()
+    protected static function getFixtureB743Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB743'] = new \DiContainerBenchmarks\Fixture\B\FixtureB743();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB743'] = new \DiContainerBenchmarks\Fixture\B\FixtureB743();
     }
 
     /*
@@ -9342,9 +9340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB744
      */
-    protected function getFixtureB744Service()
+    protected static function getFixtureB744Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB744'] = new \DiContainerBenchmarks\Fixture\B\FixtureB744();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB744'] = new \DiContainerBenchmarks\Fixture\B\FixtureB744();
     }
 
     /*
@@ -9352,9 +9350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB745
      */
-    protected function getFixtureB745Service()
+    protected static function getFixtureB745Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB745'] = new \DiContainerBenchmarks\Fixture\B\FixtureB745();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB745'] = new \DiContainerBenchmarks\Fixture\B\FixtureB745();
     }
 
     /*
@@ -9362,9 +9360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB746
      */
-    protected function getFixtureB746Service()
+    protected static function getFixtureB746Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB746'] = new \DiContainerBenchmarks\Fixture\B\FixtureB746();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB746'] = new \DiContainerBenchmarks\Fixture\B\FixtureB746();
     }
 
     /*
@@ -9372,9 +9370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB747
      */
-    protected function getFixtureB747Service()
+    protected static function getFixtureB747Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB747'] = new \DiContainerBenchmarks\Fixture\B\FixtureB747();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB747'] = new \DiContainerBenchmarks\Fixture\B\FixtureB747();
     }
 
     /*
@@ -9382,9 +9380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB748
      */
-    protected function getFixtureB748Service()
+    protected static function getFixtureB748Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB748'] = new \DiContainerBenchmarks\Fixture\B\FixtureB748();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB748'] = new \DiContainerBenchmarks\Fixture\B\FixtureB748();
     }
 
     /*
@@ -9392,9 +9390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB749
      */
-    protected function getFixtureB749Service()
+    protected static function getFixtureB749Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB749'] = new \DiContainerBenchmarks\Fixture\B\FixtureB749();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB749'] = new \DiContainerBenchmarks\Fixture\B\FixtureB749();
     }
 
     /*
@@ -9402,9 +9400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB75
      */
-    protected function getFixtureB75Service()
+    protected static function getFixtureB75Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB75'] = new \DiContainerBenchmarks\Fixture\B\FixtureB75();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB75'] = new \DiContainerBenchmarks\Fixture\B\FixtureB75();
     }
 
     /*
@@ -9412,9 +9410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB750
      */
-    protected function getFixtureB750Service()
+    protected static function getFixtureB750Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB750'] = new \DiContainerBenchmarks\Fixture\B\FixtureB750();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB750'] = new \DiContainerBenchmarks\Fixture\B\FixtureB750();
     }
 
     /*
@@ -9422,9 +9420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB751
      */
-    protected function getFixtureB751Service()
+    protected static function getFixtureB751Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB751'] = new \DiContainerBenchmarks\Fixture\B\FixtureB751();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB751'] = new \DiContainerBenchmarks\Fixture\B\FixtureB751();
     }
 
     /*
@@ -9432,9 +9430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB752
      */
-    protected function getFixtureB752Service()
+    protected static function getFixtureB752Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB752'] = new \DiContainerBenchmarks\Fixture\B\FixtureB752();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB752'] = new \DiContainerBenchmarks\Fixture\B\FixtureB752();
     }
 
     /*
@@ -9442,9 +9440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB753
      */
-    protected function getFixtureB753Service()
+    protected static function getFixtureB753Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB753'] = new \DiContainerBenchmarks\Fixture\B\FixtureB753();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB753'] = new \DiContainerBenchmarks\Fixture\B\FixtureB753();
     }
 
     /*
@@ -9452,9 +9450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB754
      */
-    protected function getFixtureB754Service()
+    protected static function getFixtureB754Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB754'] = new \DiContainerBenchmarks\Fixture\B\FixtureB754();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB754'] = new \DiContainerBenchmarks\Fixture\B\FixtureB754();
     }
 
     /*
@@ -9462,9 +9460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB755
      */
-    protected function getFixtureB755Service()
+    protected static function getFixtureB755Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB755'] = new \DiContainerBenchmarks\Fixture\B\FixtureB755();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB755'] = new \DiContainerBenchmarks\Fixture\B\FixtureB755();
     }
 
     /*
@@ -9472,9 +9470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB756
      */
-    protected function getFixtureB756Service()
+    protected static function getFixtureB756Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB756'] = new \DiContainerBenchmarks\Fixture\B\FixtureB756();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB756'] = new \DiContainerBenchmarks\Fixture\B\FixtureB756();
     }
 
     /*
@@ -9482,9 +9480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB757
      */
-    protected function getFixtureB757Service()
+    protected static function getFixtureB757Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB757'] = new \DiContainerBenchmarks\Fixture\B\FixtureB757();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB757'] = new \DiContainerBenchmarks\Fixture\B\FixtureB757();
     }
 
     /*
@@ -9492,9 +9490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB758
      */
-    protected function getFixtureB758Service()
+    protected static function getFixtureB758Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB758'] = new \DiContainerBenchmarks\Fixture\B\FixtureB758();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB758'] = new \DiContainerBenchmarks\Fixture\B\FixtureB758();
     }
 
     /*
@@ -9502,9 +9500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB759
      */
-    protected function getFixtureB759Service()
+    protected static function getFixtureB759Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB759'] = new \DiContainerBenchmarks\Fixture\B\FixtureB759();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB759'] = new \DiContainerBenchmarks\Fixture\B\FixtureB759();
     }
 
     /*
@@ -9512,9 +9510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB76
      */
-    protected function getFixtureB76Service()
+    protected static function getFixtureB76Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB76'] = new \DiContainerBenchmarks\Fixture\B\FixtureB76();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB76'] = new \DiContainerBenchmarks\Fixture\B\FixtureB76();
     }
 
     /*
@@ -9522,9 +9520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB760
      */
-    protected function getFixtureB760Service()
+    protected static function getFixtureB760Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB760'] = new \DiContainerBenchmarks\Fixture\B\FixtureB760();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB760'] = new \DiContainerBenchmarks\Fixture\B\FixtureB760();
     }
 
     /*
@@ -9532,9 +9530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB761
      */
-    protected function getFixtureB761Service()
+    protected static function getFixtureB761Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB761'] = new \DiContainerBenchmarks\Fixture\B\FixtureB761();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB761'] = new \DiContainerBenchmarks\Fixture\B\FixtureB761();
     }
 
     /*
@@ -9542,9 +9540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB762
      */
-    protected function getFixtureB762Service()
+    protected static function getFixtureB762Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB762'] = new \DiContainerBenchmarks\Fixture\B\FixtureB762();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB762'] = new \DiContainerBenchmarks\Fixture\B\FixtureB762();
     }
 
     /*
@@ -9552,9 +9550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB763
      */
-    protected function getFixtureB763Service()
+    protected static function getFixtureB763Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB763'] = new \DiContainerBenchmarks\Fixture\B\FixtureB763();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB763'] = new \DiContainerBenchmarks\Fixture\B\FixtureB763();
     }
 
     /*
@@ -9562,9 +9560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB764
      */
-    protected function getFixtureB764Service()
+    protected static function getFixtureB764Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB764'] = new \DiContainerBenchmarks\Fixture\B\FixtureB764();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB764'] = new \DiContainerBenchmarks\Fixture\B\FixtureB764();
     }
 
     /*
@@ -9572,9 +9570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB765
      */
-    protected function getFixtureB765Service()
+    protected static function getFixtureB765Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB765'] = new \DiContainerBenchmarks\Fixture\B\FixtureB765();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB765'] = new \DiContainerBenchmarks\Fixture\B\FixtureB765();
     }
 
     /*
@@ -9582,9 +9580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB766
      */
-    protected function getFixtureB766Service()
+    protected static function getFixtureB766Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB766'] = new \DiContainerBenchmarks\Fixture\B\FixtureB766();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB766'] = new \DiContainerBenchmarks\Fixture\B\FixtureB766();
     }
 
     /*
@@ -9592,9 +9590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB767
      */
-    protected function getFixtureB767Service()
+    protected static function getFixtureB767Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB767'] = new \DiContainerBenchmarks\Fixture\B\FixtureB767();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB767'] = new \DiContainerBenchmarks\Fixture\B\FixtureB767();
     }
 
     /*
@@ -9602,9 +9600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB768
      */
-    protected function getFixtureB768Service()
+    protected static function getFixtureB768Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB768'] = new \DiContainerBenchmarks\Fixture\B\FixtureB768();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB768'] = new \DiContainerBenchmarks\Fixture\B\FixtureB768();
     }
 
     /*
@@ -9612,9 +9610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB769
      */
-    protected function getFixtureB769Service()
+    protected static function getFixtureB769Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB769'] = new \DiContainerBenchmarks\Fixture\B\FixtureB769();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB769'] = new \DiContainerBenchmarks\Fixture\B\FixtureB769();
     }
 
     /*
@@ -9622,9 +9620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB77
      */
-    protected function getFixtureB77Service()
+    protected static function getFixtureB77Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB77'] = new \DiContainerBenchmarks\Fixture\B\FixtureB77();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB77'] = new \DiContainerBenchmarks\Fixture\B\FixtureB77();
     }
 
     /*
@@ -9632,9 +9630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB770
      */
-    protected function getFixtureB770Service()
+    protected static function getFixtureB770Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB770'] = new \DiContainerBenchmarks\Fixture\B\FixtureB770();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB770'] = new \DiContainerBenchmarks\Fixture\B\FixtureB770();
     }
 
     /*
@@ -9642,9 +9640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB771
      */
-    protected function getFixtureB771Service()
+    protected static function getFixtureB771Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB771'] = new \DiContainerBenchmarks\Fixture\B\FixtureB771();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB771'] = new \DiContainerBenchmarks\Fixture\B\FixtureB771();
     }
 
     /*
@@ -9652,9 +9650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB772
      */
-    protected function getFixtureB772Service()
+    protected static function getFixtureB772Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB772'] = new \DiContainerBenchmarks\Fixture\B\FixtureB772();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB772'] = new \DiContainerBenchmarks\Fixture\B\FixtureB772();
     }
 
     /*
@@ -9662,9 +9660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB773
      */
-    protected function getFixtureB773Service()
+    protected static function getFixtureB773Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB773'] = new \DiContainerBenchmarks\Fixture\B\FixtureB773();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB773'] = new \DiContainerBenchmarks\Fixture\B\FixtureB773();
     }
 
     /*
@@ -9672,9 +9670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB774
      */
-    protected function getFixtureB774Service()
+    protected static function getFixtureB774Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB774'] = new \DiContainerBenchmarks\Fixture\B\FixtureB774();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB774'] = new \DiContainerBenchmarks\Fixture\B\FixtureB774();
     }
 
     /*
@@ -9682,9 +9680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB775
      */
-    protected function getFixtureB775Service()
+    protected static function getFixtureB775Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB775'] = new \DiContainerBenchmarks\Fixture\B\FixtureB775();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB775'] = new \DiContainerBenchmarks\Fixture\B\FixtureB775();
     }
 
     /*
@@ -9692,9 +9690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB776
      */
-    protected function getFixtureB776Service()
+    protected static function getFixtureB776Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB776'] = new \DiContainerBenchmarks\Fixture\B\FixtureB776();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB776'] = new \DiContainerBenchmarks\Fixture\B\FixtureB776();
     }
 
     /*
@@ -9702,9 +9700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB777
      */
-    protected function getFixtureB777Service()
+    protected static function getFixtureB777Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB777'] = new \DiContainerBenchmarks\Fixture\B\FixtureB777();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB777'] = new \DiContainerBenchmarks\Fixture\B\FixtureB777();
     }
 
     /*
@@ -9712,9 +9710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB778
      */
-    protected function getFixtureB778Service()
+    protected static function getFixtureB778Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB778'] = new \DiContainerBenchmarks\Fixture\B\FixtureB778();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB778'] = new \DiContainerBenchmarks\Fixture\B\FixtureB778();
     }
 
     /*
@@ -9722,9 +9720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB779
      */
-    protected function getFixtureB779Service()
+    protected static function getFixtureB779Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB779'] = new \DiContainerBenchmarks\Fixture\B\FixtureB779();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB779'] = new \DiContainerBenchmarks\Fixture\B\FixtureB779();
     }
 
     /*
@@ -9732,9 +9730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB78
      */
-    protected function getFixtureB78Service()
+    protected static function getFixtureB78Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB78'] = new \DiContainerBenchmarks\Fixture\B\FixtureB78();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB78'] = new \DiContainerBenchmarks\Fixture\B\FixtureB78();
     }
 
     /*
@@ -9742,9 +9740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB780
      */
-    protected function getFixtureB780Service()
+    protected static function getFixtureB780Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB780'] = new \DiContainerBenchmarks\Fixture\B\FixtureB780();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB780'] = new \DiContainerBenchmarks\Fixture\B\FixtureB780();
     }
 
     /*
@@ -9752,9 +9750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB781
      */
-    protected function getFixtureB781Service()
+    protected static function getFixtureB781Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB781'] = new \DiContainerBenchmarks\Fixture\B\FixtureB781();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB781'] = new \DiContainerBenchmarks\Fixture\B\FixtureB781();
     }
 
     /*
@@ -9762,9 +9760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB782
      */
-    protected function getFixtureB782Service()
+    protected static function getFixtureB782Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB782'] = new \DiContainerBenchmarks\Fixture\B\FixtureB782();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB782'] = new \DiContainerBenchmarks\Fixture\B\FixtureB782();
     }
 
     /*
@@ -9772,9 +9770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB783
      */
-    protected function getFixtureB783Service()
+    protected static function getFixtureB783Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB783'] = new \DiContainerBenchmarks\Fixture\B\FixtureB783();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB783'] = new \DiContainerBenchmarks\Fixture\B\FixtureB783();
     }
 
     /*
@@ -9782,9 +9780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB784
      */
-    protected function getFixtureB784Service()
+    protected static function getFixtureB784Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB784'] = new \DiContainerBenchmarks\Fixture\B\FixtureB784();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB784'] = new \DiContainerBenchmarks\Fixture\B\FixtureB784();
     }
 
     /*
@@ -9792,9 +9790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB785
      */
-    protected function getFixtureB785Service()
+    protected static function getFixtureB785Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB785'] = new \DiContainerBenchmarks\Fixture\B\FixtureB785();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB785'] = new \DiContainerBenchmarks\Fixture\B\FixtureB785();
     }
 
     /*
@@ -9802,9 +9800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB786
      */
-    protected function getFixtureB786Service()
+    protected static function getFixtureB786Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB786'] = new \DiContainerBenchmarks\Fixture\B\FixtureB786();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB786'] = new \DiContainerBenchmarks\Fixture\B\FixtureB786();
     }
 
     /*
@@ -9812,9 +9810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB787
      */
-    protected function getFixtureB787Service()
+    protected static function getFixtureB787Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB787'] = new \DiContainerBenchmarks\Fixture\B\FixtureB787();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB787'] = new \DiContainerBenchmarks\Fixture\B\FixtureB787();
     }
 
     /*
@@ -9822,9 +9820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB788
      */
-    protected function getFixtureB788Service()
+    protected static function getFixtureB788Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB788'] = new \DiContainerBenchmarks\Fixture\B\FixtureB788();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB788'] = new \DiContainerBenchmarks\Fixture\B\FixtureB788();
     }
 
     /*
@@ -9832,9 +9830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB789
      */
-    protected function getFixtureB789Service()
+    protected static function getFixtureB789Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB789'] = new \DiContainerBenchmarks\Fixture\B\FixtureB789();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB789'] = new \DiContainerBenchmarks\Fixture\B\FixtureB789();
     }
 
     /*
@@ -9842,9 +9840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB79
      */
-    protected function getFixtureB79Service()
+    protected static function getFixtureB79Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB79'] = new \DiContainerBenchmarks\Fixture\B\FixtureB79();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB79'] = new \DiContainerBenchmarks\Fixture\B\FixtureB79();
     }
 
     /*
@@ -9852,9 +9850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB790
      */
-    protected function getFixtureB790Service()
+    protected static function getFixtureB790Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB790'] = new \DiContainerBenchmarks\Fixture\B\FixtureB790();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB790'] = new \DiContainerBenchmarks\Fixture\B\FixtureB790();
     }
 
     /*
@@ -9862,9 +9860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB791
      */
-    protected function getFixtureB791Service()
+    protected static function getFixtureB791Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB791'] = new \DiContainerBenchmarks\Fixture\B\FixtureB791();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB791'] = new \DiContainerBenchmarks\Fixture\B\FixtureB791();
     }
 
     /*
@@ -9872,9 +9870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB792
      */
-    protected function getFixtureB792Service()
+    protected static function getFixtureB792Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB792'] = new \DiContainerBenchmarks\Fixture\B\FixtureB792();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB792'] = new \DiContainerBenchmarks\Fixture\B\FixtureB792();
     }
 
     /*
@@ -9882,9 +9880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB793
      */
-    protected function getFixtureB793Service()
+    protected static function getFixtureB793Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB793'] = new \DiContainerBenchmarks\Fixture\B\FixtureB793();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB793'] = new \DiContainerBenchmarks\Fixture\B\FixtureB793();
     }
 
     /*
@@ -9892,9 +9890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB794
      */
-    protected function getFixtureB794Service()
+    protected static function getFixtureB794Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB794'] = new \DiContainerBenchmarks\Fixture\B\FixtureB794();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB794'] = new \DiContainerBenchmarks\Fixture\B\FixtureB794();
     }
 
     /*
@@ -9902,9 +9900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB795
      */
-    protected function getFixtureB795Service()
+    protected static function getFixtureB795Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB795'] = new \DiContainerBenchmarks\Fixture\B\FixtureB795();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB795'] = new \DiContainerBenchmarks\Fixture\B\FixtureB795();
     }
 
     /*
@@ -9912,9 +9910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB796
      */
-    protected function getFixtureB796Service()
+    protected static function getFixtureB796Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB796'] = new \DiContainerBenchmarks\Fixture\B\FixtureB796();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB796'] = new \DiContainerBenchmarks\Fixture\B\FixtureB796();
     }
 
     /*
@@ -9922,9 +9920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB797
      */
-    protected function getFixtureB797Service()
+    protected static function getFixtureB797Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB797'] = new \DiContainerBenchmarks\Fixture\B\FixtureB797();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB797'] = new \DiContainerBenchmarks\Fixture\B\FixtureB797();
     }
 
     /*
@@ -9932,9 +9930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB798
      */
-    protected function getFixtureB798Service()
+    protected static function getFixtureB798Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB798'] = new \DiContainerBenchmarks\Fixture\B\FixtureB798();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB798'] = new \DiContainerBenchmarks\Fixture\B\FixtureB798();
     }
 
     /*
@@ -9942,9 +9940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB799
      */
-    protected function getFixtureB799Service()
+    protected static function getFixtureB799Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB799'] = new \DiContainerBenchmarks\Fixture\B\FixtureB799();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB799'] = new \DiContainerBenchmarks\Fixture\B\FixtureB799();
     }
 
     /*
@@ -9952,9 +9950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB8
      */
-    protected function getFixtureB8Service()
+    protected static function getFixtureB8Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB8'] = new \DiContainerBenchmarks\Fixture\B\FixtureB8();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB8'] = new \DiContainerBenchmarks\Fixture\B\FixtureB8();
     }
 
     /*
@@ -9962,9 +9960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB80
      */
-    protected function getFixtureB80Service()
+    protected static function getFixtureB80Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB80'] = new \DiContainerBenchmarks\Fixture\B\FixtureB80();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB80'] = new \DiContainerBenchmarks\Fixture\B\FixtureB80();
     }
 
     /*
@@ -9972,9 +9970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB800
      */
-    protected function getFixtureB800Service()
+    protected static function getFixtureB800Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB800'] = new \DiContainerBenchmarks\Fixture\B\FixtureB800();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB800'] = new \DiContainerBenchmarks\Fixture\B\FixtureB800();
     }
 
     /*
@@ -9982,9 +9980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB801
      */
-    protected function getFixtureB801Service()
+    protected static function getFixtureB801Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB801'] = new \DiContainerBenchmarks\Fixture\B\FixtureB801();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB801'] = new \DiContainerBenchmarks\Fixture\B\FixtureB801();
     }
 
     /*
@@ -9992,9 +9990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB802
      */
-    protected function getFixtureB802Service()
+    protected static function getFixtureB802Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB802'] = new \DiContainerBenchmarks\Fixture\B\FixtureB802();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB802'] = new \DiContainerBenchmarks\Fixture\B\FixtureB802();
     }
 
     /*
@@ -10002,9 +10000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB803
      */
-    protected function getFixtureB803Service()
+    protected static function getFixtureB803Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB803'] = new \DiContainerBenchmarks\Fixture\B\FixtureB803();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB803'] = new \DiContainerBenchmarks\Fixture\B\FixtureB803();
     }
 
     /*
@@ -10012,9 +10010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB804
      */
-    protected function getFixtureB804Service()
+    protected static function getFixtureB804Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB804'] = new \DiContainerBenchmarks\Fixture\B\FixtureB804();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB804'] = new \DiContainerBenchmarks\Fixture\B\FixtureB804();
     }
 
     /*
@@ -10022,9 +10020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB805
      */
-    protected function getFixtureB805Service()
+    protected static function getFixtureB805Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB805'] = new \DiContainerBenchmarks\Fixture\B\FixtureB805();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB805'] = new \DiContainerBenchmarks\Fixture\B\FixtureB805();
     }
 
     /*
@@ -10032,9 +10030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB806
      */
-    protected function getFixtureB806Service()
+    protected static function getFixtureB806Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB806'] = new \DiContainerBenchmarks\Fixture\B\FixtureB806();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB806'] = new \DiContainerBenchmarks\Fixture\B\FixtureB806();
     }
 
     /*
@@ -10042,9 +10040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB807
      */
-    protected function getFixtureB807Service()
+    protected static function getFixtureB807Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB807'] = new \DiContainerBenchmarks\Fixture\B\FixtureB807();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB807'] = new \DiContainerBenchmarks\Fixture\B\FixtureB807();
     }
 
     /*
@@ -10052,9 +10050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB808
      */
-    protected function getFixtureB808Service()
+    protected static function getFixtureB808Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB808'] = new \DiContainerBenchmarks\Fixture\B\FixtureB808();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB808'] = new \DiContainerBenchmarks\Fixture\B\FixtureB808();
     }
 
     /*
@@ -10062,9 +10060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB809
      */
-    protected function getFixtureB809Service()
+    protected static function getFixtureB809Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB809'] = new \DiContainerBenchmarks\Fixture\B\FixtureB809();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB809'] = new \DiContainerBenchmarks\Fixture\B\FixtureB809();
     }
 
     /*
@@ -10072,9 +10070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB81
      */
-    protected function getFixtureB81Service()
+    protected static function getFixtureB81Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB81'] = new \DiContainerBenchmarks\Fixture\B\FixtureB81();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB81'] = new \DiContainerBenchmarks\Fixture\B\FixtureB81();
     }
 
     /*
@@ -10082,9 +10080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB810
      */
-    protected function getFixtureB810Service()
+    protected static function getFixtureB810Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB810'] = new \DiContainerBenchmarks\Fixture\B\FixtureB810();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB810'] = new \DiContainerBenchmarks\Fixture\B\FixtureB810();
     }
 
     /*
@@ -10092,9 +10090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB811
      */
-    protected function getFixtureB811Service()
+    protected static function getFixtureB811Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB811'] = new \DiContainerBenchmarks\Fixture\B\FixtureB811();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB811'] = new \DiContainerBenchmarks\Fixture\B\FixtureB811();
     }
 
     /*
@@ -10102,9 +10100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB812
      */
-    protected function getFixtureB812Service()
+    protected static function getFixtureB812Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB812'] = new \DiContainerBenchmarks\Fixture\B\FixtureB812();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB812'] = new \DiContainerBenchmarks\Fixture\B\FixtureB812();
     }
 
     /*
@@ -10112,9 +10110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB813
      */
-    protected function getFixtureB813Service()
+    protected static function getFixtureB813Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB813'] = new \DiContainerBenchmarks\Fixture\B\FixtureB813();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB813'] = new \DiContainerBenchmarks\Fixture\B\FixtureB813();
     }
 
     /*
@@ -10122,9 +10120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB814
      */
-    protected function getFixtureB814Service()
+    protected static function getFixtureB814Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB814'] = new \DiContainerBenchmarks\Fixture\B\FixtureB814();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB814'] = new \DiContainerBenchmarks\Fixture\B\FixtureB814();
     }
 
     /*
@@ -10132,9 +10130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB815
      */
-    protected function getFixtureB815Service()
+    protected static function getFixtureB815Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB815'] = new \DiContainerBenchmarks\Fixture\B\FixtureB815();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB815'] = new \DiContainerBenchmarks\Fixture\B\FixtureB815();
     }
 
     /*
@@ -10142,9 +10140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB816
      */
-    protected function getFixtureB816Service()
+    protected static function getFixtureB816Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB816'] = new \DiContainerBenchmarks\Fixture\B\FixtureB816();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB816'] = new \DiContainerBenchmarks\Fixture\B\FixtureB816();
     }
 
     /*
@@ -10152,9 +10150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB817
      */
-    protected function getFixtureB817Service()
+    protected static function getFixtureB817Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB817'] = new \DiContainerBenchmarks\Fixture\B\FixtureB817();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB817'] = new \DiContainerBenchmarks\Fixture\B\FixtureB817();
     }
 
     /*
@@ -10162,9 +10160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB818
      */
-    protected function getFixtureB818Service()
+    protected static function getFixtureB818Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB818'] = new \DiContainerBenchmarks\Fixture\B\FixtureB818();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB818'] = new \DiContainerBenchmarks\Fixture\B\FixtureB818();
     }
 
     /*
@@ -10172,9 +10170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB819
      */
-    protected function getFixtureB819Service()
+    protected static function getFixtureB819Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB819'] = new \DiContainerBenchmarks\Fixture\B\FixtureB819();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB819'] = new \DiContainerBenchmarks\Fixture\B\FixtureB819();
     }
 
     /*
@@ -10182,9 +10180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB82
      */
-    protected function getFixtureB82Service()
+    protected static function getFixtureB82Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB82'] = new \DiContainerBenchmarks\Fixture\B\FixtureB82();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB82'] = new \DiContainerBenchmarks\Fixture\B\FixtureB82();
     }
 
     /*
@@ -10192,9 +10190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB820
      */
-    protected function getFixtureB820Service()
+    protected static function getFixtureB820Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB820'] = new \DiContainerBenchmarks\Fixture\B\FixtureB820();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB820'] = new \DiContainerBenchmarks\Fixture\B\FixtureB820();
     }
 
     /*
@@ -10202,9 +10200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB821
      */
-    protected function getFixtureB821Service()
+    protected static function getFixtureB821Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB821'] = new \DiContainerBenchmarks\Fixture\B\FixtureB821();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB821'] = new \DiContainerBenchmarks\Fixture\B\FixtureB821();
     }
 
     /*
@@ -10212,9 +10210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB822
      */
-    protected function getFixtureB822Service()
+    protected static function getFixtureB822Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB822'] = new \DiContainerBenchmarks\Fixture\B\FixtureB822();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB822'] = new \DiContainerBenchmarks\Fixture\B\FixtureB822();
     }
 
     /*
@@ -10222,9 +10220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB823
      */
-    protected function getFixtureB823Service()
+    protected static function getFixtureB823Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB823'] = new \DiContainerBenchmarks\Fixture\B\FixtureB823();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB823'] = new \DiContainerBenchmarks\Fixture\B\FixtureB823();
     }
 
     /*
@@ -10232,9 +10230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB824
      */
-    protected function getFixtureB824Service()
+    protected static function getFixtureB824Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB824'] = new \DiContainerBenchmarks\Fixture\B\FixtureB824();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB824'] = new \DiContainerBenchmarks\Fixture\B\FixtureB824();
     }
 
     /*
@@ -10242,9 +10240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB825
      */
-    protected function getFixtureB825Service()
+    protected static function getFixtureB825Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB825'] = new \DiContainerBenchmarks\Fixture\B\FixtureB825();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB825'] = new \DiContainerBenchmarks\Fixture\B\FixtureB825();
     }
 
     /*
@@ -10252,9 +10250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB826
      */
-    protected function getFixtureB826Service()
+    protected static function getFixtureB826Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB826'] = new \DiContainerBenchmarks\Fixture\B\FixtureB826();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB826'] = new \DiContainerBenchmarks\Fixture\B\FixtureB826();
     }
 
     /*
@@ -10262,9 +10260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB827
      */
-    protected function getFixtureB827Service()
+    protected static function getFixtureB827Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB827'] = new \DiContainerBenchmarks\Fixture\B\FixtureB827();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB827'] = new \DiContainerBenchmarks\Fixture\B\FixtureB827();
     }
 
     /*
@@ -10272,9 +10270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB828
      */
-    protected function getFixtureB828Service()
+    protected static function getFixtureB828Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB828'] = new \DiContainerBenchmarks\Fixture\B\FixtureB828();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB828'] = new \DiContainerBenchmarks\Fixture\B\FixtureB828();
     }
 
     /*
@@ -10282,9 +10280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB829
      */
-    protected function getFixtureB829Service()
+    protected static function getFixtureB829Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB829'] = new \DiContainerBenchmarks\Fixture\B\FixtureB829();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB829'] = new \DiContainerBenchmarks\Fixture\B\FixtureB829();
     }
 
     /*
@@ -10292,9 +10290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB83
      */
-    protected function getFixtureB83Service()
+    protected static function getFixtureB83Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB83'] = new \DiContainerBenchmarks\Fixture\B\FixtureB83();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB83'] = new \DiContainerBenchmarks\Fixture\B\FixtureB83();
     }
 
     /*
@@ -10302,9 +10300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB830
      */
-    protected function getFixtureB830Service()
+    protected static function getFixtureB830Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB830'] = new \DiContainerBenchmarks\Fixture\B\FixtureB830();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB830'] = new \DiContainerBenchmarks\Fixture\B\FixtureB830();
     }
 
     /*
@@ -10312,9 +10310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB831
      */
-    protected function getFixtureB831Service()
+    protected static function getFixtureB831Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB831'] = new \DiContainerBenchmarks\Fixture\B\FixtureB831();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB831'] = new \DiContainerBenchmarks\Fixture\B\FixtureB831();
     }
 
     /*
@@ -10322,9 +10320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB832
      */
-    protected function getFixtureB832Service()
+    protected static function getFixtureB832Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB832'] = new \DiContainerBenchmarks\Fixture\B\FixtureB832();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB832'] = new \DiContainerBenchmarks\Fixture\B\FixtureB832();
     }
 
     /*
@@ -10332,9 +10330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB833
      */
-    protected function getFixtureB833Service()
+    protected static function getFixtureB833Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB833'] = new \DiContainerBenchmarks\Fixture\B\FixtureB833();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB833'] = new \DiContainerBenchmarks\Fixture\B\FixtureB833();
     }
 
     /*
@@ -10342,9 +10340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB834
      */
-    protected function getFixtureB834Service()
+    protected static function getFixtureB834Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB834'] = new \DiContainerBenchmarks\Fixture\B\FixtureB834();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB834'] = new \DiContainerBenchmarks\Fixture\B\FixtureB834();
     }
 
     /*
@@ -10352,9 +10350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB835
      */
-    protected function getFixtureB835Service()
+    protected static function getFixtureB835Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB835'] = new \DiContainerBenchmarks\Fixture\B\FixtureB835();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB835'] = new \DiContainerBenchmarks\Fixture\B\FixtureB835();
     }
 
     /*
@@ -10362,9 +10360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB836
      */
-    protected function getFixtureB836Service()
+    protected static function getFixtureB836Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB836'] = new \DiContainerBenchmarks\Fixture\B\FixtureB836();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB836'] = new \DiContainerBenchmarks\Fixture\B\FixtureB836();
     }
 
     /*
@@ -10372,9 +10370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB837
      */
-    protected function getFixtureB837Service()
+    protected static function getFixtureB837Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB837'] = new \DiContainerBenchmarks\Fixture\B\FixtureB837();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB837'] = new \DiContainerBenchmarks\Fixture\B\FixtureB837();
     }
 
     /*
@@ -10382,9 +10380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB838
      */
-    protected function getFixtureB838Service()
+    protected static function getFixtureB838Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB838'] = new \DiContainerBenchmarks\Fixture\B\FixtureB838();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB838'] = new \DiContainerBenchmarks\Fixture\B\FixtureB838();
     }
 
     /*
@@ -10392,9 +10390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB839
      */
-    protected function getFixtureB839Service()
+    protected static function getFixtureB839Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB839'] = new \DiContainerBenchmarks\Fixture\B\FixtureB839();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB839'] = new \DiContainerBenchmarks\Fixture\B\FixtureB839();
     }
 
     /*
@@ -10402,9 +10400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB84
      */
-    protected function getFixtureB84Service()
+    protected static function getFixtureB84Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB84'] = new \DiContainerBenchmarks\Fixture\B\FixtureB84();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB84'] = new \DiContainerBenchmarks\Fixture\B\FixtureB84();
     }
 
     /*
@@ -10412,9 +10410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB840
      */
-    protected function getFixtureB840Service()
+    protected static function getFixtureB840Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB840'] = new \DiContainerBenchmarks\Fixture\B\FixtureB840();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB840'] = new \DiContainerBenchmarks\Fixture\B\FixtureB840();
     }
 
     /*
@@ -10422,9 +10420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB841
      */
-    protected function getFixtureB841Service()
+    protected static function getFixtureB841Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB841'] = new \DiContainerBenchmarks\Fixture\B\FixtureB841();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB841'] = new \DiContainerBenchmarks\Fixture\B\FixtureB841();
     }
 
     /*
@@ -10432,9 +10430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB842
      */
-    protected function getFixtureB842Service()
+    protected static function getFixtureB842Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB842'] = new \DiContainerBenchmarks\Fixture\B\FixtureB842();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB842'] = new \DiContainerBenchmarks\Fixture\B\FixtureB842();
     }
 
     /*
@@ -10442,9 +10440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB843
      */
-    protected function getFixtureB843Service()
+    protected static function getFixtureB843Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB843'] = new \DiContainerBenchmarks\Fixture\B\FixtureB843();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB843'] = new \DiContainerBenchmarks\Fixture\B\FixtureB843();
     }
 
     /*
@@ -10452,9 +10450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB844
      */
-    protected function getFixtureB844Service()
+    protected static function getFixtureB844Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB844'] = new \DiContainerBenchmarks\Fixture\B\FixtureB844();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB844'] = new \DiContainerBenchmarks\Fixture\B\FixtureB844();
     }
 
     /*
@@ -10462,9 +10460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB845
      */
-    protected function getFixtureB845Service()
+    protected static function getFixtureB845Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB845'] = new \DiContainerBenchmarks\Fixture\B\FixtureB845();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB845'] = new \DiContainerBenchmarks\Fixture\B\FixtureB845();
     }
 
     /*
@@ -10472,9 +10470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB846
      */
-    protected function getFixtureB846Service()
+    protected static function getFixtureB846Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB846'] = new \DiContainerBenchmarks\Fixture\B\FixtureB846();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB846'] = new \DiContainerBenchmarks\Fixture\B\FixtureB846();
     }
 
     /*
@@ -10482,9 +10480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB847
      */
-    protected function getFixtureB847Service()
+    protected static function getFixtureB847Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB847'] = new \DiContainerBenchmarks\Fixture\B\FixtureB847();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB847'] = new \DiContainerBenchmarks\Fixture\B\FixtureB847();
     }
 
     /*
@@ -10492,9 +10490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB848
      */
-    protected function getFixtureB848Service()
+    protected static function getFixtureB848Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB848'] = new \DiContainerBenchmarks\Fixture\B\FixtureB848();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB848'] = new \DiContainerBenchmarks\Fixture\B\FixtureB848();
     }
 
     /*
@@ -10502,9 +10500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB849
      */
-    protected function getFixtureB849Service()
+    protected static function getFixtureB849Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB849'] = new \DiContainerBenchmarks\Fixture\B\FixtureB849();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB849'] = new \DiContainerBenchmarks\Fixture\B\FixtureB849();
     }
 
     /*
@@ -10512,9 +10510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB85
      */
-    protected function getFixtureB85Service()
+    protected static function getFixtureB85Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB85'] = new \DiContainerBenchmarks\Fixture\B\FixtureB85();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB85'] = new \DiContainerBenchmarks\Fixture\B\FixtureB85();
     }
 
     /*
@@ -10522,9 +10520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB850
      */
-    protected function getFixtureB850Service()
+    protected static function getFixtureB850Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB850'] = new \DiContainerBenchmarks\Fixture\B\FixtureB850();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB850'] = new \DiContainerBenchmarks\Fixture\B\FixtureB850();
     }
 
     /*
@@ -10532,9 +10530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB851
      */
-    protected function getFixtureB851Service()
+    protected static function getFixtureB851Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB851'] = new \DiContainerBenchmarks\Fixture\B\FixtureB851();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB851'] = new \DiContainerBenchmarks\Fixture\B\FixtureB851();
     }
 
     /*
@@ -10542,9 +10540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB852
      */
-    protected function getFixtureB852Service()
+    protected static function getFixtureB852Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB852'] = new \DiContainerBenchmarks\Fixture\B\FixtureB852();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB852'] = new \DiContainerBenchmarks\Fixture\B\FixtureB852();
     }
 
     /*
@@ -10552,9 +10550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB853
      */
-    protected function getFixtureB853Service()
+    protected static function getFixtureB853Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB853'] = new \DiContainerBenchmarks\Fixture\B\FixtureB853();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB853'] = new \DiContainerBenchmarks\Fixture\B\FixtureB853();
     }
 
     /*
@@ -10562,9 +10560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB854
      */
-    protected function getFixtureB854Service()
+    protected static function getFixtureB854Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB854'] = new \DiContainerBenchmarks\Fixture\B\FixtureB854();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB854'] = new \DiContainerBenchmarks\Fixture\B\FixtureB854();
     }
 
     /*
@@ -10572,9 +10570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB855
      */
-    protected function getFixtureB855Service()
+    protected static function getFixtureB855Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB855'] = new \DiContainerBenchmarks\Fixture\B\FixtureB855();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB855'] = new \DiContainerBenchmarks\Fixture\B\FixtureB855();
     }
 
     /*
@@ -10582,9 +10580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB856
      */
-    protected function getFixtureB856Service()
+    protected static function getFixtureB856Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB856'] = new \DiContainerBenchmarks\Fixture\B\FixtureB856();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB856'] = new \DiContainerBenchmarks\Fixture\B\FixtureB856();
     }
 
     /*
@@ -10592,9 +10590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB857
      */
-    protected function getFixtureB857Service()
+    protected static function getFixtureB857Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB857'] = new \DiContainerBenchmarks\Fixture\B\FixtureB857();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB857'] = new \DiContainerBenchmarks\Fixture\B\FixtureB857();
     }
 
     /*
@@ -10602,9 +10600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB858
      */
-    protected function getFixtureB858Service()
+    protected static function getFixtureB858Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB858'] = new \DiContainerBenchmarks\Fixture\B\FixtureB858();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB858'] = new \DiContainerBenchmarks\Fixture\B\FixtureB858();
     }
 
     /*
@@ -10612,9 +10610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB859
      */
-    protected function getFixtureB859Service()
+    protected static function getFixtureB859Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB859'] = new \DiContainerBenchmarks\Fixture\B\FixtureB859();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB859'] = new \DiContainerBenchmarks\Fixture\B\FixtureB859();
     }
 
     /*
@@ -10622,9 +10620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB86
      */
-    protected function getFixtureB86Service()
+    protected static function getFixtureB86Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB86'] = new \DiContainerBenchmarks\Fixture\B\FixtureB86();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB86'] = new \DiContainerBenchmarks\Fixture\B\FixtureB86();
     }
 
     /*
@@ -10632,9 +10630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB860
      */
-    protected function getFixtureB860Service()
+    protected static function getFixtureB860Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB860'] = new \DiContainerBenchmarks\Fixture\B\FixtureB860();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB860'] = new \DiContainerBenchmarks\Fixture\B\FixtureB860();
     }
 
     /*
@@ -10642,9 +10640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB861
      */
-    protected function getFixtureB861Service()
+    protected static function getFixtureB861Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB861'] = new \DiContainerBenchmarks\Fixture\B\FixtureB861();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB861'] = new \DiContainerBenchmarks\Fixture\B\FixtureB861();
     }
 
     /*
@@ -10652,9 +10650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB862
      */
-    protected function getFixtureB862Service()
+    protected static function getFixtureB862Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB862'] = new \DiContainerBenchmarks\Fixture\B\FixtureB862();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB862'] = new \DiContainerBenchmarks\Fixture\B\FixtureB862();
     }
 
     /*
@@ -10662,9 +10660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB863
      */
-    protected function getFixtureB863Service()
+    protected static function getFixtureB863Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB863'] = new \DiContainerBenchmarks\Fixture\B\FixtureB863();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB863'] = new \DiContainerBenchmarks\Fixture\B\FixtureB863();
     }
 
     /*
@@ -10672,9 +10670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB864
      */
-    protected function getFixtureB864Service()
+    protected static function getFixtureB864Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB864'] = new \DiContainerBenchmarks\Fixture\B\FixtureB864();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB864'] = new \DiContainerBenchmarks\Fixture\B\FixtureB864();
     }
 
     /*
@@ -10682,9 +10680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB865
      */
-    protected function getFixtureB865Service()
+    protected static function getFixtureB865Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB865'] = new \DiContainerBenchmarks\Fixture\B\FixtureB865();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB865'] = new \DiContainerBenchmarks\Fixture\B\FixtureB865();
     }
 
     /*
@@ -10692,9 +10690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB866
      */
-    protected function getFixtureB866Service()
+    protected static function getFixtureB866Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB866'] = new \DiContainerBenchmarks\Fixture\B\FixtureB866();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB866'] = new \DiContainerBenchmarks\Fixture\B\FixtureB866();
     }
 
     /*
@@ -10702,9 +10700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB867
      */
-    protected function getFixtureB867Service()
+    protected static function getFixtureB867Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB867'] = new \DiContainerBenchmarks\Fixture\B\FixtureB867();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB867'] = new \DiContainerBenchmarks\Fixture\B\FixtureB867();
     }
 
     /*
@@ -10712,9 +10710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB868
      */
-    protected function getFixtureB868Service()
+    protected static function getFixtureB868Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB868'] = new \DiContainerBenchmarks\Fixture\B\FixtureB868();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB868'] = new \DiContainerBenchmarks\Fixture\B\FixtureB868();
     }
 
     /*
@@ -10722,9 +10720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB869
      */
-    protected function getFixtureB869Service()
+    protected static function getFixtureB869Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB869'] = new \DiContainerBenchmarks\Fixture\B\FixtureB869();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB869'] = new \DiContainerBenchmarks\Fixture\B\FixtureB869();
     }
 
     /*
@@ -10732,9 +10730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB87
      */
-    protected function getFixtureB87Service()
+    protected static function getFixtureB87Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB87'] = new \DiContainerBenchmarks\Fixture\B\FixtureB87();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB87'] = new \DiContainerBenchmarks\Fixture\B\FixtureB87();
     }
 
     /*
@@ -10742,9 +10740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB870
      */
-    protected function getFixtureB870Service()
+    protected static function getFixtureB870Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB870'] = new \DiContainerBenchmarks\Fixture\B\FixtureB870();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB870'] = new \DiContainerBenchmarks\Fixture\B\FixtureB870();
     }
 
     /*
@@ -10752,9 +10750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB871
      */
-    protected function getFixtureB871Service()
+    protected static function getFixtureB871Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB871'] = new \DiContainerBenchmarks\Fixture\B\FixtureB871();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB871'] = new \DiContainerBenchmarks\Fixture\B\FixtureB871();
     }
 
     /*
@@ -10762,9 +10760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB872
      */
-    protected function getFixtureB872Service()
+    protected static function getFixtureB872Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB872'] = new \DiContainerBenchmarks\Fixture\B\FixtureB872();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB872'] = new \DiContainerBenchmarks\Fixture\B\FixtureB872();
     }
 
     /*
@@ -10772,9 +10770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB873
      */
-    protected function getFixtureB873Service()
+    protected static function getFixtureB873Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB873'] = new \DiContainerBenchmarks\Fixture\B\FixtureB873();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB873'] = new \DiContainerBenchmarks\Fixture\B\FixtureB873();
     }
 
     /*
@@ -10782,9 +10780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB874
      */
-    protected function getFixtureB874Service()
+    protected static function getFixtureB874Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB874'] = new \DiContainerBenchmarks\Fixture\B\FixtureB874();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB874'] = new \DiContainerBenchmarks\Fixture\B\FixtureB874();
     }
 
     /*
@@ -10792,9 +10790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB875
      */
-    protected function getFixtureB875Service()
+    protected static function getFixtureB875Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB875'] = new \DiContainerBenchmarks\Fixture\B\FixtureB875();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB875'] = new \DiContainerBenchmarks\Fixture\B\FixtureB875();
     }
 
     /*
@@ -10802,9 +10800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB876
      */
-    protected function getFixtureB876Service()
+    protected static function getFixtureB876Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB876'] = new \DiContainerBenchmarks\Fixture\B\FixtureB876();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB876'] = new \DiContainerBenchmarks\Fixture\B\FixtureB876();
     }
 
     /*
@@ -10812,9 +10810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB877
      */
-    protected function getFixtureB877Service()
+    protected static function getFixtureB877Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB877'] = new \DiContainerBenchmarks\Fixture\B\FixtureB877();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB877'] = new \DiContainerBenchmarks\Fixture\B\FixtureB877();
     }
 
     /*
@@ -10822,9 +10820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB878
      */
-    protected function getFixtureB878Service()
+    protected static function getFixtureB878Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB878'] = new \DiContainerBenchmarks\Fixture\B\FixtureB878();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB878'] = new \DiContainerBenchmarks\Fixture\B\FixtureB878();
     }
 
     /*
@@ -10832,9 +10830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB879
      */
-    protected function getFixtureB879Service()
+    protected static function getFixtureB879Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB879'] = new \DiContainerBenchmarks\Fixture\B\FixtureB879();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB879'] = new \DiContainerBenchmarks\Fixture\B\FixtureB879();
     }
 
     /*
@@ -10842,9 +10840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB88
      */
-    protected function getFixtureB88Service()
+    protected static function getFixtureB88Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB88'] = new \DiContainerBenchmarks\Fixture\B\FixtureB88();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB88'] = new \DiContainerBenchmarks\Fixture\B\FixtureB88();
     }
 
     /*
@@ -10852,9 +10850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB880
      */
-    protected function getFixtureB880Service()
+    protected static function getFixtureB880Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB880'] = new \DiContainerBenchmarks\Fixture\B\FixtureB880();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB880'] = new \DiContainerBenchmarks\Fixture\B\FixtureB880();
     }
 
     /*
@@ -10862,9 +10860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB881
      */
-    protected function getFixtureB881Service()
+    protected static function getFixtureB881Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB881'] = new \DiContainerBenchmarks\Fixture\B\FixtureB881();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB881'] = new \DiContainerBenchmarks\Fixture\B\FixtureB881();
     }
 
     /*
@@ -10872,9 +10870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB882
      */
-    protected function getFixtureB882Service()
+    protected static function getFixtureB882Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB882'] = new \DiContainerBenchmarks\Fixture\B\FixtureB882();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB882'] = new \DiContainerBenchmarks\Fixture\B\FixtureB882();
     }
 
     /*
@@ -10882,9 +10880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB883
      */
-    protected function getFixtureB883Service()
+    protected static function getFixtureB883Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB883'] = new \DiContainerBenchmarks\Fixture\B\FixtureB883();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB883'] = new \DiContainerBenchmarks\Fixture\B\FixtureB883();
     }
 
     /*
@@ -10892,9 +10890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB884
      */
-    protected function getFixtureB884Service()
+    protected static function getFixtureB884Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB884'] = new \DiContainerBenchmarks\Fixture\B\FixtureB884();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB884'] = new \DiContainerBenchmarks\Fixture\B\FixtureB884();
     }
 
     /*
@@ -10902,9 +10900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB885
      */
-    protected function getFixtureB885Service()
+    protected static function getFixtureB885Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB885'] = new \DiContainerBenchmarks\Fixture\B\FixtureB885();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB885'] = new \DiContainerBenchmarks\Fixture\B\FixtureB885();
     }
 
     /*
@@ -10912,9 +10910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB886
      */
-    protected function getFixtureB886Service()
+    protected static function getFixtureB886Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB886'] = new \DiContainerBenchmarks\Fixture\B\FixtureB886();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB886'] = new \DiContainerBenchmarks\Fixture\B\FixtureB886();
     }
 
     /*
@@ -10922,9 +10920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB887
      */
-    protected function getFixtureB887Service()
+    protected static function getFixtureB887Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB887'] = new \DiContainerBenchmarks\Fixture\B\FixtureB887();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB887'] = new \DiContainerBenchmarks\Fixture\B\FixtureB887();
     }
 
     /*
@@ -10932,9 +10930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB888
      */
-    protected function getFixtureB888Service()
+    protected static function getFixtureB888Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB888'] = new \DiContainerBenchmarks\Fixture\B\FixtureB888();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB888'] = new \DiContainerBenchmarks\Fixture\B\FixtureB888();
     }
 
     /*
@@ -10942,9 +10940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB889
      */
-    protected function getFixtureB889Service()
+    protected static function getFixtureB889Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB889'] = new \DiContainerBenchmarks\Fixture\B\FixtureB889();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB889'] = new \DiContainerBenchmarks\Fixture\B\FixtureB889();
     }
 
     /*
@@ -10952,9 +10950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB89
      */
-    protected function getFixtureB89Service()
+    protected static function getFixtureB89Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB89'] = new \DiContainerBenchmarks\Fixture\B\FixtureB89();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB89'] = new \DiContainerBenchmarks\Fixture\B\FixtureB89();
     }
 
     /*
@@ -10962,9 +10960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB890
      */
-    protected function getFixtureB890Service()
+    protected static function getFixtureB890Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB890'] = new \DiContainerBenchmarks\Fixture\B\FixtureB890();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB890'] = new \DiContainerBenchmarks\Fixture\B\FixtureB890();
     }
 
     /*
@@ -10972,9 +10970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB891
      */
-    protected function getFixtureB891Service()
+    protected static function getFixtureB891Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB891'] = new \DiContainerBenchmarks\Fixture\B\FixtureB891();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB891'] = new \DiContainerBenchmarks\Fixture\B\FixtureB891();
     }
 
     /*
@@ -10982,9 +10980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB892
      */
-    protected function getFixtureB892Service()
+    protected static function getFixtureB892Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB892'] = new \DiContainerBenchmarks\Fixture\B\FixtureB892();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB892'] = new \DiContainerBenchmarks\Fixture\B\FixtureB892();
     }
 
     /*
@@ -10992,9 +10990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB893
      */
-    protected function getFixtureB893Service()
+    protected static function getFixtureB893Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB893'] = new \DiContainerBenchmarks\Fixture\B\FixtureB893();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB893'] = new \DiContainerBenchmarks\Fixture\B\FixtureB893();
     }
 
     /*
@@ -11002,9 +11000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB894
      */
-    protected function getFixtureB894Service()
+    protected static function getFixtureB894Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB894'] = new \DiContainerBenchmarks\Fixture\B\FixtureB894();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB894'] = new \DiContainerBenchmarks\Fixture\B\FixtureB894();
     }
 
     /*
@@ -11012,9 +11010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB895
      */
-    protected function getFixtureB895Service()
+    protected static function getFixtureB895Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB895'] = new \DiContainerBenchmarks\Fixture\B\FixtureB895();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB895'] = new \DiContainerBenchmarks\Fixture\B\FixtureB895();
     }
 
     /*
@@ -11022,9 +11020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB896
      */
-    protected function getFixtureB896Service()
+    protected static function getFixtureB896Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB896'] = new \DiContainerBenchmarks\Fixture\B\FixtureB896();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB896'] = new \DiContainerBenchmarks\Fixture\B\FixtureB896();
     }
 
     /*
@@ -11032,9 +11030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB897
      */
-    protected function getFixtureB897Service()
+    protected static function getFixtureB897Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB897'] = new \DiContainerBenchmarks\Fixture\B\FixtureB897();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB897'] = new \DiContainerBenchmarks\Fixture\B\FixtureB897();
     }
 
     /*
@@ -11042,9 +11040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB898
      */
-    protected function getFixtureB898Service()
+    protected static function getFixtureB898Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB898'] = new \DiContainerBenchmarks\Fixture\B\FixtureB898();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB898'] = new \DiContainerBenchmarks\Fixture\B\FixtureB898();
     }
 
     /*
@@ -11052,9 +11050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB899
      */
-    protected function getFixtureB899Service()
+    protected static function getFixtureB899Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB899'] = new \DiContainerBenchmarks\Fixture\B\FixtureB899();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB899'] = new \DiContainerBenchmarks\Fixture\B\FixtureB899();
     }
 
     /*
@@ -11062,9 +11060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB9
      */
-    protected function getFixtureB9Service()
+    protected static function getFixtureB9Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB9'] = new \DiContainerBenchmarks\Fixture\B\FixtureB9();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB9'] = new \DiContainerBenchmarks\Fixture\B\FixtureB9();
     }
 
     /*
@@ -11072,9 +11070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB90
      */
-    protected function getFixtureB90Service()
+    protected static function getFixtureB90Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB90'] = new \DiContainerBenchmarks\Fixture\B\FixtureB90();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB90'] = new \DiContainerBenchmarks\Fixture\B\FixtureB90();
     }
 
     /*
@@ -11082,9 +11080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB900
      */
-    protected function getFixtureB900Service()
+    protected static function getFixtureB900Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB900'] = new \DiContainerBenchmarks\Fixture\B\FixtureB900();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB900'] = new \DiContainerBenchmarks\Fixture\B\FixtureB900();
     }
 
     /*
@@ -11092,9 +11090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB901
      */
-    protected function getFixtureB901Service()
+    protected static function getFixtureB901Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB901'] = new \DiContainerBenchmarks\Fixture\B\FixtureB901();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB901'] = new \DiContainerBenchmarks\Fixture\B\FixtureB901();
     }
 
     /*
@@ -11102,9 +11100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB902
      */
-    protected function getFixtureB902Service()
+    protected static function getFixtureB902Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB902'] = new \DiContainerBenchmarks\Fixture\B\FixtureB902();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB902'] = new \DiContainerBenchmarks\Fixture\B\FixtureB902();
     }
 
     /*
@@ -11112,9 +11110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB903
      */
-    protected function getFixtureB903Service()
+    protected static function getFixtureB903Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB903'] = new \DiContainerBenchmarks\Fixture\B\FixtureB903();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB903'] = new \DiContainerBenchmarks\Fixture\B\FixtureB903();
     }
 
     /*
@@ -11122,9 +11120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB904
      */
-    protected function getFixtureB904Service()
+    protected static function getFixtureB904Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB904'] = new \DiContainerBenchmarks\Fixture\B\FixtureB904();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB904'] = new \DiContainerBenchmarks\Fixture\B\FixtureB904();
     }
 
     /*
@@ -11132,9 +11130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB905
      */
-    protected function getFixtureB905Service()
+    protected static function getFixtureB905Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB905'] = new \DiContainerBenchmarks\Fixture\B\FixtureB905();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB905'] = new \DiContainerBenchmarks\Fixture\B\FixtureB905();
     }
 
     /*
@@ -11142,9 +11140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB906
      */
-    protected function getFixtureB906Service()
+    protected static function getFixtureB906Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB906'] = new \DiContainerBenchmarks\Fixture\B\FixtureB906();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB906'] = new \DiContainerBenchmarks\Fixture\B\FixtureB906();
     }
 
     /*
@@ -11152,9 +11150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB907
      */
-    protected function getFixtureB907Service()
+    protected static function getFixtureB907Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB907'] = new \DiContainerBenchmarks\Fixture\B\FixtureB907();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB907'] = new \DiContainerBenchmarks\Fixture\B\FixtureB907();
     }
 
     /*
@@ -11162,9 +11160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB908
      */
-    protected function getFixtureB908Service()
+    protected static function getFixtureB908Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB908'] = new \DiContainerBenchmarks\Fixture\B\FixtureB908();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB908'] = new \DiContainerBenchmarks\Fixture\B\FixtureB908();
     }
 
     /*
@@ -11172,9 +11170,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB909
      */
-    protected function getFixtureB909Service()
+    protected static function getFixtureB909Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB909'] = new \DiContainerBenchmarks\Fixture\B\FixtureB909();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB909'] = new \DiContainerBenchmarks\Fixture\B\FixtureB909();
     }
 
     /*
@@ -11182,9 +11180,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB91
      */
-    protected function getFixtureB91Service()
+    protected static function getFixtureB91Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB91'] = new \DiContainerBenchmarks\Fixture\B\FixtureB91();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB91'] = new \DiContainerBenchmarks\Fixture\B\FixtureB91();
     }
 
     /*
@@ -11192,9 +11190,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB910
      */
-    protected function getFixtureB910Service()
+    protected static function getFixtureB910Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB910'] = new \DiContainerBenchmarks\Fixture\B\FixtureB910();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB910'] = new \DiContainerBenchmarks\Fixture\B\FixtureB910();
     }
 
     /*
@@ -11202,9 +11200,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB911
      */
-    protected function getFixtureB911Service()
+    protected static function getFixtureB911Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB911'] = new \DiContainerBenchmarks\Fixture\B\FixtureB911();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB911'] = new \DiContainerBenchmarks\Fixture\B\FixtureB911();
     }
 
     /*
@@ -11212,9 +11210,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB912
      */
-    protected function getFixtureB912Service()
+    protected static function getFixtureB912Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB912'] = new \DiContainerBenchmarks\Fixture\B\FixtureB912();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB912'] = new \DiContainerBenchmarks\Fixture\B\FixtureB912();
     }
 
     /*
@@ -11222,9 +11220,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB913
      */
-    protected function getFixtureB913Service()
+    protected static function getFixtureB913Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB913'] = new \DiContainerBenchmarks\Fixture\B\FixtureB913();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB913'] = new \DiContainerBenchmarks\Fixture\B\FixtureB913();
     }
 
     /*
@@ -11232,9 +11230,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB914
      */
-    protected function getFixtureB914Service()
+    protected static function getFixtureB914Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB914'] = new \DiContainerBenchmarks\Fixture\B\FixtureB914();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB914'] = new \DiContainerBenchmarks\Fixture\B\FixtureB914();
     }
 
     /*
@@ -11242,9 +11240,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB915
      */
-    protected function getFixtureB915Service()
+    protected static function getFixtureB915Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB915'] = new \DiContainerBenchmarks\Fixture\B\FixtureB915();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB915'] = new \DiContainerBenchmarks\Fixture\B\FixtureB915();
     }
 
     /*
@@ -11252,9 +11250,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB916
      */
-    protected function getFixtureB916Service()
+    protected static function getFixtureB916Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB916'] = new \DiContainerBenchmarks\Fixture\B\FixtureB916();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB916'] = new \DiContainerBenchmarks\Fixture\B\FixtureB916();
     }
 
     /*
@@ -11262,9 +11260,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB917
      */
-    protected function getFixtureB917Service()
+    protected static function getFixtureB917Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB917'] = new \DiContainerBenchmarks\Fixture\B\FixtureB917();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB917'] = new \DiContainerBenchmarks\Fixture\B\FixtureB917();
     }
 
     /*
@@ -11272,9 +11270,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB918
      */
-    protected function getFixtureB918Service()
+    protected static function getFixtureB918Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB918'] = new \DiContainerBenchmarks\Fixture\B\FixtureB918();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB918'] = new \DiContainerBenchmarks\Fixture\B\FixtureB918();
     }
 
     /*
@@ -11282,9 +11280,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB919
      */
-    protected function getFixtureB919Service()
+    protected static function getFixtureB919Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB919'] = new \DiContainerBenchmarks\Fixture\B\FixtureB919();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB919'] = new \DiContainerBenchmarks\Fixture\B\FixtureB919();
     }
 
     /*
@@ -11292,9 +11290,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB92
      */
-    protected function getFixtureB92Service()
+    protected static function getFixtureB92Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB92'] = new \DiContainerBenchmarks\Fixture\B\FixtureB92();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB92'] = new \DiContainerBenchmarks\Fixture\B\FixtureB92();
     }
 
     /*
@@ -11302,9 +11300,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB920
      */
-    protected function getFixtureB920Service()
+    protected static function getFixtureB920Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB920'] = new \DiContainerBenchmarks\Fixture\B\FixtureB920();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB920'] = new \DiContainerBenchmarks\Fixture\B\FixtureB920();
     }
 
     /*
@@ -11312,9 +11310,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB921
      */
-    protected function getFixtureB921Service()
+    protected static function getFixtureB921Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB921'] = new \DiContainerBenchmarks\Fixture\B\FixtureB921();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB921'] = new \DiContainerBenchmarks\Fixture\B\FixtureB921();
     }
 
     /*
@@ -11322,9 +11320,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB922
      */
-    protected function getFixtureB922Service()
+    protected static function getFixtureB922Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB922'] = new \DiContainerBenchmarks\Fixture\B\FixtureB922();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB922'] = new \DiContainerBenchmarks\Fixture\B\FixtureB922();
     }
 
     /*
@@ -11332,9 +11330,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB923
      */
-    protected function getFixtureB923Service()
+    protected static function getFixtureB923Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB923'] = new \DiContainerBenchmarks\Fixture\B\FixtureB923();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB923'] = new \DiContainerBenchmarks\Fixture\B\FixtureB923();
     }
 
     /*
@@ -11342,9 +11340,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB924
      */
-    protected function getFixtureB924Service()
+    protected static function getFixtureB924Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB924'] = new \DiContainerBenchmarks\Fixture\B\FixtureB924();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB924'] = new \DiContainerBenchmarks\Fixture\B\FixtureB924();
     }
 
     /*
@@ -11352,9 +11350,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB925
      */
-    protected function getFixtureB925Service()
+    protected static function getFixtureB925Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB925'] = new \DiContainerBenchmarks\Fixture\B\FixtureB925();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB925'] = new \DiContainerBenchmarks\Fixture\B\FixtureB925();
     }
 
     /*
@@ -11362,9 +11360,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB926
      */
-    protected function getFixtureB926Service()
+    protected static function getFixtureB926Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB926'] = new \DiContainerBenchmarks\Fixture\B\FixtureB926();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB926'] = new \DiContainerBenchmarks\Fixture\B\FixtureB926();
     }
 
     /*
@@ -11372,9 +11370,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB927
      */
-    protected function getFixtureB927Service()
+    protected static function getFixtureB927Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB927'] = new \DiContainerBenchmarks\Fixture\B\FixtureB927();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB927'] = new \DiContainerBenchmarks\Fixture\B\FixtureB927();
     }
 
     /*
@@ -11382,9 +11380,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB928
      */
-    protected function getFixtureB928Service()
+    protected static function getFixtureB928Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB928'] = new \DiContainerBenchmarks\Fixture\B\FixtureB928();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB928'] = new \DiContainerBenchmarks\Fixture\B\FixtureB928();
     }
 
     /*
@@ -11392,9 +11390,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB929
      */
-    protected function getFixtureB929Service()
+    protected static function getFixtureB929Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB929'] = new \DiContainerBenchmarks\Fixture\B\FixtureB929();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB929'] = new \DiContainerBenchmarks\Fixture\B\FixtureB929();
     }
 
     /*
@@ -11402,9 +11400,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB93
      */
-    protected function getFixtureB93Service()
+    protected static function getFixtureB93Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB93'] = new \DiContainerBenchmarks\Fixture\B\FixtureB93();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB93'] = new \DiContainerBenchmarks\Fixture\B\FixtureB93();
     }
 
     /*
@@ -11412,9 +11410,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB930
      */
-    protected function getFixtureB930Service()
+    protected static function getFixtureB930Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB930'] = new \DiContainerBenchmarks\Fixture\B\FixtureB930();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB930'] = new \DiContainerBenchmarks\Fixture\B\FixtureB930();
     }
 
     /*
@@ -11422,9 +11420,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB931
      */
-    protected function getFixtureB931Service()
+    protected static function getFixtureB931Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB931'] = new \DiContainerBenchmarks\Fixture\B\FixtureB931();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB931'] = new \DiContainerBenchmarks\Fixture\B\FixtureB931();
     }
 
     /*
@@ -11432,9 +11430,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB932
      */
-    protected function getFixtureB932Service()
+    protected static function getFixtureB932Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB932'] = new \DiContainerBenchmarks\Fixture\B\FixtureB932();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB932'] = new \DiContainerBenchmarks\Fixture\B\FixtureB932();
     }
 
     /*
@@ -11442,9 +11440,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB933
      */
-    protected function getFixtureB933Service()
+    protected static function getFixtureB933Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB933'] = new \DiContainerBenchmarks\Fixture\B\FixtureB933();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB933'] = new \DiContainerBenchmarks\Fixture\B\FixtureB933();
     }
 
     /*
@@ -11452,9 +11450,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB934
      */
-    protected function getFixtureB934Service()
+    protected static function getFixtureB934Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB934'] = new \DiContainerBenchmarks\Fixture\B\FixtureB934();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB934'] = new \DiContainerBenchmarks\Fixture\B\FixtureB934();
     }
 
     /*
@@ -11462,9 +11460,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB935
      */
-    protected function getFixtureB935Service()
+    protected static function getFixtureB935Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB935'] = new \DiContainerBenchmarks\Fixture\B\FixtureB935();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB935'] = new \DiContainerBenchmarks\Fixture\B\FixtureB935();
     }
 
     /*
@@ -11472,9 +11470,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB936
      */
-    protected function getFixtureB936Service()
+    protected static function getFixtureB936Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB936'] = new \DiContainerBenchmarks\Fixture\B\FixtureB936();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB936'] = new \DiContainerBenchmarks\Fixture\B\FixtureB936();
     }
 
     /*
@@ -11482,9 +11480,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB937
      */
-    protected function getFixtureB937Service()
+    protected static function getFixtureB937Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB937'] = new \DiContainerBenchmarks\Fixture\B\FixtureB937();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB937'] = new \DiContainerBenchmarks\Fixture\B\FixtureB937();
     }
 
     /*
@@ -11492,9 +11490,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB938
      */
-    protected function getFixtureB938Service()
+    protected static function getFixtureB938Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB938'] = new \DiContainerBenchmarks\Fixture\B\FixtureB938();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB938'] = new \DiContainerBenchmarks\Fixture\B\FixtureB938();
     }
 
     /*
@@ -11502,9 +11500,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB939
      */
-    protected function getFixtureB939Service()
+    protected static function getFixtureB939Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB939'] = new \DiContainerBenchmarks\Fixture\B\FixtureB939();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB939'] = new \DiContainerBenchmarks\Fixture\B\FixtureB939();
     }
 
     /*
@@ -11512,9 +11510,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB94
      */
-    protected function getFixtureB94Service()
+    protected static function getFixtureB94Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB94'] = new \DiContainerBenchmarks\Fixture\B\FixtureB94();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB94'] = new \DiContainerBenchmarks\Fixture\B\FixtureB94();
     }
 
     /*
@@ -11522,9 +11520,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB940
      */
-    protected function getFixtureB940Service()
+    protected static function getFixtureB940Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB940'] = new \DiContainerBenchmarks\Fixture\B\FixtureB940();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB940'] = new \DiContainerBenchmarks\Fixture\B\FixtureB940();
     }
 
     /*
@@ -11532,9 +11530,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB941
      */
-    protected function getFixtureB941Service()
+    protected static function getFixtureB941Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB941'] = new \DiContainerBenchmarks\Fixture\B\FixtureB941();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB941'] = new \DiContainerBenchmarks\Fixture\B\FixtureB941();
     }
 
     /*
@@ -11542,9 +11540,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB942
      */
-    protected function getFixtureB942Service()
+    protected static function getFixtureB942Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB942'] = new \DiContainerBenchmarks\Fixture\B\FixtureB942();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB942'] = new \DiContainerBenchmarks\Fixture\B\FixtureB942();
     }
 
     /*
@@ -11552,9 +11550,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB943
      */
-    protected function getFixtureB943Service()
+    protected static function getFixtureB943Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB943'] = new \DiContainerBenchmarks\Fixture\B\FixtureB943();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB943'] = new \DiContainerBenchmarks\Fixture\B\FixtureB943();
     }
 
     /*
@@ -11562,9 +11560,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB944
      */
-    protected function getFixtureB944Service()
+    protected static function getFixtureB944Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB944'] = new \DiContainerBenchmarks\Fixture\B\FixtureB944();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB944'] = new \DiContainerBenchmarks\Fixture\B\FixtureB944();
     }
 
     /*
@@ -11572,9 +11570,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB945
      */
-    protected function getFixtureB945Service()
+    protected static function getFixtureB945Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB945'] = new \DiContainerBenchmarks\Fixture\B\FixtureB945();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB945'] = new \DiContainerBenchmarks\Fixture\B\FixtureB945();
     }
 
     /*
@@ -11582,9 +11580,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB946
      */
-    protected function getFixtureB946Service()
+    protected static function getFixtureB946Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB946'] = new \DiContainerBenchmarks\Fixture\B\FixtureB946();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB946'] = new \DiContainerBenchmarks\Fixture\B\FixtureB946();
     }
 
     /*
@@ -11592,9 +11590,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB947
      */
-    protected function getFixtureB947Service()
+    protected static function getFixtureB947Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB947'] = new \DiContainerBenchmarks\Fixture\B\FixtureB947();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB947'] = new \DiContainerBenchmarks\Fixture\B\FixtureB947();
     }
 
     /*
@@ -11602,9 +11600,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB948
      */
-    protected function getFixtureB948Service()
+    protected static function getFixtureB948Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB948'] = new \DiContainerBenchmarks\Fixture\B\FixtureB948();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB948'] = new \DiContainerBenchmarks\Fixture\B\FixtureB948();
     }
 
     /*
@@ -11612,9 +11610,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB949
      */
-    protected function getFixtureB949Service()
+    protected static function getFixtureB949Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB949'] = new \DiContainerBenchmarks\Fixture\B\FixtureB949();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB949'] = new \DiContainerBenchmarks\Fixture\B\FixtureB949();
     }
 
     /*
@@ -11622,9 +11620,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB95
      */
-    protected function getFixtureB95Service()
+    protected static function getFixtureB95Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB95'] = new \DiContainerBenchmarks\Fixture\B\FixtureB95();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB95'] = new \DiContainerBenchmarks\Fixture\B\FixtureB95();
     }
 
     /*
@@ -11632,9 +11630,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB950
      */
-    protected function getFixtureB950Service()
+    protected static function getFixtureB950Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB950'] = new \DiContainerBenchmarks\Fixture\B\FixtureB950();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB950'] = new \DiContainerBenchmarks\Fixture\B\FixtureB950();
     }
 
     /*
@@ -11642,9 +11640,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB951
      */
-    protected function getFixtureB951Service()
+    protected static function getFixtureB951Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB951'] = new \DiContainerBenchmarks\Fixture\B\FixtureB951();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB951'] = new \DiContainerBenchmarks\Fixture\B\FixtureB951();
     }
 
     /*
@@ -11652,9 +11650,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB952
      */
-    protected function getFixtureB952Service()
+    protected static function getFixtureB952Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB952'] = new \DiContainerBenchmarks\Fixture\B\FixtureB952();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB952'] = new \DiContainerBenchmarks\Fixture\B\FixtureB952();
     }
 
     /*
@@ -11662,9 +11660,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB953
      */
-    protected function getFixtureB953Service()
+    protected static function getFixtureB953Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB953'] = new \DiContainerBenchmarks\Fixture\B\FixtureB953();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB953'] = new \DiContainerBenchmarks\Fixture\B\FixtureB953();
     }
 
     /*
@@ -11672,9 +11670,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB954
      */
-    protected function getFixtureB954Service()
+    protected static function getFixtureB954Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB954'] = new \DiContainerBenchmarks\Fixture\B\FixtureB954();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB954'] = new \DiContainerBenchmarks\Fixture\B\FixtureB954();
     }
 
     /*
@@ -11682,9 +11680,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB955
      */
-    protected function getFixtureB955Service()
+    protected static function getFixtureB955Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB955'] = new \DiContainerBenchmarks\Fixture\B\FixtureB955();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB955'] = new \DiContainerBenchmarks\Fixture\B\FixtureB955();
     }
 
     /*
@@ -11692,9 +11690,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB956
      */
-    protected function getFixtureB956Service()
+    protected static function getFixtureB956Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB956'] = new \DiContainerBenchmarks\Fixture\B\FixtureB956();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB956'] = new \DiContainerBenchmarks\Fixture\B\FixtureB956();
     }
 
     /*
@@ -11702,9 +11700,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB957
      */
-    protected function getFixtureB957Service()
+    protected static function getFixtureB957Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB957'] = new \DiContainerBenchmarks\Fixture\B\FixtureB957();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB957'] = new \DiContainerBenchmarks\Fixture\B\FixtureB957();
     }
 
     /*
@@ -11712,9 +11710,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB958
      */
-    protected function getFixtureB958Service()
+    protected static function getFixtureB958Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB958'] = new \DiContainerBenchmarks\Fixture\B\FixtureB958();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB958'] = new \DiContainerBenchmarks\Fixture\B\FixtureB958();
     }
 
     /*
@@ -11722,9 +11720,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB959
      */
-    protected function getFixtureB959Service()
+    protected static function getFixtureB959Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB959'] = new \DiContainerBenchmarks\Fixture\B\FixtureB959();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB959'] = new \DiContainerBenchmarks\Fixture\B\FixtureB959();
     }
 
     /*
@@ -11732,9 +11730,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB96
      */
-    protected function getFixtureB96Service()
+    protected static function getFixtureB96Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB96'] = new \DiContainerBenchmarks\Fixture\B\FixtureB96();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB96'] = new \DiContainerBenchmarks\Fixture\B\FixtureB96();
     }
 
     /*
@@ -11742,9 +11740,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB960
      */
-    protected function getFixtureB960Service()
+    protected static function getFixtureB960Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB960'] = new \DiContainerBenchmarks\Fixture\B\FixtureB960();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB960'] = new \DiContainerBenchmarks\Fixture\B\FixtureB960();
     }
 
     /*
@@ -11752,9 +11750,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB961
      */
-    protected function getFixtureB961Service()
+    protected static function getFixtureB961Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB961'] = new \DiContainerBenchmarks\Fixture\B\FixtureB961();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB961'] = new \DiContainerBenchmarks\Fixture\B\FixtureB961();
     }
 
     /*
@@ -11762,9 +11760,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB962
      */
-    protected function getFixtureB962Service()
+    protected static function getFixtureB962Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB962'] = new \DiContainerBenchmarks\Fixture\B\FixtureB962();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB962'] = new \DiContainerBenchmarks\Fixture\B\FixtureB962();
     }
 
     /*
@@ -11772,9 +11770,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB963
      */
-    protected function getFixtureB963Service()
+    protected static function getFixtureB963Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB963'] = new \DiContainerBenchmarks\Fixture\B\FixtureB963();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB963'] = new \DiContainerBenchmarks\Fixture\B\FixtureB963();
     }
 
     /*
@@ -11782,9 +11780,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB964
      */
-    protected function getFixtureB964Service()
+    protected static function getFixtureB964Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB964'] = new \DiContainerBenchmarks\Fixture\B\FixtureB964();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB964'] = new \DiContainerBenchmarks\Fixture\B\FixtureB964();
     }
 
     /*
@@ -11792,9 +11790,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB965
      */
-    protected function getFixtureB965Service()
+    protected static function getFixtureB965Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB965'] = new \DiContainerBenchmarks\Fixture\B\FixtureB965();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB965'] = new \DiContainerBenchmarks\Fixture\B\FixtureB965();
     }
 
     /*
@@ -11802,9 +11800,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB966
      */
-    protected function getFixtureB966Service()
+    protected static function getFixtureB966Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB966'] = new \DiContainerBenchmarks\Fixture\B\FixtureB966();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB966'] = new \DiContainerBenchmarks\Fixture\B\FixtureB966();
     }
 
     /*
@@ -11812,9 +11810,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB967
      */
-    protected function getFixtureB967Service()
+    protected static function getFixtureB967Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB967'] = new \DiContainerBenchmarks\Fixture\B\FixtureB967();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB967'] = new \DiContainerBenchmarks\Fixture\B\FixtureB967();
     }
 
     /*
@@ -11822,9 +11820,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB968
      */
-    protected function getFixtureB968Service()
+    protected static function getFixtureB968Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB968'] = new \DiContainerBenchmarks\Fixture\B\FixtureB968();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB968'] = new \DiContainerBenchmarks\Fixture\B\FixtureB968();
     }
 
     /*
@@ -11832,9 +11830,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB969
      */
-    protected function getFixtureB969Service()
+    protected static function getFixtureB969Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB969'] = new \DiContainerBenchmarks\Fixture\B\FixtureB969();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB969'] = new \DiContainerBenchmarks\Fixture\B\FixtureB969();
     }
 
     /*
@@ -11842,9 +11840,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB97
      */
-    protected function getFixtureB97Service()
+    protected static function getFixtureB97Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB97'] = new \DiContainerBenchmarks\Fixture\B\FixtureB97();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB97'] = new \DiContainerBenchmarks\Fixture\B\FixtureB97();
     }
 
     /*
@@ -11852,9 +11850,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB970
      */
-    protected function getFixtureB970Service()
+    protected static function getFixtureB970Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB970'] = new \DiContainerBenchmarks\Fixture\B\FixtureB970();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB970'] = new \DiContainerBenchmarks\Fixture\B\FixtureB970();
     }
 
     /*
@@ -11862,9 +11860,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB971
      */
-    protected function getFixtureB971Service()
+    protected static function getFixtureB971Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB971'] = new \DiContainerBenchmarks\Fixture\B\FixtureB971();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB971'] = new \DiContainerBenchmarks\Fixture\B\FixtureB971();
     }
 
     /*
@@ -11872,9 +11870,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB972
      */
-    protected function getFixtureB972Service()
+    protected static function getFixtureB972Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB972'] = new \DiContainerBenchmarks\Fixture\B\FixtureB972();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB972'] = new \DiContainerBenchmarks\Fixture\B\FixtureB972();
     }
 
     /*
@@ -11882,9 +11880,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB973
      */
-    protected function getFixtureB973Service()
+    protected static function getFixtureB973Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB973'] = new \DiContainerBenchmarks\Fixture\B\FixtureB973();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB973'] = new \DiContainerBenchmarks\Fixture\B\FixtureB973();
     }
 
     /*
@@ -11892,9 +11890,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB974
      */
-    protected function getFixtureB974Service()
+    protected static function getFixtureB974Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB974'] = new \DiContainerBenchmarks\Fixture\B\FixtureB974();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB974'] = new \DiContainerBenchmarks\Fixture\B\FixtureB974();
     }
 
     /*
@@ -11902,9 +11900,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB975
      */
-    protected function getFixtureB975Service()
+    protected static function getFixtureB975Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB975'] = new \DiContainerBenchmarks\Fixture\B\FixtureB975();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB975'] = new \DiContainerBenchmarks\Fixture\B\FixtureB975();
     }
 
     /*
@@ -11912,9 +11910,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB976
      */
-    protected function getFixtureB976Service()
+    protected static function getFixtureB976Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB976'] = new \DiContainerBenchmarks\Fixture\B\FixtureB976();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB976'] = new \DiContainerBenchmarks\Fixture\B\FixtureB976();
     }
 
     /*
@@ -11922,9 +11920,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB977
      */
-    protected function getFixtureB977Service()
+    protected static function getFixtureB977Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB977'] = new \DiContainerBenchmarks\Fixture\B\FixtureB977();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB977'] = new \DiContainerBenchmarks\Fixture\B\FixtureB977();
     }
 
     /*
@@ -11932,9 +11930,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB978
      */
-    protected function getFixtureB978Service()
+    protected static function getFixtureB978Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB978'] = new \DiContainerBenchmarks\Fixture\B\FixtureB978();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB978'] = new \DiContainerBenchmarks\Fixture\B\FixtureB978();
     }
 
     /*
@@ -11942,9 +11940,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB979
      */
-    protected function getFixtureB979Service()
+    protected static function getFixtureB979Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB979'] = new \DiContainerBenchmarks\Fixture\B\FixtureB979();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB979'] = new \DiContainerBenchmarks\Fixture\B\FixtureB979();
     }
 
     /*
@@ -11952,9 +11950,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB98
      */
-    protected function getFixtureB98Service()
+    protected static function getFixtureB98Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB98'] = new \DiContainerBenchmarks\Fixture\B\FixtureB98();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB98'] = new \DiContainerBenchmarks\Fixture\B\FixtureB98();
     }
 
     /*
@@ -11962,9 +11960,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB980
      */
-    protected function getFixtureB980Service()
+    protected static function getFixtureB980Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB980'] = new \DiContainerBenchmarks\Fixture\B\FixtureB980();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB980'] = new \DiContainerBenchmarks\Fixture\B\FixtureB980();
     }
 
     /*
@@ -11972,9 +11970,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB981
      */
-    protected function getFixtureB981Service()
+    protected static function getFixtureB981Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB981'] = new \DiContainerBenchmarks\Fixture\B\FixtureB981();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB981'] = new \DiContainerBenchmarks\Fixture\B\FixtureB981();
     }
 
     /*
@@ -11982,9 +11980,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB982
      */
-    protected function getFixtureB982Service()
+    protected static function getFixtureB982Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB982'] = new \DiContainerBenchmarks\Fixture\B\FixtureB982();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB982'] = new \DiContainerBenchmarks\Fixture\B\FixtureB982();
     }
 
     /*
@@ -11992,9 +11990,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB983
      */
-    protected function getFixtureB983Service()
+    protected static function getFixtureB983Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB983'] = new \DiContainerBenchmarks\Fixture\B\FixtureB983();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB983'] = new \DiContainerBenchmarks\Fixture\B\FixtureB983();
     }
 
     /*
@@ -12002,9 +12000,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB984
      */
-    protected function getFixtureB984Service()
+    protected static function getFixtureB984Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB984'] = new \DiContainerBenchmarks\Fixture\B\FixtureB984();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB984'] = new \DiContainerBenchmarks\Fixture\B\FixtureB984();
     }
 
     /*
@@ -12012,9 +12010,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB985
      */
-    protected function getFixtureB985Service()
+    protected static function getFixtureB985Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB985'] = new \DiContainerBenchmarks\Fixture\B\FixtureB985();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB985'] = new \DiContainerBenchmarks\Fixture\B\FixtureB985();
     }
 
     /*
@@ -12022,9 +12020,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB986
      */
-    protected function getFixtureB986Service()
+    protected static function getFixtureB986Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB986'] = new \DiContainerBenchmarks\Fixture\B\FixtureB986();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB986'] = new \DiContainerBenchmarks\Fixture\B\FixtureB986();
     }
 
     /*
@@ -12032,9 +12030,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB987
      */
-    protected function getFixtureB987Service()
+    protected static function getFixtureB987Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB987'] = new \DiContainerBenchmarks\Fixture\B\FixtureB987();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB987'] = new \DiContainerBenchmarks\Fixture\B\FixtureB987();
     }
 
     /*
@@ -12042,9 +12040,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB988
      */
-    protected function getFixtureB988Service()
+    protected static function getFixtureB988Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB988'] = new \DiContainerBenchmarks\Fixture\B\FixtureB988();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB988'] = new \DiContainerBenchmarks\Fixture\B\FixtureB988();
     }
 
     /*
@@ -12052,9 +12050,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB989
      */
-    protected function getFixtureB989Service()
+    protected static function getFixtureB989Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB989'] = new \DiContainerBenchmarks\Fixture\B\FixtureB989();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB989'] = new \DiContainerBenchmarks\Fixture\B\FixtureB989();
     }
 
     /*
@@ -12062,9 +12060,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB99
      */
-    protected function getFixtureB99Service()
+    protected static function getFixtureB99Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB99'] = new \DiContainerBenchmarks\Fixture\B\FixtureB99();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB99'] = new \DiContainerBenchmarks\Fixture\B\FixtureB99();
     }
 
     /*
@@ -12072,9 +12070,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB990
      */
-    protected function getFixtureB990Service()
+    protected static function getFixtureB990Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB990'] = new \DiContainerBenchmarks\Fixture\B\FixtureB990();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB990'] = new \DiContainerBenchmarks\Fixture\B\FixtureB990();
     }
 
     /*
@@ -12082,9 +12080,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB991
      */
-    protected function getFixtureB991Service()
+    protected static function getFixtureB991Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB991'] = new \DiContainerBenchmarks\Fixture\B\FixtureB991();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB991'] = new \DiContainerBenchmarks\Fixture\B\FixtureB991();
     }
 
     /*
@@ -12092,9 +12090,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB992
      */
-    protected function getFixtureB992Service()
+    protected static function getFixtureB992Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB992'] = new \DiContainerBenchmarks\Fixture\B\FixtureB992();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB992'] = new \DiContainerBenchmarks\Fixture\B\FixtureB992();
     }
 
     /*
@@ -12102,9 +12100,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB993
      */
-    protected function getFixtureB993Service()
+    protected static function getFixtureB993Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB993'] = new \DiContainerBenchmarks\Fixture\B\FixtureB993();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB993'] = new \DiContainerBenchmarks\Fixture\B\FixtureB993();
     }
 
     /*
@@ -12112,9 +12110,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB994
      */
-    protected function getFixtureB994Service()
+    protected static function getFixtureB994Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB994'] = new \DiContainerBenchmarks\Fixture\B\FixtureB994();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB994'] = new \DiContainerBenchmarks\Fixture\B\FixtureB994();
     }
 
     /*
@@ -12122,9 +12120,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB995
      */
-    protected function getFixtureB995Service()
+    protected static function getFixtureB995Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB995'] = new \DiContainerBenchmarks\Fixture\B\FixtureB995();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB995'] = new \DiContainerBenchmarks\Fixture\B\FixtureB995();
     }
 
     /*
@@ -12132,9 +12130,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB996
      */
-    protected function getFixtureB996Service()
+    protected static function getFixtureB996Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB996'] = new \DiContainerBenchmarks\Fixture\B\FixtureB996();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB996'] = new \DiContainerBenchmarks\Fixture\B\FixtureB996();
     }
 
     /*
@@ -12142,9 +12140,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB997
      */
-    protected function getFixtureB997Service()
+    protected static function getFixtureB997Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB997'] = new \DiContainerBenchmarks\Fixture\B\FixtureB997();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB997'] = new \DiContainerBenchmarks\Fixture\B\FixtureB997();
     }
 
     /*
@@ -12152,9 +12150,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB998
      */
-    protected function getFixtureB998Service()
+    protected static function getFixtureB998Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB998'] = new \DiContainerBenchmarks\Fixture\B\FixtureB998();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB998'] = new \DiContainerBenchmarks\Fixture\B\FixtureB998();
     }
 
     /*
@@ -12162,9 +12160,9 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\B\FixtureB999
      */
-    protected function getFixtureB999Service()
+    protected static function getFixtureB999Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB999'] = new \DiContainerBenchmarks\Fixture\B\FixtureB999();
+        return $container->services['DiContainerBenchmarks\\Fixture\\B\\FixtureB999'] = new \DiContainerBenchmarks\Fixture\B\FixtureB999();
     }
 
     /*
@@ -12172,24 +12170,24 @@ class CompiledSingletonContainer extends Container
      *
      * @return \DiContainerBenchmarks\Fixture\C\FixtureC1000
      */
-    protected function getFixtureC1000Service()
+    protected static function getFixtureC1000Service($container)
     {
-        return $this->services['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000'] = new \DiContainerBenchmarks\Fixture\C\FixtureC1000(new \DiContainerBenchmarks\Fixture\C\FixtureC999(new \DiContainerBenchmarks\Fixture\C\FixtureC998(new \DiContainerBenchmarks\Fixture\C\FixtureC997(new \DiContainerBenchmarks\Fixture\C\FixtureC996(new \DiContainerBenchmarks\Fixture\C\FixtureC995(new \DiContainerBenchmarks\Fixture\C\FixtureC994(new \DiContainerBenchmarks\Fixture\C\FixtureC993(new \DiContainerBenchmarks\Fixture\C\FixtureC992(new \DiContainerBenchmarks\Fixture\C\FixtureC991(new \DiContainerBenchmarks\Fixture\C\FixtureC990(new \DiContainerBenchmarks\Fixture\C\FixtureC989(new \DiContainerBenchmarks\Fixture\C\FixtureC988(new \DiContainerBenchmarks\Fixture\C\FixtureC987(new \DiContainerBenchmarks\Fixture\C\FixtureC986(new \DiContainerBenchmarks\Fixture\C\FixtureC985(new \DiContainerBenchmarks\Fixture\C\FixtureC984(new \DiContainerBenchmarks\Fixture\C\FixtureC983(new \DiContainerBenchmarks\Fixture\C\FixtureC982(new \DiContainerBenchmarks\Fixture\C\FixtureC981(new \DiContainerBenchmarks\Fixture\C\FixtureC980(new \DiContainerBenchmarks\Fixture\C\FixtureC979(new \DiContainerBenchmarks\Fixture\C\FixtureC978(new \DiContainerBenchmarks\Fixture\C\FixtureC977(new \DiContainerBenchmarks\Fixture\C\FixtureC976(new \DiContainerBenchmarks\Fixture\C\FixtureC975(new \DiContainerBenchmarks\Fixture\C\FixtureC974(new \DiContainerBenchmarks\Fixture\C\FixtureC973(new \DiContainerBenchmarks\Fixture\C\FixtureC972(new \DiContainerBenchmarks\Fixture\C\FixtureC971(new \DiContainerBenchmarks\Fixture\C\FixtureC970(new \DiContainerBenchmarks\Fixture\C\FixtureC969(new \DiContainerBenchmarks\Fixture\C\FixtureC968(new \DiContainerBenchmarks\Fixture\C\FixtureC967(new \DiContainerBenchmarks\Fixture\C\FixtureC966(new \DiContainerBenchmarks\Fixture\C\FixtureC965(new \DiContainerBenchmarks\Fixture\C\FixtureC964(new \DiContainerBenchmarks\Fixture\C\FixtureC963(new \DiContainerBenchmarks\Fixture\C\FixtureC962(new \DiContainerBenchmarks\Fixture\C\FixtureC961(new \DiContainerBenchmarks\Fixture\C\FixtureC960(new \DiContainerBenchmarks\Fixture\C\FixtureC959(new \DiContainerBenchmarks\Fixture\C\FixtureC958(new \DiContainerBenchmarks\Fixture\C\FixtureC957(new \DiContainerBenchmarks\Fixture\C\FixtureC956(new \DiContainerBenchmarks\Fixture\C\FixtureC955(new \DiContainerBenchmarks\Fixture\C\FixtureC954(new \DiContainerBenchmarks\Fixture\C\FixtureC953(new \DiContainerBenchmarks\Fixture\C\FixtureC952(new \DiContainerBenchmarks\Fixture\C\FixtureC951(new \DiContainerBenchmarks\Fixture\C\FixtureC950(new \DiContainerBenchmarks\Fixture\C\FixtureC949(new \DiContainerBenchmarks\Fixture\C\FixtureC948(new \DiContainerBenchmarks\Fixture\C\FixtureC947(new \DiContainerBenchmarks\Fixture\C\FixtureC946(new \DiContainerBenchmarks\Fixture\C\FixtureC945(new \DiContainerBenchmarks\Fixture\C\FixtureC944(new \DiContainerBenchmarks\Fixture\C\FixtureC943(new \DiContainerBenchmarks\Fixture\C\FixtureC942(new \DiContainerBenchmarks\Fixture\C\FixtureC941(new \DiContainerBenchmarks\Fixture\C\FixtureC940(new \DiContainerBenchmarks\Fixture\C\FixtureC939(new \DiContainerBenchmarks\Fixture\C\FixtureC938(new \DiContainerBenchmarks\Fixture\C\FixtureC937(new \DiContainerBenchmarks\Fixture\C\FixtureC936(new \DiContainerBenchmarks\Fixture\C\FixtureC935(new \DiContainerBenchmarks\Fixture\C\FixtureC934(new \DiContainerBenchmarks\Fixture\C\FixtureC933(new \DiContainerBenchmarks\Fixture\C\FixtureC932(new \DiContainerBenchmarks\Fixture\C\FixtureC931(new \DiContainerBenchmarks\Fixture\C\FixtureC930(new \DiContainerBenchmarks\Fixture\C\FixtureC929(new \DiContainerBenchmarks\Fixture\C\FixtureC928(new \DiContainerBenchmarks\Fixture\C\FixtureC927(new \DiContainerBenchmarks\Fixture\C\FixtureC926(new \DiContainerBenchmarks\Fixture\C\FixtureC925(new \DiContainerBenchmarks\Fixture\C\FixtureC924(new \DiContainerBenchmarks\Fixture\C\FixtureC923(new \DiContainerBenchmarks\Fixture\C\FixtureC922(new \DiContainerBenchmarks\Fixture\C\FixtureC921(new \DiContainerBenchmarks\Fixture\C\FixtureC920(new \DiContainerBenchmarks\Fixture\C\FixtureC919(new \DiContainerBenchmarks\Fixture\C\FixtureC918(new \DiContainerBenchmarks\Fixture\C\FixtureC917(new \DiContainerBenchmarks\Fixture\C\FixtureC916(new \DiContainerBenchmarks\Fixture\C\FixtureC915(new \DiContainerBenchmarks\Fixture\C\FixtureC914(new \DiContainerBenchmarks\Fixture\C\FixtureC913(new \DiContainerBenchmarks\Fixture\C\FixtureC912(new \DiContainerBenchmarks\Fixture\C\FixtureC911(new \DiContainerBenchmarks\Fixture\C\FixtureC910(new \DiContainerBenchmarks\Fixture\C\FixtureC909(new \DiContainerBenchmarks\Fixture\C\FixtureC908(new \DiContainerBenchmarks\Fixture\C\FixtureC907(new \DiContainerBenchmarks\Fixture\C\FixtureC906(new \DiContainerBenchmarks\Fixture\C\FixtureC905(new \DiContainerBenchmarks\Fixture\C\FixtureC904(new \DiContainerBenchmarks\Fixture\C\FixtureC903(new \DiContainerBenchmarks\Fixture\C\FixtureC902(new \DiContainerBenchmarks\Fixture\C\FixtureC901(new \DiContainerBenchmarks\Fixture\C\FixtureC900(new \DiContainerBenchmarks\Fixture\C\FixtureC899(new \DiContainerBenchmarks\Fixture\C\FixtureC898(new \DiContainerBenchmarks\Fixture\C\FixtureC897(new \DiContainerBenchmarks\Fixture\C\FixtureC896(new \DiContainerBenchmarks\Fixture\C\FixtureC895(new \DiContainerBenchmarks\Fixture\C\FixtureC894(new \DiContainerBenchmarks\Fixture\C\FixtureC893(new \DiContainerBenchmarks\Fixture\C\FixtureC892(new \DiContainerBenchmarks\Fixture\C\FixtureC891(new \DiContainerBenchmarks\Fixture\C\FixtureC890(new \DiContainerBenchmarks\Fixture\C\FixtureC889(new \DiContainerBenchmarks\Fixture\C\FixtureC888(new \DiContainerBenchmarks\Fixture\C\FixtureC887(new \DiContainerBenchmarks\Fixture\C\FixtureC886(new \DiContainerBenchmarks\Fixture\C\FixtureC885(new \DiContainerBenchmarks\Fixture\C\FixtureC884(new \DiContainerBenchmarks\Fixture\C\FixtureC883(new \DiContainerBenchmarks\Fixture\C\FixtureC882(new \DiContainerBenchmarks\Fixture\C\FixtureC881(new \DiContainerBenchmarks\Fixture\C\FixtureC880(new \DiContainerBenchmarks\Fixture\C\FixtureC879(new \DiContainerBenchmarks\Fixture\C\FixtureC878(new \DiContainerBenchmarks\Fixture\C\FixtureC877(new \DiContainerBenchmarks\Fixture\C\FixtureC876(new \DiContainerBenchmarks\Fixture\C\FixtureC875(new \DiContainerBenchmarks\Fixture\C\FixtureC874(new \DiContainerBenchmarks\Fixture\C\FixtureC873(new \DiContainerBenchmarks\Fixture\C\FixtureC872(new \DiContainerBenchmarks\Fixture\C\FixtureC871(new \DiContainerBenchmarks\Fixture\C\FixtureC870(new \DiContainerBenchmarks\Fixture\C\FixtureC869(new \DiContainerBenchmarks\Fixture\C\FixtureC868(new \DiContainerBenchmarks\Fixture\C\FixtureC867(new \DiContainerBenchmarks\Fixture\C\FixtureC866(new \DiContainerBenchmarks\Fixture\C\FixtureC865(new \DiContainerBenchmarks\Fixture\C\FixtureC864(new \DiContainerBenchmarks\Fixture\C\FixtureC863(new \DiContainerBenchmarks\Fixture\C\FixtureC862(new \DiContainerBenchmarks\Fixture\C\FixtureC861(new \DiContainerBenchmarks\Fixture\C\FixtureC860(new \DiContainerBenchmarks\Fixture\C\FixtureC859(new \DiContainerBenchmarks\Fixture\C\FixtureC858(new \DiContainerBenchmarks\Fixture\C\FixtureC857(new \DiContainerBenchmarks\Fixture\C\FixtureC856(new \DiContainerBenchmarks\Fixture\C\FixtureC855(new \DiContainerBenchmarks\Fixture\C\FixtureC854(new \DiContainerBenchmarks\Fixture\C\FixtureC853(new \DiContainerBenchmarks\Fixture\C\FixtureC852(new \DiContainerBenchmarks\Fixture\C\FixtureC851(new \DiContainerBenchmarks\Fixture\C\FixtureC850(new \DiContainerBenchmarks\Fixture\C\FixtureC849(new \DiContainerBenchmarks\Fixture\C\FixtureC848(new \DiContainerBenchmarks\Fixture\C\FixtureC847(new \DiContainerBenchmarks\Fixture\C\FixtureC846(new \DiContainerBenchmarks\Fixture\C\FixtureC845(new \DiContainerBenchmarks\Fixture\C\FixtureC844(new \DiContainerBenchmarks\Fixture\C\FixtureC843(new \DiContainerBenchmarks\Fixture\C\FixtureC842(new \DiContainerBenchmarks\Fixture\C\FixtureC841(new \DiContainerBenchmarks\Fixture\C\FixtureC840(new \DiContainerBenchmarks\Fixture\C\FixtureC839(new \DiContainerBenchmarks\Fixture\C\FixtureC838(new \DiContainerBenchmarks\Fixture\C\FixtureC837(new \DiContainerBenchmarks\Fixture\C\FixtureC836(new \DiContainerBenchmarks\Fixture\C\FixtureC835(new \DiContainerBenchmarks\Fixture\C\FixtureC834(new \DiContainerBenchmarks\Fixture\C\FixtureC833(new \DiContainerBenchmarks\Fixture\C\FixtureC832(new \DiContainerBenchmarks\Fixture\C\FixtureC831(new \DiContainerBenchmarks\Fixture\C\FixtureC830(new \DiContainerBenchmarks\Fixture\C\FixtureC829(new \DiContainerBenchmarks\Fixture\C\FixtureC828(new \DiContainerBenchmarks\Fixture\C\FixtureC827(new \DiContainerBenchmarks\Fixture\C\FixtureC826(new \DiContainerBenchmarks\Fixture\C\FixtureC825(new \DiContainerBenchmarks\Fixture\C\FixtureC824(new \DiContainerBenchmarks\Fixture\C\FixtureC823(new \DiContainerBenchmarks\Fixture\C\FixtureC822(new \DiContainerBenchmarks\Fixture\C\FixtureC821(new \DiContainerBenchmarks\Fixture\C\FixtureC820(new \DiContainerBenchmarks\Fixture\C\FixtureC819(new \DiContainerBenchmarks\Fixture\C\FixtureC818(new \DiContainerBenchmarks\Fixture\C\FixtureC817(new \DiContainerBenchmarks\Fixture\C\FixtureC816(new \DiContainerBenchmarks\Fixture\C\FixtureC815(new \DiContainerBenchmarks\Fixture\C\FixtureC814(new \DiContainerBenchmarks\Fixture\C\FixtureC813(new \DiContainerBenchmarks\Fixture\C\FixtureC812(new \DiContainerBenchmarks\Fixture\C\FixtureC811(new \DiContainerBenchmarks\Fixture\C\FixtureC810(new \DiContainerBenchmarks\Fixture\C\FixtureC809(new \DiContainerBenchmarks\Fixture\C\FixtureC808(new \DiContainerBenchmarks\Fixture\C\FixtureC807(new \DiContainerBenchmarks\Fixture\C\FixtureC806(new \DiContainerBenchmarks\Fixture\C\FixtureC805(new \DiContainerBenchmarks\Fixture\C\FixtureC804(new \DiContainerBenchmarks\Fixture\C\FixtureC803(new \DiContainerBenchmarks\Fixture\C\FixtureC802(new \DiContainerBenchmarks\Fixture\C\FixtureC801(new \DiContainerBenchmarks\Fixture\C\FixtureC800(new \DiContainerBenchmarks\Fixture\C\FixtureC799(new \DiContainerBenchmarks\Fixture\C\FixtureC798(new \DiContainerBenchmarks\Fixture\C\FixtureC797(new \DiContainerBenchmarks\Fixture\C\FixtureC796(new \DiContainerBenchmarks\Fixture\C\FixtureC795(new \DiContainerBenchmarks\Fixture\C\FixtureC794(new \DiContainerBenchmarks\Fixture\C\FixtureC793(new \DiContainerBenchmarks\Fixture\C\FixtureC792(new \DiContainerBenchmarks\Fixture\C\FixtureC791(new \DiContainerBenchmarks\Fixture\C\FixtureC790(new \DiContainerBenchmarks\Fixture\C\FixtureC789(new \DiContainerBenchmarks\Fixture\C\FixtureC788(new \DiContainerBenchmarks\Fixture\C\FixtureC787(new \DiContainerBenchmarks\Fixture\C\FixtureC786(new \DiContainerBenchmarks\Fixture\C\FixtureC785(new \DiContainerBenchmarks\Fixture\C\FixtureC784(new \DiContainerBenchmarks\Fixture\C\FixtureC783(new \DiContainerBenchmarks\Fixture\C\FixtureC782(new \DiContainerBenchmarks\Fixture\C\FixtureC781(new \DiContainerBenchmarks\Fixture\C\FixtureC780(new \DiContainerBenchmarks\Fixture\C\FixtureC779(new \DiContainerBenchmarks\Fixture\C\FixtureC778(new \DiContainerBenchmarks\Fixture\C\FixtureC777(new \DiContainerBenchmarks\Fixture\C\FixtureC776(new \DiContainerBenchmarks\Fixture\C\FixtureC775(new \DiContainerBenchmarks\Fixture\C\FixtureC774(new \DiContainerBenchmarks\Fixture\C\FixtureC773(new \DiContainerBenchmarks\Fixture\C\FixtureC772(new \DiContainerBenchmarks\Fixture\C\FixtureC771(new \DiContainerBenchmarks\Fixture\C\FixtureC770(new \DiContainerBenchmarks\Fixture\C\FixtureC769(new \DiContainerBenchmarks\Fixture\C\FixtureC768(new \DiContainerBenchmarks\Fixture\C\FixtureC767(new \DiContainerBenchmarks\Fixture\C\FixtureC766(new \DiContainerBenchmarks\Fixture\C\FixtureC765(new \DiContainerBenchmarks\Fixture\C\FixtureC764(new \DiContainerBenchmarks\Fixture\C\FixtureC763(new \DiContainerBenchmarks\Fixture\C\FixtureC762(new \DiContainerBenchmarks\Fixture\C\FixtureC761(new \DiContainerBenchmarks\Fixture\C\FixtureC760(new \DiContainerBenchmarks\Fixture\C\FixtureC759(new \DiContainerBenchmarks\Fixture\C\FixtureC758(new \DiContainerBenchmarks\Fixture\C\FixtureC757(new \DiContainerBenchmarks\Fixture\C\FixtureC756(new \DiContainerBenchmarks\Fixture\C\FixtureC755(new \DiContainerBenchmarks\Fixture\C\FixtureC754(new \DiContainerBenchmarks\Fixture\C\FixtureC753(new \DiContainerBenchmarks\Fixture\C\FixtureC752(new \DiContainerBenchmarks\Fixture\C\FixtureC751(new \DiContainerBenchmarks\Fixture\C\FixtureC750(new \DiContainerBenchmarks\Fixture\C\FixtureC749(new \DiContainerBenchmarks\Fixture\C\FixtureC748(new \DiContainerBenchmarks\Fixture\C\FixtureC747(new \DiContainerBenchmarks\Fixture\C\FixtureC746(new \DiContainerBenchmarks\Fixture\C\FixtureC745(new \DiContainerBenchmarks\Fixture\C\FixtureC744(new \DiContainerBenchmarks\Fixture\C\FixtureC743(new \DiContainerBenchmarks\Fixture\C\FixtureC742(new \DiContainerBenchmarks\Fixture\C\FixtureC741(new \DiContainerBenchmarks\Fixture\C\FixtureC740(new \DiContainerBenchmarks\Fixture\C\FixtureC739(new \DiContainerBenchmarks\Fixture\C\FixtureC738(new \DiContainerBenchmarks\Fixture\C\FixtureC737(new \DiContainerBenchmarks\Fixture\C\FixtureC736(new \DiContainerBenchmarks\Fixture\C\FixtureC735(new \DiContainerBenchmarks\Fixture\C\FixtureC734(new \DiContainerBenchmarks\Fixture\C\FixtureC733(new \DiContainerBenchmarks\Fixture\C\FixtureC732(new \DiContainerBenchmarks\Fixture\C\FixtureC731(new \DiContainerBenchmarks\Fixture\C\FixtureC730(new \DiContainerBenchmarks\Fixture\C\FixtureC729(new \DiContainerBenchmarks\Fixture\C\FixtureC728(new \DiContainerBenchmarks\Fixture\C\FixtureC727(new \DiContainerBenchmarks\Fixture\C\FixtureC726(new \DiContainerBenchmarks\Fixture\C\FixtureC725(new \DiContainerBenchmarks\Fixture\C\FixtureC724(new \DiContainerBenchmarks\Fixture\C\FixtureC723(new \DiContainerBenchmarks\Fixture\C\FixtureC722(new \DiContainerBenchmarks\Fixture\C\FixtureC721(new \DiContainerBenchmarks\Fixture\C\FixtureC720(new \DiContainerBenchmarks\Fixture\C\FixtureC719(new \DiContainerBenchmarks\Fixture\C\FixtureC718(new \DiContainerBenchmarks\Fixture\C\FixtureC717(new \DiContainerBenchmarks\Fixture\C\FixtureC716(new \DiContainerBenchmarks\Fixture\C\FixtureC715(new \DiContainerBenchmarks\Fixture\C\FixtureC714(new \DiContainerBenchmarks\Fixture\C\FixtureC713(new \DiContainerBenchmarks\Fixture\C\FixtureC712(new \DiContainerBenchmarks\Fixture\C\FixtureC711(new \DiContainerBenchmarks\Fixture\C\FixtureC710(new \DiContainerBenchmarks\Fixture\C\FixtureC709(new \DiContainerBenchmarks\Fixture\C\FixtureC708(new \DiContainerBenchmarks\Fixture\C\FixtureC707(new \DiContainerBenchmarks\Fixture\C\FixtureC706(new \DiContainerBenchmarks\Fixture\C\FixtureC705(new \DiContainerBenchmarks\Fixture\C\FixtureC704(new \DiContainerBenchmarks\Fixture\C\FixtureC703(new \DiContainerBenchmarks\Fixture\C\FixtureC702(new \DiContainerBenchmarks\Fixture\C\FixtureC701(new \DiContainerBenchmarks\Fixture\C\FixtureC700(new \DiContainerBenchmarks\Fixture\C\FixtureC699(new \DiContainerBenchmarks\Fixture\C\FixtureC698(new \DiContainerBenchmarks\Fixture\C\FixtureC697(new \DiContainerBenchmarks\Fixture\C\FixtureC696(new \DiContainerBenchmarks\Fixture\C\FixtureC695(new \DiContainerBenchmarks\Fixture\C\FixtureC694(new \DiContainerBenchmarks\Fixture\C\FixtureC693(new \DiContainerBenchmarks\Fixture\C\FixtureC692(new \DiContainerBenchmarks\Fixture\C\FixtureC691(new \DiContainerBenchmarks\Fixture\C\FixtureC690(new \DiContainerBenchmarks\Fixture\C\FixtureC689(new \DiContainerBenchmarks\Fixture\C\FixtureC688(new \DiContainerBenchmarks\Fixture\C\FixtureC687(new \DiContainerBenchmarks\Fixture\C\FixtureC686(new \DiContainerBenchmarks\Fixture\C\FixtureC685(new \DiContainerBenchmarks\Fixture\C\FixtureC684(new \DiContainerBenchmarks\Fixture\C\FixtureC683(new \DiContainerBenchmarks\Fixture\C\FixtureC682(new \DiContainerBenchmarks\Fixture\C\FixtureC681(new \DiContainerBenchmarks\Fixture\C\FixtureC680(new \DiContainerBenchmarks\Fixture\C\FixtureC679(new \DiContainerBenchmarks\Fixture\C\FixtureC678(new \DiContainerBenchmarks\Fixture\C\FixtureC677(new \DiContainerBenchmarks\Fixture\C\FixtureC676(new \DiContainerBenchmarks\Fixture\C\FixtureC675(new \DiContainerBenchmarks\Fixture\C\FixtureC674(new \DiContainerBenchmarks\Fixture\C\FixtureC673(new \DiContainerBenchmarks\Fixture\C\FixtureC672(new \DiContainerBenchmarks\Fixture\C\FixtureC671(new \DiContainerBenchmarks\Fixture\C\FixtureC670(new \DiContainerBenchmarks\Fixture\C\FixtureC669(new \DiContainerBenchmarks\Fixture\C\FixtureC668(new \DiContainerBenchmarks\Fixture\C\FixtureC667(new \DiContainerBenchmarks\Fixture\C\FixtureC666(new \DiContainerBenchmarks\Fixture\C\FixtureC665(new \DiContainerBenchmarks\Fixture\C\FixtureC664(new \DiContainerBenchmarks\Fixture\C\FixtureC663(new \DiContainerBenchmarks\Fixture\C\FixtureC662(new \DiContainerBenchmarks\Fixture\C\FixtureC661(new \DiContainerBenchmarks\Fixture\C\FixtureC660(new \DiContainerBenchmarks\Fixture\C\FixtureC659(new \DiContainerBenchmarks\Fixture\C\FixtureC658(new \DiContainerBenchmarks\Fixture\C\FixtureC657(new \DiContainerBenchmarks\Fixture\C\FixtureC656(new \DiContainerBenchmarks\Fixture\C\FixtureC655(new \DiContainerBenchmarks\Fixture\C\FixtureC654(new \DiContainerBenchmarks\Fixture\C\FixtureC653(new \DiContainerBenchmarks\Fixture\C\FixtureC652(new \DiContainerBenchmarks\Fixture\C\FixtureC651(new \DiContainerBenchmarks\Fixture\C\FixtureC650(new \DiContainerBenchmarks\Fixture\C\FixtureC649(new \DiContainerBenchmarks\Fixture\C\FixtureC648(new \DiContainerBenchmarks\Fixture\C\FixtureC647(new \DiContainerBenchmarks\Fixture\C\FixtureC646(new \DiContainerBenchmarks\Fixture\C\FixtureC645(new \DiContainerBenchmarks\Fixture\C\FixtureC644(new \DiContainerBenchmarks\Fixture\C\FixtureC643(new \DiContainerBenchmarks\Fixture\C\FixtureC642(new \DiContainerBenchmarks\Fixture\C\FixtureC641(new \DiContainerBenchmarks\Fixture\C\FixtureC640(new \DiContainerBenchmarks\Fixture\C\FixtureC639(new \DiContainerBenchmarks\Fixture\C\FixtureC638(new \DiContainerBenchmarks\Fixture\C\FixtureC637(new \DiContainerBenchmarks\Fixture\C\FixtureC636(new \DiContainerBenchmarks\Fixture\C\FixtureC635(new \DiContainerBenchmarks\Fixture\C\FixtureC634(new \DiContainerBenchmarks\Fixture\C\FixtureC633(new \DiContainerBenchmarks\Fixture\C\FixtureC632(new \DiContainerBenchmarks\Fixture\C\FixtureC631(new \DiContainerBenchmarks\Fixture\C\FixtureC630(new \DiContainerBenchmarks\Fixture\C\FixtureC629(new \DiContainerBenchmarks\Fixture\C\FixtureC628(new \DiContainerBenchmarks\Fixture\C\FixtureC627(new \DiContainerBenchmarks\Fixture\C\FixtureC626(new \DiContainerBenchmarks\Fixture\C\FixtureC625(new \DiContainerBenchmarks\Fixture\C\FixtureC624(new \DiContainerBenchmarks\Fixture\C\FixtureC623(new \DiContainerBenchmarks\Fixture\C\FixtureC622(new \DiContainerBenchmarks\Fixture\C\FixtureC621(new \DiContainerBenchmarks\Fixture\C\FixtureC620(new \DiContainerBenchmarks\Fixture\C\FixtureC619(new \DiContainerBenchmarks\Fixture\C\FixtureC618(new \DiContainerBenchmarks\Fixture\C\FixtureC617(new \DiContainerBenchmarks\Fixture\C\FixtureC616(new \DiContainerBenchmarks\Fixture\C\FixtureC615(new \DiContainerBenchmarks\Fixture\C\FixtureC614(new \DiContainerBenchmarks\Fixture\C\FixtureC613(new \DiContainerBenchmarks\Fixture\C\FixtureC612(new \DiContainerBenchmarks\Fixture\C\FixtureC611(new \DiContainerBenchmarks\Fixture\C\FixtureC610(new \DiContainerBenchmarks\Fixture\C\FixtureC609(new \DiContainerBenchmarks\Fixture\C\FixtureC608(new \DiContainerBenchmarks\Fixture\C\FixtureC607(new \DiContainerBenchmarks\Fixture\C\FixtureC606(new \DiContainerBenchmarks\Fixture\C\FixtureC605(new \DiContainerBenchmarks\Fixture\C\FixtureC604(new \DiContainerBenchmarks\Fixture\C\FixtureC603(new \DiContainerBenchmarks\Fixture\C\FixtureC602(new \DiContainerBenchmarks\Fixture\C\FixtureC601(new \DiContainerBenchmarks\Fixture\C\FixtureC600(new \DiContainerBenchmarks\Fixture\C\FixtureC599(new \DiContainerBenchmarks\Fixture\C\FixtureC598(new \DiContainerBenchmarks\Fixture\C\FixtureC597(new \DiContainerBenchmarks\Fixture\C\FixtureC596(new \DiContainerBenchmarks\Fixture\C\FixtureC595(new \DiContainerBenchmarks\Fixture\C\FixtureC594(new \DiContainerBenchmarks\Fixture\C\FixtureC593(new \DiContainerBenchmarks\Fixture\C\FixtureC592(new \DiContainerBenchmarks\Fixture\C\FixtureC591(new \DiContainerBenchmarks\Fixture\C\FixtureC590(new \DiContainerBenchmarks\Fixture\C\FixtureC589(new \DiContainerBenchmarks\Fixture\C\FixtureC588(new \DiContainerBenchmarks\Fixture\C\FixtureC587(new \DiContainerBenchmarks\Fixture\C\FixtureC586(new \DiContainerBenchmarks\Fixture\C\FixtureC585(new \DiContainerBenchmarks\Fixture\C\FixtureC584(new \DiContainerBenchmarks\Fixture\C\FixtureC583(new \DiContainerBenchmarks\Fixture\C\FixtureC582(new \DiContainerBenchmarks\Fixture\C\FixtureC581(new \DiContainerBenchmarks\Fixture\C\FixtureC580(new \DiContainerBenchmarks\Fixture\C\FixtureC579(new \DiContainerBenchmarks\Fixture\C\FixtureC578(new \DiContainerBenchmarks\Fixture\C\FixtureC577(new \DiContainerBenchmarks\Fixture\C\FixtureC576(new \DiContainerBenchmarks\Fixture\C\FixtureC575(new \DiContainerBenchmarks\Fixture\C\FixtureC574(new \DiContainerBenchmarks\Fixture\C\FixtureC573(new \DiContainerBenchmarks\Fixture\C\FixtureC572(new \DiContainerBenchmarks\Fixture\C\FixtureC571(new \DiContainerBenchmarks\Fixture\C\FixtureC570(new \DiContainerBenchmarks\Fixture\C\FixtureC569(new \DiContainerBenchmarks\Fixture\C\FixtureC568(new \DiContainerBenchmarks\Fixture\C\FixtureC567(new \DiContainerBenchmarks\Fixture\C\FixtureC566(new \DiContainerBenchmarks\Fixture\C\FixtureC565(new \DiContainerBenchmarks\Fixture\C\FixtureC564(new \DiContainerBenchmarks\Fixture\C\FixtureC563(new \DiContainerBenchmarks\Fixture\C\FixtureC562(new \DiContainerBenchmarks\Fixture\C\FixtureC561(new \DiContainerBenchmarks\Fixture\C\FixtureC560(new \DiContainerBenchmarks\Fixture\C\FixtureC559(new \DiContainerBenchmarks\Fixture\C\FixtureC558(new \DiContainerBenchmarks\Fixture\C\FixtureC557(new \DiContainerBenchmarks\Fixture\C\FixtureC556(new \DiContainerBenchmarks\Fixture\C\FixtureC555(new \DiContainerBenchmarks\Fixture\C\FixtureC554(new \DiContainerBenchmarks\Fixture\C\FixtureC553(new \DiContainerBenchmarks\Fixture\C\FixtureC552(new \DiContainerBenchmarks\Fixture\C\FixtureC551(new \DiContainerBenchmarks\Fixture\C\FixtureC550(new \DiContainerBenchmarks\Fixture\C\FixtureC549(new \DiContainerBenchmarks\Fixture\C\FixtureC548(new \DiContainerBenchmarks\Fixture\C\FixtureC547(new \DiContainerBenchmarks\Fixture\C\FixtureC546(new \DiContainerBenchmarks\Fixture\C\FixtureC545(new \DiContainerBenchmarks\Fixture\C\FixtureC544(new \DiContainerBenchmarks\Fixture\C\FixtureC543(new \DiContainerBenchmarks\Fixture\C\FixtureC542(new \DiContainerBenchmarks\Fixture\C\FixtureC541(new \DiContainerBenchmarks\Fixture\C\FixtureC540(new \DiContainerBenchmarks\Fixture\C\FixtureC539(new \DiContainerBenchmarks\Fixture\C\FixtureC538(new \DiContainerBenchmarks\Fixture\C\FixtureC537(new \DiContainerBenchmarks\Fixture\C\FixtureC536(new \DiContainerBenchmarks\Fixture\C\FixtureC535(new \DiContainerBenchmarks\Fixture\C\FixtureC534(new \DiContainerBenchmarks\Fixture\C\FixtureC533(new \DiContainerBenchmarks\Fixture\C\FixtureC532(new \DiContainerBenchmarks\Fixture\C\FixtureC531(new \DiContainerBenchmarks\Fixture\C\FixtureC530(new \DiContainerBenchmarks\Fixture\C\FixtureC529(new \DiContainerBenchmarks\Fixture\C\FixtureC528(new \DiContainerBenchmarks\Fixture\C\FixtureC527(new \DiContainerBenchmarks\Fixture\C\FixtureC526(new \DiContainerBenchmarks\Fixture\C\FixtureC525(new \DiContainerBenchmarks\Fixture\C\FixtureC524(new \DiContainerBenchmarks\Fixture\C\FixtureC523(new \DiContainerBenchmarks\Fixture\C\FixtureC522(new \DiContainerBenchmarks\Fixture\C\FixtureC521(new \DiContainerBenchmarks\Fixture\C\FixtureC520(new \DiContainerBenchmarks\Fixture\C\FixtureC519(new \DiContainerBenchmarks\Fixture\C\FixtureC518(new \DiContainerBenchmarks\Fixture\C\FixtureC517(new \DiContainerBenchmarks\Fixture\C\FixtureC516(new \DiContainerBenchmarks\Fixture\C\FixtureC515(new \DiContainerBenchmarks\Fixture\C\FixtureC514(new \DiContainerBenchmarks\Fixture\C\FixtureC513(new \DiContainerBenchmarks\Fixture\C\FixtureC512(new \DiContainerBenchmarks\Fixture\C\FixtureC511(new \DiContainerBenchmarks\Fixture\C\FixtureC510(new \DiContainerBenchmarks\Fixture\C\FixtureC509(new \DiContainerBenchmarks\Fixture\C\FixtureC508(new \DiContainerBenchmarks\Fixture\C\FixtureC507(new \DiContainerBenchmarks\Fixture\C\FixtureC506(new \DiContainerBenchmarks\Fixture\C\FixtureC505(new \DiContainerBenchmarks\Fixture\C\FixtureC504(new \DiContainerBenchmarks\Fixture\C\FixtureC503(new \DiContainerBenchmarks\Fixture\C\FixtureC502(new \DiContainerBenchmarks\Fixture\C\FixtureC501(new \DiContainerBenchmarks\Fixture\C\FixtureC500(new \DiContainerBenchmarks\Fixture\C\FixtureC499(new \DiContainerBenchmarks\Fixture\C\FixtureC498(new \DiContainerBenchmarks\Fixture\C\FixtureC497(new \DiContainerBenchmarks\Fixture\C\FixtureC496(new \DiContainerBenchmarks\Fixture\C\FixtureC495(new \DiContainerBenchmarks\Fixture\C\FixtureC494(new \DiContainerBenchmarks\Fixture\C\FixtureC493(new \DiContainerBenchmarks\Fixture\C\FixtureC492(new \DiContainerBenchmarks\Fixture\C\FixtureC491(new \DiContainerBenchmarks\Fixture\C\FixtureC490(new \DiContainerBenchmarks\Fixture\C\FixtureC489(new \DiContainerBenchmarks\Fixture\C\FixtureC488(new \DiContainerBenchmarks\Fixture\C\FixtureC487(new \DiContainerBenchmarks\Fixture\C\FixtureC486(new \DiContainerBenchmarks\Fixture\C\FixtureC485(new \DiContainerBenchmarks\Fixture\C\FixtureC484(new \DiContainerBenchmarks\Fixture\C\FixtureC483(new \DiContainerBenchmarks\Fixture\C\FixtureC482(new \DiContainerBenchmarks\Fixture\C\FixtureC481(new \DiContainerBenchmarks\Fixture\C\FixtureC480(new \DiContainerBenchmarks\Fixture\C\FixtureC479(new \DiContainerBenchmarks\Fixture\C\FixtureC478(new \DiContainerBenchmarks\Fixture\C\FixtureC477(new \DiContainerBenchmarks\Fixture\C\FixtureC476(new \DiContainerBenchmarks\Fixture\C\FixtureC475(new \DiContainerBenchmarks\Fixture\C\FixtureC474(new \DiContainerBenchmarks\Fixture\C\FixtureC473(new \DiContainerBenchmarks\Fixture\C\FixtureC472(new \DiContainerBenchmarks\Fixture\C\FixtureC471(new \DiContainerBenchmarks\Fixture\C\FixtureC470(new \DiContainerBenchmarks\Fixture\C\FixtureC469(new \DiContainerBenchmarks\Fixture\C\FixtureC468(new \DiContainerBenchmarks\Fixture\C\FixtureC467(new \DiContainerBenchmarks\Fixture\C\FixtureC466(new \DiContainerBenchmarks\Fixture\C\FixtureC465(new \DiContainerBenchmarks\Fixture\C\FixtureC464(new \DiContainerBenchmarks\Fixture\C\FixtureC463(new \DiContainerBenchmarks\Fixture\C\FixtureC462(new \DiContainerBenchmarks\Fixture\C\FixtureC461(new \DiContainerBenchmarks\Fixture\C\FixtureC460(new \DiContainerBenchmarks\Fixture\C\FixtureC459(new \DiContainerBenchmarks\Fixture\C\FixtureC458(new \DiContainerBenchmarks\Fixture\C\FixtureC457(new \DiContainerBenchmarks\Fixture\C\FixtureC456(new \DiContainerBenchmarks\Fixture\C\FixtureC455(new \DiContainerBenchmarks\Fixture\C\FixtureC454(new \DiContainerBenchmarks\Fixture\C\FixtureC453(new \DiContainerBenchmarks\Fixture\C\FixtureC452(new \DiContainerBenchmarks\Fixture\C\FixtureC451(new \DiContainerBenchmarks\Fixture\C\FixtureC450(new \DiContainerBenchmarks\Fixture\C\FixtureC449(new \DiContainerBenchmarks\Fixture\C\FixtureC448(new \DiContainerBenchmarks\Fixture\C\FixtureC447(new \DiContainerBenchmarks\Fixture\C\FixtureC446(new \DiContainerBenchmarks\Fixture\C\FixtureC445(new \DiContainerBenchmarks\Fixture\C\FixtureC444(new \DiContainerBenchmarks\Fixture\C\FixtureC443(new \DiContainerBenchmarks\Fixture\C\FixtureC442(new \DiContainerBenchmarks\Fixture\C\FixtureC441(new \DiContainerBenchmarks\Fixture\C\FixtureC440(new \DiContainerBenchmarks\Fixture\C\FixtureC439(new \DiContainerBenchmarks\Fixture\C\FixtureC438(new \DiContainerBenchmarks\Fixture\C\FixtureC437(new \DiContainerBenchmarks\Fixture\C\FixtureC436(new \DiContainerBenchmarks\Fixture\C\FixtureC435(new \DiContainerBenchmarks\Fixture\C\FixtureC434(new \DiContainerBenchmarks\Fixture\C\FixtureC433(new \DiContainerBenchmarks\Fixture\C\FixtureC432(new \DiContainerBenchmarks\Fixture\C\FixtureC431(new \DiContainerBenchmarks\Fixture\C\FixtureC430(new \DiContainerBenchmarks\Fixture\C\FixtureC429(new \DiContainerBenchmarks\Fixture\C\FixtureC428(new \DiContainerBenchmarks\Fixture\C\FixtureC427(new \DiContainerBenchmarks\Fixture\C\FixtureC426(new \DiContainerBenchmarks\Fixture\C\FixtureC425(new \DiContainerBenchmarks\Fixture\C\FixtureC424(new \DiContainerBenchmarks\Fixture\C\FixtureC423(new \DiContainerBenchmarks\Fixture\C\FixtureC422(new \DiContainerBenchmarks\Fixture\C\FixtureC421(new \DiContainerBenchmarks\Fixture\C\FixtureC420(new \DiContainerBenchmarks\Fixture\C\FixtureC419(new \DiContainerBenchmarks\Fixture\C\FixtureC418(new \DiContainerBenchmarks\Fixture\C\FixtureC417(new \DiContainerBenchmarks\Fixture\C\FixtureC416(new \DiContainerBenchmarks\Fixture\C\FixtureC415(new \DiContainerBenchmarks\Fixture\C\FixtureC414(new \DiContainerBenchmarks\Fixture\C\FixtureC413(new \DiContainerBenchmarks\Fixture\C\FixtureC412(new \DiContainerBenchmarks\Fixture\C\FixtureC411(new \DiContainerBenchmarks\Fixture\C\FixtureC410(new \DiContainerBenchmarks\Fixture\C\FixtureC409(new \DiContainerBenchmarks\Fixture\C\FixtureC408(new \DiContainerBenchmarks\Fixture\C\FixtureC407(new \DiContainerBenchmarks\Fixture\C\FixtureC406(new \DiContainerBenchmarks\Fixture\C\FixtureC405(new \DiContainerBenchmarks\Fixture\C\FixtureC404(new \DiContainerBenchmarks\Fixture\C\FixtureC403(new \DiContainerBenchmarks\Fixture\C\FixtureC402(new \DiContainerBenchmarks\Fixture\C\FixtureC401(new \DiContainerBenchmarks\Fixture\C\FixtureC400(new \DiContainerBenchmarks\Fixture\C\FixtureC399(new \DiContainerBenchmarks\Fixture\C\FixtureC398(new \DiContainerBenchmarks\Fixture\C\FixtureC397(new \DiContainerBenchmarks\Fixture\C\FixtureC396(new \DiContainerBenchmarks\Fixture\C\FixtureC395(new \DiContainerBenchmarks\Fixture\C\FixtureC394(new \DiContainerBenchmarks\Fixture\C\FixtureC393(new \DiContainerBenchmarks\Fixture\C\FixtureC392(new \DiContainerBenchmarks\Fixture\C\FixtureC391(new \DiContainerBenchmarks\Fixture\C\FixtureC390(new \DiContainerBenchmarks\Fixture\C\FixtureC389(new \DiContainerBenchmarks\Fixture\C\FixtureC388(new \DiContainerBenchmarks\Fixture\C\FixtureC387(new \DiContainerBenchmarks\Fixture\C\FixtureC386(new \DiContainerBenchmarks\Fixture\C\FixtureC385(new \DiContainerBenchmarks\Fixture\C\FixtureC384(new \DiContainerBenchmarks\Fixture\C\FixtureC383(new \DiContainerBenchmarks\Fixture\C\FixtureC382(new \DiContainerBenchmarks\Fixture\C\FixtureC381(new \DiContainerBenchmarks\Fixture\C\FixtureC380(new \DiContainerBenchmarks\Fixture\C\FixtureC379(new \DiContainerBenchmarks\Fixture\C\FixtureC378(new \DiContainerBenchmarks\Fixture\C\FixtureC377(new \DiContainerBenchmarks\Fixture\C\FixtureC376(new \DiContainerBenchmarks\Fixture\C\FixtureC375(new \DiContainerBenchmarks\Fixture\C\FixtureC374(new \DiContainerBenchmarks\Fixture\C\FixtureC373(new \DiContainerBenchmarks\Fixture\C\FixtureC372(new \DiContainerBenchmarks\Fixture\C\FixtureC371(new \DiContainerBenchmarks\Fixture\C\FixtureC370(new \DiContainerBenchmarks\Fixture\C\FixtureC369(new \DiContainerBenchmarks\Fixture\C\FixtureC368(new \DiContainerBenchmarks\Fixture\C\FixtureC367(new \DiContainerBenchmarks\Fixture\C\FixtureC366(new \DiContainerBenchmarks\Fixture\C\FixtureC365(new \DiContainerBenchmarks\Fixture\C\FixtureC364(new \DiContainerBenchmarks\Fixture\C\FixtureC363(new \DiContainerBenchmarks\Fixture\C\FixtureC362(new \DiContainerBenchmarks\Fixture\C\FixtureC361(new \DiContainerBenchmarks\Fixture\C\FixtureC360(new \DiContainerBenchmarks\Fixture\C\FixtureC359(new \DiContainerBenchmarks\Fixture\C\FixtureC358(new \DiContainerBenchmarks\Fixture\C\FixtureC357(new \DiContainerBenchmarks\Fixture\C\FixtureC356(new \DiContainerBenchmarks\Fixture\C\FixtureC355(new \DiContainerBenchmarks\Fixture\C\FixtureC354(new \DiContainerBenchmarks\Fixture\C\FixtureC353(new \DiContainerBenchmarks\Fixture\C\FixtureC352(new \DiContainerBenchmarks\Fixture\C\FixtureC351(new \DiContainerBenchmarks\Fixture\C\FixtureC350(new \DiContainerBenchmarks\Fixture\C\FixtureC349(new \DiContainerBenchmarks\Fixture\C\FixtureC348(new \DiContainerBenchmarks\Fixture\C\FixtureC347(new \DiContainerBenchmarks\Fixture\C\FixtureC346(new \DiContainerBenchmarks\Fixture\C\FixtureC345(new \DiContainerBenchmarks\Fixture\C\FixtureC344(new \DiContainerBenchmarks\Fixture\C\FixtureC343(new \DiContainerBenchmarks\Fixture\C\FixtureC342(new \DiContainerBenchmarks\Fixture\C\FixtureC341(new \DiContainerBenchmarks\Fixture\C\FixtureC340(new \DiContainerBenchmarks\Fixture\C\FixtureC339(new \DiContainerBenchmarks\Fixture\C\FixtureC338(new \DiContainerBenchmarks\Fixture\C\FixtureC337(new \DiContainerBenchmarks\Fixture\C\FixtureC336(new \DiContainerBenchmarks\Fixture\C\FixtureC335(new \DiContainerBenchmarks\Fixture\C\FixtureC334(new \DiContainerBenchmarks\Fixture\C\FixtureC333(new \DiContainerBenchmarks\Fixture\C\FixtureC332(new \DiContainerBenchmarks\Fixture\C\FixtureC331(new \DiContainerBenchmarks\Fixture\C\FixtureC330(new \DiContainerBenchmarks\Fixture\C\FixtureC329(new \DiContainerBenchmarks\Fixture\C\FixtureC328(new \DiContainerBenchmarks\Fixture\C\FixtureC327(new \DiContainerBenchmarks\Fixture\C\FixtureC326(new \DiContainerBenchmarks\Fixture\C\FixtureC325(new \DiContainerBenchmarks\Fixture\C\FixtureC324(new \DiContainerBenchmarks\Fixture\C\FixtureC323(new \DiContainerBenchmarks\Fixture\C\FixtureC322(new \DiContainerBenchmarks\Fixture\C\FixtureC321(new \DiContainerBenchmarks\Fixture\C\FixtureC320(new \DiContainerBenchmarks\Fixture\C\FixtureC319(new \DiContainerBenchmarks\Fixture\C\FixtureC318(new \DiContainerBenchmarks\Fixture\C\FixtureC317(new \DiContainerBenchmarks\Fixture\C\FixtureC316(new \DiContainerBenchmarks\Fixture\C\FixtureC315(new \DiContainerBenchmarks\Fixture\C\FixtureC314(new \DiContainerBenchmarks\Fixture\C\FixtureC313(new \DiContainerBenchmarks\Fixture\C\FixtureC312(new \DiContainerBenchmarks\Fixture\C\FixtureC311(new \DiContainerBenchmarks\Fixture\C\FixtureC310(new \DiContainerBenchmarks\Fixture\C\FixtureC309(new \DiContainerBenchmarks\Fixture\C\FixtureC308(new \DiContainerBenchmarks\Fixture\C\FixtureC307(new \DiContainerBenchmarks\Fixture\C\FixtureC306(new \DiContainerBenchmarks\Fixture\C\FixtureC305(new \DiContainerBenchmarks\Fixture\C\FixtureC304(new \DiContainerBenchmarks\Fixture\C\FixtureC303(new \DiContainerBenchmarks\Fixture\C\FixtureC302(new \DiContainerBenchmarks\Fixture\C\FixtureC301(new \DiContainerBenchmarks\Fixture\C\FixtureC300(new \DiContainerBenchmarks\Fixture\C\FixtureC299(new \DiContainerBenchmarks\Fixture\C\FixtureC298(new \DiContainerBenchmarks\Fixture\C\FixtureC297(new \DiContainerBenchmarks\Fixture\C\FixtureC296(new \DiContainerBenchmarks\Fixture\C\FixtureC295(new \DiContainerBenchmarks\Fixture\C\FixtureC294(new \DiContainerBenchmarks\Fixture\C\FixtureC293(new \DiContainerBenchmarks\Fixture\C\FixtureC292(new \DiContainerBenchmarks\Fixture\C\FixtureC291(new \DiContainerBenchmarks\Fixture\C\FixtureC290(new \DiContainerBenchmarks\Fixture\C\FixtureC289(new \DiContainerBenchmarks\Fixture\C\FixtureC288(new \DiContainerBenchmarks\Fixture\C\FixtureC287(new \DiContainerBenchmarks\Fixture\C\FixtureC286(new \DiContainerBenchmarks\Fixture\C\FixtureC285(new \DiContainerBenchmarks\Fixture\C\FixtureC284(new \DiContainerBenchmarks\Fixture\C\FixtureC283(new \DiContainerBenchmarks\Fixture\C\FixtureC282(new \DiContainerBenchmarks\Fixture\C\FixtureC281(new \DiContainerBenchmarks\Fixture\C\FixtureC280(new \DiContainerBenchmarks\Fixture\C\FixtureC279(new \DiContainerBenchmarks\Fixture\C\FixtureC278(new \DiContainerBenchmarks\Fixture\C\FixtureC277(new \DiContainerBenchmarks\Fixture\C\FixtureC276(new \DiContainerBenchmarks\Fixture\C\FixtureC275(new \DiContainerBenchmarks\Fixture\C\FixtureC274(new \DiContainerBenchmarks\Fixture\C\FixtureC273(new \DiContainerBenchmarks\Fixture\C\FixtureC272(new \DiContainerBenchmarks\Fixture\C\FixtureC271(new \DiContainerBenchmarks\Fixture\C\FixtureC270(new \DiContainerBenchmarks\Fixture\C\FixtureC269(new \DiContainerBenchmarks\Fixture\C\FixtureC268(new \DiContainerBenchmarks\Fixture\C\FixtureC267(new \DiContainerBenchmarks\Fixture\C\FixtureC266(new \DiContainerBenchmarks\Fixture\C\FixtureC265(new \DiContainerBenchmarks\Fixture\C\FixtureC264(new \DiContainerBenchmarks\Fixture\C\FixtureC263(new \DiContainerBenchmarks\Fixture\C\FixtureC262(new \DiContainerBenchmarks\Fixture\C\FixtureC261(new \DiContainerBenchmarks\Fixture\C\FixtureC260(new \DiContainerBenchmarks\Fixture\C\FixtureC259(new \DiContainerBenchmarks\Fixture\C\FixtureC258(new \DiContainerBenchmarks\Fixture\C\FixtureC257(new \DiContainerBenchmarks\Fixture\C\FixtureC256(new \DiContainerBenchmarks\Fixture\C\FixtureC255(new \DiContainerBenchmarks\Fixture\C\FixtureC254(new \DiContainerBenchmarks\Fixture\C\FixtureC253(new \DiContainerBenchmarks\Fixture\C\FixtureC252(new \DiContainerBenchmarks\Fixture\C\FixtureC251(new \DiContainerBenchmarks\Fixture\C\FixtureC250(new \DiContainerBenchmarks\Fixture\C\FixtureC249(new \DiContainerBenchmarks\Fixture\C\FixtureC248(new \DiContainerBenchmarks\Fixture\C\FixtureC247(new \DiContainerBenchmarks\Fixture\C\FixtureC246(new \DiContainerBenchmarks\Fixture\C\FixtureC245(new \DiContainerBenchmarks\Fixture\C\FixtureC244(new \DiContainerBenchmarks\Fixture\C\FixtureC243(new \DiContainerBenchmarks\Fixture\C\FixtureC242(new \DiContainerBenchmarks\Fixture\C\FixtureC241(new \DiContainerBenchmarks\Fixture\C\FixtureC240(new \DiContainerBenchmarks\Fixture\C\FixtureC239(new \DiContainerBenchmarks\Fixture\C\FixtureC238(new \DiContainerBenchmarks\Fixture\C\FixtureC237(new \DiContainerBenchmarks\Fixture\C\FixtureC236(new \DiContainerBenchmarks\Fixture\C\FixtureC235(new \DiContainerBenchmarks\Fixture\C\FixtureC234(new \DiContainerBenchmarks\Fixture\C\FixtureC233(new \DiContainerBenchmarks\Fixture\C\FixtureC232(new \DiContainerBenchmarks\Fixture\C\FixtureC231(new \DiContainerBenchmarks\Fixture\C\FixtureC230(new \DiContainerBenchmarks\Fixture\C\FixtureC229(new \DiContainerBenchmarks\Fixture\C\FixtureC228(new \DiContainerBenchmarks\Fixture\C\FixtureC227(new \DiContainerBenchmarks\Fixture\C\FixtureC226(new \DiContainerBenchmarks\Fixture\C\FixtureC225(new \DiContainerBenchmarks\Fixture\C\FixtureC224(new \DiContainerBenchmarks\Fixture\C\FixtureC223(new \DiContainerBenchmarks\Fixture\C\FixtureC222(new \DiContainerBenchmarks\Fixture\C\FixtureC221(new \DiContainerBenchmarks\Fixture\C\FixtureC220(new \DiContainerBenchmarks\Fixture\C\FixtureC219(new \DiContainerBenchmarks\Fixture\C\FixtureC218(new \DiContainerBenchmarks\Fixture\C\FixtureC217(new \DiContainerBenchmarks\Fixture\C\FixtureC216(new \DiContainerBenchmarks\Fixture\C\FixtureC215(new \DiContainerBenchmarks\Fixture\C\FixtureC214(new \DiContainerBenchmarks\Fixture\C\FixtureC213(new \DiContainerBenchmarks\Fixture\C\FixtureC212(new \DiContainerBenchmarks\Fixture\C\FixtureC211(new \DiContainerBenchmarks\Fixture\C\FixtureC210(new \DiContainerBenchmarks\Fixture\C\FixtureC209(new \DiContainerBenchmarks\Fixture\C\FixtureC208(new \DiContainerBenchmarks\Fixture\C\FixtureC207(new \DiContainerBenchmarks\Fixture\C\FixtureC206(new \DiContainerBenchmarks\Fixture\C\FixtureC205(new \DiContainerBenchmarks\Fixture\C\FixtureC204(new \DiContainerBenchmarks\Fixture\C\FixtureC203(new \DiContainerBenchmarks\Fixture\C\FixtureC202(new \DiContainerBenchmarks\Fixture\C\FixtureC201(new \DiContainerBenchmarks\Fixture\C\FixtureC200(new \DiContainerBenchmarks\Fixture\C\FixtureC199(new \DiContainerBenchmarks\Fixture\C\FixtureC198(new \DiContainerBenchmarks\Fixture\C\FixtureC197(new \DiContainerBenchmarks\Fixture\C\FixtureC196(new \DiContainerBenchmarks\Fixture\C\FixtureC195(new \DiContainerBenchmarks\Fixture\C\FixtureC194(new \DiContainerBenchmarks\Fixture\C\FixtureC193(new \DiContainerBenchmarks\Fixture\C\FixtureC192(new \DiContainerBenchmarks\Fixture\C\FixtureC191(new \DiContainerBenchmarks\Fixture\C\FixtureC190(new \DiContainerBenchmarks\Fixture\C\FixtureC189(new \DiContainerBenchmarks\Fixture\C\FixtureC188(new \DiContainerBenchmarks\Fixture\C\FixtureC187(new \DiContainerBenchmarks\Fixture\C\FixtureC186(new \DiContainerBenchmarks\Fixture\C\FixtureC185(new \DiContainerBenchmarks\Fixture\C\FixtureC184(new \DiContainerBenchmarks\Fixture\C\FixtureC183(new \DiContainerBenchmarks\Fixture\C\FixtureC182(new \DiContainerBenchmarks\Fixture\C\FixtureC181(new \DiContainerBenchmarks\Fixture\C\FixtureC180(new \DiContainerBenchmarks\Fixture\C\FixtureC179(new \DiContainerBenchmarks\Fixture\C\FixtureC178(new \DiContainerBenchmarks\Fixture\C\FixtureC177(new \DiContainerBenchmarks\Fixture\C\FixtureC176(new \DiContainerBenchmarks\Fixture\C\FixtureC175(new \DiContainerBenchmarks\Fixture\C\FixtureC174(new \DiContainerBenchmarks\Fixture\C\FixtureC173(new \DiContainerBenchmarks\Fixture\C\FixtureC172(new \DiContainerBenchmarks\Fixture\C\FixtureC171(new \DiContainerBenchmarks\Fixture\C\FixtureC170(new \DiContainerBenchmarks\Fixture\C\FixtureC169(new \DiContainerBenchmarks\Fixture\C\FixtureC168(new \DiContainerBenchmarks\Fixture\C\FixtureC167(new \DiContainerBenchmarks\Fixture\C\FixtureC166(new \DiContainerBenchmarks\Fixture\C\FixtureC165(new \DiContainerBenchmarks\Fixture\C\FixtureC164(new \DiContainerBenchmarks\Fixture\C\FixtureC163(new \DiContainerBenchmarks\Fixture\C\FixtureC162(new \DiContainerBenchmarks\Fixture\C\FixtureC161(new \DiContainerBenchmarks\Fixture\C\FixtureC160(new \DiContainerBenchmarks\Fixture\C\FixtureC159(new \DiContainerBenchmarks\Fixture\C\FixtureC158(new \DiContainerBenchmarks\Fixture\C\FixtureC157(new \DiContainerBenchmarks\Fixture\C\FixtureC156(new \DiContainerBenchmarks\Fixture\C\FixtureC155(new \DiContainerBenchmarks\Fixture\C\FixtureC154(new \DiContainerBenchmarks\Fixture\C\FixtureC153(new \DiContainerBenchmarks\Fixture\C\FixtureC152(new \DiContainerBenchmarks\Fixture\C\FixtureC151(new \DiContainerBenchmarks\Fixture\C\FixtureC150(new \DiContainerBenchmarks\Fixture\C\FixtureC149(new \DiContainerBenchmarks\Fixture\C\FixtureC148(new \DiContainerBenchmarks\Fixture\C\FixtureC147(new \DiContainerBenchmarks\Fixture\C\FixtureC146(new \DiContainerBenchmarks\Fixture\C\FixtureC145(new \DiContainerBenchmarks\Fixture\C\FixtureC144(new \DiContainerBenchmarks\Fixture\C\FixtureC143(new \DiContainerBenchmarks\Fixture\C\FixtureC142(new \DiContainerBenchmarks\Fixture\C\FixtureC141(new \DiContainerBenchmarks\Fixture\C\FixtureC140(new \DiContainerBenchmarks\Fixture\C\FixtureC139(new \DiContainerBenchmarks\Fixture\C\FixtureC138(new \DiContainerBenchmarks\Fixture\C\FixtureC137(new \DiContainerBenchmarks\Fixture\C\FixtureC136(new \DiContainerBenchmarks\Fixture\C\FixtureC135(new \DiContainerBenchmarks\Fixture\C\FixtureC134(new \DiContainerBenchmarks\Fixture\C\FixtureC133(new \DiContainerBenchmarks\Fixture\C\FixtureC132(new \DiContainerBenchmarks\Fixture\C\FixtureC131(new \DiContainerBenchmarks\Fixture\C\FixtureC130(new \DiContainerBenchmarks\Fixture\C\FixtureC129(new \DiContainerBenchmarks\Fixture\C\FixtureC128(new \DiContainerBenchmarks\Fixture\C\FixtureC127(new \DiContainerBenchmarks\Fixture\C\FixtureC126(new \DiContainerBenchmarks\Fixture\C\FixtureC125(new \DiContainerBenchmarks\Fixture\C\FixtureC124(new \DiContainerBenchmarks\Fixture\C\FixtureC123(new \DiContainerBenchmarks\Fixture\C\FixtureC122(new \DiContainerBenchmarks\Fixture\C\FixtureC121(new \DiContainerBenchmarks\Fixture\C\FixtureC120(new \DiContainerBenchmarks\Fixture\C\FixtureC119(new \DiContainerBenchmarks\Fixture\C\FixtureC118(new \DiContainerBenchmarks\Fixture\C\FixtureC117(new \DiContainerBenchmarks\Fixture\C\FixtureC116(new \DiContainerBenchmarks\Fixture\C\FixtureC115(new \DiContainerBenchmarks\Fixture\C\FixtureC114(new \DiContainerBenchmarks\Fixture\C\FixtureC113(new \DiContainerBenchmarks\Fixture\C\FixtureC112(new \DiContainerBenchmarks\Fixture\C\FixtureC111(new \DiContainerBenchmarks\Fixture\C\FixtureC110(new \DiContainerBenchmarks\Fixture\C\FixtureC109(new \DiContainerBenchmarks\Fixture\C\FixtureC108(new \DiContainerBenchmarks\Fixture\C\FixtureC107(new \DiContainerBenchmarks\Fixture\C\FixtureC106(new \DiContainerBenchmarks\Fixture\C\FixtureC105(new \DiContainerBenchmarks\Fixture\C\FixtureC104(new \DiContainerBenchmarks\Fixture\C\FixtureC103(new \DiContainerBenchmarks\Fixture\C\FixtureC102(new \DiContainerBenchmarks\Fixture\C\FixtureC101(new \DiContainerBenchmarks\Fixture\C\FixtureC100(new \DiContainerBenchmarks\Fixture\C\FixtureC99(new \DiContainerBenchmarks\Fixture\C\FixtureC98(new \DiContainerBenchmarks\Fixture\C\FixtureC97(new \DiContainerBenchmarks\Fixture\C\FixtureC96(new \DiContainerBenchmarks\Fixture\C\FixtureC95(new \DiContainerBenchmarks\Fixture\C\FixtureC94(new \DiContainerBenchmarks\Fixture\C\FixtureC93(new \DiContainerBenchmarks\Fixture\C\FixtureC92(new \DiContainerBenchmarks\Fixture\C\FixtureC91(new \DiContainerBenchmarks\Fixture\C\FixtureC90(new \DiContainerBenchmarks\Fixture\C\FixtureC89(new \DiContainerBenchmarks\Fixture\C\FixtureC88(new \DiContainerBenchmarks\Fixture\C\FixtureC87(new \DiContainerBenchmarks\Fixture\C\FixtureC86(new \DiContainerBenchmarks\Fixture\C\FixtureC85(new \DiContainerBenchmarks\Fixture\C\FixtureC84(new \DiContainerBenchmarks\Fixture\C\FixtureC83(new \DiContainerBenchmarks\Fixture\C\FixtureC82(new \DiContainerBenchmarks\Fixture\C\FixtureC81(new \DiContainerBenchmarks\Fixture\C\FixtureC80(new \DiContainerBenchmarks\Fixture\C\FixtureC79(new \DiContainerBenchmarks\Fixture\C\FixtureC78(new \DiContainerBenchmarks\Fixture\C\FixtureC77(new \DiContainerBenchmarks\Fixture\C\FixtureC76(new \DiContainerBenchmarks\Fixture\C\FixtureC75(new \DiContainerBenchmarks\Fixture\C\FixtureC74(new \DiContainerBenchmarks\Fixture\C\FixtureC73(new \DiContainerBenchmarks\Fixture\C\FixtureC72(new \DiContainerBenchmarks\Fixture\C\FixtureC71(new \DiContainerBenchmarks\Fixture\C\FixtureC70(new \DiContainerBenchmarks\Fixture\C\FixtureC69(new \DiContainerBenchmarks\Fixture\C\FixtureC68(new \DiContainerBenchmarks\Fixture\C\FixtureC67(new \DiContainerBenchmarks\Fixture\C\FixtureC66(new \DiContainerBenchmarks\Fixture\C\FixtureC65(new \DiContainerBenchmarks\Fixture\C\FixtureC64(new \DiContainerBenchmarks\Fixture\C\FixtureC63(new \DiContainerBenchmarks\Fixture\C\FixtureC62(new \DiContainerBenchmarks\Fixture\C\FixtureC61(new \DiContainerBenchmarks\Fixture\C\FixtureC60(new \DiContainerBenchmarks\Fixture\C\FixtureC59(new \DiContainerBenchmarks\Fixture\C\FixtureC58(new \DiContainerBenchmarks\Fixture\C\FixtureC57(new \DiContainerBenchmarks\Fixture\C\FixtureC56(new \DiContainerBenchmarks\Fixture\C\FixtureC55(new \DiContainerBenchmarks\Fixture\C\FixtureC54(new \DiContainerBenchmarks\Fixture\C\FixtureC53(new \DiContainerBenchmarks\Fixture\C\FixtureC52(new \DiContainerBenchmarks\Fixture\C\FixtureC51(new \DiContainerBenchmarks\Fixture\C\FixtureC50(new \DiContainerBenchmarks\Fixture\C\FixtureC49(new \DiContainerBenchmarks\Fixture\C\FixtureC48(new \DiContainerBenchmarks\Fixture\C\FixtureC47(new \DiContainerBenchmarks\Fixture\C\FixtureC46(new \DiContainerBenchmarks\Fixture\C\FixtureC45(new \DiContainerBenchmarks\Fixture\C\FixtureC44(new \DiContainerBenchmarks\Fixture\C\FixtureC43(new \DiContainerBenchmarks\Fixture\C\FixtureC42(new \DiContainerBenchmarks\Fixture\C\FixtureC41(new \DiContainerBenchmarks\Fixture\C\FixtureC40(new \DiContainerBenchmarks\Fixture\C\FixtureC39(new \DiContainerBenchmarks\Fixture\C\FixtureC38(new \DiContainerBenchmarks\Fixture\C\FixtureC37(new \DiContainerBenchmarks\Fixture\C\FixtureC36(new \DiContainerBenchmarks\Fixture\C\FixtureC35(new \DiContainerBenchmarks\Fixture\C\FixtureC34(new \DiContainerBenchmarks\Fixture\C\FixtureC33(new \DiContainerBenchmarks\Fixture\C\FixtureC32(new \DiContainerBenchmarks\Fixture\C\FixtureC31(new \DiContainerBenchmarks\Fixture\C\FixtureC30(new \DiContainerBenchmarks\Fixture\C\FixtureC29(new \DiContainerBenchmarks\Fixture\C\FixtureC28(new \DiContainerBenchmarks\Fixture\C\FixtureC27(new \DiContainerBenchmarks\Fixture\C\FixtureC26(new \DiContainerBenchmarks\Fixture\C\FixtureC25(new \DiContainerBenchmarks\Fixture\C\FixtureC24(new \DiContainerBenchmarks\Fixture\C\FixtureC23(new \DiContainerBenchmarks\Fixture\C\FixtureC22(new \DiContainerBenchmarks\Fixture\C\FixtureC21(new \DiContainerBenchmarks\Fixture\C\FixtureC20(new \DiContainerBenchmarks\Fixture\C\FixtureC19(new \DiContainerBenchmarks\Fixture\C\FixtureC18(new \DiContainerBenchmarks\Fixture\C\FixtureC17(new \DiContainerBenchmarks\Fixture\C\FixtureC16(new \DiContainerBenchmarks\Fixture\C\FixtureC15(new \DiContainerBenchmarks\Fixture\C\FixtureC14(new \DiContainerBenchmarks\Fixture\C\FixtureC13(new \DiContainerBenchmarks\Fixture\C\FixtureC12(new \DiContainerBenchmarks\Fixture\C\FixtureC11(new \DiContainerBenchmarks\Fixture\C\FixtureC10(new \DiContainerBenchmarks\Fixture\C\FixtureC9(new \DiContainerBenchmarks\Fixture\C\FixtureC8(new \DiContainerBenchmarks\Fixture\C\FixtureC7(new \DiContainerBenchmarks\Fixture\C\FixtureC6(new \DiContainerBenchmarks\Fixture\C\FixtureC5(new \DiContainerBenchmarks\Fixture\C\FixtureC4(new \DiContainerBenchmarks\Fixture\C\FixtureC3(new \DiContainerBenchmarks\Fixture\C\FixtureC2(new \DiContainerBenchmarks\Fixture\C\FixtureC1())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
+        return $container->services['DiContainerBenchmarks\\Fixture\\C\\FixtureC1000'] = new \DiContainerBenchmarks\Fixture\C\FixtureC1000(new \DiContainerBenchmarks\Fixture\C\FixtureC999(new \DiContainerBenchmarks\Fixture\C\FixtureC998(new \DiContainerBenchmarks\Fixture\C\FixtureC997(new \DiContainerBenchmarks\Fixture\C\FixtureC996(new \DiContainerBenchmarks\Fixture\C\FixtureC995(new \DiContainerBenchmarks\Fixture\C\FixtureC994(new \DiContainerBenchmarks\Fixture\C\FixtureC993(new \DiContainerBenchmarks\Fixture\C\FixtureC992(new \DiContainerBenchmarks\Fixture\C\FixtureC991(new \DiContainerBenchmarks\Fixture\C\FixtureC990(new \DiContainerBenchmarks\Fixture\C\FixtureC989(new \DiContainerBenchmarks\Fixture\C\FixtureC988(new \DiContainerBenchmarks\Fixture\C\FixtureC987(new \DiContainerBenchmarks\Fixture\C\FixtureC986(new \DiContainerBenchmarks\Fixture\C\FixtureC985(new \DiContainerBenchmarks\Fixture\C\FixtureC984(new \DiContainerBenchmarks\Fixture\C\FixtureC983(new \DiContainerBenchmarks\Fixture\C\FixtureC982(new \DiContainerBenchmarks\Fixture\C\FixtureC981(new \DiContainerBenchmarks\Fixture\C\FixtureC980(new \DiContainerBenchmarks\Fixture\C\FixtureC979(new \DiContainerBenchmarks\Fixture\C\FixtureC978(new \DiContainerBenchmarks\Fixture\C\FixtureC977(new \DiContainerBenchmarks\Fixture\C\FixtureC976(new \DiContainerBenchmarks\Fixture\C\FixtureC975(new \DiContainerBenchmarks\Fixture\C\FixtureC974(new \DiContainerBenchmarks\Fixture\C\FixtureC973(new \DiContainerBenchmarks\Fixture\C\FixtureC972(new \DiContainerBenchmarks\Fixture\C\FixtureC971(new \DiContainerBenchmarks\Fixture\C\FixtureC970(new \DiContainerBenchmarks\Fixture\C\FixtureC969(new \DiContainerBenchmarks\Fixture\C\FixtureC968(new \DiContainerBenchmarks\Fixture\C\FixtureC967(new \DiContainerBenchmarks\Fixture\C\FixtureC966(new \DiContainerBenchmarks\Fixture\C\FixtureC965(new \DiContainerBenchmarks\Fixture\C\FixtureC964(new \DiContainerBenchmarks\Fixture\C\FixtureC963(new \DiContainerBenchmarks\Fixture\C\FixtureC962(new \DiContainerBenchmarks\Fixture\C\FixtureC961(new \DiContainerBenchmarks\Fixture\C\FixtureC960(new \DiContainerBenchmarks\Fixture\C\FixtureC959(new \DiContainerBenchmarks\Fixture\C\FixtureC958(new \DiContainerBenchmarks\Fixture\C\FixtureC957(new \DiContainerBenchmarks\Fixture\C\FixtureC956(new \DiContainerBenchmarks\Fixture\C\FixtureC955(new \DiContainerBenchmarks\Fixture\C\FixtureC954(new \DiContainerBenchmarks\Fixture\C\FixtureC953(new \DiContainerBenchmarks\Fixture\C\FixtureC952(new \DiContainerBenchmarks\Fixture\C\FixtureC951(new \DiContainerBenchmarks\Fixture\C\FixtureC950(new \DiContainerBenchmarks\Fixture\C\FixtureC949(new \DiContainerBenchmarks\Fixture\C\FixtureC948(new \DiContainerBenchmarks\Fixture\C\FixtureC947(new \DiContainerBenchmarks\Fixture\C\FixtureC946(new \DiContainerBenchmarks\Fixture\C\FixtureC945(new \DiContainerBenchmarks\Fixture\C\FixtureC944(new \DiContainerBenchmarks\Fixture\C\FixtureC943(new \DiContainerBenchmarks\Fixture\C\FixtureC942(new \DiContainerBenchmarks\Fixture\C\FixtureC941(new \DiContainerBenchmarks\Fixture\C\FixtureC940(new \DiContainerBenchmarks\Fixture\C\FixtureC939(new \DiContainerBenchmarks\Fixture\C\FixtureC938(new \DiContainerBenchmarks\Fixture\C\FixtureC937(new \DiContainerBenchmarks\Fixture\C\FixtureC936(new \DiContainerBenchmarks\Fixture\C\FixtureC935(new \DiContainerBenchmarks\Fixture\C\FixtureC934(new \DiContainerBenchmarks\Fixture\C\FixtureC933(new \DiContainerBenchmarks\Fixture\C\FixtureC932(new \DiContainerBenchmarks\Fixture\C\FixtureC931(new \DiContainerBenchmarks\Fixture\C\FixtureC930(new \DiContainerBenchmarks\Fixture\C\FixtureC929(new \DiContainerBenchmarks\Fixture\C\FixtureC928(new \DiContainerBenchmarks\Fixture\C\FixtureC927(new \DiContainerBenchmarks\Fixture\C\FixtureC926(new \DiContainerBenchmarks\Fixture\C\FixtureC925(new \DiContainerBenchmarks\Fixture\C\FixtureC924(new \DiContainerBenchmarks\Fixture\C\FixtureC923(new \DiContainerBenchmarks\Fixture\C\FixtureC922(new \DiContainerBenchmarks\Fixture\C\FixtureC921(new \DiContainerBenchmarks\Fixture\C\FixtureC920(new \DiContainerBenchmarks\Fixture\C\FixtureC919(new \DiContainerBenchmarks\Fixture\C\FixtureC918(new \DiContainerBenchmarks\Fixture\C\FixtureC917(new \DiContainerBenchmarks\Fixture\C\FixtureC916(new \DiContainerBenchmarks\Fixture\C\FixtureC915(new \DiContainerBenchmarks\Fixture\C\FixtureC914(new \DiContainerBenchmarks\Fixture\C\FixtureC913(new \DiContainerBenchmarks\Fixture\C\FixtureC912(new \DiContainerBenchmarks\Fixture\C\FixtureC911(new \DiContainerBenchmarks\Fixture\C\FixtureC910(new \DiContainerBenchmarks\Fixture\C\FixtureC909(new \DiContainerBenchmarks\Fixture\C\FixtureC908(new \DiContainerBenchmarks\Fixture\C\FixtureC907(new \DiContainerBenchmarks\Fixture\C\FixtureC906(new \DiContainerBenchmarks\Fixture\C\FixtureC905(new \DiContainerBenchmarks\Fixture\C\FixtureC904(new \DiContainerBenchmarks\Fixture\C\FixtureC903(new \DiContainerBenchmarks\Fixture\C\FixtureC902(new \DiContainerBenchmarks\Fixture\C\FixtureC901(new \DiContainerBenchmarks\Fixture\C\FixtureC900(new \DiContainerBenchmarks\Fixture\C\FixtureC899(new \DiContainerBenchmarks\Fixture\C\FixtureC898(new \DiContainerBenchmarks\Fixture\C\FixtureC897(new \DiContainerBenchmarks\Fixture\C\FixtureC896(new \DiContainerBenchmarks\Fixture\C\FixtureC895(new \DiContainerBenchmarks\Fixture\C\FixtureC894(new \DiContainerBenchmarks\Fixture\C\FixtureC893(new \DiContainerBenchmarks\Fixture\C\FixtureC892(new \DiContainerBenchmarks\Fixture\C\FixtureC891(new \DiContainerBenchmarks\Fixture\C\FixtureC890(new \DiContainerBenchmarks\Fixture\C\FixtureC889(new \DiContainerBenchmarks\Fixture\C\FixtureC888(new \DiContainerBenchmarks\Fixture\C\FixtureC887(new \DiContainerBenchmarks\Fixture\C\FixtureC886(new \DiContainerBenchmarks\Fixture\C\FixtureC885(new \DiContainerBenchmarks\Fixture\C\FixtureC884(new \DiContainerBenchmarks\Fixture\C\FixtureC883(new \DiContainerBenchmarks\Fixture\C\FixtureC882(new \DiContainerBenchmarks\Fixture\C\FixtureC881(new \DiContainerBenchmarks\Fixture\C\FixtureC880(new \DiContainerBenchmarks\Fixture\C\FixtureC879(new \DiContainerBenchmarks\Fixture\C\FixtureC878(new \DiContainerBenchmarks\Fixture\C\FixtureC877(new \DiContainerBenchmarks\Fixture\C\FixtureC876(new \DiContainerBenchmarks\Fixture\C\FixtureC875(new \DiContainerBenchmarks\Fixture\C\FixtureC874(new \DiContainerBenchmarks\Fixture\C\FixtureC873(new \DiContainerBenchmarks\Fixture\C\FixtureC872(new \DiContainerBenchmarks\Fixture\C\FixtureC871(new \DiContainerBenchmarks\Fixture\C\FixtureC870(new \DiContainerBenchmarks\Fixture\C\FixtureC869(new \DiContainerBenchmarks\Fixture\C\FixtureC868(new \DiContainerBenchmarks\Fixture\C\FixtureC867(new \DiContainerBenchmarks\Fixture\C\FixtureC866(new \DiContainerBenchmarks\Fixture\C\FixtureC865(new \DiContainerBenchmarks\Fixture\C\FixtureC864(new \DiContainerBenchmarks\Fixture\C\FixtureC863(new \DiContainerBenchmarks\Fixture\C\FixtureC862(new \DiContainerBenchmarks\Fixture\C\FixtureC861(new \DiContainerBenchmarks\Fixture\C\FixtureC860(new \DiContainerBenchmarks\Fixture\C\FixtureC859(new \DiContainerBenchmarks\Fixture\C\FixtureC858(new \DiContainerBenchmarks\Fixture\C\FixtureC857(new \DiContainerBenchmarks\Fixture\C\FixtureC856(new \DiContainerBenchmarks\Fixture\C\FixtureC855(new \DiContainerBenchmarks\Fixture\C\FixtureC854(new \DiContainerBenchmarks\Fixture\C\FixtureC853(new \DiContainerBenchmarks\Fixture\C\FixtureC852(new \DiContainerBenchmarks\Fixture\C\FixtureC851(new \DiContainerBenchmarks\Fixture\C\FixtureC850(new \DiContainerBenchmarks\Fixture\C\FixtureC849(new \DiContainerBenchmarks\Fixture\C\FixtureC848(new \DiContainerBenchmarks\Fixture\C\FixtureC847(new \DiContainerBenchmarks\Fixture\C\FixtureC846(new \DiContainerBenchmarks\Fixture\C\FixtureC845(new \DiContainerBenchmarks\Fixture\C\FixtureC844(new \DiContainerBenchmarks\Fixture\C\FixtureC843(new \DiContainerBenchmarks\Fixture\C\FixtureC842(new \DiContainerBenchmarks\Fixture\C\FixtureC841(new \DiContainerBenchmarks\Fixture\C\FixtureC840(new \DiContainerBenchmarks\Fixture\C\FixtureC839(new \DiContainerBenchmarks\Fixture\C\FixtureC838(new \DiContainerBenchmarks\Fixture\C\FixtureC837(new \DiContainerBenchmarks\Fixture\C\FixtureC836(new \DiContainerBenchmarks\Fixture\C\FixtureC835(new \DiContainerBenchmarks\Fixture\C\FixtureC834(new \DiContainerBenchmarks\Fixture\C\FixtureC833(new \DiContainerBenchmarks\Fixture\C\FixtureC832(new \DiContainerBenchmarks\Fixture\C\FixtureC831(new \DiContainerBenchmarks\Fixture\C\FixtureC830(new \DiContainerBenchmarks\Fixture\C\FixtureC829(new \DiContainerBenchmarks\Fixture\C\FixtureC828(new \DiContainerBenchmarks\Fixture\C\FixtureC827(new \DiContainerBenchmarks\Fixture\C\FixtureC826(new \DiContainerBenchmarks\Fixture\C\FixtureC825(new \DiContainerBenchmarks\Fixture\C\FixtureC824(new \DiContainerBenchmarks\Fixture\C\FixtureC823(new \DiContainerBenchmarks\Fixture\C\FixtureC822(new \DiContainerBenchmarks\Fixture\C\FixtureC821(new \DiContainerBenchmarks\Fixture\C\FixtureC820(new \DiContainerBenchmarks\Fixture\C\FixtureC819(new \DiContainerBenchmarks\Fixture\C\FixtureC818(new \DiContainerBenchmarks\Fixture\C\FixtureC817(new \DiContainerBenchmarks\Fixture\C\FixtureC816(new \DiContainerBenchmarks\Fixture\C\FixtureC815(new \DiContainerBenchmarks\Fixture\C\FixtureC814(new \DiContainerBenchmarks\Fixture\C\FixtureC813(new \DiContainerBenchmarks\Fixture\C\FixtureC812(new \DiContainerBenchmarks\Fixture\C\FixtureC811(new \DiContainerBenchmarks\Fixture\C\FixtureC810(new \DiContainerBenchmarks\Fixture\C\FixtureC809(new \DiContainerBenchmarks\Fixture\C\FixtureC808(new \DiContainerBenchmarks\Fixture\C\FixtureC807(new \DiContainerBenchmarks\Fixture\C\FixtureC806(new \DiContainerBenchmarks\Fixture\C\FixtureC805(new \DiContainerBenchmarks\Fixture\C\FixtureC804(new \DiContainerBenchmarks\Fixture\C\FixtureC803(new \DiContainerBenchmarks\Fixture\C\FixtureC802(new \DiContainerBenchmarks\Fixture\C\FixtureC801(new \DiContainerBenchmarks\Fixture\C\FixtureC800(new \DiContainerBenchmarks\Fixture\C\FixtureC799(new \DiContainerBenchmarks\Fixture\C\FixtureC798(new \DiContainerBenchmarks\Fixture\C\FixtureC797(new \DiContainerBenchmarks\Fixture\C\FixtureC796(new \DiContainerBenchmarks\Fixture\C\FixtureC795(new \DiContainerBenchmarks\Fixture\C\FixtureC794(new \DiContainerBenchmarks\Fixture\C\FixtureC793(new \DiContainerBenchmarks\Fixture\C\FixtureC792(new \DiContainerBenchmarks\Fixture\C\FixtureC791(new \DiContainerBenchmarks\Fixture\C\FixtureC790(new \DiContainerBenchmarks\Fixture\C\FixtureC789(new \DiContainerBenchmarks\Fixture\C\FixtureC788(new \DiContainerBenchmarks\Fixture\C\FixtureC787(new \DiContainerBenchmarks\Fixture\C\FixtureC786(new \DiContainerBenchmarks\Fixture\C\FixtureC785(new \DiContainerBenchmarks\Fixture\C\FixtureC784(new \DiContainerBenchmarks\Fixture\C\FixtureC783(new \DiContainerBenchmarks\Fixture\C\FixtureC782(new \DiContainerBenchmarks\Fixture\C\FixtureC781(new \DiContainerBenchmarks\Fixture\C\FixtureC780(new \DiContainerBenchmarks\Fixture\C\FixtureC779(new \DiContainerBenchmarks\Fixture\C\FixtureC778(new \DiContainerBenchmarks\Fixture\C\FixtureC777(new \DiContainerBenchmarks\Fixture\C\FixtureC776(new \DiContainerBenchmarks\Fixture\C\FixtureC775(new \DiContainerBenchmarks\Fixture\C\FixtureC774(new \DiContainerBenchmarks\Fixture\C\FixtureC773(new \DiContainerBenchmarks\Fixture\C\FixtureC772(new \DiContainerBenchmarks\Fixture\C\FixtureC771(new \DiContainerBenchmarks\Fixture\C\FixtureC770(new \DiContainerBenchmarks\Fixture\C\FixtureC769(new \DiContainerBenchmarks\Fixture\C\FixtureC768(new \DiContainerBenchmarks\Fixture\C\FixtureC767(new \DiContainerBenchmarks\Fixture\C\FixtureC766(new \DiContainerBenchmarks\Fixture\C\FixtureC765(new \DiContainerBenchmarks\Fixture\C\FixtureC764(new \DiContainerBenchmarks\Fixture\C\FixtureC763(new \DiContainerBenchmarks\Fixture\C\FixtureC762(new \DiContainerBenchmarks\Fixture\C\FixtureC761(new \DiContainerBenchmarks\Fixture\C\FixtureC760(new \DiContainerBenchmarks\Fixture\C\FixtureC759(new \DiContainerBenchmarks\Fixture\C\FixtureC758(new \DiContainerBenchmarks\Fixture\C\FixtureC757(new \DiContainerBenchmarks\Fixture\C\FixtureC756(new \DiContainerBenchmarks\Fixture\C\FixtureC755(new \DiContainerBenchmarks\Fixture\C\FixtureC754(new \DiContainerBenchmarks\Fixture\C\FixtureC753(new \DiContainerBenchmarks\Fixture\C\FixtureC752(new \DiContainerBenchmarks\Fixture\C\FixtureC751(new \DiContainerBenchmarks\Fixture\C\FixtureC750(new \DiContainerBenchmarks\Fixture\C\FixtureC749(new \DiContainerBenchmarks\Fixture\C\FixtureC748(new \DiContainerBenchmarks\Fixture\C\FixtureC747(new \DiContainerBenchmarks\Fixture\C\FixtureC746(new \DiContainerBenchmarks\Fixture\C\FixtureC745(new \DiContainerBenchmarks\Fixture\C\FixtureC744(new \DiContainerBenchmarks\Fixture\C\FixtureC743(new \DiContainerBenchmarks\Fixture\C\FixtureC742(new \DiContainerBenchmarks\Fixture\C\FixtureC741(new \DiContainerBenchmarks\Fixture\C\FixtureC740(new \DiContainerBenchmarks\Fixture\C\FixtureC739(new \DiContainerBenchmarks\Fixture\C\FixtureC738(new \DiContainerBenchmarks\Fixture\C\FixtureC737(new \DiContainerBenchmarks\Fixture\C\FixtureC736(new \DiContainerBenchmarks\Fixture\C\FixtureC735(new \DiContainerBenchmarks\Fixture\C\FixtureC734(new \DiContainerBenchmarks\Fixture\C\FixtureC733(new \DiContainerBenchmarks\Fixture\C\FixtureC732(new \DiContainerBenchmarks\Fixture\C\FixtureC731(new \DiContainerBenchmarks\Fixture\C\FixtureC730(new \DiContainerBenchmarks\Fixture\C\FixtureC729(new \DiContainerBenchmarks\Fixture\C\FixtureC728(new \DiContainerBenchmarks\Fixture\C\FixtureC727(new \DiContainerBenchmarks\Fixture\C\FixtureC726(new \DiContainerBenchmarks\Fixture\C\FixtureC725(new \DiContainerBenchmarks\Fixture\C\FixtureC724(new \DiContainerBenchmarks\Fixture\C\FixtureC723(new \DiContainerBenchmarks\Fixture\C\FixtureC722(new \DiContainerBenchmarks\Fixture\C\FixtureC721(new \DiContainerBenchmarks\Fixture\C\FixtureC720(new \DiContainerBenchmarks\Fixture\C\FixtureC719(new \DiContainerBenchmarks\Fixture\C\FixtureC718(new \DiContainerBenchmarks\Fixture\C\FixtureC717(new \DiContainerBenchmarks\Fixture\C\FixtureC716(new \DiContainerBenchmarks\Fixture\C\FixtureC715(new \DiContainerBenchmarks\Fixture\C\FixtureC714(new \DiContainerBenchmarks\Fixture\C\FixtureC713(new \DiContainerBenchmarks\Fixture\C\FixtureC712(new \DiContainerBenchmarks\Fixture\C\FixtureC711(new \DiContainerBenchmarks\Fixture\C\FixtureC710(new \DiContainerBenchmarks\Fixture\C\FixtureC709(new \DiContainerBenchmarks\Fixture\C\FixtureC708(new \DiContainerBenchmarks\Fixture\C\FixtureC707(new \DiContainerBenchmarks\Fixture\C\FixtureC706(new \DiContainerBenchmarks\Fixture\C\FixtureC705(new \DiContainerBenchmarks\Fixture\C\FixtureC704(new \DiContainerBenchmarks\Fixture\C\FixtureC703(new \DiContainerBenchmarks\Fixture\C\FixtureC702(new \DiContainerBenchmarks\Fixture\C\FixtureC701(new \DiContainerBenchmarks\Fixture\C\FixtureC700(new \DiContainerBenchmarks\Fixture\C\FixtureC699(new \DiContainerBenchmarks\Fixture\C\FixtureC698(new \DiContainerBenchmarks\Fixture\C\FixtureC697(new \DiContainerBenchmarks\Fixture\C\FixtureC696(new \DiContainerBenchmarks\Fixture\C\FixtureC695(new \DiContainerBenchmarks\Fixture\C\FixtureC694(new \DiContainerBenchmarks\Fixture\C\FixtureC693(new \DiContainerBenchmarks\Fixture\C\FixtureC692(new \DiContainerBenchmarks\Fixture\C\FixtureC691(new \DiContainerBenchmarks\Fixture\C\FixtureC690(new \DiContainerBenchmarks\Fixture\C\FixtureC689(new \DiContainerBenchmarks\Fixture\C\FixtureC688(new \DiContainerBenchmarks\Fixture\C\FixtureC687(new \DiContainerBenchmarks\Fixture\C\FixtureC686(new \DiContainerBenchmarks\Fixture\C\FixtureC685(new \DiContainerBenchmarks\Fixture\C\FixtureC684(new \DiContainerBenchmarks\Fixture\C\FixtureC683(new \DiContainerBenchmarks\Fixture\C\FixtureC682(new \DiContainerBenchmarks\Fixture\C\FixtureC681(new \DiContainerBenchmarks\Fixture\C\FixtureC680(new \DiContainerBenchmarks\Fixture\C\FixtureC679(new \DiContainerBenchmarks\Fixture\C\FixtureC678(new \DiContainerBenchmarks\Fixture\C\FixtureC677(new \DiContainerBenchmarks\Fixture\C\FixtureC676(new \DiContainerBenchmarks\Fixture\C\FixtureC675(new \DiContainerBenchmarks\Fixture\C\FixtureC674(new \DiContainerBenchmarks\Fixture\C\FixtureC673(new \DiContainerBenchmarks\Fixture\C\FixtureC672(new \DiContainerBenchmarks\Fixture\C\FixtureC671(new \DiContainerBenchmarks\Fixture\C\FixtureC670(new \DiContainerBenchmarks\Fixture\C\FixtureC669(new \DiContainerBenchmarks\Fixture\C\FixtureC668(new \DiContainerBenchmarks\Fixture\C\FixtureC667(new \DiContainerBenchmarks\Fixture\C\FixtureC666(new \DiContainerBenchmarks\Fixture\C\FixtureC665(new \DiContainerBenchmarks\Fixture\C\FixtureC664(new \DiContainerBenchmarks\Fixture\C\FixtureC663(new \DiContainerBenchmarks\Fixture\C\FixtureC662(new \DiContainerBenchmarks\Fixture\C\FixtureC661(new \DiContainerBenchmarks\Fixture\C\FixtureC660(new \DiContainerBenchmarks\Fixture\C\FixtureC659(new \DiContainerBenchmarks\Fixture\C\FixtureC658(new \DiContainerBenchmarks\Fixture\C\FixtureC657(new \DiContainerBenchmarks\Fixture\C\FixtureC656(new \DiContainerBenchmarks\Fixture\C\FixtureC655(new \DiContainerBenchmarks\Fixture\C\FixtureC654(new \DiContainerBenchmarks\Fixture\C\FixtureC653(new \DiContainerBenchmarks\Fixture\C\FixtureC652(new \DiContainerBenchmarks\Fixture\C\FixtureC651(new \DiContainerBenchmarks\Fixture\C\FixtureC650(new \DiContainerBenchmarks\Fixture\C\FixtureC649(new \DiContainerBenchmarks\Fixture\C\FixtureC648(new \DiContainerBenchmarks\Fixture\C\FixtureC647(new \DiContainerBenchmarks\Fixture\C\FixtureC646(new \DiContainerBenchmarks\Fixture\C\FixtureC645(new \DiContainerBenchmarks\Fixture\C\FixtureC644(new \DiContainerBenchmarks\Fixture\C\FixtureC643(new \DiContainerBenchmarks\Fixture\C\FixtureC642(new \DiContainerBenchmarks\Fixture\C\FixtureC641(new \DiContainerBenchmarks\Fixture\C\FixtureC640(new \DiContainerBenchmarks\Fixture\C\FixtureC639(new \DiContainerBenchmarks\Fixture\C\FixtureC638(new \DiContainerBenchmarks\Fixture\C\FixtureC637(new \DiContainerBenchmarks\Fixture\C\FixtureC636(new \DiContainerBenchmarks\Fixture\C\FixtureC635(new \DiContainerBenchmarks\Fixture\C\FixtureC634(new \DiContainerBenchmarks\Fixture\C\FixtureC633(new \DiContainerBenchmarks\Fixture\C\FixtureC632(new \DiContainerBenchmarks\Fixture\C\FixtureC631(new \DiContainerBenchmarks\Fixture\C\FixtureC630(new \DiContainerBenchmarks\Fixture\C\FixtureC629(new \DiContainerBenchmarks\Fixture\C\FixtureC628(new \DiContainerBenchmarks\Fixture\C\FixtureC627(new \DiContainerBenchmarks\Fixture\C\FixtureC626(new \DiContainerBenchmarks\Fixture\C\FixtureC625(new \DiContainerBenchmarks\Fixture\C\FixtureC624(new \DiContainerBenchmarks\Fixture\C\FixtureC623(new \DiContainerBenchmarks\Fixture\C\FixtureC622(new \DiContainerBenchmarks\Fixture\C\FixtureC621(new \DiContainerBenchmarks\Fixture\C\FixtureC620(new \DiContainerBenchmarks\Fixture\C\FixtureC619(new \DiContainerBenchmarks\Fixture\C\FixtureC618(new \DiContainerBenchmarks\Fixture\C\FixtureC617(new \DiContainerBenchmarks\Fixture\C\FixtureC616(new \DiContainerBenchmarks\Fixture\C\FixtureC615(new \DiContainerBenchmarks\Fixture\C\FixtureC614(new \DiContainerBenchmarks\Fixture\C\FixtureC613(new \DiContainerBenchmarks\Fixture\C\FixtureC612(new \DiContainerBenchmarks\Fixture\C\FixtureC611(new \DiContainerBenchmarks\Fixture\C\FixtureC610(new \DiContainerBenchmarks\Fixture\C\FixtureC609(new \DiContainerBenchmarks\Fixture\C\FixtureC608(new \DiContainerBenchmarks\Fixture\C\FixtureC607(new \DiContainerBenchmarks\Fixture\C\FixtureC606(new \DiContainerBenchmarks\Fixture\C\FixtureC605(new \DiContainerBenchmarks\Fixture\C\FixtureC604(new \DiContainerBenchmarks\Fixture\C\FixtureC603(new \DiContainerBenchmarks\Fixture\C\FixtureC602(new \DiContainerBenchmarks\Fixture\C\FixtureC601(new \DiContainerBenchmarks\Fixture\C\FixtureC600(new \DiContainerBenchmarks\Fixture\C\FixtureC599(new \DiContainerBenchmarks\Fixture\C\FixtureC598(new \DiContainerBenchmarks\Fixture\C\FixtureC597(new \DiContainerBenchmarks\Fixture\C\FixtureC596(new \DiContainerBenchmarks\Fixture\C\FixtureC595(new \DiContainerBenchmarks\Fixture\C\FixtureC594(new \DiContainerBenchmarks\Fixture\C\FixtureC593(new \DiContainerBenchmarks\Fixture\C\FixtureC592(new \DiContainerBenchmarks\Fixture\C\FixtureC591(new \DiContainerBenchmarks\Fixture\C\FixtureC590(new \DiContainerBenchmarks\Fixture\C\FixtureC589(new \DiContainerBenchmarks\Fixture\C\FixtureC588(new \DiContainerBenchmarks\Fixture\C\FixtureC587(new \DiContainerBenchmarks\Fixture\C\FixtureC586(new \DiContainerBenchmarks\Fixture\C\FixtureC585(new \DiContainerBenchmarks\Fixture\C\FixtureC584(new \DiContainerBenchmarks\Fixture\C\FixtureC583(new \DiContainerBenchmarks\Fixture\C\FixtureC582(new \DiContainerBenchmarks\Fixture\C\FixtureC581(new \DiContainerBenchmarks\Fixture\C\FixtureC580(new \DiContainerBenchmarks\Fixture\C\FixtureC579(new \DiContainerBenchmarks\Fixture\C\FixtureC578(new \DiContainerBenchmarks\Fixture\C\FixtureC577(new \DiContainerBenchmarks\Fixture\C\FixtureC576(new \DiContainerBenchmarks\Fixture\C\FixtureC575(new \DiContainerBenchmarks\Fixture\C\FixtureC574(new \DiContainerBenchmarks\Fixture\C\FixtureC573(new \DiContainerBenchmarks\Fixture\C\FixtureC572(new \DiContainerBenchmarks\Fixture\C\FixtureC571(new \DiContainerBenchmarks\Fixture\C\FixtureC570(new \DiContainerBenchmarks\Fixture\C\FixtureC569(new \DiContainerBenchmarks\Fixture\C\FixtureC568(new \DiContainerBenchmarks\Fixture\C\FixtureC567(new \DiContainerBenchmarks\Fixture\C\FixtureC566(new \DiContainerBenchmarks\Fixture\C\FixtureC565(new \DiContainerBenchmarks\Fixture\C\FixtureC564(new \DiContainerBenchmarks\Fixture\C\FixtureC563(new \DiContainerBenchmarks\Fixture\C\FixtureC562(new \DiContainerBenchmarks\Fixture\C\FixtureC561(new \DiContainerBenchmarks\Fixture\C\FixtureC560(new \DiContainerBenchmarks\Fixture\C\FixtureC559(new \DiContainerBenchmarks\Fixture\C\FixtureC558(new \DiContainerBenchmarks\Fixture\C\FixtureC557(new \DiContainerBenchmarks\Fixture\C\FixtureC556(new \DiContainerBenchmarks\Fixture\C\FixtureC555(new \DiContainerBenchmarks\Fixture\C\FixtureC554(new \DiContainerBenchmarks\Fixture\C\FixtureC553(new \DiContainerBenchmarks\Fixture\C\FixtureC552(new \DiContainerBenchmarks\Fixture\C\FixtureC551(new \DiContainerBenchmarks\Fixture\C\FixtureC550(new \DiContainerBenchmarks\Fixture\C\FixtureC549(new \DiContainerBenchmarks\Fixture\C\FixtureC548(new \DiContainerBenchmarks\Fixture\C\FixtureC547(new \DiContainerBenchmarks\Fixture\C\FixtureC546(new \DiContainerBenchmarks\Fixture\C\FixtureC545(new \DiContainerBenchmarks\Fixture\C\FixtureC544(new \DiContainerBenchmarks\Fixture\C\FixtureC543(new \DiContainerBenchmarks\Fixture\C\FixtureC542(new \DiContainerBenchmarks\Fixture\C\FixtureC541(new \DiContainerBenchmarks\Fixture\C\FixtureC540(new \DiContainerBenchmarks\Fixture\C\FixtureC539(new \DiContainerBenchmarks\Fixture\C\FixtureC538(new \DiContainerBenchmarks\Fixture\C\FixtureC537(new \DiContainerBenchmarks\Fixture\C\FixtureC536(new \DiContainerBenchmarks\Fixture\C\FixtureC535(new \DiContainerBenchmarks\Fixture\C\FixtureC534(new \DiContainerBenchmarks\Fixture\C\FixtureC533(new \DiContainerBenchmarks\Fixture\C\FixtureC532(new \DiContainerBenchmarks\Fixture\C\FixtureC531(new \DiContainerBenchmarks\Fixture\C\FixtureC530(new \DiContainerBenchmarks\Fixture\C\FixtureC529(new \DiContainerBenchmarks\Fixture\C\FixtureC528(new \DiContainerBenchmarks\Fixture\C\FixtureC527(new \DiContainerBenchmarks\Fixture\C\FixtureC526(new \DiContainerBenchmarks\Fixture\C\FixtureC525(new \DiContainerBenchmarks\Fixture\C\FixtureC524(new \DiContainerBenchmarks\Fixture\C\FixtureC523(new \DiContainerBenchmarks\Fixture\C\FixtureC522(new \DiContainerBenchmarks\Fixture\C\FixtureC521(new \DiContainerBenchmarks\Fixture\C\FixtureC520(new \DiContainerBenchmarks\Fixture\C\FixtureC519(new \DiContainerBenchmarks\Fixture\C\FixtureC518(new \DiContainerBenchmarks\Fixture\C\FixtureC517(new \DiContainerBenchmarks\Fixture\C\FixtureC516(new \DiContainerBenchmarks\Fixture\C\FixtureC515(new \DiContainerBenchmarks\Fixture\C\FixtureC514(new \DiContainerBenchmarks\Fixture\C\FixtureC513(new \DiContainerBenchmarks\Fixture\C\FixtureC512(new \DiContainerBenchmarks\Fixture\C\FixtureC511(new \DiContainerBenchmarks\Fixture\C\FixtureC510(new \DiContainerBenchmarks\Fixture\C\FixtureC509(new \DiContainerBenchmarks\Fixture\C\FixtureC508(new \DiContainerBenchmarks\Fixture\C\FixtureC507(new \DiContainerBenchmarks\Fixture\C\FixtureC506(new \DiContainerBenchmarks\Fixture\C\FixtureC505(new \DiContainerBenchmarks\Fixture\C\FixtureC504(new \DiContainerBenchmarks\Fixture\C\FixtureC503(new \DiContainerBenchmarks\Fixture\C\FixtureC502(new \DiContainerBenchmarks\Fixture\C\FixtureC501(new \DiContainerBenchmarks\Fixture\C\FixtureC500(new \DiContainerBenchmarks\Fixture\C\FixtureC499(new \DiContainerBenchmarks\Fixture\C\FixtureC498(new \DiContainerBenchmarks\Fixture\C\FixtureC497(new \DiContainerBenchmarks\Fixture\C\FixtureC496(new \DiContainerBenchmarks\Fixture\C\FixtureC495(new \DiContainerBenchmarks\Fixture\C\FixtureC494(new \DiContainerBenchmarks\Fixture\C\FixtureC493(new \DiContainerBenchmarks\Fixture\C\FixtureC492(new \DiContainerBenchmarks\Fixture\C\FixtureC491(new \DiContainerBenchmarks\Fixture\C\FixtureC490(new \DiContainerBenchmarks\Fixture\C\FixtureC489(new \DiContainerBenchmarks\Fixture\C\FixtureC488(new \DiContainerBenchmarks\Fixture\C\FixtureC487(new \DiContainerBenchmarks\Fixture\C\FixtureC486(new \DiContainerBenchmarks\Fixture\C\FixtureC485(new \DiContainerBenchmarks\Fixture\C\FixtureC484(new \DiContainerBenchmarks\Fixture\C\FixtureC483(new \DiContainerBenchmarks\Fixture\C\FixtureC482(new \DiContainerBenchmarks\Fixture\C\FixtureC481(new \DiContainerBenchmarks\Fixture\C\FixtureC480(new \DiContainerBenchmarks\Fixture\C\FixtureC479(new \DiContainerBenchmarks\Fixture\C\FixtureC478(new \DiContainerBenchmarks\Fixture\C\FixtureC477(new \DiContainerBenchmarks\Fixture\C\FixtureC476(new \DiContainerBenchmarks\Fixture\C\FixtureC475(new \DiContainerBenchmarks\Fixture\C\FixtureC474(new \DiContainerBenchmarks\Fixture\C\FixtureC473(new \DiContainerBenchmarks\Fixture\C\FixtureC472(new \DiContainerBenchmarks\Fixture\C\FixtureC471(new \DiContainerBenchmarks\Fixture\C\FixtureC470(new \DiContainerBenchmarks\Fixture\C\FixtureC469(new \DiContainerBenchmarks\Fixture\C\FixtureC468(new \DiContainerBenchmarks\Fixture\C\FixtureC467(new \DiContainerBenchmarks\Fixture\C\FixtureC466(new \DiContainerBenchmarks\Fixture\C\FixtureC465(new \DiContainerBenchmarks\Fixture\C\FixtureC464(new \DiContainerBenchmarks\Fixture\C\FixtureC463(new \DiContainerBenchmarks\Fixture\C\FixtureC462(new \DiContainerBenchmarks\Fixture\C\FixtureC461(new \DiContainerBenchmarks\Fixture\C\FixtureC460(new \DiContainerBenchmarks\Fixture\C\FixtureC459(new \DiContainerBenchmarks\Fixture\C\FixtureC458(new \DiContainerBenchmarks\Fixture\C\FixtureC457(new \DiContainerBenchmarks\Fixture\C\FixtureC456(new \DiContainerBenchmarks\Fixture\C\FixtureC455(new \DiContainerBenchmarks\Fixture\C\FixtureC454(new \DiContainerBenchmarks\Fixture\C\FixtureC453(new \DiContainerBenchmarks\Fixture\C\FixtureC452(new \DiContainerBenchmarks\Fixture\C\FixtureC451(new \DiContainerBenchmarks\Fixture\C\FixtureC450(new \DiContainerBenchmarks\Fixture\C\FixtureC449(new \DiContainerBenchmarks\Fixture\C\FixtureC448(new \DiContainerBenchmarks\Fixture\C\FixtureC447(new \DiContainerBenchmarks\Fixture\C\FixtureC446(new \DiContainerBenchmarks\Fixture\C\FixtureC445(new \DiContainerBenchmarks\Fixture\C\FixtureC444(new \DiContainerBenchmarks\Fixture\C\FixtureC443(new \DiContainerBenchmarks\Fixture\C\FixtureC442(new \DiContainerBenchmarks\Fixture\C\FixtureC441(new \DiContainerBenchmarks\Fixture\C\FixtureC440(new \DiContainerBenchmarks\Fixture\C\FixtureC439(new \DiContainerBenchmarks\Fixture\C\FixtureC438(new \DiContainerBenchmarks\Fixture\C\FixtureC437(new \DiContainerBenchmarks\Fixture\C\FixtureC436(new \DiContainerBenchmarks\Fixture\C\FixtureC435(new \DiContainerBenchmarks\Fixture\C\FixtureC434(new \DiContainerBenchmarks\Fixture\C\FixtureC433(new \DiContainerBenchmarks\Fixture\C\FixtureC432(new \DiContainerBenchmarks\Fixture\C\FixtureC431(new \DiContainerBenchmarks\Fixture\C\FixtureC430(new \DiContainerBenchmarks\Fixture\C\FixtureC429(new \DiContainerBenchmarks\Fixture\C\FixtureC428(new \DiContainerBenchmarks\Fixture\C\FixtureC427(new \DiContainerBenchmarks\Fixture\C\FixtureC426(new \DiContainerBenchmarks\Fixture\C\FixtureC425(new \DiContainerBenchmarks\Fixture\C\FixtureC424(new \DiContainerBenchmarks\Fixture\C\FixtureC423(new \DiContainerBenchmarks\Fixture\C\FixtureC422(new \DiContainerBenchmarks\Fixture\C\FixtureC421(new \DiContainerBenchmarks\Fixture\C\FixtureC420(new \DiContainerBenchmarks\Fixture\C\FixtureC419(new \DiContainerBenchmarks\Fixture\C\FixtureC418(new \DiContainerBenchmarks\Fixture\C\FixtureC417(new \DiContainerBenchmarks\Fixture\C\FixtureC416(new \DiContainerBenchmarks\Fixture\C\FixtureC415(new \DiContainerBenchmarks\Fixture\C\FixtureC414(new \DiContainerBenchmarks\Fixture\C\FixtureC413(new \DiContainerBenchmarks\Fixture\C\FixtureC412(new \DiContainerBenchmarks\Fixture\C\FixtureC411(new \DiContainerBenchmarks\Fixture\C\FixtureC410(new \DiContainerBenchmarks\Fixture\C\FixtureC409(new \DiContainerBenchmarks\Fixture\C\FixtureC408(new \DiContainerBenchmarks\Fixture\C\FixtureC407(new \DiContainerBenchmarks\Fixture\C\FixtureC406(new \DiContainerBenchmarks\Fixture\C\FixtureC405(new \DiContainerBenchmarks\Fixture\C\FixtureC404(new \DiContainerBenchmarks\Fixture\C\FixtureC403(new \DiContainerBenchmarks\Fixture\C\FixtureC402(new \DiContainerBenchmarks\Fixture\C\FixtureC401(new \DiContainerBenchmarks\Fixture\C\FixtureC400(new \DiContainerBenchmarks\Fixture\C\FixtureC399(new \DiContainerBenchmarks\Fixture\C\FixtureC398(new \DiContainerBenchmarks\Fixture\C\FixtureC397(new \DiContainerBenchmarks\Fixture\C\FixtureC396(new \DiContainerBenchmarks\Fixture\C\FixtureC395(new \DiContainerBenchmarks\Fixture\C\FixtureC394(new \DiContainerBenchmarks\Fixture\C\FixtureC393(new \DiContainerBenchmarks\Fixture\C\FixtureC392(new \DiContainerBenchmarks\Fixture\C\FixtureC391(new \DiContainerBenchmarks\Fixture\C\FixtureC390(new \DiContainerBenchmarks\Fixture\C\FixtureC389(new \DiContainerBenchmarks\Fixture\C\FixtureC388(new \DiContainerBenchmarks\Fixture\C\FixtureC387(new \DiContainerBenchmarks\Fixture\C\FixtureC386(new \DiContainerBenchmarks\Fixture\C\FixtureC385(new \DiContainerBenchmarks\Fixture\C\FixtureC384(new \DiContainerBenchmarks\Fixture\C\FixtureC383(new \DiContainerBenchmarks\Fixture\C\FixtureC382(new \DiContainerBenchmarks\Fixture\C\FixtureC381(new \DiContainerBenchmarks\Fixture\C\FixtureC380(new \DiContainerBenchmarks\Fixture\C\FixtureC379(new \DiContainerBenchmarks\Fixture\C\FixtureC378(new \DiContainerBenchmarks\Fixture\C\FixtureC377(new \DiContainerBenchmarks\Fixture\C\FixtureC376(new \DiContainerBenchmarks\Fixture\C\FixtureC375(new \DiContainerBenchmarks\Fixture\C\FixtureC374(new \DiContainerBenchmarks\Fixture\C\FixtureC373(new \DiContainerBenchmarks\Fixture\C\FixtureC372(new \DiContainerBenchmarks\Fixture\C\FixtureC371(new \DiContainerBenchmarks\Fixture\C\FixtureC370(new \DiContainerBenchmarks\Fixture\C\FixtureC369(new \DiContainerBenchmarks\Fixture\C\FixtureC368(new \DiContainerBenchmarks\Fixture\C\FixtureC367(new \DiContainerBenchmarks\Fixture\C\FixtureC366(new \DiContainerBenchmarks\Fixture\C\FixtureC365(new \DiContainerBenchmarks\Fixture\C\FixtureC364(new \DiContainerBenchmarks\Fixture\C\FixtureC363(new \DiContainerBenchmarks\Fixture\C\FixtureC362(new \DiContainerBenchmarks\Fixture\C\FixtureC361(new \DiContainerBenchmarks\Fixture\C\FixtureC360(new \DiContainerBenchmarks\Fixture\C\FixtureC359(new \DiContainerBenchmarks\Fixture\C\FixtureC358(new \DiContainerBenchmarks\Fixture\C\FixtureC357(new \DiContainerBenchmarks\Fixture\C\FixtureC356(new \DiContainerBenchmarks\Fixture\C\FixtureC355(new \DiContainerBenchmarks\Fixture\C\FixtureC354(new \DiContainerBenchmarks\Fixture\C\FixtureC353(new \DiContainerBenchmarks\Fixture\C\FixtureC352(new \DiContainerBenchmarks\Fixture\C\FixtureC351(new \DiContainerBenchmarks\Fixture\C\FixtureC350(new \DiContainerBenchmarks\Fixture\C\FixtureC349(new \DiContainerBenchmarks\Fixture\C\FixtureC348(new \DiContainerBenchmarks\Fixture\C\FixtureC347(new \DiContainerBenchmarks\Fixture\C\FixtureC346(new \DiContainerBenchmarks\Fixture\C\FixtureC345(new \DiContainerBenchmarks\Fixture\C\FixtureC344(new \DiContainerBenchmarks\Fixture\C\FixtureC343(new \DiContainerBenchmarks\Fixture\C\FixtureC342(new \DiContainerBenchmarks\Fixture\C\FixtureC341(new \DiContainerBenchmarks\Fixture\C\FixtureC340(new \DiContainerBenchmarks\Fixture\C\FixtureC339(new \DiContainerBenchmarks\Fixture\C\FixtureC338(new \DiContainerBenchmarks\Fixture\C\FixtureC337(new \DiContainerBenchmarks\Fixture\C\FixtureC336(new \DiContainerBenchmarks\Fixture\C\FixtureC335(new \DiContainerBenchmarks\Fixture\C\FixtureC334(new \DiContainerBenchmarks\Fixture\C\FixtureC333(new \DiContainerBenchmarks\Fixture\C\FixtureC332(new \DiContainerBenchmarks\Fixture\C\FixtureC331(new \DiContainerBenchmarks\Fixture\C\FixtureC330(new \DiContainerBenchmarks\Fixture\C\FixtureC329(new \DiContainerBenchmarks\Fixture\C\FixtureC328(new \DiContainerBenchmarks\Fixture\C\FixtureC327(new \DiContainerBenchmarks\Fixture\C\FixtureC326(new \DiContainerBenchmarks\Fixture\C\FixtureC325(new \DiContainerBenchmarks\Fixture\C\FixtureC324(new \DiContainerBenchmarks\Fixture\C\FixtureC323(new \DiContainerBenchmarks\Fixture\C\FixtureC322(new \DiContainerBenchmarks\Fixture\C\FixtureC321(new \DiContainerBenchmarks\Fixture\C\FixtureC320(new \DiContainerBenchmarks\Fixture\C\FixtureC319(new \DiContainerBenchmarks\Fixture\C\FixtureC318(new \DiContainerBenchmarks\Fixture\C\FixtureC317(new \DiContainerBenchmarks\Fixture\C\FixtureC316(new \DiContainerBenchmarks\Fixture\C\FixtureC315(new \DiContainerBenchmarks\Fixture\C\FixtureC314(new \DiContainerBenchmarks\Fixture\C\FixtureC313(new \DiContainerBenchmarks\Fixture\C\FixtureC312(new \DiContainerBenchmarks\Fixture\C\FixtureC311(new \DiContainerBenchmarks\Fixture\C\FixtureC310(new \DiContainerBenchmarks\Fixture\C\FixtureC309(new \DiContainerBenchmarks\Fixture\C\FixtureC308(new \DiContainerBenchmarks\Fixture\C\FixtureC307(new \DiContainerBenchmarks\Fixture\C\FixtureC306(new \DiContainerBenchmarks\Fixture\C\FixtureC305(new \DiContainerBenchmarks\Fixture\C\FixtureC304(new \DiContainerBenchmarks\Fixture\C\FixtureC303(new \DiContainerBenchmarks\Fixture\C\FixtureC302(new \DiContainerBenchmarks\Fixture\C\FixtureC301(new \DiContainerBenchmarks\Fixture\C\FixtureC300(new \DiContainerBenchmarks\Fixture\C\FixtureC299(new \DiContainerBenchmarks\Fixture\C\FixtureC298(new \DiContainerBenchmarks\Fixture\C\FixtureC297(new \DiContainerBenchmarks\Fixture\C\FixtureC296(new \DiContainerBenchmarks\Fixture\C\FixtureC295(new \DiContainerBenchmarks\Fixture\C\FixtureC294(new \DiContainerBenchmarks\Fixture\C\FixtureC293(new \DiContainerBenchmarks\Fixture\C\FixtureC292(new \DiContainerBenchmarks\Fixture\C\FixtureC291(new \DiContainerBenchmarks\Fixture\C\FixtureC290(new \DiContainerBenchmarks\Fixture\C\FixtureC289(new \DiContainerBenchmarks\Fixture\C\FixtureC288(new \DiContainerBenchmarks\Fixture\C\FixtureC287(new \DiContainerBenchmarks\Fixture\C\FixtureC286(new \DiContainerBenchmarks\Fixture\C\FixtureC285(new \DiContainerBenchmarks\Fixture\C\FixtureC284(new \DiContainerBenchmarks\Fixture\C\FixtureC283(new \DiContainerBenchmarks\Fixture\C\FixtureC282(new \DiContainerBenchmarks\Fixture\C\FixtureC281(new \DiContainerBenchmarks\Fixture\C\FixtureC280(new \DiContainerBenchmarks\Fixture\C\FixtureC279(new \DiContainerBenchmarks\Fixture\C\FixtureC278(new \DiContainerBenchmarks\Fixture\C\FixtureC277(new \DiContainerBenchmarks\Fixture\C\FixtureC276(new \DiContainerBenchmarks\Fixture\C\FixtureC275(new \DiContainerBenchmarks\Fixture\C\FixtureC274(new \DiContainerBenchmarks\Fixture\C\FixtureC273(new \DiContainerBenchmarks\Fixture\C\FixtureC272(new \DiContainerBenchmarks\Fixture\C\FixtureC271(new \DiContainerBenchmarks\Fixture\C\FixtureC270(new \DiContainerBenchmarks\Fixture\C\FixtureC269(new \DiContainerBenchmarks\Fixture\C\FixtureC268(new \DiContainerBenchmarks\Fixture\C\FixtureC267(new \DiContainerBenchmarks\Fixture\C\FixtureC266(new \DiContainerBenchmarks\Fixture\C\FixtureC265(new \DiContainerBenchmarks\Fixture\C\FixtureC264(new \DiContainerBenchmarks\Fixture\C\FixtureC263(new \DiContainerBenchmarks\Fixture\C\FixtureC262(new \DiContainerBenchmarks\Fixture\C\FixtureC261(new \DiContainerBenchmarks\Fixture\C\FixtureC260(new \DiContainerBenchmarks\Fixture\C\FixtureC259(new \DiContainerBenchmarks\Fixture\C\FixtureC258(new \DiContainerBenchmarks\Fixture\C\FixtureC257(new \DiContainerBenchmarks\Fixture\C\FixtureC256(new \DiContainerBenchmarks\Fixture\C\FixtureC255(new \DiContainerBenchmarks\Fixture\C\FixtureC254(new \DiContainerBenchmarks\Fixture\C\FixtureC253(new \DiContainerBenchmarks\Fixture\C\FixtureC252(new \DiContainerBenchmarks\Fixture\C\FixtureC251(new \DiContainerBenchmarks\Fixture\C\FixtureC250(new \DiContainerBenchmarks\Fixture\C\FixtureC249(new \DiContainerBenchmarks\Fixture\C\FixtureC248(new \DiContainerBenchmarks\Fixture\C\FixtureC247(new \DiContainerBenchmarks\Fixture\C\FixtureC246(new \DiContainerBenchmarks\Fixture\C\FixtureC245(new \DiContainerBenchmarks\Fixture\C\FixtureC244(new \DiContainerBenchmarks\Fixture\C\FixtureC243(new \DiContainerBenchmarks\Fixture\C\FixtureC242(new \DiContainerBenchmarks\Fixture\C\FixtureC241(new \DiContainerBenchmarks\Fixture\C\FixtureC240(new \DiContainerBenchmarks\Fixture\C\FixtureC239(new \DiContainerBenchmarks\Fixture\C\FixtureC238(new \DiContainerBenchmarks\Fixture\C\FixtureC237(new \DiContainerBenchmarks\Fixture\C\FixtureC236(new \DiContainerBenchmarks\Fixture\C\FixtureC235(new \DiContainerBenchmarks\Fixture\C\FixtureC234(new \DiContainerBenchmarks\Fixture\C\FixtureC233(new \DiContainerBenchmarks\Fixture\C\FixtureC232(new \DiContainerBenchmarks\Fixture\C\FixtureC231(new \DiContainerBenchmarks\Fixture\C\FixtureC230(new \DiContainerBenchmarks\Fixture\C\FixtureC229(new \DiContainerBenchmarks\Fixture\C\FixtureC228(new \DiContainerBenchmarks\Fixture\C\FixtureC227(new \DiContainerBenchmarks\Fixture\C\FixtureC226(new \DiContainerBenchmarks\Fixture\C\FixtureC225(new \DiContainerBenchmarks\Fixture\C\FixtureC224(new \DiContainerBenchmarks\Fixture\C\FixtureC223(new \DiContainerBenchmarks\Fixture\C\FixtureC222(new \DiContainerBenchmarks\Fixture\C\FixtureC221(new \DiContainerBenchmarks\Fixture\C\FixtureC220(new \DiContainerBenchmarks\Fixture\C\FixtureC219(new \DiContainerBenchmarks\Fixture\C\FixtureC218(new \DiContainerBenchmarks\Fixture\C\FixtureC217(new \DiContainerBenchmarks\Fixture\C\FixtureC216(new \DiContainerBenchmarks\Fixture\C\FixtureC215(new \DiContainerBenchmarks\Fixture\C\FixtureC214(new \DiContainerBenchmarks\Fixture\C\FixtureC213(new \DiContainerBenchmarks\Fixture\C\FixtureC212(new \DiContainerBenchmarks\Fixture\C\FixtureC211(new \DiContainerBenchmarks\Fixture\C\FixtureC210(new \DiContainerBenchmarks\Fixture\C\FixtureC209(new \DiContainerBenchmarks\Fixture\C\FixtureC208(new \DiContainerBenchmarks\Fixture\C\FixtureC207(new \DiContainerBenchmarks\Fixture\C\FixtureC206(new \DiContainerBenchmarks\Fixture\C\FixtureC205(new \DiContainerBenchmarks\Fixture\C\FixtureC204(new \DiContainerBenchmarks\Fixture\C\FixtureC203(new \DiContainerBenchmarks\Fixture\C\FixtureC202(new \DiContainerBenchmarks\Fixture\C\FixtureC201(new \DiContainerBenchmarks\Fixture\C\FixtureC200(new \DiContainerBenchmarks\Fixture\C\FixtureC199(new \DiContainerBenchmarks\Fixture\C\FixtureC198(new \DiContainerBenchmarks\Fixture\C\FixtureC197(new \DiContainerBenchmarks\Fixture\C\FixtureC196(new \DiContainerBenchmarks\Fixture\C\FixtureC195(new \DiContainerBenchmarks\Fixture\C\FixtureC194(new \DiContainerBenchmarks\Fixture\C\FixtureC193(new \DiContainerBenchmarks\Fixture\C\FixtureC192(new \DiContainerBenchmarks\Fixture\C\FixtureC191(new \DiContainerBenchmarks\Fixture\C\FixtureC190(new \DiContainerBenchmarks\Fixture\C\FixtureC189(new \DiContainerBenchmarks\Fixture\C\FixtureC188(new \DiContainerBenchmarks\Fixture\C\FixtureC187(new \DiContainerBenchmarks\Fixture\C\FixtureC186(new \DiContainerBenchmarks\Fixture\C\FixtureC185(new \DiContainerBenchmarks\Fixture\C\FixtureC184(new \DiContainerBenchmarks\Fixture\C\FixtureC183(new \DiContainerBenchmarks\Fixture\C\FixtureC182(new \DiContainerBenchmarks\Fixture\C\FixtureC181(new \DiContainerBenchmarks\Fixture\C\FixtureC180(new \DiContainerBenchmarks\Fixture\C\FixtureC179(new \DiContainerBenchmarks\Fixture\C\FixtureC178(new \DiContainerBenchmarks\Fixture\C\FixtureC177(new \DiContainerBenchmarks\Fixture\C\FixtureC176(new \DiContainerBenchmarks\Fixture\C\FixtureC175(new \DiContainerBenchmarks\Fixture\C\FixtureC174(new \DiContainerBenchmarks\Fixture\C\FixtureC173(new \DiContainerBenchmarks\Fixture\C\FixtureC172(new \DiContainerBenchmarks\Fixture\C\FixtureC171(new \DiContainerBenchmarks\Fixture\C\FixtureC170(new \DiContainerBenchmarks\Fixture\C\FixtureC169(new \DiContainerBenchmarks\Fixture\C\FixtureC168(new \DiContainerBenchmarks\Fixture\C\FixtureC167(new \DiContainerBenchmarks\Fixture\C\FixtureC166(new \DiContainerBenchmarks\Fixture\C\FixtureC165(new \DiContainerBenchmarks\Fixture\C\FixtureC164(new \DiContainerBenchmarks\Fixture\C\FixtureC163(new \DiContainerBenchmarks\Fixture\C\FixtureC162(new \DiContainerBenchmarks\Fixture\C\FixtureC161(new \DiContainerBenchmarks\Fixture\C\FixtureC160(new \DiContainerBenchmarks\Fixture\C\FixtureC159(new \DiContainerBenchmarks\Fixture\C\FixtureC158(new \DiContainerBenchmarks\Fixture\C\FixtureC157(new \DiContainerBenchmarks\Fixture\C\FixtureC156(new \DiContainerBenchmarks\Fixture\C\FixtureC155(new \DiContainerBenchmarks\Fixture\C\FixtureC154(new \DiContainerBenchmarks\Fixture\C\FixtureC153(new \DiContainerBenchmarks\Fixture\C\FixtureC152(new \DiContainerBenchmarks\Fixture\C\FixtureC151(new \DiContainerBenchmarks\Fixture\C\FixtureC150(new \DiContainerBenchmarks\Fixture\C\FixtureC149(new \DiContainerBenchmarks\Fixture\C\FixtureC148(new \DiContainerBenchmarks\Fixture\C\FixtureC147(new \DiContainerBenchmarks\Fixture\C\FixtureC146(new \DiContainerBenchmarks\Fixture\C\FixtureC145(new \DiContainerBenchmarks\Fixture\C\FixtureC144(new \DiContainerBenchmarks\Fixture\C\FixtureC143(new \DiContainerBenchmarks\Fixture\C\FixtureC142(new \DiContainerBenchmarks\Fixture\C\FixtureC141(new \DiContainerBenchmarks\Fixture\C\FixtureC140(new \DiContainerBenchmarks\Fixture\C\FixtureC139(new \DiContainerBenchmarks\Fixture\C\FixtureC138(new \DiContainerBenchmarks\Fixture\C\FixtureC137(new \DiContainerBenchmarks\Fixture\C\FixtureC136(new \DiContainerBenchmarks\Fixture\C\FixtureC135(new \DiContainerBenchmarks\Fixture\C\FixtureC134(new \DiContainerBenchmarks\Fixture\C\FixtureC133(new \DiContainerBenchmarks\Fixture\C\FixtureC132(new \DiContainerBenchmarks\Fixture\C\FixtureC131(new \DiContainerBenchmarks\Fixture\C\FixtureC130(new \DiContainerBenchmarks\Fixture\C\FixtureC129(new \DiContainerBenchmarks\Fixture\C\FixtureC128(new \DiContainerBenchmarks\Fixture\C\FixtureC127(new \DiContainerBenchmarks\Fixture\C\FixtureC126(new \DiContainerBenchmarks\Fixture\C\FixtureC125(new \DiContainerBenchmarks\Fixture\C\FixtureC124(new \DiContainerBenchmarks\Fixture\C\FixtureC123(new \DiContainerBenchmarks\Fixture\C\FixtureC122(new \DiContainerBenchmarks\Fixture\C\FixtureC121(new \DiContainerBenchmarks\Fixture\C\FixtureC120(new \DiContainerBenchmarks\Fixture\C\FixtureC119(new \DiContainerBenchmarks\Fixture\C\FixtureC118(new \DiContainerBenchmarks\Fixture\C\FixtureC117(new \DiContainerBenchmarks\Fixture\C\FixtureC116(new \DiContainerBenchmarks\Fixture\C\FixtureC115(new \DiContainerBenchmarks\Fixture\C\FixtureC114(new \DiContainerBenchmarks\Fixture\C\FixtureC113(new \DiContainerBenchmarks\Fixture\C\FixtureC112(new \DiContainerBenchmarks\Fixture\C\FixtureC111(new \DiContainerBenchmarks\Fixture\C\FixtureC110(new \DiContainerBenchmarks\Fixture\C\FixtureC109(new \DiContainerBenchmarks\Fixture\C\FixtureC108(new \DiContainerBenchmarks\Fixture\C\FixtureC107(new \DiContainerBenchmarks\Fixture\C\FixtureC106(new \DiContainerBenchmarks\Fixture\C\FixtureC105(new \DiContainerBenchmarks\Fixture\C\FixtureC104(new \DiContainerBenchmarks\Fixture\C\FixtureC103(new \DiContainerBenchmarks\Fixture\C\FixtureC102(new \DiContainerBenchmarks\Fixture\C\FixtureC101(new \DiContainerBenchmarks\Fixture\C\FixtureC100(new \DiContainerBenchmarks\Fixture\C\FixtureC99(new \DiContainerBenchmarks\Fixture\C\FixtureC98(new \DiContainerBenchmarks\Fixture\C\FixtureC97(new \DiContainerBenchmarks\Fixture\C\FixtureC96(new \DiContainerBenchmarks\Fixture\C\FixtureC95(new \DiContainerBenchmarks\Fixture\C\FixtureC94(new \DiContainerBenchmarks\Fixture\C\FixtureC93(new \DiContainerBenchmarks\Fixture\C\FixtureC92(new \DiContainerBenchmarks\Fixture\C\FixtureC91(new \DiContainerBenchmarks\Fixture\C\FixtureC90(new \DiContainerBenchmarks\Fixture\C\FixtureC89(new \DiContainerBenchmarks\Fixture\C\FixtureC88(new \DiContainerBenchmarks\Fixture\C\FixtureC87(new \DiContainerBenchmarks\Fixture\C\FixtureC86(new \DiContainerBenchmarks\Fixture\C\FixtureC85(new \DiContainerBenchmarks\Fixture\C\FixtureC84(new \DiContainerBenchmarks\Fixture\C\FixtureC83(new \DiContainerBenchmarks\Fixture\C\FixtureC82(new \DiContainerBenchmarks\Fixture\C\FixtureC81(new \DiContainerBenchmarks\Fixture\C\FixtureC80(new \DiContainerBenchmarks\Fixture\C\FixtureC79(new \DiContainerBenchmarks\Fixture\C\FixtureC78(new \DiContainerBenchmarks\Fixture\C\FixtureC77(new \DiContainerBenchmarks\Fixture\C\FixtureC76(new \DiContainerBenchmarks\Fixture\C\FixtureC75(new \DiContainerBenchmarks\Fixture\C\FixtureC74(new \DiContainerBenchmarks\Fixture\C\FixtureC73(new \DiContainerBenchmarks\Fixture\C\FixtureC72(new \DiContainerBenchmarks\Fixture\C\FixtureC71(new \DiContainerBenchmarks\Fixture\C\FixtureC70(new \DiContainerBenchmarks\Fixture\C\FixtureC69(new \DiContainerBenchmarks\Fixture\C\FixtureC68(new \DiContainerBenchmarks\Fixture\C\FixtureC67(new \DiContainerBenchmarks\Fixture\C\FixtureC66(new \DiContainerBenchmarks\Fixture\C\FixtureC65(new \DiContainerBenchmarks\Fixture\C\FixtureC64(new \DiContainerBenchmarks\Fixture\C\FixtureC63(new \DiContainerBenchmarks\Fixture\C\FixtureC62(new \DiContainerBenchmarks\Fixture\C\FixtureC61(new \DiContainerBenchmarks\Fixture\C\FixtureC60(new \DiContainerBenchmarks\Fixture\C\FixtureC59(new \DiContainerBenchmarks\Fixture\C\FixtureC58(new \DiContainerBenchmarks\Fixture\C\FixtureC57(new \DiContainerBenchmarks\Fixture\C\FixtureC56(new \DiContainerBenchmarks\Fixture\C\FixtureC55(new \DiContainerBenchmarks\Fixture\C\FixtureC54(new \DiContainerBenchmarks\Fixture\C\FixtureC53(new \DiContainerBenchmarks\Fixture\C\FixtureC52(new \DiContainerBenchmarks\Fixture\C\FixtureC51(new \DiContainerBenchmarks\Fixture\C\FixtureC50(new \DiContainerBenchmarks\Fixture\C\FixtureC49(new \DiContainerBenchmarks\Fixture\C\FixtureC48(new \DiContainerBenchmarks\Fixture\C\FixtureC47(new \DiContainerBenchmarks\Fixture\C\FixtureC46(new \DiContainerBenchmarks\Fixture\C\FixtureC45(new \DiContainerBenchmarks\Fixture\C\FixtureC44(new \DiContainerBenchmarks\Fixture\C\FixtureC43(new \DiContainerBenchmarks\Fixture\C\FixtureC42(new \DiContainerBenchmarks\Fixture\C\FixtureC41(new \DiContainerBenchmarks\Fixture\C\FixtureC40(new \DiContainerBenchmarks\Fixture\C\FixtureC39(new \DiContainerBenchmarks\Fixture\C\FixtureC38(new \DiContainerBenchmarks\Fixture\C\FixtureC37(new \DiContainerBenchmarks\Fixture\C\FixtureC36(new \DiContainerBenchmarks\Fixture\C\FixtureC35(new \DiContainerBenchmarks\Fixture\C\FixtureC34(new \DiContainerBenchmarks\Fixture\C\FixtureC33(new \DiContainerBenchmarks\Fixture\C\FixtureC32(new \DiContainerBenchmarks\Fixture\C\FixtureC31(new \DiContainerBenchmarks\Fixture\C\FixtureC30(new \DiContainerBenchmarks\Fixture\C\FixtureC29(new \DiContainerBenchmarks\Fixture\C\FixtureC28(new \DiContainerBenchmarks\Fixture\C\FixtureC27(new \DiContainerBenchmarks\Fixture\C\FixtureC26(new \DiContainerBenchmarks\Fixture\C\FixtureC25(new \DiContainerBenchmarks\Fixture\C\FixtureC24(new \DiContainerBenchmarks\Fixture\C\FixtureC23(new \DiContainerBenchmarks\Fixture\C\FixtureC22(new \DiContainerBenchmarks\Fixture\C\FixtureC21(new \DiContainerBenchmarks\Fixture\C\FixtureC20(new \DiContainerBenchmarks\Fixture\C\FixtureC19(new \DiContainerBenchmarks\Fixture\C\FixtureC18(new \DiContainerBenchmarks\Fixture\C\FixtureC17(new \DiContainerBenchmarks\Fixture\C\FixtureC16(new \DiContainerBenchmarks\Fixture\C\FixtureC15(new \DiContainerBenchmarks\Fixture\C\FixtureC14(new \DiContainerBenchmarks\Fixture\C\FixtureC13(new \DiContainerBenchmarks\Fixture\C\FixtureC12(new \DiContainerBenchmarks\Fixture\C\FixtureC11(new \DiContainerBenchmarks\Fixture\C\FixtureC10(new \DiContainerBenchmarks\Fixture\C\FixtureC9(new \DiContainerBenchmarks\Fixture\C\FixtureC8(new \DiContainerBenchmarks\Fixture\C\FixtureC7(new \DiContainerBenchmarks\Fixture\C\FixtureC6(new \DiContainerBenchmarks\Fixture\C\FixtureC5(new \DiContainerBenchmarks\Fixture\C\FixtureC4(new \DiContainerBenchmarks\Fixture\C\FixtureC3(new \DiContainerBenchmarks\Fixture\C\FixtureC2(new \DiContainerBenchmarks\Fixture\C\FixtureC1())))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))));
     }
 
-    /**
-     * @return array|bool|float|int|string|null
-     */
-    public function getParameter(string $name)
+    public function getParameter(string $name): array|bool|string|int|float|\UnitEnum|null
     {
         if (!(isset($this->parameters[$name]) || isset($this->loadedDynamicParameters[$name]) || \array_key_exists($name, $this->parameters))) {
-            throw new InvalidArgumentException(sprintf('The parameter "%s" must be defined.', $name));
-        }
-        if (isset($this->loadedDynamicParameters[$name])) {
-            return $this->loadedDynamicParameters[$name] ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
+            throw new ParameterNotFoundException($name);
         }
 
-        return $this->parameters[$name];
+        if (isset($this->loadedDynamicParameters[$name])) {
+            $value = $this->loadedDynamicParameters[$name] ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
+        } else {
+            $value = $this->parameters[$name];
+        }
+
+        return $value;
     }
 
     public function hasParameter(string $name): bool
@@ -12204,12 +12202,12 @@ class CompiledSingletonContainer extends Container
 
     public function getParameterBag(): ParameterBagInterface
     {
-        if (null === $this->parameterBag) {
+        if (!isset($this->parameterBag)) {
             $parameters = $this->parameters;
             foreach ($this->loadedDynamicParameters as $name => $loaded) {
                 $parameters[$name] = $loaded ? $this->dynamicParameters[$name] : $this->getDynamicParameter($name);
             }
-            $this->parameterBag = new FrozenParameterBag($parameters);
+            $this->parameterBag = new FrozenParameterBag($parameters, []);
         }
 
         return $this->parameterBag;
@@ -12220,7 +12218,7 @@ class CompiledSingletonContainer extends Container
 
     private function getDynamicParameter(string $name)
     {
-        throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
+        throw new ParameterNotFoundException($name);
     }
 
     protected function getDefaultParameters(): array

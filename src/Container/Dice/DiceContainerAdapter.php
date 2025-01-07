@@ -12,11 +12,8 @@ final class DiceContainerAdapter implements ContainerAdapterInterface
     {
     }
 
-    public function bootstrapSingletonContainer()
-    {
-        $container = new DecoratedDice();
-
-        return $container->addRule('*', ["shared" => true]);
+    public function bootstrapSingletonContainer(): DecoratedDice|\Psr\Container\ContainerInterface {
+        return new DecoratedDice()->addRule('*', ["shared" => true]);
     }
 
     public function bootstrapPrototypeContainer()

@@ -2115,8 +2115,7 @@ final class LaminasServiceManagerContainerAdapter implements ContainerAdapterInt
     {
     }
 
-    public function bootstrapSingletonContainer()
-    {
+    public function bootstrapSingletonContainer(): ServiceManager {
         /* Generated with:
             for ($i = 1; $i <= 100; $i++) {
                echo "use DiContainerBenchmarks\\Fixture\\A\\FixtureA$i";\n";

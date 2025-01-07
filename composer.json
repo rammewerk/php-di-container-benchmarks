@@ -3,7 +3,11 @@
     "description": "Benchmarks of some popular PHP DI Containers",
     "license": "MIT",
     "homepage": "https://github.com/kocsismate/php-di-benchmarks",
-    "keywords": ["Dependency Injection Container benchmarks", "Dependency Injection Container performance", "DI"],
+    "keywords": [
+        "Dependency Injection Container benchmarks",
+        "Dependency Injection Container performance",
+        "DI"
+    ],
     "authors": [
         {
             "name": "Máté Kocsis",
@@ -34,6 +38,7 @@
         "rammewerk/container": "^1.1.0"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "phpstan/phpstan": "^2.1.1",
         "phpstan/phpstan-strict-rules": "^2.0.1",
         "squizlabs/php_codesniffer": "^3.11.2",

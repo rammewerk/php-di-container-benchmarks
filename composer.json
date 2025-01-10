@@ -35,7 +35,8 @@
         "symfony/dependency-injection": "^7.2.0",
         "woohoolabs/zen": "^3.1.1",
         "yiisoft/yii2": "^2.0.51",
-        "rammewerk/container": "^1.1.0"
+        "rammewerk/container": "^1.2.1",
+        "ext-zend-opcache": "*"
     },
     "require-dev": {
         "roave/security-advisories": "dev-latest",

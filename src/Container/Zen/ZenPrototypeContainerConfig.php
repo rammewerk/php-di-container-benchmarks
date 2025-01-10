@@ -20,6 +20,7 @@ class ZenPrototypeContainerConfig extends AbstractContainerConfig
             FixtureA100::class,
             FixtureC1000::class,
             Psr4NamespaceEntryPoint::create("DiContainerBenchmarks\\Fixture\\B"),
+            Psr4NamespaceEntryPoint::create("DiContainerBenchmarks\\Fixture\\D"),
         ];
     }
 
@@ -42,6 +43,10 @@ class ZenPrototypeContainerConfig extends AbstractContainerConfig
             Psr4WildcardHint::prototype(
                 "DiContainerBenchmarks\\Fixture\\C\\FixtureC*",
                 "DiContainerBenchmarks\\Fixture\\C\\FixtureC*"
+            ),
+            Psr4WildcardHint::prototype(
+                "DiContainerBenchmarks\\Fixture\\D\\FixtureC*",
+                "DiContainerBenchmarks\\Fixture\\D\\FixtureC*"
             ),
         ];
     }

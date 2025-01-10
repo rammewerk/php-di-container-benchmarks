@@ -13,8 +13,7 @@ gc_collect_cycles();
 
 // Start benchmark
 $t1 = hrtime(true);
-$container->get(DiContainerBenchmarks\Fixture\D\FixtureD50::class);
-$container->get(DiContainerBenchmarks\Fixture\D\FixtureD50::class);
+$container->get(DiContainerBenchmarks\Fixture\D\FixtureD25::class);
 $t2 = hrtime(true);
 // End benchmark
 

@@ -19,6 +19,7 @@ class ZenSingletonContainerConfig extends AbstractContainerConfig
             FixtureA100::class,
             FixtureC1000::class,
             Psr4NamespaceEntryPoint::create("DiContainerBenchmarks\\Fixture\\B"),
+            Psr4NamespaceEntryPoint::create("DiContainerBenchmarks\\Fixture\\D"),
         ];
     }
 

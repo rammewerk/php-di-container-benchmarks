@@ -14,47 +14,50 @@ use DiContainerBenchmarks\TestSuite\TestSuiteInterface;
 use function file_put_contents;
 use function hrtime;
 
-final class Benchmark
-{
+final class Benchmark {
+
     private BenchmarkContextInterface $context;
 
-    public function __construct(BenchmarkContextInterface $context)
-    {
+
+
+    public function __construct(BenchmarkContextInterface $context) {
         $this->context = $context;
     }
+
+
 
     /**
      * @param ContainerDefinitionInterface[] $containerDefinitions
      */
-    public function buildContainers(array $containerDefinitions): void
-    {
+    public function buildContainers(array $containerDefinitions): void {
         echo "Building DI Containers...\n";
-        foreach ($containerDefinitions as $containerDefinition) {
+        foreach( $containerDefinitions as $containerDefinition ) {
             echo "Building " . $containerDefinition->getDisplayedName() . ": ";
-            $t1 = hrtime(true);
+            $t1 = hrtime( true );
             $containerDefinition->getAdapter()->build();
-            $t2 = hrtime(true);
+            $t2 = hrtime( true );
 
             echo (($t2 - $t1) / 1000000) . " ms\n";
         }
     }
 
+
+
     /**
      * @param TestSuiteInterface[] $testSuites
      */
-    public function generateTestCases(array $testSuites): void
-    {
+    public function generateTestCases(array $testSuites): void {
         echo "Generating test cases...\n";
-        foreach ($testSuites as $testSuite) {
+        foreach( $testSuites as $testSuite ) {
             $testSuiteNumber = $testSuite->getNumber();
 
-            foreach ($testSuite->getTestCases() as $testCase) {
+            foreach( $testSuite->getTestCases() as $testCase ) {
                 $testCaseNumber = $testCase->number;
 
                 echo "Generating test case $testSuiteNumber/$testCaseNumber: ";
-                $code = TestCaseGenerator::generate($testCase);
-                $result = file_put_contents(__DIR__ . "/../../app/generated/test_case_{$testSuiteNumber}_{$testCaseNumber}.php", $code);
-                if ($result === false) {
+                $code = TestCaseGenerator::generate( $testCase );
+                $result = file_put_contents( __DIR__ . "/../../app/generated/test_case_{$testSuiteNumber}_$testCaseNumber.php", $code );
+                if( $result === false ) {
                     echo "Failed\n";
                 } else {
                     echo "Done\n";
@@ -63,30 +66,33 @@ final class Benchmark
         }
     }
 
+
+
     /**
      * @param TestSuiteInterface[] $testSuites
      * @param ContainerDefinitionInterface[] $containerDefinitions
      * @param OutputGeneratorInterface[] $outputGenerators
      */
-    public function runBenchmark(array $testSuites, array $containerDefinitions, array $outputGenerators): void
-    {
+    public function runBenchmark(array $testSuites, array $containerDefinitions, array $outputGenerators): void {
         $benchmarkResult = new BenchmarkResult();
 
-        foreach ($testSuites as $testSuite) {
-            foreach ($testSuite->getTestCases() as $testCase) {
-                foreach ($containerDefinitions as $containerDefinition) {
-                    $this->runTest($testSuite, $testCase, $containerDefinition, $benchmarkResult);
+        foreach( $testSuites as $testSuite ) {
+            foreach( $testSuite->getTestCases() as $testCase ) {
+                foreach( $containerDefinitions as $containerDefinition ) {
+                    $this->runTest( $testSuite, $testCase, $containerDefinition, $benchmarkResult );
                 }
             }
         }
 
         echo "Generating results...\n";
-        foreach ($outputGenerators as $outputGenerator) {
-            $outputGenerator->generateOutput($testSuites, $containerDefinitions, $benchmarkResult);
+        foreach( $outputGenerators as $outputGenerator ) {
+            $outputGenerator->generateOutput( $testSuites, $containerDefinitions, $benchmarkResult );
         }
 
         echo "Benchmark finished successfully\n";
     }
+
+
 
     private function runTest(
         TestSuiteInterface $testSuite,
@@ -101,19 +107,21 @@ final class Benchmark
         echo "Running test $testSuiteNumber.$testCaseNumber: $containerName";
 
         $this->context->clear();
-        for ($run = 0; $run < 30; $run++) {
+        for( $run = 0; $run < 30; $run++ ) {
             $container = $containerDefinition->getName();
 
-            $output = $this->context->getTestOutput($testSuiteNumber, $testCaseNumber, $container);
-            $result = TestResult::createFromJson($output);
-            $benchmarkResult->addTestResult($testSuite, $testCase, $containerDefinition, $result);
+            $output = $this->context->getTestOutput( $testSuiteNumber, $testCaseNumber, $container );
+            $result = TestResult::createFromJson( $output );
+            $benchmarkResult->addTestResult( $testSuite, $testCase, $containerDefinition, $result );
 
-            if ($result->isSuccessful() === false) {
+            if( $result->isSuccessful() === false ) {
                 echo "\nTest failed: " . $result->getMessage() . "\n";
                 return;
             }
         }
 
-        echo " (" . $benchmarkResult->getResult($testSuite, $testCase, $containerName)->getTimeConsumptionInMilliSeconds() . " ms)\n";
+        echo " (" . $benchmarkResult->getResult( $testSuite, $testCase, $containerName )->getTimeConsumptionInMilliSeconds() . " ms)\n";
     }
+
+
 }

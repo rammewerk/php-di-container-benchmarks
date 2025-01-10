@@ -16,12 +16,15 @@ use function sprintf;
 
 final class HtmlOutputGenerator implements OutputGeneratorInterface
 {
+
     private string $path;
+
 
     public function __construct(string $path)
     {
         $this->path = $path;
     }
+
 
     /**
      * @param TestSuiteInterface[] $testSuites
@@ -255,8 +258,10 @@ HERE;
                         $memoryBase = $memory ?? null;
                     }
 
-                    $timeColumn = $time !== null ? round((float) $time, 3) : "N/A";
-                    $timePercentColumn = $time !== null ? round((float) $time / $timeBase * 100, 0) . "%" : "N/A";
+                    $timeColumn = $time !== null ? round((float)$time, 3) : "N/A";
+                    $epsilon = 1e-10; // A small threshold to treat near-zero values as zero
+                    $timeBaseFloat = (float)$timeBase;
+                    $timePercentColumn = ($time !== null && abs($timeBaseFloat) > $epsilon) ? round((float)$time / $timeBaseFloat * 100, 0) . "%" : "N/A";
                     $memoryColumn = $memory !== null ? round($memory, 3) : "N/A";
                     $memoryPercentColumn = $memory !== null && $memoryBase !== null ? round($memory / $memoryBase * 100, 0) . "%" : "N/A";
 
@@ -308,4 +313,6 @@ HERE;
 
         file_put_contents($this->path, $html);
     }
+
+
 }

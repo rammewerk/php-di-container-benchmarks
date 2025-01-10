@@ -6,12 +6,9 @@ require_once __DIR__ . "/../app/bootstrap.php";
 
 use DiContainerBenchmarks\Test\TestRunner;
 
-if( isset( $_GET['generate_code'] ) ) {
-    require_once __DIR__ . "/../app/fixture_generator_2.php";
-}
-
 if( isset( $_GET["opcache"] ) ) {
     echo "<pre>";
+    /** @noinspection ForgottenDebugOutputInspection */
     var_dump( opcache_get_status() );
     exit;
 }

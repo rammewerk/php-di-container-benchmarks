@@ -15,12 +15,14 @@ use DiContainerBenchmarks\Container\Symfony\SymfonyContainerDefinition;
 use DiContainerBenchmarks\Container\Yii2\Yii2ContainerDefinition;
 use DiContainerBenchmarks\Container\Zen\ZenContainerDefinition;
 
-final class ContainerDefinitions {
+final class ContainerDefinitions
+{
 
     /**
      * @return ContainerDefinitionInterface[]
      */
-    public static function getAllContainerDefinitions(): array {
+    public static function getAllContainerDefinitions(): array
+    {
         return [
             new AuraContainerDefinition(),
             new ChubbyphpContainerDefinition(),
@@ -31,13 +33,13 @@ final class ContainerDefinitions {
             new PhpDiContainerDefinition(),
             new SymfonyContainerDefinition(),
             new Yii2ContainerDefinition(),
-            new ZenContainerDefinition(),
+            new ZenContainerDefinition()
         ];
     }
 
 
-
-    public static function getContainerDefinition(string $name): ?ContainerDefinitionInterface {
+    public static function getContainerDefinition(string $name): ?ContainerDefinitionInterface
+    {
         return array_find(
             self::getAllContainerDefinitions(),
             static fn($definition) => $definition->getName() === $name

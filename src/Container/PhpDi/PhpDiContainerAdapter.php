@@ -38,7 +38,7 @@ final class PhpDiContainerAdapter implements ContainerAdapterInterface
         }
 
         for ($i = 1; $i <= 50; $i++) {
-            $definitions["DiContainerBenchmarks\\Fixture\\D\\FixtureD$i"] = autowire();
+            $definitions["DiContainerBenchmarks\\Fixture\\D\\FixtureD$i"] = autowire()->lazy();
         }
 
         $builder->addDefinitions($definitions);

@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace DiContainerBenchmarks\TestSuite;
 
-use DiContainerBenchmarks\Fixture\C\FixtureC1000;
-use DiContainerBenchmarks\Fixture\D\FixtureD50;
+use DiContainerBenchmarks\Fixture\D\FixtureD25;
 use DiContainerBenchmarks\Test\TestCase;
 
 final class TestSuite7 implements TestSuiteInterface {
@@ -29,6 +28,7 @@ HERE;
     }
 
 
+
     public function getTestCases(): array {
         return [
             new TestCase(
@@ -36,21 +36,21 @@ HERE;
                 1,
                 TestCase::COLD,
                 false,
-                [FixtureD50::class]
+                [FixtureD25::class]
             ),
             new TestCase(
                 2,
-                2,
+                1,
                 TestCase::WARM,
                 false,
-                [FixtureD50::class]
+                [FixtureD25::class]
             ),
             new TestCase(
                 3,
-                4,
+                1,
                 TestCase::HOT,
                 false,
-                [FixtureD50::class]
+                [FixtureD25::class]
             ),
         ];
     }

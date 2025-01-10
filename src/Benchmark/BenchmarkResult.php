@@ -60,10 +60,9 @@ final class BenchmarkResult
             return [];
         }
 
-        $results = [];
-        foreach ($this->testResults[$testSuiteNumber][$testCaseNumber] as $containerName => $containerResults) {
-            $results[$containerName] = $this->calculateResults($containerResults);
-        }
+        $results = array_map( function($containerResults) {
+            return $this->calculateResults( $containerResults );
+        }, $this->testResults[$testSuiteNumber][$testCaseNumber] );
 
         uasort($results, static function (TestResult $a, TestResult $b): int {
             if ($a->getTimeConsumptionInMilliSeconds() === null && $b->getTimeConsumptionInMilliSeconds() !== null) {

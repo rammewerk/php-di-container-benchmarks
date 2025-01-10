@@ -9,6 +9,7 @@ use DiContainerBenchmarks\Benchmark\WebBenchmarkContext;
 use DiContainerBenchmarks\Container\ContainerDefinitions;
 use DiContainerBenchmarks\OutputGenerator\HtmlOutputGenerator;
 use DiContainerBenchmarks\TestSuite\TestSuite1;
+use DiContainerBenchmarks\TestSuite\TestSuite10;
 use DiContainerBenchmarks\TestSuite\TestSuite2;
 use DiContainerBenchmarks\TestSuite\TestSuite3;
 use DiContainerBenchmarks\TestSuite\TestSuite4;
@@ -27,7 +28,8 @@ $testSuites = [
     new TestSuite6(),
     new TestSuite7(),
     new TestSuite8(),
-    new TestSuite9()
+    new TestSuite9(),
+    new TestSuite10()
 ];
 
 $containers = ContainerDefinitions::getAllContainerDefinitions();

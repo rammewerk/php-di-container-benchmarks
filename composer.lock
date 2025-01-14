@@ -1212,16 +1212,16 @@
         },
         {
             "name": "rammewerk/container",
-            "version": "1.2.1",
+            "version": "1.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rammewerk/container.git",
-                "reference": "54dc5df87924071d4c8e081da30bff92d8e59e4e"
+                "reference": "0d3efdb970bc383fd11567851bbcfbdbf1d124c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rammewerk/container/zipball/54dc5df87924071d4c8e081da30bff92d8e59e4e",
-                "reference": "54dc5df87924071d4c8e081da30bff92d8e59e4e",
+                "url": "https://api.github.com/repos/rammewerk/container/zipball/0d3efdb970bc383fd11567851bbcfbdbf1d124c5",
+                "reference": "0d3efdb970bc383fd11567851bbcfbdbf1d124c5",
                 "shasum": ""
             },
             "require": {
@@ -1261,9 +1261,9 @@
             ],
             "support": {
                 "issues": "https://github.com/rammewerk/container/issues",
-                "source": "https://github.com/rammewerk/container/tree/1.2.1"
+                "source": "https://github.com/rammewerk/container/tree/1.2.2"
             },
-            "time": "2025-01-10T13:41:11+00:00"
+            "time": "2025-01-14T12:12:27+00:00"
         },
         {
             "name": "symfony/config",

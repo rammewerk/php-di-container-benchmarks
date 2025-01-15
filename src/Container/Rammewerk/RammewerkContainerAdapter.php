@@ -1021,9 +1021,7 @@ final class RammewerkContainerAdapter implements ContainerAdapterInterface
 
     public function bootstrapSingletonContainer(): ContainerInterface
     {
-        $container = new PsrContainer();
-
-        return $container->share([
+        return new PsrContainer()->share([
             FixtureA10::class,
             FixtureA100::class,
             FixtureC1000::class,
